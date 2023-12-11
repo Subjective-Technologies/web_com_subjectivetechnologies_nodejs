@@ -1,0 +1,70 @@
+/* components/Menu.module.css */
+.navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Align items horizontally */
+    flex-wrap: wrap;
+}
+
+.navItem {
+    padding: 8px;
+    margin: 5px;
+    color: #FEF8E2;
+    background-color: #071919;
+    cursor: pointer;
+    position: relative; /* Needed for absolute positioning of dropdown */
+}
+
+.navItem:hover {
+    color: #071919;
+    background-color: #FEF8E2;
+}
+
+.navItemDropdown {
+    display: none; /* Hide dropdowns initially */
+    position: absolute; /* Position dropdowns absolutely */
+    left: 0; /* Align dropdowns with the left edge of the navItem */
+    z-index: 1; /* Ensure dropdowns appear above other content */
+    background-color: #f0f0f0; /* Optional: Match the background of navItem */
+}
+
+.navItem:hover .navItemDropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+/* Responsive Styles for Lateral Menu */
+@media (max-width: 600px) {
+    .navList {
+        flex-direction: column;
+        width: 250px; /* Adjust as needed */
+        height: 100vh; /* Full viewport height */
+        position: fixed; /* Fixed position */
+        top: 0;
+        left: -100%; /* Start off-screen */
+        overflow-y: auto; /* Scrollable if content overflows */
+        transition: left 0.3s; /* Smooth transition for sidebar */
+        background-color: #f0f0f0; /* Background color for the sidebar */
+    }
+
+    .navList.open {
+        left: 0; /* Move into view */
+    }
+
+    .navItem {
+        width: 100%; /* Full width for mobile */
+        text-align: center; /* Center text for mobile */
+    }
+
+    .navItemDropdown {
+        position: relative; /* Dropdowns as part of the normal flow on mobile */
+    }
+}
+
+.toggleButton {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    /* Add more styles as needed */
+}
