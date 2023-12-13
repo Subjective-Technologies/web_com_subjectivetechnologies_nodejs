@@ -1,70 +1,82 @@
-/* components/Menu.module.css */
-.navList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Align items horizontally */
-    flex-wrap: wrap;
-}
-
-.navItem {
-    padding: 8px;
-    margin: 5px;
-    color: #FEF8E2;
-    background-color: #071919;
-    cursor: pointer;
-    position: relative; /* Needed for absolute positioning of dropdown */
-}
-
-.navItem:hover {
-    color: #071919;
-    background-color: #FEF8E2;
-}
-
-.navItemDropdown {
-    display: none; /* Hide dropdowns initially */
-    position: absolute; /* Position dropdowns absolutely */
-    left: 0; /* Align dropdowns with the left edge of the navItem */
-    z-index: 1; /* Ensure dropdowns appear above other content */
-    background-color: #f0f0f0; /* Optional: Match the background of navItem */
-}
-
-.navItem:hover .navItemDropdown {
-    display: block; /* Show dropdown on hover */
-}
-
-/* Responsive Styles for Lateral Menu */
-@media (max-width: 600px) {
-    .navList {
-        flex-direction: column;
-        width: 250px; /* Adjust as needed */
-        height: 100vh; /* Full viewport height */
-        position: fixed; /* Fixed position */
-        top: 0;
-        left: -100%; /* Start off-screen */
-        overflow-y: auto; /* Scrollable if content overflows */
-        transition: left 0.3s; /* Smooth transition for sidebar */
-        background-color: #f0f0f0; /* Background color for the sidebar */
-    }
-
-    .navList.open {
-        left: 0; /* Move into view */
-    }
-
-    .navItem {
-        width: 100%; /* Full width for mobile */
-        text-align: center; /* Center text for mobile */
-    }
-
-    .navItemDropdown {
-        position: relative; /* Dropdowns as part of the normal flow on mobile */
-    }
-}
-
-.toggleButton {
+.link {
+    text-decoration: none;
+    color: white;
+    font-weight: regular;
+    font-family: "Input Mono", monospace;
+    transition: color 0.2s;
+  }
+  
+  .link:hover {
+    color: neonwhite !important;
+    text-decoration: none !important;
+  }
+  
+.menu {
+    background-color: black;
+    color: white;
+    padding: 0px;
+    display: flex; /* Add flex display */
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 2;
-    /* Add more styles as needed */
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+}
+
+.menuItem {
+    margin-right: 20px;
+}
+
+.menuItem:hover,
+.signUpButton:hover {
+  font-weight: bold;
+}
+
+.subMenu {
+    display: none;
+    position: absolute;
+    background-color: black;
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    border-radius: 70px;
+}
+
+.menuItem:hover .subMenu {
+    display: flex;
+}
+
+.menuItem:hover {
+  font-weight: bold;
+}
+
+.signUpButton {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+  .leftMenu,
+  .rightMenu {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style for individual menu items */
+  .menuItem {
+    /* Your menu item styles */
+    margin: 5px;
+  }
+  
+#logo {
+  left: 0px;
 }

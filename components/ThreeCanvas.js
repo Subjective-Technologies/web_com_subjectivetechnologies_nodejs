@@ -17,7 +17,14 @@ const ThreeCanvas = () => {
         
         // Create a renderer
         const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
+        //renderer.setSize(window.innerWidth, window.innerHeight);
+        // Change the canvas size
+        
+        const canvasWidth = window.innerWidth;
+        const canvasHeight = window.innerHeight * 0.8; // 80% of the window height
+
+        renderer.setSize(canvasWidth, canvasHeight);
+
         renderer.gammaOutput = true; // Make output colors look more correct
         document.body.appendChild(renderer.domElement);
         

@@ -1,0 +1,34 @@
+.imageMenuItem {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 8px;
+}
+
+.imageWrapper {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  margin-right: 16px; /* Adjust the spacing between the image and content */
+}
+
+.roundedImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  flex: 1; /* Allow content to expand and fill available space */
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: white;
+}
+
+.text {
+  color: #888;
+}

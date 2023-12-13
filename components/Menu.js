@@ -1,43 +1,63 @@
-// components/Menu.js
 import React, { useState } from 'react';
 import styles from '../styles/Menu.module.css';
+import ImageMenuItem from './ImageMenuItem.js'
+
 
 const Menu = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    return (  
+    <div  className={`${styles.menu} ${styles.link}`}>
+        
+        <div id="logo"> 
+            <img src="images/logo_horizontal.png"/>  
+        </div>
 
-    const toggleSidebar = () => {
-        setIsOpen(!isOpen);
-    };
 
-    return (
-        <>
-            <button className={styles.toggleButton} onClick={toggleSidebar}>Menu</button>
-            <nav className={`${styles.navList} ${isOpen ? styles.open : ''}`}>
-                <ul>
-                    <li className={styles.navItem}>Home</li>
-                    <li className={styles.navItem}>
-                        Products
-                        <ul className={styles.navItemDropdown}>
-                            <li>Subjective Cognitive Booster</li>
-                            <li>Subjective Semantizer</li>
-                            <li>Subjective Domotics</li>
-                            <li>Subjective Advertising</li>
-                            <li>Subjective Instant Job Finder</li>
-                            <li>Subjective ForMate</li>
-                            <li>Subjective Thermo-Currency</li>
-                            <li>Subjective Adapter</li>
-                            <li>Subjective BeMyself</li>
-                        </ul>
-                    </li>
-                    <li className={styles.navItem}>Impact</li>
-                    <li className={styles.navItem}>How It Works</li>
-                    <li className={styles.navItem}>Scientific Research</li>
-                    <li className={styles.navItem}>Investors</li>
-                    <li className={styles.navItem}>Contact</li>
-                    <li className={styles.navItem}>About</li>
-                </ul>
-            </nav>
-        </>
+        <div className={`${styles.menuItem} ${styles.link}`}>
+            Products
+            <div className={styles.subMenu}>
+                <div id="left" className={styles.leftMenu}>
+                    <div className={`${styles.menuItem} ${styles.link}`}>
+                        <a href=""><ImageMenuItem className={`styles.link`} imageUrl="images/purple_angel_semantizer.jpg" label="GT® Subjective Semantizer" text="In the Post-Education Era - THE KNOWLEDGE IS ALIVE."/></a>
+                    </div>
+                    <div className={`${styles.menuItem} ${styles.link}`}>
+                        <a href=""><ImageMenuItem className={`styles.link`}  imageUrl="images/angel_red_2.png" label="GT® Subjective Cognitive Booster" text="Day to day nothing you will forget."/></a>
+                    </div>
+                    <div className={`${styles.menuItem} ${styles.link}`}>
+                        <a href=""><ImageMenuItem className={`styles.link`}  imageUrl="images/angel_blue_2.png" label="GT® Subjective Domotics" text="Menu Item Text"/></a>
+                    </div>
+                    <div className={`${styles.menuItem} ${styles.link}`}>
+                        <a href=""><ImageMenuItem className={`styles.link`}  imageUrl="images/yellow_angel_1.png" label="GT® Subjective Advertising" text="Menu Item Text"/></a>
+                    </div>
+                    <div className={`${styles.menuItem} ${styles.link}`}>
+                        <a href=""><ImageMenuItem className={`styles.link`}  imageUrl="images/angel_greeen_3.png" label="GT® Subjective Instant Job Finder" text="Menu Item Text"/></a>
+                    </div>
+                </div>
+                <div id="right" className={styles.rightMenu}>
+                    <div className={`${styles.menuItem} ${styles.link}`}>
+                        <a href=""><ImageMenuItem className={`styles.link`}  imageUrl="images/angel_pink_3.png" label="GT® Subjective ForMate" text="Menu Item Text"/></a>
+                    </div>
+                    <div className={`${styles.menuItem} ${styles.link}`}>
+                        <a href=""><ImageMenuItem className={`styles.link`}  imageUrl="images/angel-2.jpeg" label="GT® Subjective Thermo-Currency" text="Menu Item Text"/></a>
+                    </div>
+                    <div className={`${styles.menuItem} ${styles.link}`}>
+                        <a href=""><ImageMenuItem  className={`styles.link`} imageUrl="images/angel_blue_2.png" label="GT® Subjective Adapter" text="Menu Item Text"/></a>
+                    </div>
+                    <div className={`${styles.menuItem} ${styles.link}`}>
+                        <a href=""><ImageMenuItem className={`styles.link`}  imageUrl="images/angel_red_1.png" label="GT® Subjective BeMyself" text="Menu Item Text"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href=""><div className={`${styles.menuItem} ${styles.link}`}>Impact</div></a>
+        <a href=""><div className={`${styles.menuItem} ${styles.link}`}>How It Works</div></a>
+        <a href=""><div className={`${styles.menuItem} ${styles.link}`}>Scientific Research</div></a>
+        <a href=""><div className={`${styles.menuItem} ${styles.link}`}>Careers</div></a>
+        <a href=""><div className={`${styles.menuItem} ${styles.link}`}>Investors</div></a>
+        <a href=""><div className={`${styles.menuItem} ${styles.link}`}>Contact</div></a>
+        <a href=""><div className={`${styles.menuItem} ${styles.link}`}>About</div></a>
+        <button className={styles.signUpButton}>Sign Up</button>
+    </div>
+           
     );
 };
 
