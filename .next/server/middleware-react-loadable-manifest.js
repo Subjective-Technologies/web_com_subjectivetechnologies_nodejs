@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"index.js -> ../components/ThreeCanvas\":{\"id\":\"index.js -> ../components/ThreeCanvas\",\"files\":[\"static/chunks/components_ThreeCanvas_js.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST="{\"index.js -> ../components/GoldenThinkerAnimation\":{\"id\":\"index.js -> ../components/GoldenThinkerAnimation\",\"files\":[\"static/chunks/components_GoldenThinkerAnimation_js.js\"]}}"

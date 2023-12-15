@@ -3,7 +3,7 @@ import React from 'react';
 import Menu from '../components/Menu';
 import Footer from '../components/Footer';
 
-const ThreeCanvas = dynamic(() => import('../components/ThreeCanvas'), {
+const GoldenThinkerAnimation = dynamic(() => import('../components/GoldenThinkerAnimation'), {
   ssr: false,
 });
 
@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <div>
             <Menu />
-            <ThreeCanvas id="three_canvas"/>
+            <GoldenThinkerAnimation id="three_canvas"/>
             <Footer />
         </div>
     );

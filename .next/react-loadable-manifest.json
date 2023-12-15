@@ -1,8 +1,8 @@
 {
-  "index.js -> ../components/ThreeCanvas": {
-    "id": "index.js -> ../components/ThreeCanvas",
+  "index.js -> ../components/GoldenThinkerAnimation": {
+    "id": "index.js -> ../components/GoldenThinkerAnimation",
     "files": [
-      "static/chunks/components_ThreeCanvas_js.js"
+      "static/chunks/components_GoldenThinkerAnimation_js.js"
     ]
   }
 }
