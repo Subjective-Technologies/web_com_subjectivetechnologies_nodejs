@@ -18,6 +18,13 @@ class Scene {
 
   init() {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.domElement.style.display = 'block';
+    this.renderer.domElement.style.margin = '0';
+    const canvas = this.renderer.domElement;
+    canvas.style.position = 'absolute'; // Example to make it absolute positioned
+    canvas.style.left = '0';
+    canvas.style.top = '0';
+
     this.renderer.gammaOutput = false;
     document.body.appendChild(this.renderer.domElement);
 
