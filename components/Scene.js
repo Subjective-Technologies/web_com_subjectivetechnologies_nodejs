@@ -147,6 +147,16 @@ class Scene {
     // Convert the snapshot object to JSON
     return JSON.stringify(snapshot, null, 2);
   }
+
+
+  loadObjModel(objPath) {
+    const loader = new OBJLoader();
+    loader.load(objPath, (obj) => {
+      // Process the loaded .obj file
+      // For example, setting position, scale, etc.
+      this.scene.add(obj);
+    });
+  }
   
   
 }

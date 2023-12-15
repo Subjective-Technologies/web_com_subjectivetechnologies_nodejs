@@ -7,16 +7,17 @@ import Scene from './Scene';
 
 const GoldenThinkerAnimation = () => {
   useEffect(() => {
-    const myScene = new Scene();
-    myScene.init();
+    const image360Path = 'images/360/back.jpg'; // Update with the actual path
+    const objPath = '3d/anim_goldenthinker.obj'; // Update with the actual path
 
-    // Rest of your code to add elements to the scene...
+    const myScene = new Scene(image360Path, objPath);
+    myScene.init();
 
     return () => {
       // Clean up when the component unmounts
       myScene.dispose();
     };
-  },[]);
+  }, []);
 
   return <div id="three-canvas-container"></div>;
 };
