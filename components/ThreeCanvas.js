@@ -19,7 +19,7 @@ const goldMaterial = new THREE.MeshPhysicalMaterial({
   reflectivity: 1, // Full reflectivity for a metallic look
 });
 
-myScene.addElement('anim_goldenthinker.obj', {
+myScene.addElement('https://symmetrical-space-fortnight-j7wxgwrjpqcpqj-3000.app.github.dev/3d/anim_goldenthinker.obj', {
   material: goldMaterial,
   position: { x: 0, y: -2, z: 0 },
   rotation: { x: 0, y: 0, z: 0 },
