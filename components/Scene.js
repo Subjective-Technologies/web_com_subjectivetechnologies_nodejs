@@ -3,7 +3,9 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 
 class Scene {
-  constructor() {
+  constructor(image360Path, objPath) {
+    this.image360Path = image360Path;
+    this.objPath = objPath;
     this.scene = new THREE.Scene();
     if (typeof window !== 'undefined') {
       this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -21,14 +23,18 @@ class Scene {
 
     this.camera.position.z = 5;
     this.controls.target.set(0, 0, 0);
-    
+
     this.addLights();
-    this.addBackgroundSphere('images/360/background_black_4096x2048_360.png');
-    
+    this.addBackgroundSphere(this.image360Path); // Use the provided 360 image path
+
+    // Load the .obj file
+    this.loadObjModel(this.objPath);
+
     this.controls.addEventListener('change', () => {
       this.updateObjectInfoArray();
       this.printSceneState();
     });
+
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'S') {
