@@ -1,10 +1,11 @@
-// pages/index.js
+import dynamic from 'next/dynamic';
 import React from 'react';
 import Menu from '../components/Menu';
-import ThreeCanvas from '../components/ThreeCanvas';
 import Footer from '../components/Footer';
 
-
+const ThreeCanvas = dynamic(() => import('../components/ThreeCanvas'), {
+  ssr: false,
+});
 
 const Home = () => {
     return (
