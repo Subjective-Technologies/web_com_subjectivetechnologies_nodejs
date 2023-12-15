@@ -23,7 +23,7 @@ class Scene {
     this.controls.target.set(0, 0, 0);
     
     this.addLights();
-    this.addBackgroundSphere('/images/back.jpg');
+    this.addBackgroundSphere('images/360/background_black_4096x2048_360.png');
     
     this.controls.addEventListener('change', () => {
       this.updateObjectInfoArray();
