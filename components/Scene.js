@@ -21,12 +21,25 @@ class Scene {
     this.renderer.domElement.style.display = 'block';
     this.renderer.domElement.style.margin = '0';
     const canvas = this.renderer.domElement;
-    canvas.style.position = 'absolute'; // Example to make it absolute positioned
+    canvas.style.position = 'relative'; // Example to make it absolute positioned
     canvas.style.left = '0';
     canvas.style.top = '0';
 
+    // Instead of document.body.appendChild(this.renderer.domElement);
+
+
+
+    window.addEventListener('resize', onWindowResize, false);
+    function onWindowResize() {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+
+
     this.renderer.gammaOutput = false;
-    document.body.appendChild(this.renderer.domElement);
+    const container = document.getElementById('three-canvas-container'); // Make sure this is the ID of your container div
+    container.appendChild(this.renderer.domElement);
 
     this.camera.position.z = 5;
     this.controls.target.set(0, 0, 0);
@@ -171,6 +184,44 @@ class Scene {
     });
   }
   
+
+  dispose() {
+    // Dispose of geometries, materials, textures, etc.
+    this.scene.traverse(object => {
+      if (!object.isMesh) return;
+
+      object.geometry.dispose();
+
+      if (object.material.isMaterial) {
+        this.cleanMaterial(object.material);
+      } else {
+        // An array of materials
+        for (const material of object.material) cleanMaterial(material);
+      }
+    });
+
+    if (this.renderer) {
+      this.renderer.dispose();
+    }
+
+    // Additional cleanup if needed
+  
+  }
+
+  cleanMaterial(material) {
+    material.dispose();
+  
+    // Dispose textures
+    for (const key of Object.keys(material)) {
+      const value = material[key];
+      if (value && typeof value === 'object' && 'minFilter' in value) {
+        value.dispose();
+      }
+    }
+  }
+
+
+
   
 }
 
