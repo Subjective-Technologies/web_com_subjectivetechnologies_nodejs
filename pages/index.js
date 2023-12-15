@@ -1,3 +1,4 @@
+// pages/index.js
 import dynamic from 'next/dynamic';
 import React from 'react';
 import Menu from '../components/Menu';
@@ -9,10 +10,16 @@ const GoldenThinkerAnimation = dynamic(() => import('../components/GoldenThinker
 
 const Home = () => {
     return (
-        <div>
-            <Menu />
-            <GoldenThinkerAnimation id="three_canvas"/>
-            <Footer />
+        <div className="container">
+            <div className="menu_container">
+                <Menu />
+            </div>
+            <div className="animation_container">
+                <GoldenThinkerAnimation id="three_canvas"/>
+            </div>
+            <div className="footer_container">
+                <Footer />
+            </div>
         </div>
     );
 };

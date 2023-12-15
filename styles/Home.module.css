@@ -1,25 +1,2 @@
 /* styles/Home.module.css */
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #071919;
-    margin: 0px;
-    font-family: 'InputMono', monospace; /* Apply the custom font */
-}
-
-#three_canvas {
-    display: block;
-    width: 100%;
-    height: 85vh;
-    touch-action: none;
-}
-
-body {
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* This prevents scrollbars */
-    }

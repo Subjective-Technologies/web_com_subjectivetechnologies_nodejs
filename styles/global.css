@@ -1,0 +1,26 @@
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 2.6fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "menu_container menu_container menu_container"
+      "animation_container animation_container animation_container"
+      "footer_container footer_container footer_container";
+  }
+  
+  .menu_container { grid-area: menu_container; }
+  
+  .animation_container { grid-area: animation_container; }
+  
+  .footer_container { grid-area: footer_container; }
+  
+  
+
+@font-face {
+    font-family: 'InputMono';
+    src: url('../public/font/Input_Fonts/InputMono/InputMono/InputMono-Light.ttf') format('truetype'); /* Adjust the path to your font file */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
