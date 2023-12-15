@@ -19,6 +19,6 @@ const GoldenThinkerAnimation = () => {
     };
   }, []);
 
-  return <div id="three-canvas-container"></div>;
+  return <div id="animation_container"></div>;
 };
 export default GoldenThinkerAnimation;

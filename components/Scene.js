@@ -18,7 +18,7 @@ class Scene {
 
   init() {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.renderer.domElement.style.display = 'block';
+    this.renderer.domElement.style.display = 'relative';
     this.renderer.domElement.style.margin = '0';
     const canvas = this.renderer.domElement;
     canvas.style.position = 'relative'; // Example to make it absolute positioned
@@ -28,17 +28,8 @@ class Scene {
     // Instead of document.body.appendChild(this.renderer.domElement);
 
 
-
-    window.addEventListener('resize', onWindowResize, false);
-    function onWindowResize() {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    }
-
-
     this.renderer.gammaOutput = false;
-    const container = document.getElementById('three-canvas-container'); // Make sure this is the ID of your container div
+    const container = document.getElementById('animation_container'); // Make sure this is the ID of your container div
     container.appendChild(this.renderer.domElement);
 
     this.camera.position.z = 5;
