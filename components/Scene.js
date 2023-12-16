@@ -3,18 +3,20 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 
 class Scene {
-  constructor(image360Path, objPath) {
+  constructor(image360Path, objPath, material) {
     this.image360Path = image360Path;
     this.objPath = objPath;
+    this.material = material; // Store the material
     this.scene = new THREE.Scene();
+
     if (typeof window !== 'undefined') {
-      this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-      this.renderer = new THREE.WebGLRenderer();
-      this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+        this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        this.renderer = new THREE.WebGLRenderer();
+        this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     }
+
     this.objectInfoArray = [];
   }
-  
 
   init() {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
@@ -174,6 +176,22 @@ class Scene {
       this.scene.add(obj);
     });
   }
+
+  loadObjModelWithMaterial(objPath, material) {
+    const loader = new OBJLoader();
+    loader.load(objPath, (obj) => {
+        obj.traverse((child) => {
+            if (child.isMesh) {
+                child.material = material || child.material;
+            }
+        });
+
+        this.scene.add(obj);
+    });
+  }
+
+// ... rest of the Scene class
+
   
 
   dispose() {
