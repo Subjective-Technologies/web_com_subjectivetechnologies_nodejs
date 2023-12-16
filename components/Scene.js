@@ -21,7 +21,7 @@ class Scene {
     this.renderer.domElement.style.display = 'relative';
     this.renderer.domElement.style.margin = '0';
     const canvas = this.renderer.domElement;
-    canvas.style.position = 'relative'; // Example to make it absolute positioned
+    canvas.style.position = 'absolute'; // Example to make it absolute positioned
     canvas.style.left = '0';
     canvas.style.top = '0';
 

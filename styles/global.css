@@ -9,9 +9,9 @@
       "footer_container footer_container footer_container";
   }
   
-  .menu_container { grid-area: menu_container; }
+  .menu_container { grid-area: menu_container; z-index: 1;}
   
-  .animation_container { grid-area: animation_container; }
+  .animation_container { grid-area: animation_container;}
   
   .footer_container { grid-area: footer_container; }
   
