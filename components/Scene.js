@@ -16,6 +16,7 @@ class Scene {
     }
 
     this.objectInfoArray = [];
+    this.init();
   }
 
   init() {
