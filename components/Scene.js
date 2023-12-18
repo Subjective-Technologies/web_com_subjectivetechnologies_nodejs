@@ -3,7 +3,11 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 
 class Scene {
-  constructor(image360Path, objPath, material) {
+
+  static instance  = null;
+
+  constructor(image360Path, objPath, material, bloom = true) {
+    
     this.image360Path = image360Path;
     this.objPath = objPath;
     this.material = material; // Store the material
@@ -15,11 +19,25 @@ class Scene {
         this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     }
 
+    if (!bloom) {
+      this.renderer = new THREE.WebGLRenderer({ antialias: true });
+      const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), bloomStrength, bloomRadius, bloomThreshold);
+      bloomPass.strength = 1.0;
+      bloomPass.radius = 0.1;
+      bloomPass.threshold = 0.9;
+      this.renderPass = new RenderPass(scene, camera);
+      this.composer = new EffectComposer(renderer);
+      composer.addPass(renderPass);
+      composer.addPass(bloomPass);
+
+    }
     this.objectInfoArray = [];
     this.init();
+ 
   }
 
   init() {
+    console.log("Calling INIT");
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.domElement.style.display = 'relative';
     this.renderer.domElement.style.margin = '0';
@@ -42,7 +60,7 @@ class Scene {
     this.addBackgroundSphere(this.image360Path); // Use the provided 360 image path
 
     // Load the .obj file
-    this.loadObjModel(this.objPath);
+    this.loadObjModelWithMaterial(this.objPath,this.material);
 
     this.controls.addEventListener('change', () => {
       this.updateObjectInfoArray();
@@ -68,18 +86,22 @@ class Scene {
   animate() {
     requestAnimationFrame(() => this.animate());
     // Add any animations or updates here
-    this.renderer.render(this.scene, this.camera);
+    if (this.bloom){
+      composer.render();
+    } else {
+      this.renderer.render(this.scene, this.camera);
+    }
   }
 
   addLights() {
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
     this.scene.add(ambientLight);
 
-    const pointLight1 = new THREE.PointLight(0xffffff, 1);
+    const pointLight1 = new THREE.PointLight(0xffffff, 218);
     pointLight1.position.set(10, 10, 10);
     this.scene.add(pointLight1);
 
-    const pointLight2 = new THREE.PointLight(0xffffff, 1);
+    const pointLight2 = new THREE.PointLight(0xffffff, 500);
     pointLight2.position.set(-10, -10, -10);
     this.scene.add(pointLight2);
   }
