@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aframe": "^1.5.0",
     "next": "14.0.3",
     "postprocessing": "^6.33.4",
     "react": "^18",
