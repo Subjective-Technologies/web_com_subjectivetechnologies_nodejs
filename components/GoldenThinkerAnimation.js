@@ -62,8 +62,10 @@ const GoldenThinkerAnimation = () => {
           scene.add(sphereMesh);
         }
 
-        addBackgroundSphere('images/360/background_black_4096x2048_360.jpg');
+        //addBackgroundSphere('images/360/background_black_4096x2048_360.jpg');
 
+
+        addBackgroundSphere('images/360/back4.png');
 
         camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 100);
         camera.position.set(-5, 2.5, -3.5);
@@ -101,7 +103,7 @@ const GoldenThinkerAnimation = () => {
           reflectivity: 1, // Full reflectivity for a metallic look
         });
 
-        new GLTFLoader().load('3d/thinker.glb', function (gltf) {
+        new GLTFLoader().load('3d/all.glb', function (gltf) {
           const model = gltf.scene;
         
           // Function to set material recursively for all children

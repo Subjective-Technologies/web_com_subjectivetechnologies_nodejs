@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const GoldenThinkerAnimation = () => {
+const GoldenThinkerAnimationReact = () => {
   useEffect(() => {
     // Add event listeners or other logic as needed
     return () => {
@@ -12,7 +12,7 @@ const GoldenThinkerAnimation = () => {
     <div>
         <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
       <a-scene background="color: #000;">
-        <a-sky src="images/360/back.jpg"></a-sky>
+        <a-sky src="images/360/back4.jpg"></a-sky>
         <a-entity
           gltf-model="url(3d/thinker.glb)"
           position="-5 2.5 -3.5"
@@ -24,4 +24,4 @@ const GoldenThinkerAnimation = () => {
   );
 };
 
-export default GoldenThinkerAnimation;
+export default GoldenThinkerAnimationReact;
