@@ -54,7 +54,6 @@ const Menu = () => {
         <a href=""><div className={`${styles.menuItem} ${styles.link}`}>Careers</div></a>
         <a href=""><div className={`${styles.menuItem} ${styles.link}`}>Investors</div></a>
         <a href=""><div className={`${styles.menuItem} ${styles.link}`}>Contact</div></a>
-        <a href=""><div className={`${styles.menuItem} ${styles.link}`}>About</div></a>
         <button className={styles.signUpButton}>Sign Up</button>
     </div>
            
