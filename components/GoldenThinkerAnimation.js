@@ -54,7 +54,7 @@ const GoldenThinkerAnimation = () => {
       camera.add(pointLight);
 
       const renderScene = new RenderPass(scene, camera);
-      const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.5, 0.4, 0.85);
+      const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 0.5, 0.2, 0.55);
       const outputPass = new OutputPass();
 
       composer = new EffectComposer(renderer);
