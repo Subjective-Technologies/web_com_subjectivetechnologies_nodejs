@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');*/
+
+.impactContainer {
+  font-family: 'Roboto Mono', monospace;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+.impactHeader {
+  background: #f4b400;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.impactTitle {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.impactSubtitle {
+  font-size: 1.5rem;
+  margin: 10px 0 0;
+}
+
+.videoSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  margin-top: 100px; /* Add margin to the top */
+}
+
+.video {
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.introSection {
+  padding: 40px 20px;
+}
+
+.introTitle {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.introText {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.eraSection {
+  padding: 40px 20px;
+}
+
+.eraTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.impactSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 50px 20px;
+  color: #333;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.impactImage {
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.impactText {
+  width: 50%;
+  padding: 20px;
+}
+
+.impactHeading {
+  font-size: 2rem;
+  margin: 0 0 20px;
+  color: #333;
+}
+
+.impactDescription {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.impactQuoteSection {
+  background: #333;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.impactQuote {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.impactFooter {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.impactFooterText {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .impactSection {
+    flex-direction: column;
+  }
+
+  .reverse {
+    flex-direction: column;
+  }
+
+  .impactImage,
+  .impactText {
+    width: 100%;
+  }
+
+  .impactText {
+    padding: 20px 0;
+  }
+
+  .video {
+    width: 100%;
+  }
+}

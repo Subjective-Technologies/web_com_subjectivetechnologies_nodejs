@@ -1,152 +1,23 @@
 import React, { useEffect } from 'react';
 import * as THREE from 'three';
-import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
-import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass.js';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import GUI from 'lil-gui';
+import { initRenderer, initCamera, initLights, initComposer, initModel, setupGUI } from './SceneUtils';
+import { startRecording, stopRecording, pauseRecording, continueRecording, playAnimation, loadCameraPath } from './AnimationUtils';
 
 const DEVELOPER_MODE = true;
 
 const GoldenThinkerAnimation = () => {
   useEffect(() => {
-    let composer, camera, renderer, model, pointLight1, pointLight2, pointLight3, pointLight4, directionalLight;
-    const scene = new THREE.Scene();
-    let recording = false;
-    let recordingPaused = false;
-    let cameraPath = [];
-    let lastTimestamp = null;
-    let playbackIndex = 0;
-    let playbackSpeed = 0.1; // Adjust this for smoother transitions
+    let scene, camera, renderer, composer, model, pointLights, directionalLight;
+    let scrollY = window.scrollY;
 
-    function startRecording() {
-      recording = true;
-      recordingPaused = false;
-      cameraPath = [];
-      lastTimestamp = null;
-      console.log("Recording started");
-    }
-
-    function stopRecording() {
-      recording = false;
-      recordingPaused = false;
-      console.log("Recording stopped");
-      console.log(cameraPath); // Print the camera path to the console
-      exportCameraPath();
-    }
-
-    function pauseRecording() {
-      recordingPaused = true;
-      console.log("Recording paused");
-    }
-
-    function continueRecording() {
-      recordingPaused = false;
-      console.log("Recording continued");
-    }
-
-    function exportCameraPath() {
-      const serializedPath = cameraPath.map(point => ({
-        camera: {
-          position: {
-            x: point.camera.position.x,
-            y: point.camera.position.y,
-            z: point.camera.position.z
-          },
-          rotation: {
-            x: point.camera.rotation.x,
-            y: point.camera.rotation.y,
-            z: point.camera.rotation.z
-          }
-        },
-        lights: point.lights.map(light => ({
-          position: {
-            x: light.position.x,
-            y: light.position.y,
-            z: light.position.z
-          },
-          intensity: light.intensity
-        }))
-      }));
-      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(serializedPath));
-      const downloadAnchorNode = document.createElement('a');
-      downloadAnchorNode.setAttribute("href", dataStr);
-      downloadAnchorNode.setAttribute("download", "camera_path.json");
-      document.body.appendChild(downloadAnchorNode); // Required for Firefox
-      downloadAnchorNode.click();
-      downloadAnchorNode.remove();
-    }
-
-    function loadCameraPath(jsonString) {
-      const loadedPath = JSON.parse(jsonString);
-      cameraPath = loadedPath.map(point => ({
-        camera: {
-          position: new THREE.Vector3(point.camera.position.x, point.camera.position.y, point.camera.position.z),
-          rotation: new THREE.Euler(point.camera.rotation.x, point.camera.rotation.y, point.camera.rotation.z)
-        },
-        lights: point.lights.map(light => ({
-          position: new THREE.Vector3(light.position.x, light.position.y, light.position.z),
-          intensity: light.intensity
-        }))
-      }));
-    }
-
-    function playAnimation() {
-      if (cameraPath.length === 0) {
-        console.log("No recorded animation to play.");
-        return;
-      }
-
-      playbackIndex = 0;
-      function animatePlayback() {
-        if (playbackIndex < cameraPath.length - 1) {
-          const { camera: startCam, lights: startLights } = cameraPath[playbackIndex];
-          const { camera: endCam, lights: endLights } = cameraPath[playbackIndex + 1];
-          const alpha = playbackSpeed;
-
-          camera.position.lerpVectors(startCam.position, endCam.position, alpha);
-          camera.quaternion.slerpQuaternions(
-            new THREE.Quaternion().setFromEuler(startCam.rotation),
-            new THREE.Quaternion().setFromEuler(endCam.rotation),
-            alpha
-          );
-
-          pointLight1.position.lerpVectors(startLights[0].position, endLights[0].position, alpha);
-          pointLight1.intensity = THREE.MathUtils.lerp(startLights[0].intensity, endLights[0].intensity, alpha);
-          pointLight2.position.lerpVectors(startLights[1].position, endLights[1].position, alpha);
-          pointLight2.intensity = THREE.MathUtils.lerp(startLights[1].intensity, endLights[1].intensity, alpha);
-          pointLight3.position.lerpVectors(startLights[2].position, endLights[2].position, alpha);
-          pointLight3.intensity = THREE.MathUtils.lerp(startLights[2].intensity, endLights[2].intensity, alpha);
-          pointLight4.position.lerpVectors(startLights[3].position, endLights[3].position, alpha);
-          pointLight4.intensity = THREE.MathUtils.lerp(startLights[3].intensity, endLights[3].intensity, alpha);
-          directionalLight.position.lerpVectors(startLights[4].position, endLights[4].position, alpha);
-          directionalLight.intensity = THREE.MathUtils.lerp(startLights[4].intensity, endLights[4].intensity, alpha);
-
-          playbackIndex += playbackSpeed;
-          requestAnimationFrame(animatePlayback);
-        } else {
-          playbackIndex = 0;
-        }
-      }
-      animatePlayback();
-    }
-
-    function init() {
+    async function init() {
       const container = document.getElementById('animation_container');
-      const clock = new THREE.Clock();
+      scene = new THREE.Scene();
 
-      renderer = new THREE.WebGLRenderer({ antialias: true });
-      renderer.setPixelRatio(window.devicePixelRatio);
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.toneMapping = THREE.ReinhardToneMapping;
-      renderer.toneMappingExposure = 1.5;
-      container.appendChild(renderer.domElement);
-
-      camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 100);
-      camera.position.set(8, 4, 8); // Adjusted camera position for better view
-      scene.add(camera);
+      renderer = initRenderer(container);
+      camera = initCamera(scene);
+      composer = initComposer(renderer, scene, camera);
 
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.target.set(0, 0, 0); // Set the target to the center of the statue and the pyramid
@@ -154,412 +25,42 @@ const GoldenThinkerAnimation = () => {
       controls.minDistance = 5;
       controls.maxDistance = 20;
 
-      pointLight1 = new THREE.PointLight(0xffffff, 1.5);
-      pointLight1.position.set(5, 10, 5);
-      scene.add(pointLight1);
+      ({ pointLights, directionalLight } = initLights(scene));
+      model = await initModel(scene);
 
-      pointLight2 = new THREE.PointLight(0xffffff, 1.5);
-      pointLight2.position.set(-5, 10, -5);
-      scene.add(pointLight2);
-
-      pointLight3 = new THREE.PointLight(0xffffff, 1.5);
-      pointLight3.position.set(5, -10, -5);
-      scene.add(pointLight3);
-
-      pointLight4 = new THREE.PointLight(0xffffff, 1.5);
-      pointLight4.position.set(-5, -10, 5);
-      scene.add(pointLight4);
-
-      directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
-      directionalLight.position.set(10, 20, 10);
-      scene.add(directionalLight);
-
-      const renderScene = new RenderPass(scene, camera);
-      const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 0.7, 0.5, 0.1); // Softer bloom effect
-      const outputPass = new OutputPass();
-
-      composer = new EffectComposer(renderer);
-      composer.addPass(renderScene);
-      composer.addPass(bloomPass);
-      composer.addPass(outputPass);
-
-      const textureLoader = new THREE.TextureLoader();
-      const diffuseTexture = textureLoader.load('3d/textures/Avellana_Diffuse.png');
-      const glossinessTexture = textureLoader.load('3d/textures/Avellana_Glossiness.png');
-      const heightTexture = textureLoader.load('3d/textures/Avellana_Height.png');
-      const normalTexture = textureLoader.load('3d/textures/Avellana_Normal.png');
-      const specularTexture = textureLoader.load('3d/textures/Avellana_Specular.png');
-
-      const goldMaterial = new THREE.MeshPhysicalMaterial({
-        color: 0xFFD700, // Gold color
-        metalness: 1,
-        roughness: 0.3,
-        clearcoat: 1,
-        clearcoatRoughness: 0.1
-      });
-
-      new GLTFLoader().load('3d/all.glb', function (gltf) {
-        model = gltf.scene;
-        setMaterial(model, goldMaterial);
-        model.rotation.set(0, -Math.PI / 2, 0);
-        model.position.set(0, -2, 0);
-        scene.add(model);
-        animate();
-        setSceneSettings(initialSettings);
-
-        if (DEVELOPER_MODE) {
-          setupGUI(model, goldMaterial);
-        }
-      });
-
-      function setMaterial(object, material) {
-        object.traverse((child) => {
-          if (child.isMesh) {
-            child.material = material;
-            child.castShadow = true;
-            child.receiveShadow = true;
-          }
-        });
+      if (DEVELOPER_MODE) {
+        setupGUI(model, camera, pointLights, directionalLight, startRecording, stopRecording, pauseRecording, continueRecording, (direction) => playAnimation(direction, camera, pointLights, directionalLight));
       }
 
-      function animate(timestamp) {
-        requestAnimationFrame(animate);
-        composer.render();
-        controls.update(); // Update controls
+      const animationData = await fetch('3d/animations/animation.json').then(res => res.json());
+      loadCameraPath(JSON.stringify(animationData));
 
-        if (recording && !recordingPaused) {
-          if (!lastTimestamp) lastTimestamp = timestamp;
-          const elapsed = timestamp - lastTimestamp;
-          if (elapsed > 100) { // Record every 100ms
-            cameraPath.push({
-              camera: {
-                position: camera.position.clone(),
-                rotation: camera.rotation.clone(),
-              },
-              lights: [
-                {
-                  position: pointLight1.position.clone(),
-                  intensity: pointLight1.intensity
-                },
-                {
-                  position: pointLight2.position.clone(),
-                  intensity: pointLight2.intensity
-                },
-                {
-                  position: pointLight3.position.clone(),
-                  intensity: pointLight3.intensity
-                },
-                {
-                  position: pointLight4.position.clone(),
-                  intensity: pointLight4.intensity
-                },
-                {
-                  position: directionalLight.position.clone(),
-                  intensity: directionalLight.intensity
-                }
-              ]
-            });
-            lastTimestamp = timestamp;
-          }
-        }
-      }
-
-      function onKeyDown(event) {
-        if (event.altKey && event.key === 's') {
-          takeSnapshot();
-        }
-        if (event.shiftKey && event.key === 'R') {
-          startRecording();
-        }
-        if (event.shiftKey && event.key === 'S') {
-          stopRecording();
-        }
-        if (event.shiftKey && event.key === 'P') {
-          pauseRecording();
-        }
-        if (event.shiftKey && event.key === 'C') {
-          continueRecording();
-        }
-        if (event.shiftKey && event.key === 'A') {
-          playAnimation();
-        }
-      }
-
-      window.addEventListener('keydown', onKeyDown);
       window.addEventListener('resize', onWindowResize);
+      window.addEventListener('scroll', onScroll);
 
-      return () => {
-        window.removeEventListener('keydown', onKeyDown);
-        window.removeEventListener('resize', onWindowResize);
-        renderer.dispose();
-        composer.dispose();
-      };
+      animate();
     }
 
-    const takeSnapshot = () => {
-      const sceneSnapshot = {
-        camera: {
-          position: camera.position,
-          rotation: camera.rotation
-        },
-        model: {
-          position: model.position,
-          rotation: model.rotation
-        },
-        lights: [
-          {
-            type: 'PointLight',
-            position: pointLight1.position,
-            color: pointLight1.color.getHex(),
-            intensity: pointLight1.intensity
-          },
-          {
-            type: 'PointLight2',
-            position: pointLight2.position,
-            color: pointLight2.color.getHex(),
-            intensity: pointLight2.intensity
-          },
-          {
-            type: 'PointLight3',
-            position: pointLight3.position,
-            color: pointLight3.color.getHex(),
-            intensity: pointLight3.intensity
-          },
-          {
-            type: 'PointLight4',
-            position: pointLight4.position,
-            color: pointLight4.color.getHex(),
-            intensity: pointLight4.intensity
-          },
-          {
-            type: 'DirectionalLight',
-            position: directionalLight.position,
-            color: directionalLight.color.getHex(),
-            intensity: directionalLight.intensity
-          }
-        ]
-      };
-      console.log(JSON.stringify(sceneSnapshot, null, 2));
-    };
+    function animate() {
+      requestAnimationFrame(animate);
+      composer.render();
+    }
 
-    const setSceneSettings = (settings) => {
-      if (settings.camera) {
-        camera.position.set(settings.camera.position.x, settings.camera.position.y, settings.camera.position.z);
-        camera.rotation.set(settings.camera.rotation._x, settings.camera.rotation._y, settings.camera.rotation._z);
-      }
-      if (settings.model) {
-        model.position.set(settings.model.position.x, settings.model.position.y, settings.model.position.z);
-        model.rotation.set(settings.model.rotation._x, settings.model.rotation._y, settings.model.rotation._z);
-      }
-      if (settings.lights) {
-        settings.lights.forEach(light => {
-          if (light.type === 'PointLight') {
-            pointLight1.position.set(light.position.x, light.position.y, light.position.z);
-            pointLight1.color.setHex(light.color);
-            pointLight1.intensity = light.intensity;
-          }
-          if (light.type === 'PointLight2') {
-            pointLight2.position.set(light.position.x, light.position.y, light.position.z);
-            pointLight2.color.setHex(light.color);
-            pointLight2.intensity = light.intensity;
-          }
-          if (light.type === 'PointLight3') {
-            pointLight3.position.set(light.position.x, light.position.y, light.position.z);
-            pointLight3.color.setHex(light.color);
-            pointLight3.intensity = light.intensity;
-          }
-          if (light.type === 'PointLight4') {
-            pointLight4.position.set(light.position.x, light.position.y, light.position.z);
-            pointLight4.color.setHex(light.color);
-            pointLight4.intensity = light.intensity;
-          }
-          if (light.type === 'DirectionalLight') {
-            directionalLight.position.set(light.position.x, light.position.y, light.position.z);
-            directionalLight.color.setHex(light.color);
-            directionalLight.intensity = light.intensity;
-          }
-        });
-      }
-    };
-
-    const setupGUI = (model, material) => {
-      const gui = new GUI();
-
-      const cameraFolder = gui.addFolder('Camera');
-      cameraFolder.add(camera.position, 'x', -10, 10).name('Position X');
-      cameraFolder.add(camera.position, 'y', -10, 10).name('Position Y');
-      cameraFolder.add(camera.position, 'z', -10, 10).name('Position Z');
-      cameraFolder.add(camera.rotation, '_x', -Math.PI, Math.PI).name('Rotation X');
-      cameraFolder.add(camera.rotation, '_y', -Math.PI, Math.PI).name('Rotation Y');
-      cameraFolder.add(camera.rotation, '_z', -Math.PI, Math.PI).name('Rotation Z');
-
-      const modelFolder = gui.addFolder('Model');
-      modelFolder.add(model.position, 'x', -10, 10).name('Position X');
-      modelFolder.add(model.position, 'y', -10, 10).name('Position Y');
-      modelFolder.add(model.position, 'z', -10, 10).name('Position Z');
-      modelFolder.add(model.rotation, '_x', -Math.PI, Math.PI).name('Rotation X');
-      modelFolder.add(model.rotation, '_y', -Math.PI, Math.PI).name('Rotation Y');
-      modelFolder.add(model.rotation, '_z', -Math.PI, Math.PI).name('Rotation Z');
-
-      const materialFolder = gui.addFolder('Material');
-      materialFolder.add(material, 'metalness', 0, 1).name('Metalness');
-      materialFolder.add(material, 'roughness', 0, 1).name('Roughness');
-      materialFolder.add(material, 'reflectivity', 0, 1).name('Reflectivity');
-      materialFolder.add(material, 'clearcoat', 0, 1).name('Clearcoat');
-      materialFolder.add(material, 'clearcoatRoughness', 0, 1).name('Clearcoat Roughness');
-
-      const pointLight1Folder = gui.addFolder('Point Light 1');
-      pointLight1Folder.add(pointLight1.position, 'x', -10, 10).name('Position X');
-      pointLight1Folder.add(pointLight1.position, 'y', -10, 10).name('Position Y');
-      pointLight1Folder.add(pointLight1.position, 'z', -10, 10).name('Position Z');
-      pointLight1Folder.addColor(pointLight1, 'color').name('Color');
-      pointLight1Folder.add(pointLight1, 'intensity', 0, 10).name('Intensity');
-
-      const pointLight2Folder = gui.addFolder('Point Light 2');
-      pointLight2Folder.add(pointLight2.position, 'x', -10, 10).name('Position X');
-      pointLight2Folder.add(pointLight2.position, 'y', -10, 10).name('Position Y');
-      pointLight2Folder.add(pointLight2.position, 'z', -10, 10).name('Position Z');
-      pointLight2Folder.addColor(pointLight2, 'color').name('Color');
-      pointLight2Folder.add(pointLight2, 'intensity', 0, 10).name('Intensity');
-
-      const pointLight3Folder = gui.addFolder('Point Light 3');
-      pointLight3Folder.add(pointLight3.position, 'x', -10, 10).name('Position X');
-      pointLight3Folder.add(pointLight3.position, 'y', -10, 10).name('Position Y');
-      pointLight3Folder.add(pointLight3.position, 'z', -10, 10).name('Position Z');
-      pointLight3Folder.addColor(pointLight3, 'color').name('Color');
-      pointLight3Folder.add(pointLight3, 'intensity', 0, 10).name('Intensity');
-
-      const pointLight4Folder = gui.addFolder('Point Light 4');
-      pointLight4Folder.add(pointLight4.position, 'x', -10, 10).name('Position X');
-      pointLight4Folder.add(pointLight4.position, 'y', -10, 10).name('Position Y');
-      pointLight4Folder.add(pointLight4.position, 'z', -10, 10).name('Position Z');
-      pointLight4Folder.addColor(pointLight4, 'color').name('Color');
-      pointLight4Folder.add(pointLight4, 'intensity', 0, 10).name('Intensity');
-
-      const directionalLightFolder = gui.addFolder('Directional Light');
-      directionalLightFolder.add(directionalLight.position, 'x', -10, 10).name('Position X');
-      directionalLightFolder.add(directionalLight.position, 'y', -10, 10).name('Position Y');
-      directionalLightFolder.add(directionalLight.position, 'z', -10, 10).name('Position Z');
-      directionalLightFolder.addColor(directionalLight, 'color').name('Color');
-      directionalLightFolder.add(directionalLight, 'intensity', 0, 10).name('Intensity');
-
-      const textureFolder = gui.addFolder('Textures');
-      const textures = {
-        model: '3d/all.glb'
-      };
-      textureFolder.add(textures, 'model').name('Model Texture').onChange((value) => {
-        const textureLoader = new THREE.TextureLoader();
-        const modelTexture = textureLoader.load(value);
-        model.traverse((child) => {
-          if (child.isMesh) {
-            child.material.map = modelTexture;
-          }
-        });
-      });
-
-      gui.add({ takeSnapshot }, 'takeSnapshot').name('Take Snapshot');
-      gui.add({ setSnapshot: () => setSceneSettings({ camera, model, lights: [pointLight1, pointLight2, pointLight3, pointLight4, directionalLight] }) }, 'setSnapshot').name('Set Snapshot');
-      
-      // Add recording controls in a new Animation folder
-      const animationFolder = gui.addFolder('Animation');
-      animationFolder.add({ startRecording }, 'startRecording').name('Start Recording (Shift+R)');
-      animationFolder.add({ stopRecording }, 'stopRecording').name('Stop Recording (Shift+S)');
-      animationFolder.add({ pauseRecording }, 'pauseRecording').name('Pause Recording (Shift+P)');
-      animationFolder.add({ continueRecording }, 'continueRecording').name('Continue Recording (Shift+C)');
-      animationFolder.add({ playAnimation }, 'playAnimation').name('Play Animation (Shift+A)');
-    };
-
-    const initialSettings = {
-      camera: {
-        position: {
-          x: 8,
-          y: 4,
-          z: 8
-        },
-        rotation: {
-          isEuler: true,
-          _x: 0,
-          _y: 0,
-          _z: 0,
-          _order: "XYZ"
-        }
-      },
-      model: {
-        position: {
-          x: 0,
-          y: -2,
-          z: 0
-        },
-        rotation: {
-          isEuler: true,
-          _x: 0,
-          _y: -1.5707963267948966,
-          _z: 0,
-          _order: "XYZ"
-        }
-      },
-      lights: [
-        {
-          type: "PointLight",
-          position: {
-            x: 5,
-            y: 10,
-            z: 5
-          },
-          color: 0xffffff,
-          intensity: 1.5
-        },
-        {
-          type: "PointLight2",
-          position: {
-            x: -5,
-            y: 10,
-            z: -5
-          },
-          color: 0xffffff,
-          intensity: 1.5
-        },
-        {
-          type: "PointLight3",
-          position: {
-            x: 5,
-            y: -10,
-            z: -5
-          },
-          color: 0xffffff,
-          intensity: 1.5
-        },
-        {
-          type: "PointLight4",
-          position: {
-            x: -5,
-            y: -10,
-            z: 5
-          },
-          color: 0xffffff,
-          intensity: 1.5
-        },
-        {
-          type: "DirectionalLight",
-          position: {
-            x: 10,
-            y: 20,
-            z: 10
-          },
-          color: 0xffffff,
-          intensity: 1.5
-        }
-      ]
-    };
-
-    const onWindowResize = () => {
+    function onWindowResize() {
       const width = window.innerWidth;
       const height = window.innerHeight;
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
       renderer.setSize(width, height);
       composer.setSize(width, height);
-    };
+    }
+
+    function onScroll() {
+      const deltaY = window.scrollY - scrollY;
+      const playbackDirection = deltaY > 0 ? 1 : -1;
+      playAnimation(playbackDirection, camera, pointLights, directionalLight);
+      scrollY = window.scrollY;
+    }
 
     init();
   }, []);

@@ -37,7 +37,7 @@ const Menu = () => {
                         <a href=""><ImageMenuItem className={`styles.link`}  imageUrl="images/angel_pink_3.png" label="GT® Subjective ForMate" text="Menu Item Text"/></a>
                     </div>
                     <div className={`${styles.menuItem} ${styles.link}`}>
-                        <a href=""><ImageMenuItem className={`styles.link`}  imageUrl="images/angel-2.jpeg" label="GT® Subjective Thermo-Currency" text="Menu Item Text"/></a>
+                        <a href="products_subjective_thermo_currency"><ImageMenuItem className={`styles.link`}  imageUrl="images/angel-2.jpeg" label="GT® Subjective Thermo-Currency" text="Menu Item Text"/></a>
                     </div>
                     <div className={`${styles.menuItem} ${styles.link}`}>
                         <a href=""><ImageMenuItem  className={`styles.link`} imageUrl="images/angel_blue_2.png" label="GT® Subjective Adapter" text="Menu Item Text"/></a>
@@ -48,7 +48,7 @@ const Menu = () => {
                 </div>
             </div>
         </div>
-        <a href=""><div className={`${styles.menuItem} ${styles.link}`}>Impact</div></a>
+        <a href="impact"><div className={`${styles.menuItem} ${styles.link}`}>Impact</div></a>
         <a href=""><div className={`${styles.menuItem} ${styles.link}`}>How It Works</div></a>
         <a href=""><div className={`${styles.menuItem} ${styles.link}`}>Scientific Research</div></a>
         <a href=""><div className={`${styles.menuItem} ${styles.link}`}>Careers</div></a>

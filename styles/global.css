@@ -25,9 +25,25 @@ html {
   
 
 @font-face {
-    font-family: 'InputMono';
-    src: url('../public/font/Input_Fonts/InputMono/InputMono/InputMono-Light.ttf') format('truetype'); /* Adjust the path to your font file */
+    font-family: 'Roboto Mono', monospace;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap') format('truetype'); /* Adjust the path to your font file */
     font-weight: normal;
     font-style: normal;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .menu_container, .footer_container {
+    flex-shrink: 0;
+  }
+  
+  .animation_container {
+    flex: 1 0 auto;
+    overflow-y: auto;
   }
   
