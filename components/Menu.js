@@ -8,7 +8,7 @@ const Menu = () => {
     <div  className={`${styles.menu} ${styles.link}`}>
         
         <div id="logo"> 
-            <img src="images/logo_horizontal.png"/>  
+            <a href="/"><img src="images/logo_horizontal.png"/></a>
         </div>
 
 
@@ -50,10 +50,10 @@ const Menu = () => {
         </div>
         <a href="impact"><div className={`${styles.menuItem} ${styles.link}`}>Impact</div></a>
         <a href=""><div className={`${styles.menuItem} ${styles.link}`}>How It Works</div></a>
-        <a href=""><div className={`${styles.menuItem} ${styles.link}`}>Scientific Research</div></a>
+        <a href="scientific_research"><div className={`${styles.menuItem} ${styles.link}`}>Scientific Research</div></a>
         <a href=""><div className={`${styles.menuItem} ${styles.link}`}>Careers</div></a>
-        <a href=""><div className={`${styles.menuItem} ${styles.link}`}>Investors</div></a>
-        <a href=""><div className={`${styles.menuItem} ${styles.link}`}>Contact</div></a>
+        <a href="investor"><div className={`${styles.menuItem} ${styles.link}`}>Investor</div></a>
+        <a href="contact"><div className={`${styles.menuItem} ${styles.link}`}>Contact|Press</div></a>
         <button className={styles.signUpButton}>Sign Up</button>
     </div>
            

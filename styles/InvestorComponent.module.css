@@ -1,0 +1,86 @@
+.investorContainer {
+    background-color: #ffffff;
+    color: #000000;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 100px;
+}
+
+.title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.subheading {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    height: 200px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    font-size: 1.2em;
+    color: #666;
+    border-radius: 8px;
+}
+
+.patentTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.patentTable th, .patentTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.patentTable th {
+    background-color: #f2f2f2;
+}
+
+.link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2em;
+    }
+
+    .subheading {
+        font-size: 1.5em;
+    }
+
+    .text {
+        font-size: 1em;
+    }
+
+    .imagePlaceholder {
+        height: 150px;
+    }
+
+    .patentTable th, .patentTable td {
+        font-size: 0.9em;
+    }
+}

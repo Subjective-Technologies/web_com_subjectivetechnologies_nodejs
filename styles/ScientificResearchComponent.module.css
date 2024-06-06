@@ -1,0 +1,91 @@
+.container {
+    background-color: #ffffff;
+    color: #000000;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.papersContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.paperFrame {
+    flex: 1;
+    min-width: 300px;
+    max-width: 45%;
+    margin: 10px;
+}
+
+.iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+.note {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.orcidSection {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.orcidLabel {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.orcidCode {
+    font-size: 1.2em;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2em;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+
+    .iframe {
+        height: 400px;
+    }
+
+    .orcidLabel,
+    .orcidCode {
+        font-size: 1em;
+    }
+}

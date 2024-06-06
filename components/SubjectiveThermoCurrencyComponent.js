@@ -19,7 +19,7 @@ const SubjectiveThermoCurrencyComponent = () => {
         </section>
   
         <section className={styles.imageSection}>
-          <img src="https://via.placeholder.com/1200x600" alt="Thermo-Currency" className={styles.image} />
+          <img src="images/brainboost_marketing_images_subjective_thermocurrency_1200x600.png" alt="Thermo-Currency" className={styles.image} />
         </section>
   
         <section className={styles.papersSection}>
@@ -100,6 +100,9 @@ const SubjectiveThermoCurrencyComponent = () => {
             Subjective Thermo-Currency (STC) introduces several patented technologies that enable its unique functionality and distinguish it from other currency models discussed in the scientific literature. Here are the key patented technologies and their novel contributions:
           </p>
           <ul className={styles.list}>
+          <li className={styles.listItem}>
+              <strong>Knowledge Hooks (KnowledeHooks):</strong> This is the patented technology that enable us to implemment our Subjective Thermo-Currency.
+            </li>
             <li className={styles.listItem}>
               <strong>Virtual Artificial Glands (BodyParts):</strong> These are software constructs integrated into the human body, designed to measure and store the energy exerted by users in real-time. The virtual glands are placed strategically on the hands and shoulders and function as energy transducers.
             </li>
