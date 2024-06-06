@@ -1,3 +1,13 @@
 {
-    "git.ignoreLimitWarning": true
+    "workbench.colorTheme": "Space Purple Dark",
+    "git.autofetch": true,
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#3B205A",
+        "activityBar.foreground": "#FFFFFF",
+        "activityBar.border": "#2E1846",
+        "activityBar.activeBorder": "#FFD700", // Gold color for contrast
+        "activityBar.activeBackground": "#4A2C71", // Slightly lighter shade
+        "activityBarBadge.background": "#FFD700", // Gold color to match active border
+        "activityBarBadge.foreground": "#3B205A"  // Complementary text color
+    }
 }
