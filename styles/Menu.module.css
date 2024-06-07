@@ -1,82 +1,100 @@
-.link {
-    text-decoration: none;
-    color: white;
-    font-weight: regular;
-    font-family: 'Roboto Mono', monospace;
-    transition: color 0.2s;
-  }
-  
-  .link:hover {
-    color: neonwhite !important;
-    text-decoration: none !important;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
 .menu {
-    background-color: black;
-    color: white;
-    padding: 0px;
-    display: flex; /* Add flex display */
-    justify-content: space-between;
+    display: flex;
     align-items: center;
-    position: fixed;
+    justify-content: space-evenly;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Ensure the menu stays at the top */
     width: 100%;
-    left: 0px;
-    right: 0px;
-    top: 0px;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+    font-family: 'Roboto Mono', monospace;
 }
 
 .menuItem {
-    margin-right: 20px;
-}
-
-.menuItem:hover,
-.signUpButton:hover {
-  font-weight: bold;
-}
-
-.subMenu {
-    display: none;
-    position: absolute;
-    background-color: black;
-    color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    border-radius: 70px;
-}
-
-.menuItem:hover .subMenu {
-    display: flex;
+    margin: 0 15px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 400;
+    color: #fff;
+    transition: transform 0.3s, font-weight 0.3s;
+    font-size: larger;
 }
 
 .menuItem:hover {
-  font-weight: bold;
+    font-weight: 700;
+    transform: scale(1.2);
+}
+
+.menuItem a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    transition: font-weight 0.3s;
+}
+
+.menuItem a:hover {
+    color: #fff;
+    font-weight: 700;
+}
+
+.subMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    z-index: 10;
+    padding: 20px;
+    border-radius: 10px;
+    width: auto; /* Adjust width to fit content */
+    font-size: medium;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.leftMenu, .rightMenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    transition: font-weight 0.3s;
+}
+
+.link:hover {
+    font-weight: 700;
 }
 
 .signUpButton {
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 20px;
+    background-color: #007bff;
+    color: white;
     border: none;
+    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.5em;
+    font-family: 'Roboto Mono', monospace;
 }
 
-  .leftMenu,
-  .rightMenu {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Style for individual menu items */
-  .menuItem {
-    /* Your menu item styles */
-    margin: 5px;
-  }
-  
-#logo {
-  left: 0px;
+.signUpButton:hover {
+    background-color: #0056b3;
+}
+
+.content_container {
+    padding-top: 70px; /* Ensure there is space below the fixed menu */
 }

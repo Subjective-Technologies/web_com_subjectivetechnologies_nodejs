@@ -1,49 +1,72 @@
-html {
+/* Import the Roboto Mono font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+html, body {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px; /* Adjust the font size as needed */
+  overflow: hidden;
+  background-color: black;
+  color: white; /* Ensure text color is white for better contrast */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 2.6fr 0.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "menu_container menu_container menu_container"
+    "animation_container animation_container animation_container"
+    "footer_container footer_container footer_container";
   overflow: hidden;
   background-color: black;
 }
 
-.container {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 2.6fr 0.2fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "menu_container menu_container menu_container"
-      "animation_container animation_container animation_container"
-      "footer_container footer_container footer_container";
-    overflow: hidden;
-    background-color: black;
-  }
-  
-  .menu_container { grid-area: menu_container; z-index: 1;}
-  
-  .animation_container { grid-area: animation_container;}
-  
-  .footer_container { grid-area: footer_container; }
-  
-  
+.menu_container {
+  grid-area: menu_container;
+  z-index: 1;
+}
 
-@font-face {
-    font-family: 'Roboto Mono', monospace;
-    src: url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap') format('truetype'); /* Adjust the path to your font file */
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow-y: auto;
-  }
-  
-  .menu_container, .footer_container {
-    flex-shrink: 0;
-  }
-  
-  .animation_container {
-    flex: 1 0 auto;
-    overflow-y: auto;
-  }
-  
+.animation_container {
+  grid-area: animation_container;
+}
+
+.footer_container {
+  grid-area: footer_container;
+}
+
+* {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px; /* Adjust the font size as needed */
+  color: black; /* Ensure text color is white for better contrast */
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.menu_container, .footer_container {
+  flex-shrink: 0;
+}
+
+.animation_container {
+  flex: 1 0 auto;
+  overflow-y: auto;
+}
+
+.content-wrapper {
+  background-color: #ffffff;
+  color: #000000;
+  max-width: 80%; /* Increase the maximum width */
+  margin: 40px auto; /* Add more top and bottom margin */
+  padding: 40px; /* Increase padding for better readability */
+  border-radius: 8px; /* Optional for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional for subtle shadow */
+}

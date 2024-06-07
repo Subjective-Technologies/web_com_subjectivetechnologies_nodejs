@@ -1,2 +1,16 @@
-/* styles/Home.module.css */
-
+.container {
+    padding-top: 70px; /* Ensure there is space below the fixed menu */
+  }
+  
+  .menu_container {
+    /* Add your styles here */
+  }
+  
+  .animation_container {
+    padding-top: 100px; /* Adjust the padding as needed */
+  }
+  
+  .footer_container {
+    /* Add your styles here */
+  }
+  
