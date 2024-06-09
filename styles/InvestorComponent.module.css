@@ -63,6 +63,18 @@
     text-decoration: underline;
 }
 
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.pitchImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 @media (max-width: 768px) {
     .title {
         font-size: 2em;

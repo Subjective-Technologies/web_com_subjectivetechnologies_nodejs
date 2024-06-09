@@ -9,35 +9,40 @@ const Footer = () => {
                 <div className={styles.column}>
                     <h4>Products</h4>
                     <ul>
-                        <li><a href="">GT® Subjective Semantizer</a></li>
-                        <li><a href="">GT® Subjective Cognitive Booster</a></li>
-                        <li><a href="">GT® Subjective Domotics</a></li>
-                        <li><a href="">GT® Subjective Advertising</a></li>
-                        <li><a href="">GT® Subjective Instant Job Finder</a></li>
-                        <li><a href="">GT® Subjective ForMate</a></li>
-                        <li><a href="">GT® Subjective Thermo-Currency</a></li>
-                        <li><a href="">GT® Subjective Adapter</a></li>
-                        <li><a href="">GT® Subjective BeMyself</a></li>
+                    <ul>
+                        <li><a href="subjective_semantizer">GT® Subjective Semantizer</a></li>
+                        <li><a href="subjective_cognitive_booster">GT® Subjective Cognitive Booster</a></li>
+                        <li><a href="subjective_domotics">GT® Subjective Domotics</a></li>
+                        <li><a href="subjective_advertising">GT® Subjective Advertising</a></li>
+                        <li><a href="subjective_instant_job_finder">GT® Subjective Instant Job Finder</a></li>
+                        <li><a href="subjective_formate">GT® Subjective ForMate</a></li>
+                        <li><a href="subjective_thermo_currency">GT® Subjective Thermo-Currency</a></li>
+                        <li><a href="subjective_adapter">GT® Subjective Adapter</a></li>
+                        <li><a href="subjective_bemyself">GT® Subjective BeMyself</a></li>
+                        <li><a href="subjective_logistics">GT® Subjective Logistics</a></li>
+                    </ul>
+
                     </ul>
                 </div>
                 <div className={styles.column}>
                     <h4>About</h4>
                     <ul>
                         <li><a href="impact">Impact</a></li>
-                        <li><a href="">How It Works</a></li>
-                        <li><a href="">Scientific Research</a></li>
-                        <li><a href="">Careers</a></li>
-                        <li><a href="">Investors</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="how_it_works">How It Works</a></li>
+                        <li><a href="scientific_research">Scientific Research</a></li>
+                        <li><a href="careers">Careers</a></li>
+                        <li><a href="investor">Investors</a></li>
+                        <li><a href="contact">Contact</a></li>
+                        <li><a href="consulting">Consulting</a></li>
                     </ul>
                 </div>
                 <div className={styles.column}>
                     <h4>Follow Us</h4>
                     <ul>
-                        <li><a href="">Facebook</a></li>
-                        <li><a href="">Twitter</a></li>
-                        <li><a href="">LinkedIn</a></li>
-                        <li><a href="">Instagram</a></li>
+                        <li><a href="https://www.facebook.com">Facebook</a></li>
+                        <li><a href="https://www.twitter.com">Twitter</a></li>
+                        <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com">Instagram</a></li>
                     </ul>
                 </div>
             </div>

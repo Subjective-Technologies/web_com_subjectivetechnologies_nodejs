@@ -1,0 +1,57 @@
+.howItWorksContainer {
+    background-color: #ffffff;
+    color: #000000;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 100px;
+}
+
+.title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.subheading {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    height: 200px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    font-size: 1.2em;
+    color: #666;
+    border-radius: 8px;
+}
+
+.videoPlaceholder {
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

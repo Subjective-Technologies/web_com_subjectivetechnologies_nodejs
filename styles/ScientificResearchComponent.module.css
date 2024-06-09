@@ -5,46 +5,53 @@
     margin: 0 auto;
     padding: 20px;
     font-family: 'Roboto Mono', monospace;
+    margin-top: 100px;
 }
 
 .title {
     font-size: 2.5em;
     margin-bottom: 20px;
-    margin-top: 100px;
     text-align: center;
 }
 
 .description {
     font-size: 1.2em;
     line-height: 1.6;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 .papersContainer {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
+    justify-content: space-between;
+    margin-bottom: 40px; /* Add space from the paper frames */
 }
 
 .paperFrame {
-    flex: 1;
-    min-width: 300px;
-    max-width: 45%;
-    margin: 10px;
+    width: 48%;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .iframe {
     width: 100%;
-    height: 500px;
+    height: 300px; /* 50% smaller */
     border: none;
+}
+
+.paperNote {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #666;
 }
 
 .note {
     font-size: 1em;
-    text-align: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center; /* Center the content */
 }
 
 .link {
@@ -56,36 +63,73 @@
     text-decoration: underline;
 }
 
-.orcidSection {
+.logoTable {
+    width: 100%;
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.orcidLabel {
-    font-size: 1.2em;
-    font-weight: bold;
+.logoCell {
+    padding: 10px;
+}
+
+.logo {
+    width: 300px; /* 3 times bigger */
+    vertical-align: middle;
+}
+
+.orcidSection {
+    margin-top: 20px;
+    text-align: center; /* Center the content */
+}
+
+.orcidRow {
+    margin-top: 10px;
+}
+
+.orcidLogo {
+    width: 150px; /* 3 times bigger */
 }
 
 .orcidCode {
-    font-size: 1.2em;
-    color: #333;
+    font-size: 1em;
 }
 
-@media (max-width: 768px) {
-    .title {
-        font-size: 2em;
-    }
+.bookSection {
+    margin-top: 20px;
+    text-align: center;
+}
 
-    .description {
-        font-size: 1em;
-    }
+.bookTitle {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
 
-    .iframe {
-        height: 400px;
-    }
+.bookSubtitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
 
-    .orcidLabel,
-    .orcidCode {
-        font-size: 1em;
-    }
+.bookCover {
+    width: 100%; /* Full width of the container */
+    border-radius: 8px;
+}
+
+.bookNote {
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.bookPitch {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.amazonButton {
+    width: 300px; /* Adjust as necessary for better display */
+    margin-top: 20px;
 }
