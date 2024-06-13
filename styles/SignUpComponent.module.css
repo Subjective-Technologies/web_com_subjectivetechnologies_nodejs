@@ -1,31 +1,41 @@
+/* src/styles/SignUpComponent.module.css */
+
 .signUpContainer {
-    background-color: #ffffff;
+    background-image: url('/images/golden_city.png'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #000000;
     max-width: 80%;
     margin: 0 auto;
     padding: 20px;
     font-family: 'Roboto Mono', monospace;
     margin-top: 100px;
+    text-align: center;
+    min-height: 100vh; /* Ensures the container covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .title {
     font-size: 2.5em;
     margin-bottom: 20px;
+}
+
+.placeholderImage img {
+    width: 100%;
+    height: auto;
+}
+
+.loginBox {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
     text-align: center;
-}
-
-.testContent {
-    margin-bottom: 40px;
-}
-
-.sampleVideo {
-    margin: 20px 0;
-}
-
-.sampleText {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 20px;
 }
 
 .signUpOptions {
@@ -44,6 +54,10 @@
     font-size: 1.2em;
     cursor: pointer;
     margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .signUpButton:hover {
@@ -58,12 +72,14 @@
 .signUpForm {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
+    align-items: center;
 }
 
 .formGroup {
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
 }
 
 .label {
@@ -96,4 +112,23 @@
 .error {
     color: red;
     text-align: center;
+}
+
+.googleButton {
+    background-color: #4285F4;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 1em;
+    max-width: 300px;
+    margin: 5px 0;
+}
+
+.googleButton img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
 }
