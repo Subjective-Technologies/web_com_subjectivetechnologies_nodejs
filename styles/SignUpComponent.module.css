@@ -6,11 +6,9 @@
     background-position: center;
     background-repeat: no-repeat;
     color: #000000;
-    max-width: 80%;
     margin: 0 auto;
     padding: 20px;
     font-family: 'Roboto Mono', monospace;
-    margin-top: 100px;
     text-align: center;
     min-height: 100vh; /* Ensures the container covers the full viewport height */
     display: flex;
