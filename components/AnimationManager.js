@@ -10,7 +10,13 @@ class AnimationManager {
     this.lastTimestamp = null;
     this.playbackIndex = 0;
     this.playbackSpeed = 0.1;
+    this.textarea = null;
   }
+
+  setTextarea(textarea) {
+    this.textarea = textarea;
+  }
+
 
   startRecording = () => {
     this.recording = true;
