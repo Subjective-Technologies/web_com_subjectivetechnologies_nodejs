@@ -1,6 +1,6 @@
 // src/components/SubjectiveAdvertisingComponent.js
 import React from 'react';
-import styles from '../styles/SubjectiveAdvertisingComponent.module.css';
+import styles from '../public/styles/SubjectiveAdvertisingComponent.module.css';
 
 const SubjectiveAdvertisingComponent = () => {
     return (

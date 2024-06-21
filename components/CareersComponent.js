@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/CareersComponent.module.css';
+import styles from '../public/styles/CareersComponent.module.css';
 
 const CareersComponent = () => {
     return (

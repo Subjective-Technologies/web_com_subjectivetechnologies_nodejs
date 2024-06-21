@@ -1,6 +1,6 @@
 // src/components/SubjectiveForMateComponent.js
 import React from 'react';
-import styles from '../styles/SubjectiveForMateComponent.module.css';
+import styles from '../public/styles/SubjectiveForMateComponent.module.css';
 
 const SubjectiveForMateComponent = () => {
     return (

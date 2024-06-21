@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/ConsultingComponent.module.css';
+import styles from '../public/styles/ConsultingComponent.module.css';
 
 const ConsultingComponent = () => {
     return (

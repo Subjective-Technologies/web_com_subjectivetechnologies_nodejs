@@ -1,6 +1,6 @@
 // src/components/SubjectiveCognitiveBoosterComponent.js
 import React from 'react';
-import styles from '../styles/SubjectiveCognitiveBoosterComponent.module.css';
+import styles from '../public/styles/SubjectiveCognitiveBoosterComponent.module.css';
 
 const SubjectiveCognitiveBoosterComponent = () => {
     return (

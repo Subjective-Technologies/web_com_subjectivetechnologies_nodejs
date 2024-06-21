@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/SubjectiveThermoCurrencyComponent.module.css';
+import styles from '../public/styles/SubjectiveThermoCurrencyComponent.module.css';
 
 
 const SubjectiveThermoCurrencyComponent = () => {

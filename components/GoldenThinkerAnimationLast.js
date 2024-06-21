@@ -6,6 +6,11 @@ import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import GUI from 'lil-gui';
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
+import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass';
+import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
+
 
 const DEVELOPER_MODE = true;
 let animationTextarea = null; // To reference the animation textarea
@@ -332,6 +337,51 @@ function playAnimation() {
 
       window.addEventListener('keydown', onKeyDown);
       window.addEventListener('resize', onWindowResize);
+
+
+      // Load the Roboto Mono font
+      const fontLoader = new FontLoader();
+      fontLoader.load('path/to/roboto-mono.json', function (font) {
+        // Create the text geometry
+        const textGeometry = new TextGeometry('Subjective Technologies', {
+          font: font,
+          size: 1,
+          height: 0.2,
+          curveSegments: 12,
+          bevelEnabled: true,
+          bevelThickness: 0.03,
+          bevelSize: 0.02,
+          bevelOffset: 0,
+          bevelSegments: 5
+        });
+
+        // Create the text material
+        const textMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+        const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+
+        // Position the text mesh beside the statue
+        textMesh.position.set(5, 2, 0); // Adjust the position as needed
+        scene.add(textMesh);
+
+        // Apply bloom effect to the text
+        const bloomLayer = new THREE.Layers();
+        bloomLayer.set(1);
+        textMesh.layers.enable(1);
+
+        const bloomPass = new UnrealBloomPass(
+          new THREE.Vector2(window.innerWidth, window.innerHeight),
+          1.5,  // Strength of the bloom
+          0.4,  // Radius of the bloom
+          0.85  // Threshold for the bloom
+        );
+
+        const renderScene = new RenderPass(scene, camera);
+        composer = new EffectComposer(renderer);
+        composer.addPass(renderScene);
+        composer.addPass(bloomPass);
+      });
+
+
 
       return () => {
         window.removeEventListener('keydown', onKeyDown);

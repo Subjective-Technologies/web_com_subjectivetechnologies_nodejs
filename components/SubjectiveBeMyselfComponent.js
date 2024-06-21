@@ -1,6 +1,6 @@
 // src/components/SubjectiveBeMyselfComponent.js
 import React from 'react';
-import styles from '../styles/SubjectiveBeMyselfComponent.module.css';
+import styles from '../public/styles/SubjectiveBeMyselfComponent.module.css';
 
 const SubjectiveBeMyselfComponent = () => {
     return (

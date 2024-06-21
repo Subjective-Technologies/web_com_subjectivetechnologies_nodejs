@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../styles/ImageMenuItem.module.css'; // Import CSS module for styling
+import styles from '../public/styles/ImageMenuItem.module.css'; // Import CSS module for styling
 
 const ImageMenuItem = ({ imageUrl, label, text }) => {
   return (

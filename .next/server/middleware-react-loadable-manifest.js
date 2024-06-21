@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"products_subjective_thermo_currency.js -> ../components/SubjectiveThermoCurrencyComponent\":{\"id\":\"products_subjective_thermo_currency.js -> ../components/SubjectiveThermoCurrencyComponent\",\"files\":[\"static/chunks/components_SubjectiveThermoCurrencyComponent_js.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST="{\"index.js -> ../components/GoldenThinkerAnimation\":{\"id\":\"index.js -> ../components/GoldenThinkerAnimation\",\"files\":[\"static/chunks/components_GoldenThinkerAnimation_js.js\"]}}"

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/SubjectiveLogisticsComponent.module.css';
+import styles from '../public/styles/SubjectiveLogisticsComponent.module.css';
 
 const SubjectiveLogisticsComponent = () => {
     return (

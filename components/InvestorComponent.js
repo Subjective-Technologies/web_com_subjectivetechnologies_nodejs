@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/InvestorComponent.module.css';
+import styles from '../public/styles/InvestorComponent.module.css';
 
 const InvestorComponent = () => {
   return (

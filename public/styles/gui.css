@@ -1,0 +1,61 @@
+/* styles/gui.css */
+
+/* Reset color property for lil-gui components */
+.lil-gui * {
+  color: inherit !important; /* Ensure all elements inherit the color */
+}
+
+/* Make the title of the folder white and smaller */
+.lil-gui .title {
+  color: white !important; /* White text for tabs */
+  font-size: 14px !important; /* Adjust the font size as needed */
+  background-color: black !important; /* Ensure background is black for visibility */
+}
+
+/* Make the property names inside folders green */
+.lil-gui .cr > .property-name {
+  color: green !important; /* Green text for properties */
+  background-color: black !important; /* Ensure background is black for visibility */
+}
+
+/* Make the text in buttons and other controls green */
+.lil-gui .cr input[type="text"],
+.lil-gui .cr select,
+.lil-gui .cr .property-name,
+.lil-gui .cr .title,
+.lil-gui .cr .control,
+.lil-gui .cr label,
+.lil-gui .cr .checkbox-label,
+.lil-gui .cr .name {
+  color: green !important; /* Green text */
+  background-color: black !important; /* Ensure background is black for visibility */
+}
+
+/* Ensure button text is green */
+.lil-gui button {
+  color: green !important; /* Green text for buttons */
+  background-color: black !important; /* Ensure background is black for visibility */
+}
+
+/* Ensure textarea text is green */
+.lil-gui textarea {
+  color: green !important; /* Green text for textarea */
+  background-color: black !important; /* Ensure background is black for visibility */
+}
+
+/* Increase specificity for all lil-gui elements */
+html body .lil-gui .title,
+html body .lil-gui .cr > .property-name,
+html body .lil-gui .cr input[type="text"],
+html body .lil-gui .cr select,
+html body .lil-gui .cr .property-name,
+html body .lil-gui .cr .title,
+html body .lil-gui .cr .control,
+html body .lil-gui .cr label,
+html body .lil-gui .cr .checkbox-label,
+html body .lil-gui .cr .name,
+html body .lil-gui button,
+html body .lil-gui textarea {
+  color: green !important; /* Green text */
+  background-color: black !important; /* Ensure background is black for visibility */
+}

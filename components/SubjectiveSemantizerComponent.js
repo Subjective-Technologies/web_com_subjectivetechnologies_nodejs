@@ -1,6 +1,6 @@
 // src/components/SubjectiveSemantizerComponent.js
 import React from 'react';
-import styles from '../styles/SubjectiveSemantizerComponent.module.css';
+import styles from '../public/styles/SubjectiveSemantizerComponent.module.css';
 
 const SubjectiveSemantizerComponent = () => {
     return (

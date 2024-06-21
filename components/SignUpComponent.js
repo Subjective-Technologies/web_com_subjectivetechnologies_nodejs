@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { auth, googleProvider, githubProvider, linkedinProvider } from '../config/firebaseConfig';
 import { signInWithPopup, createUserWithEmailAndPassword } from 'firebase/auth';
-import styles from '../styles/SignUpComponent.module.css';
+import styles from '../public/styles/SignUpComponent.module.css';
 
 const SignUpComponent = () => {
     const [email, setEmail] = useState('');

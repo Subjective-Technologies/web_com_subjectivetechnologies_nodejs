@@ -2,6 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/impact": "pages/impact.js",
-  "/products_subjective_thermo_currency": "pages/products_subjective_thermo_currency.js"
+  "/": "pages/index.js",
+  "/subjective_thermo_currency": "pages/subjective_thermo_currency.js"
 }

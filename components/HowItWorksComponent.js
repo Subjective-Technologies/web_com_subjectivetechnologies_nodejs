@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/HowItWorksComponent.module.css';
+import styles from '../public/styles/HowItWorksComponent.module.css';
 
 const HowItWorksComponent = () => {
     return (

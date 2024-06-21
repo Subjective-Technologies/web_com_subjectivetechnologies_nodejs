@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/GoldenThinkerImpact.module.css';
+import styles from '../public/styles/GoldenThinkerImpact.module.css';
 
 const TechnologyImpact = ({ image, title, description, reverse }) => {
   return (

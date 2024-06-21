@@ -1,6 +1,6 @@
 import React from 'react';
 import TechnologyImpact from './TechnologyImpact';
-import styles from '../styles/GoldenThinkerImpact.module.css';
+import styles from '../public/styles/GoldenThinkerImpact.module.css';
 
 const postScarcity = [
   {

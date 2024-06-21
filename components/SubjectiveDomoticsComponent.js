@@ -1,6 +1,6 @@
 // src/components/SubjectiveDomoticsComponent.js
 import React from 'react';
-import styles from '../styles/SubjectiveDomoticsComponent.module.css';
+import styles from '../public/styles/SubjectiveDomoticsComponent.module.css';
 
 const SubjectiveDomoticsComponent = () => {
     return (

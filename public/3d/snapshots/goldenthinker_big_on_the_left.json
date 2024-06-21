@@ -1,0 +1,82 @@
+{
+    "camera": {
+      "position": {
+        "x": 2.0922102580933775,
+        "y": 1.8626568893977609,
+        "z": -3.2094138431900783
+      },
+      "rotation": {
+        "_x": -3.141592653589793,
+        "_y": 0.9742903941188229,
+        "_z": 3.141592653589793,
+        "_order": "XYZ",
+        "isEuler": true
+      }
+    },
+    "model": {
+      "position": {
+        "x": 0,
+        "y": -2,
+        "z": 0
+      },
+      "rotation": {
+        "_x": 0,
+        "_y": -1.5707963267948966,
+        "_z": 0,
+        "_order": "XYZ",
+        "isEuler": true
+      }
+    },
+    "lights": [
+      {
+        "type": "PointLight",
+        "position": {
+          "x": 5,
+          "y": 10,
+          "z": 5
+        },
+        "color": 16777215,
+        "intensity": 1.5
+      },
+      {
+        "type": "PointLight2",
+        "position": {
+          "x": -5,
+          "y": 10,
+          "z": -5
+        },
+        "color": 16777215,
+        "intensity": 1.5
+      },
+      {
+        "type": "PointLight3",
+        "position": {
+          "x": 5,
+          "y": -10,
+          "z": -5
+        },
+        "color": 16777215,
+        "intensity": 1.5
+      },
+      {
+        "type": "PointLight4",
+        "position": {
+          "x": -5,
+          "y": -10,
+          "z": 5
+        },
+        "color": 16777215,
+        "intensity": 1.5
+      },
+      {
+        "type": "DirectionalLight",
+        "position": {
+          "x": 10,
+          "y": 20,
+          "z": 10
+        },
+        "color": 16777215,
+        "intensity": 1.5
+      }
+    ]
+  }

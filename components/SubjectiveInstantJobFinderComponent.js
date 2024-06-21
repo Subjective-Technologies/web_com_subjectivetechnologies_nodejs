@@ -1,6 +1,6 @@
 // src/components/SubjectiveInstantJobFinderComponent.js
 import React from 'react';
-import styles from '../styles/SubjectiveInstantJobFinderComponent.module.css';
+import styles from '../public/styles/SubjectiveInstantJobFinderComponent.module.css';
 
 const SubjectiveInstantJobFinderComponent = () => {
     return (

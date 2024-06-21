@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import Menu from '../components/Menu';
 import Footer from '../components/Footer';
 
+
 const GoldenThinkerAnimation = dynamic(() => import('../components/GoldenThinkerAnimation'), {
   ssr: false,
 });

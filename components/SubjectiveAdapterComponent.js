@@ -1,6 +1,6 @@
 // src/components/SubjectiveAdapterComponent.js
 import React from 'react';
-import styles from '../styles/SubjectiveAdapterComponent.module.css';
+import styles from '../public/styles/SubjectiveAdapterComponent.module.css';
 
 const SubjectiveAdapterComponent = () => {
     return (
