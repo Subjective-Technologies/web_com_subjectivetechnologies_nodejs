@@ -8,9 +8,9 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import GUI from 'lil-gui';
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
-import '../public/styles/overlay.css'; // Ensure you have the CSS imported
 
 const DEVELOPER_MODE = true;
+let controls; // Declare controls variable in the outer scope
 let animationTextarea = null; // To reference the animation textarea
 
 const GoldenThinkerAnimation = () => {
@@ -27,6 +27,10 @@ const GoldenThinkerAnimation = () => {
     bloomLayer.set(1); // Set layer 1 for bloom
 
     const startRecording = () => {
+      console.log("Initial Camera Position:", camera.position);
+      console.log("Initial Camera Rotation:", camera.rotation);
+      console.log("Initial Model Position:", model.position);
+      console.log("Initial Model Rotation:", model.rotation);
       recording = true;
       recordingPaused = false;
       cameraPath = [];
@@ -34,14 +38,14 @@ const GoldenThinkerAnimation = () => {
       console.log("Recording started");
     };
 
-    const stopRecording = () => {
+    function stopRecording() {
       recording = false;
       recordingPaused = false;
       console.log("Recording stopped");
-      console.log(cameraPath); // Print the camera path to the console
+      console.log("Recorded Camera Path:", cameraPath); // Log the camera path
       exportCameraPath();
-    };
-
+    }
+    
     const pauseRecording = () => {
       recordingPaused = true;
       console.log("Recording paused");
@@ -111,39 +115,29 @@ const GoldenThinkerAnimation = () => {
         console.log("No recorded animation to play.");
         return;
       }
-
-      playbackIndex = 0;
+    
       const animatePlayback = () => {
         if (playbackIndex < cameraPath.length - 1) {
-          const startPoint = cameraPath[playbackIndex];
-          const endPoint = cameraPath[playbackIndex + 1];
-
+          const startPoint = cameraPath[Math.floor(playbackIndex)];
+          const endPoint = cameraPath[Math.ceil(playbackIndex)];
+    
           if (!startPoint || !endPoint) {
             console.error('Invalid camera path data.');
             return;
           }
-
+    
           const { camera: startCam, lights: startLights } = startPoint;
           const { camera: endCam, lights: endLights } = endPoint;
-
-          if (!startCam || !endCam || !startLights || !endLights) {
-            console.error('Invalid camera or light data.');
-            return;
-          }
-
-          const alpha = playbackSpeed;
-
-          console.log("Animating playback from index:", playbackIndex);
-          console.log("Start camera position:", startCam.position);
-          console.log("End camera position:", endCam.position);
-
+    
+          const alpha = playbackIndex - Math.floor(playbackIndex); // Fractional part for interpolation
+    
           camera.position.lerpVectors(startCam.position, endCam.position, alpha);
           camera.quaternion.slerpQuaternions(
             new THREE.Quaternion().setFromEuler(startCam.rotation),
             new THREE.Quaternion().setFromEuler(endCam.rotation),
             alpha
           );
-
+    
           if (startLights.length === 5 && endLights.length === 5) {
             pointLight1.position.lerpVectors(startLights[0].position, endLights[0].position, alpha);
             pointLight1.intensity = THREE.MathUtils.lerp(startLights[0].intensity, endLights[0].intensity, alpha);
@@ -159,7 +153,7 @@ const GoldenThinkerAnimation = () => {
             console.error('Invalid number of lights in camera path data.');
             return;
           }
-
+    
           playbackIndex += playbackSpeed;
           requestAnimationFrame(animatePlayback);
         } else {
@@ -169,6 +163,114 @@ const GoldenThinkerAnimation = () => {
       animatePlayback();
     };
 
+    function createIndicator(color, size = 0.1, identifier) {
+      const geometry = new THREE.SphereGeometry(size, 16, 16);
+      const material = new THREE.MeshBasicMaterial({ color });
+      const sphere = new THREE.Mesh(geometry, material);
+      sphere.userData.identifier = identifier; // Add identifier to userData
+      return sphere;
+    }
+
+    function addIndicators() {
+      // Camera Indicator
+      const cameraIndicator = createIndicator(0xff0000, 0.2, 'camera'); // Red color for the camera
+      scene.add(cameraIndicator);
+
+      // Lights Indicators
+      const lightIndicators = [
+        createIndicator(0xffff00, 0.2, 'light1'), // Yellow color for lights
+        createIndicator(0xffff00, 0.2, 'light2'),
+        createIndicator(0xffff00, 0.2, 'light3'),
+        createIndicator(0xffff00, 0.2, 'light4'),
+        createIndicator(0xffff00, 0.2, 'directionalLight')
+      ];
+
+      scene.add(...lightIndicators);
+    }
+
+    function updateIndicators() {
+      scene.children.forEach((child) => {
+        if (child.userData.identifier === 'camera') {
+          child.position.copy(camera.position);
+        } else if (child.userData.identifier === 'light1') {
+          child.position.copy(pointLight1.position);
+        } else if (child.userData.identifier === 'light2') {
+          child.position.copy(pointLight2.position);
+        } else if (child.userData.identifier === 'light3') {
+          child.position.copy(pointLight3.position);
+        } else if (child.userData.identifier === 'light4') {
+          child.position.copy(pointLight4.position);
+        } else if (child.userData.identifier === 'directionalLight') {
+          child.position.copy(directionalLight.position);
+        }
+      });
+    }
+            
+    function animate(timestamp) {
+      requestAnimationFrame(animate);
+    
+      // Render the bloom effect for objects in the bloom layer
+      scene.traverse((obj) => {
+        if (obj.layers.test(bloomLayer)) {
+          obj.visible = true;
+        } else {
+          obj.visible = false;
+        }
+      });
+    
+      composer.render();
+    
+      // Render the scene normally for objects not in the bloom layer
+      scene.traverse((obj) => {
+        if (!obj.layers.test(bloomLayer)) {
+          obj.visible = true;
+        }
+      });
+      renderer.render(scene, camera);
+    
+      controls.update(); // Update controls
+    
+      if (recording && !recordingPaused) {
+        if (!lastTimestamp) lastTimestamp = timestamp;
+        const elapsed = timestamp - lastTimestamp;
+        if (elapsed > 100) { // Record every 100ms
+          cameraPath.push({
+            camera: {
+              position: camera.position.clone(),
+              rotation: camera.rotation.clone(),
+            },
+            lights: [
+              {
+                position: pointLight1.position.clone(),
+                intensity: pointLight1.intensity
+              },
+              {
+                position: pointLight2.position.clone(),
+                intensity: pointLight2.intensity
+              },
+              {
+                position: pointLight3.position.clone(),
+                intensity: pointLight3.intensity
+              },
+              {
+                position: pointLight4.position.clone(),
+                intensity: pointLight4.intensity
+              },
+              {
+                position: directionalLight.position.clone(),
+                intensity: directionalLight.intensity
+              }
+            ]
+          });
+          lastTimestamp = timestamp;
+        }
+      }
+
+      // Update the indicators positions
+      updateIndicators();
+    }
+                
+
     const loadSnapshotFromFile = async (filePath) => {
       try {
         const response = await fetch(filePath);
@@ -176,9 +278,10 @@ const GoldenThinkerAnimation = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const settings = await response.json();
-        setSnapshot(settings);
+        return settings;
       } catch (error) {
         console.error("Error loading settings:", error);
+        return null;
       }
     };
 
@@ -337,16 +440,6 @@ const GoldenThinkerAnimation = () => {
       materialFolder.add(material, 'clearcoat', 0, 1).name('Clearcoat');
       materialFolder.add(material, 'clearcoatRoughness', 0, 1).name('Clearcoat Roughness');
 
-      const pointLight1Folder = gui.addFolder('Point Light 1');
-      pointLight1Folder.add(pointLight1.position, 'x', -10, 10).name('Position X');
-      pointLight1Folder.add(pointLight1.position, 'y', -10, 10).name('Position Y');
-      pointLight1Folder.add(pointLight1.position, 'z', -10, 10).name('Position Z');
-      pointLight1Folder.addColor(pointLight1, 'color').name('Color');
-      pointLight1Folder.add(pointLight1, 'intensity', 0, 10).name('Intensity');
-      pointLight1Folder.add(pointLight1, 'visible').name('Visible').onChange((value) => {
-        pointLight1.visible = value;
-      });
-
       const pointLight2Folder = gui.addFolder('Point Light 2');
       pointLight2Folder.add(pointLight2.position, 'x', -10, 10).name('Position X');
       pointLight2Folder.add(pointLight2.position, 'y', -10, 10).name('Position Y');
@@ -472,60 +565,59 @@ const GoldenThinkerAnimation = () => {
     };
 
     async function init() {
-      const initialSnapshot = loadSnapshotFromFile('3d/snapshots/centered_cross_snapshot.json');
-      setSnapshot(initialSnapshot);
-
+      const initialSnapshot = await loadSnapshotFromFile('3d/snapshots/centered_cross_snapshot.json');
+    
       const container = document.getElementById('animation_container');
-
+    
       renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.toneMapping = THREE.ReinhardToneMapping;
       renderer.toneMappingExposure = 5;
       container.appendChild(renderer.domElement);
-
+    
       // ------------------------- CAMERA ------------------------------------------------------
       camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 100);
       camera.position.set(8, 4, 8); // Adjusted camera position for better view
       scene.add(camera);
-
+    
       // ------------------------- LIGHT ------------------------------------------------------
       pointLight1 = new THREE.PointLight(0xffffff, 1.5);
       pointLight1.position.set(5, 10, 5);
       scene.add(pointLight1);
-
+    
       pointLight2 = new THREE.PointLight(0xffffff, 1.5);
       pointLight2.position.set(-5, 10, -5);
       scene.add(pointLight2);
-
+    
       pointLight3 = new THREE.PointLight(0xffffff, 1.5);
       pointLight3.position.set(5, -10, -5);
       scene.add(pointLight3);
-
+    
       pointLight4 = new THREE.PointLight(0xffffff, 1.5);
       pointLight4.position.set(-5, -10, 5);
       scene.add(pointLight4);
-
+    
       directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
       directionalLight.position.set(10, 20, 10);
       scene.add(directionalLight);
-
+    
       //-------------------------- CONTROLS -----------------------------------------------------
-      const controls = new OrbitControls(camera, renderer.domElement);
+      controls = new OrbitControls(camera, renderer.domElement);
       controls.target.set(0, 0, 0); // Set the target to the center of the statue and the pyramid
       controls.maxPolarAngle = Math.PI * 0.5;
       controls.minDistance = 5;
       controls.maxDistance = 20;
-
+    
       const renderScene = new RenderPass(scene, camera);
       const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 5.7, 1.5, 2.1); // Softer bloom effect
       const outputPass = new EffectComposer(renderer);
-
+    
       composer = new EffectComposer(renderer);
       composer.addPass(renderScene);
       composer.addPass(bloomPass);
       composer.addPass(outputPass);
-
+    
       // Add video sphere
       const video = document.createElement('video');
       video.src = 'video/brainboost_marketing_video_subjective_temple_bar_4k_360.mp4';
@@ -533,14 +625,14 @@ const GoldenThinkerAnimation = () => {
       video.loop = true;
       video.muted = true;
       video.play();
-
+    
       const videoTexture = new THREE.VideoTexture(video);
       const sphereGeometry = new THREE.SphereGeometry(64, 64, 64); // Smaller sphere
       const sphereMaterial = new THREE.MeshBasicMaterial({ map: videoTexture, side: THREE.DoubleSide });
       videoSphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
       videoSphere.position.set(10, 3, 0); // Move the sphere further back
       // scene.add(videoSphere);
-
+    
       const goldMaterial = new THREE.MeshPhysicalMaterial({
         color: 0xFFD700, // Gold color
         metalness: 1,
@@ -549,34 +641,29 @@ const GoldenThinkerAnimation = () => {
         clearcoatRoughness: 0.1
       });
 
-      new GLTFLoader().load('3d/all.glb', function (gltf) {
-        model = gltf.scene;
-        setMaterial(model, goldMaterial);
-        model.rotation.set(0, -Math.PI / 2, 0);
-        model.position.set(0, -2, 0);
-        scene.add(model);
-        animate();
-        setSnapshot(initialSnapshot);
-
-        if (DEVELOPER_MODE) {
-          setupGUI(model, goldMaterial);
-        }
-
-        initVisibility(); // Initialize visibility states after model and lights are loaded
-      });
-
-      function setMaterial(object, material) {
-        object.traverse((child) => {
-          if (child.isMesh) {
-            child.material = material;
-            child.castShadow = true;
-            child.receiveShadow = true;
-          }
-        });
-      }
-
       const fontLoader = new FontLoader();
-      fontLoader.load('/path/to/RobotoMono-Regular.json', function (font) {
+
+      fontLoader.load(
+        'font/Roboto_Mono/font_json_format/RobotoMono-Regular.json',
+        function (font) {
+          createTextGeometry(font);
+        },
+        undefined,
+        function (error) {
+          console.error('Error loading RobotoMono-Regular.json font, falling back to default font.');
+          // Fallback to default font
+          fontLoader.load('fonts/helvetiker_regular.typeface.json', function (defaultFont) {
+            createTextGeometry(defaultFont);
+          });
+        }
+      );
+      
+      function createTextGeometry(font) {
+        if (!font) {
+          console.error('Font is undefined, cannot create text geometry.');
+          return;
+        }
+      
         const textGeometry = new TextGeometry('Subjective Technologies', {
           font: font,
           size: 1,
@@ -588,16 +675,66 @@ const GoldenThinkerAnimation = () => {
           bevelOffset: 0,
           bevelSegments: 5
         });
-        const textMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+      
+        const textMaterial = new THREE.MeshStandardMaterial({
+          color: 0xff0000,
+          emissive: 0x111111,
+          roughness: 0.5,
+          metalness: 0.1
+        });
+      
         const textMesh = new THREE.Mesh(textGeometry, textMaterial);
-        textMesh.position.set(10, 5, 0); // Adjust position as needed
-        textMesh.layers.enable(1); // Enable bloom layer
+        textMesh.position.set(-3, 5, -5);
         scene.add(textMesh);
-      });
+      }
+            
 
+      function addGridHelper() {
+        const size = 10;
+        const divisions = 10;
+        const gridHelper = new THREE.GridHelper(size, divisions);
+        scene.add(gridHelper);
+      }
+
+      addGridHelper();
+    
+      new GLTFLoader().load('3d/all.glb', function (gltf) {
+        model = gltf.scene;
+        setMaterial(model, goldMaterial);
+        model.rotation.set(0, -Math.PI / 2, 0);
+        model.position.set(0, -2, 0);
+        scene.add(model);
+        animate();
+    
+        // Apply snapshot after model is loaded
+        setSnapshot(initialSnapshot);
+    
+        if (DEVELOPER_MODE) {
+          setupGUI(model, goldMaterial);
+        }
+    
+        initVisibility(); // Initialize visibility states after model and lights are loaded
+    
+        addIndicators(); // Add indicators for debugging
+      });
+    
+      function setMaterial(object, material) {
+        object.traverse((child) => {
+          if (child.isMesh) {
+            child.material = material;
+            child.castShadow = true;
+            child.castShadow = true;
+            child.receiveShadow = true;
+          }
+        });
+      }
+    
+      const axesHelper = new THREE.AxesHelper(10); // Increase the size of the helper
+      scene.add(axesHelper);
+    
       function animate(timestamp) {
         requestAnimationFrame(animate);
-
+    
         // Render the bloom effect for objects in the bloom layer
         scene.traverse((obj) => {
           if (obj.layers.test(bloomLayer)) {
@@ -606,9 +743,9 @@ const GoldenThinkerAnimation = () => {
             obj.visible = false;
           }
         });
-
+    
         composer.render();
-
+    
         // Render the scene normally for objects not in the bloom layer
         scene.traverse((obj) => {
           if (!obj.layers.test(bloomLayer)) {
@@ -616,9 +753,9 @@ const GoldenThinkerAnimation = () => {
           }
         });
         renderer.render(scene, camera);
-
+    
         controls.update(); // Update controls
-
+    
         if (recording && !recordingPaused) {
           if (!lastTimestamp) lastTimestamp = timestamp;
           const elapsed = timestamp - lastTimestamp;
@@ -654,41 +791,28 @@ const GoldenThinkerAnimation = () => {
             lastTimestamp = timestamp;
           }
         }
+    
+        // Update the indicators positions
+        updateIndicators();
       }
-
-      // Add bloom rendering logic
-      function renderBloom() {
-        scene.traverse((obj) => {
-          if (obj.isMesh) {
-            obj.layers.enable(1); // Enable bloom layer for bloom rendering
-          }
-        });
-        composer.render();
-        scene.traverse((obj) => {
-          if (obj.isMesh) {
-            obj.layers.disable(1); // Disable bloom layer after rendering bloom
-          }
-        });
-      }
-
+    
       window.addEventListener('resize', onWindowResize);
       onWindowResize();
-
+    
       return () => {
         window.removeEventListener('resize', onWindowResize);
         renderer.dispose();
         composer.dispose();
       };
     }
-
+    
     init();
   }, []);
 
   return (
-    <div id="animation_container">
-      <img src="images/masculine_golden_angels_formation.webp" className="center-image" alt="Golden Angels Formation" />
-    </div>
+    <div id="animation_container"></div>
   );
 };
 
 export default GoldenThinkerAnimation;
+           
