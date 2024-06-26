@@ -3,5 +3,10 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/subjective_thermo_currency": "pages/subjective_thermo_currency.js"
+  "/consulting": "pages/consulting.js",
+  "/careers": "pages/careers.js",
+  "/investor": "pages/investor.js",
+  "/contact": "pages/contact.js",
+  "/scientific_research": "pages/scientific_research.js",
+  "/how_it_works": "pages/how_it_works.js"
 }

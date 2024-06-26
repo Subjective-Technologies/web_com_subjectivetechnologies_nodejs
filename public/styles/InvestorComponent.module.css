@@ -76,6 +76,62 @@
     border-radius: 8px;
 }
 
+.collapsibleGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.collapsibleTitle {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.collapsibleTitle:hover {
+    background-color: #444;
+}
+
+.collapsibleContent {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    width: calc(100% - 22px); /* Account for border and padding */
+    box-sizing: border-box;
+}
+
+.downloadContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.downloadButton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.downloadButton:hover {
+    background-color: #0056b3;
+}
+
 @media (max-width: 768px) {
     .title {
         font-size: 2em;
@@ -95,5 +151,9 @@
 
     .patentTable th, .patentTable td {
         font-size: 0.9em;
+    }
+
+    .collapsibleGrid {
+        grid-template-columns: 1fr;
     }
 }
