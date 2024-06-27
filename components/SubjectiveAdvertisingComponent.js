@@ -1,10 +1,14 @@
 // src/components/SubjectiveAdvertisingComponent.js
 import React from 'react';
-import styles from '../public/styles/SubjectiveAdvertisingComponent.module.css';
+import styles from '../public/styles/SubjectiveAdvertisingComponent.module.css'; // Make sure the CSS path is correct
 
 const SubjectiveAdvertisingComponent = () => {
     return (
         <div className={styles.container}>
+            <div className={styles.imageContainer}>
+                <img src="images/subjective_advertising.png" alt="Subjective Advertising" className={styles.roundImage} />
+                <p className={styles.imageText}>Explore the new era of personalized advertising with GT® Subjective Advertising.</p>
+            </div>
             <h1 className={styles.title}>GT® Subjective Advertising</h1>
             <p className={styles.description}>MarketingLess Advertising</p>
             <p className={styles.content}>

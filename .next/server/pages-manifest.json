@@ -3,10 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/consulting": "pages/consulting.js",
-  "/careers": "pages/careers.js",
-  "/investor": "pages/investor.js",
-  "/contact": "pages/contact.js",
-  "/scientific_research": "pages/scientific_research.js",
-  "/how_it_works": "pages/how_it_works.js"
+  "/sign_up": "pages/sign_up.js",
+  "/impact": "pages/impact.js"
 }

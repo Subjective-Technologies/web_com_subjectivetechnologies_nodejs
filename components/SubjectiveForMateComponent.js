@@ -5,6 +5,10 @@ import styles from '../public/styles/SubjectiveForMateComponent.module.css';
 const SubjectiveForMateComponent = () => {
     return (
         <div className={styles.container}>
+            <div className={styles.imageContainer}>
+                <img src="images/subjective_formate.png" alt="Subjective ForMate" className={styles.roundImage} />
+                <p className={styles.imageText}>Streamline your workflows with GT® Subjective ForMate, eliminating the hassle of forms.</p>
+            </div>
             <h1 className={styles.title}>GT® Subjective ForMate</h1>
             <p className={styles.description}>No More Forms</p>
             <p className={styles.content}>

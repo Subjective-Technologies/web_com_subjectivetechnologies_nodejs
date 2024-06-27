@@ -1,5 +1,5 @@
 /* src/styles/SubjectiveCognitiveBoosterComponent.module.css */
-.productContainer {
+.container {
     background-color: #ffffff;
     color: #000000;
     max-width: 80%;
@@ -11,13 +11,33 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.imageContainer {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.roundImage {
+    width: 400px;  /* Large size */
+    height: 400px; /* Large size */
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.imageText {
+    margin-top: 0;
+    margin-bottom: 20px; /* Keep text in normal size and margin */
+    font-size: 1em; /* Original font size */
+    width: calc(100% - 420px); /* Adjust width to accommodate large image */
+}
+
 .title {
-    font-size: 2.5em;
+    font-size: 2.5em; /* Original font size */
     margin-bottom: 20px;
     text-align: center;
 }
 
 .description {
-    font-size: 1.2em;
-    line-height: 1.6;
+    font-size: 1.2em; /* Original font size */
+    line-height: 1.6; /* Original line height */
 }

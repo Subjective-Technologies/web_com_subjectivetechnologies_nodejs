@@ -25,9 +25,9 @@ const Home = () => {
       <div className="animation_container">
         <GoldenThinkerAnimation id="three_canvas" />
       </div>
-      <div className="footer_container">
+{/*       <div className="footer_container">
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 };

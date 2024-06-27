@@ -1,51 +1,71 @@
+/* src/public/styles/SubjectiveThermoCurrencyComponent.module.css */
 .currencyContainer {
-    background-color: #ffffff;
-    color: #000000;
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: 'Roboto Mono', monospace;
-    margin-top: 100px;
-  }
-  
-  .introSection, .papersSection, .noveltySection, .patentsSection {
-    margin-bottom: 40px;
-  }
-  
-  .title {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .subheading {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .text {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  .imageSection {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .image {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .list {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .listItem {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-  }
-  
+  background-color: #ffffff;
+  color: #000000;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Roboto Mono', monospace;
+  margin-top: 100px;
+}
+
+.imageContainer {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.roundImage {
+  width: 400px;  /* Large size */
+  height: 400px; /* Large size */
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px; /* Space between image and text */
+}
+
+.imageText {
+  margin-top: 0;
+  margin-bottom: 20px; /* Keep text in normal size and margin */
+  font-size: 1em; /* Original font size */
+  width: calc(100% - 420px); /* Adjust width to accommodate large image */
+}
+
+.introSection, .papersSection, .noveltySection, .patentsSection {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.subheading {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.imageSection {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.listItem {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}

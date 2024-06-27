@@ -58,7 +58,8 @@ html, body {
 
 .animation_container {
   flex: 1 0 auto;
-  overflow-y: auto;
+  overflow: unset;
+  height: 100%;
 }
 
 .content-wrapper {

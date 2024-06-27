@@ -1,10 +1,13 @@
 import React from 'react';
 import styles from '../public/styles/SubjectiveThermoCurrencyComponent.module.css';
 
-
 const SubjectiveThermoCurrencyComponent = () => {
     return (
       <div className={styles.currencyContainer}>
+        <div className={styles.imageContainer}>
+            <img src="images/subjective_thermo_currency.png" alt="Thermo-Currency" className={styles.roundImage} />
+            <p className={styles.imageText}>Explore the cutting-edge concept of energy-based economy with GT® Subjective Thermo-Currency.</p>
+        </div>
         <section className={styles.introSection}>
           <h1 className={styles.title}>Subjective Thermo-Currency: Energy-based Economy</h1>
           <p className={styles.text}>
@@ -17,11 +20,11 @@ const SubjectiveThermoCurrencyComponent = () => {
             Moreover, STC represents a philosophical shift towards harmonizing human economic activities with natural laws, potentially leading to a more balanced and just society. The technology underpinning STC includes the use of specialized devices to visualize and manage these virtual glands, making the concept both practical and revolutionary in its implications for future economic systems​.
           </p>
         </section>
-  
+
         <section className={styles.imageSection}>
           <img src="images/brainboost_marketing_images_subjective_thermocurrency_1200x600.png" alt="Thermo-Currency" className={styles.image} />
         </section>
-  
+
         <section className={styles.papersSection}>
           <h2 className={styles.subheading}>Related Scientific Papers</h2>
           <p className={styles.text}>
@@ -72,7 +75,7 @@ const SubjectiveThermoCurrencyComponent = () => {
             </li>
           </ul>
         </section>
-  
+
         <section className={styles.noveltySection}>
           <h2 className={styles.subheading}>Novel Aspects of Subjective Thermo-Currency</h2>
           <p className={styles.text}>
@@ -93,7 +96,7 @@ const SubjectiveThermoCurrencyComponent = () => {
             </li>
           </ul>
         </section>
-  
+
         <section className={styles.patentsSection}>
           <h2 className={styles.subheading}>Patented Technologies</h2>
           <p className={styles.text}>
@@ -101,7 +104,7 @@ const SubjectiveThermoCurrencyComponent = () => {
           </p>
           <ul className={styles.list}>
           <li className={styles.listItem}>
-              <strong>Knowledge Hooks (KnowledeHooks):</strong> This is the patented technology that enable us to implemment our Subjective Thermo-Currency.
+              <strong>Knowledge Hooks (KnowledgeHooks):</strong> This is the patented technology that enable us to implement our Subjective Thermo-Currency.
             </li>
             <li className={styles.listItem}>
               <strong>Virtual Artificial Glands (BodyParts):</strong> These are software constructs integrated into the human body, designed to measure and store the energy exerted by users in real-time. The virtual glands are placed strategically on the hands and shoulders and function as energy transducers.
@@ -119,6 +122,6 @@ const SubjectiveThermoCurrencyComponent = () => {
         </section>
       </div>
     );
-  };
-  
-  export default SubjectiveThermoCurrencyComponent;
+};
+
+export default SubjectiveThermoCurrencyComponent;

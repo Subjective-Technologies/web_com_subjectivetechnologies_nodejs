@@ -1,38 +1,14 @@
 {
-  "pages/careers.js -> ../components/CareersComponent": {
-    "id": "pages/careers.js -> ../components/CareersComponent",
-    "files": [
-      "static/chunks/components_CareersComponent_js.js"
-    ]
-  },
-  "pages/consulting.js -> ../components/ConsultingComponent": {
-    "id": "pages/consulting.js -> ../components/ConsultingComponent",
-    "files": [
-      "static/chunks/components_ConsultingComponent_js.js"
-    ]
-  },
-  "pages/contact.js -> ../components/ContactComponent": {
-    "id": "pages/contact.js -> ../components/ContactComponent",
-    "files": [
-      "static/chunks/components_ContactComponent_js.js"
-    ]
-  },
-  "pages/how_it_works.js -> ../components/HowItWorksComponent": {
-    "id": "pages/how_it_works.js -> ../components/HowItWorksComponent",
-    "files": [
-      "static/chunks/components_HowItWorksComponent_js.js"
-    ]
-  },
   "pages/index.js -> ../components/GoldenThinkerAnimation": {
     "id": "pages/index.js -> ../components/GoldenThinkerAnimation",
     "files": [
       "static/chunks/components_GoldenThinkerAnimation_js.js"
     ]
   },
-  "pages/investor.js -> ../components/InvestorComponent": {
-    "id": "pages/investor.js -> ../components/InvestorComponent",
+  "pages/sign_up.js -> ../components/SignUpComponent": {
+    "id": "pages/sign_up.js -> ../components/SignUpComponent",
     "files": [
-      "static/chunks/components_InvestorComponent_js.js"
+      "static/chunks/components_SignUpComponent_js.js"
     ]
   }
 }

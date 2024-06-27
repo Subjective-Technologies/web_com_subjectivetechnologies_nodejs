@@ -6,7 +6,7 @@
     justify-content: space-evenly;
     background-color: #000;
     color: #fff;
-    padding: 10px 20px;
+    /*padding: 10px 20px;*/
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed; /* Ensure the menu stays at the top */
     width: 100%;
@@ -28,7 +28,7 @@
 
 .menuItem:hover {
     font-weight: 700;
-    transform: scale(1.2);
+    transform: scale(1.18);
 }
 
 .menuItem a {
@@ -52,16 +52,16 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     z-index: 10;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 10px;
+    border-radius: 8px;
     width: auto; /* Adjust width to fit content */
-    font-size: medium;
+    font-size: smaller;
 }
 
 .column {
     display: flex;
     flex-direction: column;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .leftMenu, .rightMenu {

@@ -5,6 +5,10 @@ import styles from '../public/styles/SubjectiveInstantJobFinderComponent.module.
 const SubjectiveInstantJobFinderComponent = () => {
     return (
         <div className={styles.container}>
+            <div className={styles.imageContainer}>
+                <img src="images/subjective_instant_job_finder.png" alt="Instant Job Finder" className={styles.roundImage} />
+                <p className={styles.imageText}>Connect instantly to your dream job with GT® Instant Job Finder.</p>
+            </div>
             <h1 className={styles.title}>GT® Subjective Instant Job Finder</h1>
             <p className={styles.description}>Just Sit&Work</p>
             <p className={styles.content}>
