@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="4.1">
+  <axes>
+    <axis tag="wght" name="Weight" minimum="100" maximum="700" default="400">
+      <map input="100" output="0"/>
+      <map input="300" output="25"/>
+      <map input="400" output="50"/>
+      <map input="500" output="79"/>
+      <map input="700" output="100"/>
+    </axis>
+  </axes>
+  <sources>
+    <source filename="RobotoMono-ThinItalic.ufo" familyname="Roboto Mono" stylename="Thin Italic">
+      <location>
+        <dimension name="Weight" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="RobotoMono-Italic.ufo" familyname="Roboto Mono" stylename="Italic">
+      <lib copy="1"/>
+      <groups copy="1"/>
+      <features copy="1"/>
+      <info copy="1"/>
+      <location>
+        <dimension name="Weight" xvalue="50"/>
+      </location>
+    </source>
+    <source filename="RobotoMono-BoldItalic.ufo" familyname="Roboto Mono" stylename="Bold Italic">
+      <location>
+        <dimension name="Weight" xvalue="100"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance familyname="Roboto Mono" stylename="Thin Italic" filename="instances/RobotoMono-ThinItalic.ufo" postscriptfontname="RobotoMono-ThinItalic" stylemapfamilyname="Roboto Mono Thin" stylemapstylename="italic">
+      <location>
+        <dimension name="Weight" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Roboto Mono" stylename="Light Italic" filename="instances/RobotoMono-LightItalic.ufo" postscriptfontname="RobotoMono-LightItalic" stylemapfamilyname="Roboto Mono Light" stylemapstylename="italic">
+      <location>
+        <dimension name="Weight" xvalue="25"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Roboto Mono" stylename="Italic" filename="instances/RobotoMono-Italic.ufo" postscriptfontname="RobotoMono-Italic" stylemapfamilyname="Roboto Mono" stylemapstylename="italic">
+      <location>
+        <dimension name="Weight" xvalue="50"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Roboto Mono" stylename="Medium Italic" filename="instances/RobotoMono-MediumItalic.ufo" postscriptfontname="RobotoMono-MediumItalic" stylemapfamilyname="Roboto Mono Medium" stylemapstylename="italic">
+      <location>
+        <dimension name="Weight" xvalue="79"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Roboto Mono" stylename="Bold Italic" filename="instances/RobotoMono-BoldItalic.ufo" postscriptfontname="RobotoMono-BoldItalic" stylemapfamilyname="Roboto Mono" stylemapstylename="bold italic">
+      <location>
+        <dimension name="Weight" xvalue="100"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+  </instances>
+  <lib>
+    <dict>
+      <key>org.statmake.additionalLocations</key>
+      <dict>
+        <key>Italic</key>
+        <integer>1</integer>
+      </dict>
+    </dict>
+  </lib>
+</designspace>

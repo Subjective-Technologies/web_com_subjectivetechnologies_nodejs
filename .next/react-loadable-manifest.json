@@ -1,14 +1,20 @@
 {
+  "pages/dashboard.js -> ../components/DashboardContentComponent": {
+    "id": "pages/dashboard.js -> ../components/DashboardContentComponent",
+    "files": [
+      "static/chunks/components_DashboardContentComponent_js.js"
+    ]
+  },
+  "pages/dashboard.js -> ../components/MenuFromDashboardComponent": {
+    "id": "pages/dashboard.js -> ../components/MenuFromDashboardComponent",
+    "files": [
+      "static/chunks/components_MenuFromDashboardComponent_js.js"
+    ]
+  },
   "pages/index.js -> ../components/GoldenThinkerAnimation": {
     "id": "pages/index.js -> ../components/GoldenThinkerAnimation",
     "files": [
       "static/chunks/components_GoldenThinkerAnimation_js.js"
-    ]
-  },
-  "pages/sign_up.js -> ../components/SignUpComponent": {
-    "id": "pages/sign_up.js -> ../components/SignUpComponent",
-    "files": [
-      "static/chunks/components_SignUpComponent_js.js"
     ]
   }
 }

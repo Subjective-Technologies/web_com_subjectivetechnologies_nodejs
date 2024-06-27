@@ -1,0 +1,183 @@
+/* styles/SignInComponent.module.css */
+.signInContainer {
+    background-image: url('/images/golden_city.png'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000000;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    min-height: 100vh; /* Ensures the container covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.loginBox {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.signInForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+}
+
+.label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.submitButton {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.orSeparator {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1em;
+    color: #aaa;
+}
+
+.signInOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.signInButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.googleButton {
+    background-color: #db4437;
+    color: white;
+}
+
+.githubButton {
+    background-color: #333;
+    color: white;
+}
+
+.twitterButton {
+    background-color: #1da1f2;
+    color: white;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.googleButton:hover {
+    background-color: #c33d2e;
+}
+
+.githubButton:hover {
+    background-color: #222;
+}
+
+.twitterButton:hover {
+    background-color: #0d95e8;
+}
+
+.forgotPasswordPrompt {
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.resetButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+.resetButton:hover {
+    background-color: #0056b3;
+}
+
+.signUpPrompt {
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.signUpButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+.signUpButton:hover {
+    background-color: #218838;
+}
