@@ -1,99 +1,80 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
-import SubjectiveGlowingText from './3d/SubjectiveGlowingText';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass';
 
+import SubjectiveGlowingText from './subjective_3d/SubjectiveGlowingText';
+import GoldenThinkerStatue from './subjective_3d/GoldenThinkerStatue';
+import SubjectiveSceneThree from './subjective_3d/SubjectiveSceneThree';
+import styles from '../public/styles/GoldenThinkerAnimation.module.css';
 
+function GoldenThinkerAnimation() {
+  const containerRef = useRef(null);
 
-
-
-const GoldenThinkerAnimation = () => {
   useEffect(() => {
-    let composer, bloomComposer, camera, renderer;
-    const scene = new THREE.Scene();
-    const bloomLayer = new THREE.Layers();
-    bloomLayer.set(1); // Set layer 1 for bloom
+    const scene = new SubjectiveSceneThree();
 
-    // Initialize renderer
-    const container = document.getElementById('animation_container');
-    renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setPixelRatio(window.devicePixelRatio);
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    );
+    camera.position.set(0, 0, 5);
+
+    const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.toneMapping = THREE.ReinhardToneMapping;
-    renderer.toneMappingExposure = 1.5; // Adjust as needed
-    container.appendChild(renderer.domElement);
+    renderer.shadowMap.enabled = true;
+    if (containerRef.current) {
+      containerRef.current.appendChild(renderer.domElement);
+    }
 
-    // Initialize camera
-    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.set(0, 1, 5);
-    scene.add(camera);
-
-    // Initialize controls
     const controls = new OrbitControls(camera, renderer.domElement);
-    controls.target.set(0, 0, 0);
-    controls.update();
+    controls.enableDamping = true;
 
-    // Add lights
-    const light = new THREE.PointLight(0xffffff, 1.5);
-    light.position.set(10, 10, 10);
-    scene.add(light);
-
-    // Set up postprocessing
-    const renderScene = new RenderPass(scene, camera);
+    const renderScene = new RenderPass(scene.get_threejs_scene(), camera);
     const bloomPass = new UnrealBloomPass(
       new THREE.Vector2(window.innerWidth, window.innerHeight),
-      1.5, // Bloom strength
+      1.5, // Strength
       0.4, // Radius
       0.85 // Threshold
     );
+    const composer = new EffectComposer(renderer);
+    composer.addPass(renderScene);
+    composer.addPass(bloomPass);
 
-    bloomComposer = new EffectComposer(renderer);
-    bloomComposer.addPass(renderScene);
-    bloomComposer.addPass(bloomPass);
+    const outlinePass = new OutlinePass(new THREE.Vector2(window.innerWidth, window.innerHeight), scene.get_threejs_scene(), camera);
+    outlinePass.edgeStrength = 2.5;
+    outlinePass.edgeGlow = 0.0;
+    outlinePass.edgeThickness = 1.0;
+    outlinePass.pulsePeriod = 0;
+    outlinePass.visibleEdgeColor.set('#ffffff');
+    outlinePass.hiddenEdgeColor.set('#190a05');
+    composer.addPass(outlinePass);
 
-    // Add grid helper for better visualization
-    const gridHelper = new THREE.GridHelper(10, 10);
-    //scene.add(gridHelper);
+    const goldenThinkerStatue = new GoldenThinkerStatue(scene, true);
+    scene.add_object(goldenThinkerStatue);
 
-    // Create glowing text
-    const glowingText = new SubjectiveGlowingText('Subjective Technologies', scene, camera, {}, true);
-
-    // Animation loop
-    function animate() {
+    const animate = function () {
       requestAnimationFrame(animate);
-
-      // Render scene with bloom
-      renderer.render(scene, camera);
-      bloomComposer.render();
-
       controls.update();
-    }
+      composer.render();
+    };
 
     animate();
 
-    // Handle window resize
-    function onWindowResize() {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      bloomComposer.setSize(window.innerWidth, window.innerHeight);
-    }
-
-    window.addEventListener('resize', onWindowResize);
-
     return () => {
-      window.removeEventListener('resize', onWindowResize);
-      renderer.dispose();
-      bloomComposer.dispose();
+      if (containerRef.current) {
+        containerRef.current.removeChild(renderer.domElement);
+      }
     };
   }, []);
 
-  return (
-    <div id="animation_container" style={{ width: '100%', height: '100vh' }}></div>
-  );
-};
+  return <div ref={containerRef} className={styles.animation_container} />;
+}
 
 export default GoldenThinkerAnimation;

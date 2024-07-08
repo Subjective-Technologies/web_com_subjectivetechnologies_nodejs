@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"pages/index.js -> ../components/GoldenThinkerAnimation\":{\"id\":\"pages/index.js -> ../components/GoldenThinkerAnimation\",\"files\":[\"static/chunks/components_GoldenThinkerAnimation_js.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST="{}"

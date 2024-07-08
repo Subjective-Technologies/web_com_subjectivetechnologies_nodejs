@@ -204,6 +204,17 @@ module.exports = require("react/jsx-runtime");
 
 /***/ }),
 
+/***/ "v8":
+/*!*********************!*\
+  !*** external "v8" ***!
+  \*********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("v8");
+
+/***/ }),
+
 /***/ "three":
 /*!************************!*\
   !*** external "three" ***!

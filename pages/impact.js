@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 import React from 'react';
 import Menu from '../components/Menu';
 import Footer from '../components/Footer';
-import GoldenThinkerImpact from '../components/GoldenThinkerImpact';
+import ImpactComponent from '../components/ImpactComponent';
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
         <Menu />
       </div>
       <div className="animation_container">
-        <GoldenThinkerImpact id="impact_react_page" />
+        <ImpactComponent id="impact_react_page" />
       </div>
       <div className="footer_container">
         <Footer />

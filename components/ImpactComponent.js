@@ -1,6 +1,6 @@
 import React from 'react';
 import TechnologyImpact from './TechnologyImpact';
-import styles from '../public/styles/GoldenThinkerImpact.module.css';
+import styles from '../public/styles/ImpactComponent.module.css';
 
 const postScarcity = [
   {
@@ -51,7 +51,7 @@ const postLabour = [
   },
 ];
 
-const GoldenThinkerImpact = () => {
+const ImpactComponent = () => {
   return (
     <div className={styles.impactContainer}>
       <section className={styles.videoSection}>
@@ -125,4 +125,4 @@ const GoldenThinkerImpact = () => {
   );
 };
 
-export default GoldenThinkerImpact;
+export default ImpactComponent;

@@ -4,7 +4,6 @@
 html, body {
   font-family: 'Roboto Mono', monospace;
   font-size: 18px; /* Adjust the font size as needed */
-  overflow: hidden;
   background-color: black;
   color: white; /* Ensure text color is white for better contrast */
   margin: 0;
@@ -21,7 +20,7 @@ html, body {
     "menu_container menu_container menu_container"
     "animation_container animation_container animation_container"
     "footer_container footer_container footer_container";
-  overflow: hidden;
+
   background-color: black;
 }
 
@@ -49,7 +48,6 @@ html, body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow-y: auto;
 }
 
 .menu_container, .footer_container {
@@ -58,7 +56,6 @@ html, body {
 
 .animation_container {
   flex: 1 0 auto;
-  overflow: unset;
   height: 100%;
 }
 

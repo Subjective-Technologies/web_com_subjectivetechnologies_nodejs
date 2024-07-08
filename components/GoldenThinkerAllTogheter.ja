@@ -8,9 +8,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass';
 
 import GUI from 'lil-gui';
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
-import 'typeface-roboto-mono';
+import SubjectiveGlowingText from './3d/SubjectiveGlowingText';
 
 
 const DEVELOPER_MODE = true;
@@ -21,18 +19,17 @@ const GoldenThinkerAnimation = () => {
   useEffect(() => {
     let composer, camera, renderer, model, pointLight1, pointLight2, pointLight3, pointLight4, directionalLight, videoSphere;
     const scene = new THREE.Scene();
+
+
     let recording = false;
     let recordingPaused = false;
     let cameraPath = [];
     let lastTimestamp = null;
     let playbackIndex = 0;
     let playbackSpeed = 0.1; // Adjust this for smoother transitions
-    const bloomLayer = new THREE.Layers();
-    bloomLayer.set(1); // Set layer 1 for bloom
 
 
 
-    // After the initial imports and constants, add debugging for initialization
     console.log("Initializing GoldenThinkerAnimation...");
 
     // When starting recording
@@ -48,10 +45,8 @@ const GoldenThinkerAnimation = () => {
       console.log("Recording started");
     };
 
-
-    // Add debugging statements for indicators
-    console.log("Loading indicators...");
     function createIndicator(color, size = 0.1, identifier) {
+      console.log("Loading indicators...");
       const geometry = new THREE.SphereGeometry(size, 16, 16);
       const material = new THREE.MeshBasicMaterial({ color });
       const sphere = new THREE.Mesh(geometry, material);
@@ -60,8 +55,6 @@ const GoldenThinkerAnimation = () => {
     }
 
 
-    // Add indicators to the scene and debug
-    console.log("Adding indicators...");
     function addIndicators() {
       // Camera Indicator
       const cameraIndicator = createIndicator(0xff0000, 0.2, 'camera'); // Red color for the camera
@@ -77,9 +70,8 @@ const GoldenThinkerAnimation = () => {
       ];
 
       scene.add(...lightIndicators);
+      console.log("Indicators added.");
     }
-    console.log("Indicators added.");
-
 
     function stopRecording() {
       recording = false;
@@ -250,6 +242,8 @@ const GoldenThinkerAnimation = () => {
     }
             
     function animate(timestamp) {
+      renderer.render(scene, camera);
+      bloomComposer.render();
       requestAnimationFrame(animate);
     
       // Render the bloom effect for objects in the bloom layer
@@ -624,6 +618,9 @@ const GoldenThinkerAnimation = () => {
       const initialSnapshot = await loadSnapshotFromFile('3d/snapshots/centered_cross_snapshot.json');
     
       const container = document.getElementById('animation_container');
+
+      const bloomLayer = new THREE.Layers();
+      bloomLayer.set(1);
     
       renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setPixelRatio(window.devicePixelRatio);
@@ -636,8 +633,22 @@ const GoldenThinkerAnimation = () => {
       camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 100);
       camera.position.set(8, 4, 8);
       scene.add(camera);
+
+
+      // Create glowing text
+      const glowingText = new SubjectiveGlowingText('Subjective Technologies', scene, camera, {}, true);
+
+
     
       // Lights
+
+
+      const light = new THREE.PointLight(0xffffff, 1.5);
+      light.position.set(10, 10, 10);
+      scene.add(light);
+  
+
+
       pointLight1 = new THREE.PointLight(0xffffff, 1.5);
       pointLight1.position.set(5, 10, 5);
       scene.add(pointLight1);
@@ -691,8 +702,6 @@ const GoldenThinkerAnimation = () => {
       );
       composer = new EffectComposer(renderer);
       composer.addPass(renderScene);
-
-
       composer.addPass(bloomPass);
     
       const goldMaterial = new THREE.MeshPhysicalMaterial({
@@ -712,49 +721,11 @@ const GoldenThinkerAnimation = () => {
       outlinePass.hiddenEdgeColor.set('#190a05');
       composer.addPass(outlinePass);
     
-      const fontLoader = new FontLoader();
-      fontLoader.load('font/RobotoMono/fonts/json/Roboto Mono Thin_Regular.json', function (font) {
-        createTextGeometry(font);
-      }, undefined, function (error) {
-        console.error('Error loading RobotoMono-Regular.json font, falling back to default font.');
-        fontLoader.load('font/RobotoMono/fonts/json/Roboto Mono Thin_Regular.json', function (defaultFont) {
-          createTextGeometry(defaultFont);
-        });
-      });
-    
-      function createTextGeometry(font) {
-        const textGeometry = new TextGeometry('Subjective Technologies', {
-          font,
-          size: 1,
-          height: 0.1, // Adjusted height
-          curveSegments: 12,
-          bevelEnabled: true,
-          bevelThickness: 0.005,  // Reduced thickness
-          bevelSize: 0.005,       // Reduced size
-          bevelOffset: 0,
-          bevelSegments: 3       // Adjusted bevel segments
-        });
-        textGeometry.computeBoundingBox();
-        textGeometry.computeVertexNormals();
-      
-        const textMaterial = new THREE.MeshStandardMaterial({
-          color: 0xffffff, // White color
-          emissive: 0x000000,
-          roughness: 0.5,
-          metalness: 0.1,
-          side: THREE.DoubleSide
-        });
-      
-
-        
-        const textMesh = new THREE.Mesh(textGeometry, textMaterial);
-        textMesh.position.set(-3, 5, -5);
-        textMesh.layers.enable(bloomLayer);
-        scene.add(textMesh);
-      }
             
     
       addGridHelper();
+      initVisibility();
+      addIndicators();
     
       new GLTFLoader().load('3d/all.glb', function (gltf) {
         model = gltf.scene;
@@ -770,9 +741,6 @@ const GoldenThinkerAnimation = () => {
         if (DEVELOPER_MODE) {
           setupGUI(model, goldMaterial);
         }
-      
-        initVisibility();
-        addIndicators();
       });
       
     

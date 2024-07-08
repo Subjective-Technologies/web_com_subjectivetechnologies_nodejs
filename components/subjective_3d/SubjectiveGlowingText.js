@@ -3,12 +3,17 @@ import * as THREE from 'three';
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
 import * as dat from 'dat.gui';
+import SubjectivePersistentObject from './SubjectivePersistentObject';
 
-class SubjectiveGlowingText {
-  constructor(text, scene, camera, params = {}, developerMode = false) {
+class SubjectiveGlowingText extends SubjectivePersistentObject {
+
+
+  constructor(subjective_scene, text, developerMode = true) {
+    super(developerMode);
     this.text = text;
-    this.scene = scene;
-    this.camera = camera;
+    this.subjective_scene = subjective_scene;
+    this.three_scene = subjective_scene.get_threejs_scene();
+    this.camera = this.subjective_scene.get_threejs_camera();
     this.developerMode = developerMode;
 
     this.params = {
@@ -21,11 +26,11 @@ class SubjectiveGlowingText {
       bevelSize: 0.05,
       bevelSegments: 5,
       textColor: 0xffffff,
-      emissiveColor: 0xffffff,
-      ...params
+      emissiveColor: 0xffffff
     };
 
     this.init();
+
   }
 
   init() {
@@ -39,13 +44,13 @@ class SubjectiveGlowingText {
   }
 
   createText(font) {
-    if (this.textMesh) this.scene.remove(this.textMesh);
-    if (this.glowMesh) this.scene.remove(this.glowMesh);
+    if (this.textMesh) this.subjective_scene.get_threejs_scene().remove(this.textMesh);
+    if (this.glowMesh) this.subjective_scene.get_threejs_scene().remove(this.glowMesh);
 
     const textGeometry = new TextGeometry(this.text, {
       font,
       size: this.params.textSize,
-      height: this.params.textHeight,
+      depth: this.params.textHeight,
       curveSegments: 12,
       bevelEnabled: true,
       bevelThickness: this.params.bevelThickness,
@@ -62,7 +67,7 @@ class SubjectiveGlowingText {
 
     this.textMesh = new THREE.Mesh(textGeometry, textMaterial);
     this.textMesh.position.set(-5, 0, 0);
-    this.scene.add(this.textMesh);
+    this.subjective_scene.get_threejs_scene().add(this.textMesh);
 
     const glowGeometry = textGeometry.clone();
     glowGeometry.computeVertexNormals();
@@ -103,7 +108,11 @@ class SubjectiveGlowingText {
     this.glowMesh = new THREE.Mesh(glowGeometry, glowMaterial);
     this.glowMesh.position.set(-5, 0, 0);
     this.glowMesh.layers.enable(1); // Enable bloom layer
-    //this.scene.add(this.glowMesh);
+    //this.subjective_scene.get_threejs_scene().add(this.glowMesh);
+  }
+
+  get_threejs_object(){
+    return this.me
   }
 
   setupGUI() {
@@ -112,6 +121,21 @@ class SubjectiveGlowingText {
     }
 
     const gui = new dat.GUI();
+    gui.domElement.addEventListener('touchmove', (event) => {
+      event.stopPropagation();
+    }, { passive: false });
+
+
+    // Patch dat.GUI to add passive event listeners
+    const addEventListener = EventTarget.prototype.addEventListener;
+    EventTarget.prototype.addEventListener = function(type, listener, options) {
+      options = options || {};
+      if (typeof options === 'object') {
+        options.passive = true;
+      }
+      addEventListener.call(this, type, listener, options);
+    };
+
     gui.add(this.params, 'bloomStrength', 0.0, 3.0).onChange(value => {
       this.bloomPass.strength = value;
     });

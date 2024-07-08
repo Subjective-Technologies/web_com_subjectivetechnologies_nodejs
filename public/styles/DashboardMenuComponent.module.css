@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Adjust background color as needed */
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding-left: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.menuItem {
+    margin: 0 15px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 400;
+    color: #fff;
+    transition: transform 0.3s, font-weight 0.3s;
+    font-size: 14px; /* Adjust font size as per dashboard requirements */
+}
+
+.menuItem:hover {
+    font-weight: 700;
+    transform: scale(1.1);
+}
+
+.subMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+    gap: 10px;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 12px; /* Set smaller font size for submenu items */
+    overflow-y: auto; /* Enable scrolling if necessary */
+    max-height: 50vh; /* Limit the height of the submenu */
+    width: 50vw; /* Make submenu half the width of the screen */
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    transition: font-weight 0.3s;
+}
+
+.link:hover {
+    font-weight: 700;
+}
+
+.subjectiveIcon {
+    width: 40px; /* Adjust icon size as per design */
+    height: 40px;
+    margin-right: 10px; /* Adjust spacing between icons */
+}
+
+.dashboardIcon {
+    width: 48px; /* Adjust icon size as per design */
+    height: 48px;
+    border-radius: 3px;
+    filter: invert(1);
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff; /* Adjust background color as needed */
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.widget {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.widgetTitle {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.rightAlignedItems {
+    margin-left: auto;
+    display: flex;
+}
+
+.userProfile {
+    position: relative;
+    cursor: pointer;
+}
+
+.userProfileImage {
+    width: 40px; /* Adjust size as per design */
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.userSubMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 12px; /* Set smaller font size for submenu items */
+}
+
+.subMenuItem {
+    text-decoration: none;                                                                                                                                                                                      
+    color: #fff;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s, font-weight 0.3s; /* Add transition for hover effect */
+}
+
+.subMenuItem:hover {
+    font-weight: 700;
+    transform: scale(1.1); /* Add scale transformation on hover */
+}
+
+.settingsIcon {
+    width: 16px; /* Adjust icon size as per design */
+    height: 16px;                                                                                                                                                                                                           
+    margin-left: 8px;
+}

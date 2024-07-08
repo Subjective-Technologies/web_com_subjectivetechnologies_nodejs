@@ -30,6 +30,11 @@ const InvestorComponent = () => {
       <div className={styles.imageContainer}>
         <img src="/images/brainboost_marketing_subjective_thermo_currency.jpg" alt="Investment Pitch" className={styles.pitchImage} />
       </div>
+      <div className={styles.roundImageContainer}>
+        <a href="https://github.com/Subjective-Technologies">
+          <img src="/images/subjective_technologies_logo_github.png" alt="Investment Pitch" className={styles.pitchImage} />
+        </a>
+      </div>
 
       <div className={styles.collapsibleGrid}>
         <CollapsibleSection 
