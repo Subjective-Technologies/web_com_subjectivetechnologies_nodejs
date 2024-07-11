@@ -55,9 +55,13 @@ html, body {
 }
 
 .animation_container {
-  flex: 1 0 auto;
-  height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
 }
+
 
 .content-wrapper {
   background-color: #ffffff;

@@ -4,13 +4,15 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass';
 
-import SubjectiveGlowingText from './subjective_3d/SubjectiveGlowingText';
 import GoldenThinkerStatue from './subjective_3d/GoldenThinkerStatue';
 import SubjectiveSceneThree from './subjective_3d/SubjectiveSceneThree';
+import Subjective2DSVGPlaneCSS3D from './subjective_3d/Subjective2DSVGPlaneCSS3D';
 import styles from '../public/styles/GoldenThinkerAnimation.module.css';
+import LightsDefault from './subjective_3d/LightsDefault';
+
+const developerMode = true;
 
 function GoldenThinkerAnimation() {
   const containerRef = useRef(null);
@@ -24,11 +26,15 @@ function GoldenThinkerAnimation() {
       0.1,
       1000
     );
-    camera.position.set(0, 0, 5);
+    camera.position.set(0, 0, 10);
 
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.shadowMap.enabled = true;
+    renderer.domElement.style.position = 'absolute';
+    renderer.domElement.style.top = '0';
+    renderer.domElement.style.left = '0';
+
     if (containerRef.current) {
       containerRef.current.appendChild(renderer.domElement);
     }
@@ -56,8 +62,31 @@ function GoldenThinkerAnimation() {
     outlinePass.hiddenEdgeColor.set('#190a05');
     composer.addPass(outlinePass);
 
-    const goldenThinkerStatue = new GoldenThinkerStatue(scene, true);
-    scene.add_object(goldenThinkerStatue);
+    const goldenThinkerStatue = new GoldenThinkerStatue(scene, developerMode);
+    const svgPlaneCSS3D = new Subjective2DSVGPlaneCSS3D(scene, developerMode);
+
+    // Wait for both objects to load
+    Promise.all([goldenThinkerStatue.onLoad(), svgPlaneCSS3D.onLoad()]).then(() => {
+      // Position and scale the objects
+      goldenThinkerStatue.getObject3D().position.set(-3, 0, 0);
+      goldenThinkerStatue.getObject3D().scale.set(0.5, 0.5, 0.5);
+
+      svgPlaneCSS3D.getObject3D().position.set(3, 0, 0);
+      svgPlaneCSS3D.getObject3D().scale.set(0.5, 0.5, 0.5);
+
+      scene.add_object(goldenThinkerStatue);
+      scene.add_object(svgPlaneCSS3D);
+    });
+
+    const lightsDefault = new LightsDefault(scene, developerMode);
+    scene.add_object(lightsDefault);
+
+    const synchronizeScroll = () => {
+      controls.update();
+      composer.render();
+    };
+
+    window.addEventListener('scroll', synchronizeScroll);
 
     const animate = function () {
       requestAnimationFrame(animate);
@@ -71,10 +100,11 @@ function GoldenThinkerAnimation() {
       if (containerRef.current) {
         containerRef.current.removeChild(renderer.domElement);
       }
+      window.removeEventListener('scroll', synchronizeScroll);
     };
   }, []);
 
-  return <div ref={containerRef} className={styles.animation_container} />;
+  return <div ref={containerRef} className={styles.animation_container} style={{ position: 'relative', border: '2px solid yellow' }} />;
 }
 
 export default GoldenThinkerAnimation;

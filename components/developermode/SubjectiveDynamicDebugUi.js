@@ -77,6 +77,12 @@ class SubjectiveDynamicDebugUi {
         background: #fff !important;
         font-weight: bold !important;
       }
+      .dg .a {
+        float: right;
+        margin-right: 15px;
+        overflow-y: visible;
+        width: fit-content;
+      }
         .dg .property-name {
             color: white;
         }

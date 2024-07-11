@@ -11,16 +11,6 @@
     width: 100%;
 }
 
-.DashboardMyBodyComponent_bodyPartsList__1_G4I {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    max-height: 80vh;
-    padding: 5%;
-}
-
 .leftSide, .rightSide {
     margin-top: 0;
     width: 48%;
@@ -51,9 +41,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    max-height: 80vh;
+    overflow-y: auto; /* Enable scrolling for the body parts list */
+    max-height: 80vh; /* Limit the height of the body parts list */
     padding: 5%;
     padding-top: 0%;
 }
@@ -74,7 +63,7 @@
 
 .bodyPartItem:hover {
     background-color: #e0e0e0;
-    transform: scale(1.1); /* Increase the scale slightly more */
+    transform: scale(1.05); /* Increase the scale slightly more */
 }
 
 .selected {
@@ -83,8 +72,8 @@
 }
 
 .bodyPartImage {
-    width: 40px; /* Reduced image size */
-    height: 40px;
+    width: 120px; /* Adjusted image size */
+    height: 120px;
     border-radius: 5px;
     margin-right: 15px; /* Adjusted margin */
     object-fit: cover;
@@ -96,21 +85,21 @@
 }
 
 .bodyPartName {
-    font-size: 16px; /* Reduced font size */
+    font-size: 16px; /* Adjusted font size */
     font-weight: 700;
     margin: 0;
 }
 
 .bodyPartType {
-    font-size: 12px; /* Reduced font size */
+    font-size: 12px; /* Adjusted font size */
     font-weight: 400;
     margin: 0;
     color: #666;
 }
 
 .bodyPartDescription {
-    font-size: 10px; /* Reduced font size */
+    font-size: 10px; /* Adjusted font size */
     font-weight: 400;
     margin: 0;
-    color: #999;
+    color: #000000;
 }

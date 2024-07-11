@@ -61,11 +61,13 @@ const DashboardMenuComponent = () => {
                 className={`${styles.menuItem} ${styles.link}`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}>
-                <img 
-                    src="/images/icons/subjective_technologies_icon_square.png" 
-                    alt="Subjective Technologies Icon" 
-                    className={styles.subjectiveIcon} 
-                />
+                <a href="/">
+                    <img 
+                        src="/images/icons/subjective_technologies_icon_square.png" 
+                        alt="Subjective Technologies Icon" 
+                        className={styles.subjectiveIcon} 
+                    />
+                </a>
                 <img 
                     src="/images/icons/dashboard_menu_grid_icon.svg" 
                     alt="Dashboard Icon" 
@@ -95,8 +97,8 @@ const DashboardMenuComponent = () => {
                     />
                     {showUserSubMenu && (
                         <div className={styles.userSubMenu}>
-                            <a href="/dashboard/dashboard_my_profile" className={styles.subMenuItem}>Profile</a>
-                            <a href="/dashboard/dashboard_my_settings" className={styles.subMenuItem}>
+                            <a href="/dashboard_my_profile" className={styles.subMenuItem}>Profile</a>
+                            <a href="/dashboard_my_settings" className={styles.subMenuItem}>
                                 Settings
                                 <img 
                                     src="/images/icons/dashboard_settings_icon.svg" 
@@ -104,8 +106,8 @@ const DashboardMenuComponent = () => {
                                     className={styles.settingsIcon} 
                                 />
                             </a>
-                            <a href="/dashboard/security" className={styles.subMenuItem}>Security</a>
-                            <a href="/dashboard/billing" className={styles.subMenuItem}>Billing Cost and Management</a>
+                            <a href="/dashboard_security" className={styles.subMenuItem}>Security</a>
+                            <a href="/dashboard_billing_and_payment" className={styles.subMenuItem}>Billing Cost and Management</a>
                         </div>
                     )}
                 </div>

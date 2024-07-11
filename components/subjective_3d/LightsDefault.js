@@ -34,7 +34,7 @@ class LightsDefault extends SubjectivePersistentObject{
         spotLight.decay = 2;
         spotLight.distance = 50;
         spotLight.castShadow = true;
-        this.threejs_scene.add(spotLight);
+        // this.threejs_scene.add(spotLight);
         this.threejs_scene.add(spotLight.target);
 
         this.threejs_scene.add(this.directionalLight);

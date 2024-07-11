@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+.container {
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.billingTable {
+    margin-bottom: 20px;
+}
+
+.billingTable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.billingTable th, .billingTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.billingTable th {
+    background-color: #f2f2f2;
+}
+
+.paymentPanel {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.paymentPanel h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.paymentMethods {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.paymentMethods label {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.stripeForm, .paypalForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stripeForm input, .stripeForm button, .paypalForm button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.stripeForm button, .paypalForm button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.stripeForm button:hover, .paypalForm button:hover {
+    background-color: #0056b3;
+}
