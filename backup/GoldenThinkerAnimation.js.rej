@@ -1,0 +1,142 @@
+--- GoldenThinkerAnimation.js
++++ GoldenThinkerAnimation.js
+@@ -215,6 +215,7 @@
+           side: THREE.DoubleSide
+         });
+ 
++        textMesh.layers.enable(bloomLayer);
+         scene.add(textMesh);
+       }
+       
+@@ -303,7 +304,7 @@
+           camera.position.lerpVectors(startCam.position, endCam.position, alpha);
+           camera.quaternion.slerpQuaternions(
+             new THREE.Quaternion().setFromEuler(startCam.rotation),
+-            new THREE.Quaternion().setFromEuler(endCam.rotation),
++            new THREE.Quaternion().setFromEuler(endCam.rotation),
+             alpha
+           );
+ 
+@@ -359,7 +360,7 @@
+ 
+       function updateIndicators() {
+         scene.children.forEach((child) => {
+-          if (child.userData.identifier === 'camera') {
++          if (child.userData.identifier === 'camera') {
+             child.position.copy(camera.position);
+           } else if (child.userData.identifier === 'light1') {
+             child.position.copy(pointLight1.position);
+@@ -476,6 +477,7 @@
+             if (elapsed > 100) {
+               cameraPath.push({
+                 camera: {
++                  console.log("Recording camera position and rotation", camera.position, camera.rotation);
+                   position: camera.position.clone(),
+                   rotation: camera.rotation.clone(),
+                 },
+@@ -601,7 +603,7 @@
+     function createIndicator(color, size = 0.1, identifier) {
+       const geometry = new THREE.SphereGeometry(size, 16, 16);
+       const material = new THREE.MeshBasicMaterial({ color });
+-      const sphere = new THREE.Mesh(geometry, material);
++      const sphere = new THREE.Mesh(geometry, material);
+       sphere.userData.identifier = identifier; // Add identifier to userData
+       return sphere;
+     }
+@@ -704,7 +706,7 @@
+ 
+     const loadSnapshotFromFile = async (filePath) => {
+       try {
+-        const response = await fetch(filePath);
++        const response = await fetch(filePath);
+         if (!response.ok) {
+           throw new Error(`HTTP error! status: ${response.status}`);
+         }
+@@ -722,6 +724,7 @@
+ 
+     const takeSnapshot = () => {
+       const sceneSnapshot = {
++        console.log("Taking snapshot of the camera...");
+         camera: {
+           position: camera.position,
+           rotation: {
+@@ -729,7 +732,7 @@
+             _y: camera.rotation.y,
+             _z: camera.rotation.z,
+             _order: camera.rotation.order,
+-            isEuler: camera.rotation.isEuler
++            isEuler: camera.rotation.isEuler
+           }
+         },
+         model: {
+@@ -789,7 +792,7 @@
+       }
+     };
+ 
+-    const setSnapshot = (settings) => {
++    const setSnapshot = (settings) => {
+       if (settings && typeof settings === 'object') {
+         console.log("Applying scene settings:", settings);
+ 
+@@ -898,7 +901,7 @@
+ 
+       const container = document.getElementById('animation_container');
+ 
+-      renderer = new THREE.WebGLRenderer({ antialias: true });
++      renderer = new THREE.WebGLRenderer({ antialias: true });
+       renderer.setPixelRatio(window.devicePixelRatio);
+       renderer.setSize(window.innerWidth, window.innerHeight);
+       renderer.toneMapping = THREE.ReinhardToneMapping;
+@@ -922,6 +925,7 @@
+       pointLight2.position.set(-5, 10, -5);
+       scene.add(pointLight2);
+ 
++      console.log("PointLight2 position set to:", pointLight2.position);
+       pointLight3 = new THREE.PointLight(0xffffff, 1.5);
+       pointLight3.position.set(5, -10, -5);
+       scene.add(pointLight3);
+@@ -938,7 +942,7 @@
+ 
+       controls = new OrbitControls(camera, renderer.domElement);
+       controls.target.set(0, 0, 0);
+-      controls.maxPolarAngle = Math.PI * 0.5;
++      controls.maxPolarAngle = Math.PI * 0.5;
+       controls.minDistance = 5;
+       controls.maxDistance = 20;
+ 
+@@ -959,7 +963,7 @@
+ 
+       const goldMaterial = new THREE.MeshPhysicalMaterial({
+         color: 0xFFD700,
+-        metalness: 1,
++        metalness: 1,
+         roughness: 0.3,
+         clearcoat: 1,
+         clearcoatRoughness: 0.1
+@@ -1084,7 +1088,7 @@
+               cameraPath.push({
+                 camera: {
+                   position: camera.position.clone(),
+-                  rotation: camera.rotation.clone(),
++                  rotation: camera.rotation.clone(),
+                 },
+                 lights: [
+                   {
+@@ -1096,7 +1100,7 @@
+                   },
+                   {
+                     position: pointLight2.position.clone(),
+-                    intensity: pointLight2.intensity
++                    intensity: pointLight2.intensity
+                   },
+                   {
+                     position: pointLight3.position.clone(),
+@@ -1121,7 +1125,7 @@
+       window.addEventListener('resize', onWindowResize);
+       onWindowResize();
+ 
+-      return () => {
++      return () => {
+         window.removeEventListener('resize', onWindowResize);
+         renderer.dispose();
+         composer.dispose();

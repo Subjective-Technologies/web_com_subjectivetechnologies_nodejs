@@ -4,17 +4,5 @@
     "files": [
       "static/chunks/components_GoldenThinkerAnimation_js.js"
     ]
-  },
-  "pages/sign_in.js -> ../components/SignInComponent": {
-    "id": "pages/sign_in.js -> ../components/SignInComponent",
-    "files": [
-      "static/chunks/components_SignInComponent_js.js"
-    ]
-  },
-  "pages/sign_up.js -> ../components/SignUpComponent": {
-    "id": "pages/sign_up.js -> ../components/SignUpComponent",
-    "files": [
-      "static/chunks/components_SignUpComponent_js.js"
-    ]
   }
 }

@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle id="ball" cx="50" cy="10" r="5" fill="red">
+    <animate
+      attributeName="cy"
+      values="10;90;10"
+      dur="1s"
+      keyTimes="0;0.5;1"
+      repeatCount="indefinite" />
+  </circle>
+</svg>

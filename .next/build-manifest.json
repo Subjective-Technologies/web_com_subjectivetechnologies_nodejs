@@ -27,15 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/sign_in": [
+    "/scientific_research": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/sign_in.js"
-    ],
-    "/sign_up": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/sign_up.js"
+      "static/chunks/pages/scientific_research.js"
     ]
   },
   "ampFirstPages": []

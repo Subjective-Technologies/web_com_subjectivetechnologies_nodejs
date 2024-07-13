@@ -11,7 +11,7 @@
 			"titleBar.activeBackground": "#254165",
 			"titleBar.activeForeground": "#F8FAFD"
 		},
-		"CodeGPT.apiKey": "CodeGPT Plus Beta"
+		"CodeGPT.apiKey": "OpenAI"
 	},
 	"launch": {
 		"configurations": [

@@ -8,7 +8,7 @@ import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass';
 
 import GoldenThinkerStatue from './subjective_3d/GoldenThinkerStatue';
 import SubjectiveSceneThree from './subjective_3d/SubjectiveSceneThree';
-import Subjective2DSVGPlaneCSS3D from './subjective_3d/Subjective2DSVGPlaneCSS3D';
+import SubjectiveVideoPlane from './subjective_3d/SubjectiveVideoPlane';
 import styles from '../public/styles/GoldenThinkerAnimation.module.css';
 import LightsDefault from './subjective_3d/LightsDefault';
 
@@ -18,7 +18,7 @@ function GoldenThinkerAnimation() {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const scene = new SubjectiveSceneThree();
+    const scene = new SubjectiveSceneThree(developerMode);
 
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -34,6 +34,7 @@ function GoldenThinkerAnimation() {
     renderer.domElement.style.position = 'absolute';
     renderer.domElement.style.top = '0';
     renderer.domElement.style.left = '0';
+    renderer.domElement.style.zIndex = '0'; // Ensure it is behind CSS3DRenderer
 
     if (containerRef.current) {
       containerRef.current.appendChild(renderer.domElement);
@@ -63,19 +64,27 @@ function GoldenThinkerAnimation() {
     composer.addPass(outlinePass);
 
     const goldenThinkerStatue = new GoldenThinkerStatue(scene, developerMode);
-    const svgPlaneCSS3D = new Subjective2DSVGPlaneCSS3D(scene, developerMode);
+    const videoPlane = new SubjectiveVideoPlane(scene, '/images/animations/mp4/brainboost_marketing_videos_landing_page.mp4', developerMode);
 
     // Wait for both objects to load
-    Promise.all([goldenThinkerStatue.onLoad(), svgPlaneCSS3D.onLoad()]).then(() => {
+    Promise.all([goldenThinkerStatue.onLoad(), videoPlane.onLoad()]).then(() => {
       // Position and scale the objects
-      goldenThinkerStatue.getObject3D().position.set(-3, 0, 0);
-      goldenThinkerStatue.getObject3D().scale.set(0.5, 0.5, 0.5);
+      const statueObject = goldenThinkerStatue.getObject3D();
+      if (statueObject) {
+        statueObject.position.set(-3, 0, 0);
+        statueObject.scale.set(0.5, 0.5, 0.5);
+      }
 
-      svgPlaneCSS3D.getObject3D().position.set(3, 0, 0);
-      svgPlaneCSS3D.getObject3D().scale.set(0.5, 0.5, 0.5);
+      const videoObject = videoPlane.getObject3D();
+      if (videoObject) {
+        videoObject.position.set(3, 0, 0);
+        videoObject.scale.set(0.5, 0.5, 0.5);
+      }
 
       scene.add_object(goldenThinkerStatue);
-      scene.add_object(svgPlaneCSS3D);
+      scene.add_object(videoPlane);
+
+      console.log('Video Plane added to the scene:', videoPlane);
     });
 
     const lightsDefault = new LightsDefault(scene, developerMode);

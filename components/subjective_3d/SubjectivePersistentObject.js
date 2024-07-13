@@ -1,17 +1,52 @@
 const v8 = require('v8');
 import SubjectiveDynamicDebugUi from '../developermode/SubjectiveDynamicDebugUi';
+import global_dictionary from './SubjectiveGlobalDictionary';
+
 
 class SubjectivePersistentObject {
   constructor(developerMode = false) {
-    this.snapshots = [];
-    this.isPlaying = false;
-    this.isRecording = false;
-    this.currentFrame = 0;
-    this.recordInterval = null;
+    this.snapshots = global_dictionary.get('SubjectivePersistentObject_8_snapshots');
+    this.isPlaying = global_dictionary.get('SubjectivePersistentObject_9_isPlaying');
+    this.isRecording = global_dictionary.get('SubjectivePersistentObject_10_isRecording');
+    this.currentFrame = global_dictionary.get('SubjectivePersistentObject_11_currentFrame');
+    this.recordInterval = global_dictionary.get('SubjectivePersistentObject_12_recordInterval');
+
+
 
     if (developerMode) {
+      console.log('Developer mode enabled');
       this.debugUi = new SubjectiveDynamicDebugUi(this);
+      this.proxy = this.initPropertyListeners();
+    } else {
+      this.proxy = this; // Use the original object if not in developer mode
     }
+
+    return this.proxy; // Return the proxy (or original object)
+  }
+
+  // Initialize property listeners to detect changes
+  initPropertyListeners() {
+    const handler = {
+      set: (obj, prop, value) => {
+        console.log(`Property set: ${prop} = ${value}`);
+        obj[prop] = value;
+        if (this.debugUi) {
+          this.debugUi.updateUi();
+        }
+        return true;
+      },
+      deleteProperty: (obj, prop) => {
+        console.log(`Property deleted: ${prop}`);
+        delete obj[prop];
+        if (this.debugUi) {
+          this.debugUi.updateUi();
+        }
+        return true;
+      }
+    };
+
+    // Wrap the object with a Proxy to detect property changes
+    return new Proxy(this, handler);
   }
 
   // Take a snapshot of the current state
@@ -27,6 +62,9 @@ class SubjectivePersistentObject {
       const snapshot = this.snapshots[snapshotIndex];
       const restored = v8.deserialize(snapshot);
       Object.assign(this, restored);
+      if (this.debugUi) {
+        this.debugUi.updateUi(); // Update the UI after setting the snapshot
+      }
       console.log('Restored snapshot:', snapshotIndex + 1);
     } else {
       console.error('Snapshot index out of range.');
@@ -89,6 +127,9 @@ class SubjectivePersistentObject {
         const snapshot = this.snapshots[this.currentFrame];
         const restored = v8.deserialize(snapshot);
         Object.assign(this, restored);
+        if (this.debugUi) {
+          this.debugUi.updateUi(); // Update the UI during playback
+        }
         console.log(`Frame ${this.currentFrame + 1}`);
         this.currentFrame++;
       } else {
