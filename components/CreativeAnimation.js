@@ -9,6 +9,7 @@ import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass';
 import GoldenThinkerStatue from './subjective_3d/GoldenThinkerStatue';
 import SubjectiveSceneThree from './subjective_3d/SubjectiveSceneThree';
 import SubjectiveVideoPlane from './subjective_3d/SubjectiveVideoPlane';
+import SubjectiveGlowingText from './subjective_3d/SubjectiveGlowingText';
 import styles from '../public/styles/GoldenThinkerAnimation.module.css';
 import LightsDefault from './subjective_3d/LightsDefault';
 import trackProperties from './developermode/trackProperties';
@@ -16,11 +17,10 @@ import SubjectiveDynamicDebugUi from './developermode/SubjectiveDynamicDebugUi';
 
 const developerMode = true;
 
-function GoldenThinkerAnimation() {
+function CreativeAnimation() {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    console.log('Setting up scene, camera, and renderer...');
     const scene = new SubjectiveSceneThree(developerMode);
 
     const cameraConfig = trackProperties({
@@ -56,11 +56,6 @@ function GoldenThinkerAnimation() {
     const controls = trackProperties(new OrbitControls(camera, renderer.domElement), 'controls');
     controls.enableDamping = true;
 
-    console.log('Scene initialized:', scene);
-    console.log('Camera initialized:', camera);
-    console.log('Renderer initialized:', renderer);
-    console.log('OrbitControls initialized:', controls);
-
     const renderScene = trackProperties(new RenderPass(scene.get_threejs_scene(), camera), 'renderScene');
     const bloomPass = trackProperties(
       new UnrealBloomPass(
@@ -87,53 +82,49 @@ function GoldenThinkerAnimation() {
     outlinePass.hiddenEdgeColor.set('#190a05');
     composer.addPass(outlinePass);
 
-    console.log('RenderPass initialized:', renderScene);
-    console.log('UnrealBloomPass initialized:', bloomPass);
-    console.log('OutlinePass initialized:', outlinePass);
-
     const goldenThinkerStatue = new GoldenThinkerStatue(scene, developerMode);
     const videoPlane = new SubjectiveVideoPlane(scene, '/images/animations/mp4/brainboost_marketing_videos_landing_page.mp4', developerMode);
+    const glowingText = new SubjectiveGlowingText(scene, 'Subjective Technologies', developerMode);
 
-    console.log('Loading GoldenThinkerStatue...');
-    console.log('Loading SubjectiveVideoPlane...');
+    // Wait for objects to load
+    const statueObject = goldenThinkerStatue.getObject3D();
+    const videoObject = videoPlane.getObject3D();
+    const textObject = glowingText.getObject3D();
 
-    // Wait for both objects to load
-    Promise.all([goldenThinkerStatue.onLoad(), videoPlane.onLoad()]).then(() => {
-      // Position and scale the objects
-      const statueObject = goldenThinkerStatue.getObject3D();
-      if (statueObject) {
-        statueObject.position.set(-3, 0, 0);
-        statueObject.scale.set(0.5, 0.5, 0.5);
-        console.log('Statue object added to the scene:', statueObject);
-      }
+    // Position and scale the objects
+    if (statueObject) {
+      statueObject.position.set(-3, 0, 0);
+      statueObject.scale.set(0.5, 0.5, 0.5);
+    }
 
-      const videoObject = videoPlane.getObject3D();
-      if (videoObject) {
-        videoObject.position.set(3, 0, 0);
-        videoObject.scale.set(0.5, 0.5, 0.5);
-        console.log('Video object added to the scene:', videoObject);
-      }
+    if (videoObject) {
+      videoObject.position.set(0, 0, 0);
+      videoObject.scale.set(3, 3, 3);
+    }
 
-      scene.add_objects(goldenThinkerStatue);
-      scene.add_objects(videoPlane);
+    if (textObject) {
+      textObject.position.set(0, 3, -5);
+    }
 
-      console.log('Video Plane added to the scene:', videoPlane);
-    });
+    scene.add_objects(goldenThinkerStatue);
+    scene.add_objects(videoPlane);
+    scene.add_objects(glowingText);
 
     const lightsDefault = new LightsDefault(scene, developerMode);
     scene.add_objects(lightsDefault);
 
-    console.log('Lights added to the scene:', lightsDefault.getObject3D());
-
-    const synchronizeScroll = () => {
-      controls.update();
-      composer.render();
-    };
-
-    window.addEventListener('scroll', synchronizeScroll);
+    // Add camera movement
+    const clock = new THREE.Clock();
 
     const animate = function () {
       requestAnimationFrame(animate);
+      const elapsedTime = clock.getElapsedTime();
+
+      // Circular camera movement
+      camera.position.x = 10 * Math.sin(elapsedTime * 0.5);
+      camera.position.z = 10 * Math.cos(elapsedTime * 0.5);
+      camera.lookAt(0, 0, 0);
+
       controls.update();
       composer.render();
     };
@@ -149,11 +140,10 @@ function GoldenThinkerAnimation() {
       if (containerRef.current) {
         containerRef.current.removeChild(renderer.domElement);
       }
-      window.removeEventListener('scroll', synchronizeScroll);
     };
   }, []);
 
   return <div ref={containerRef} className={styles.animation_container} style={{ position: 'relative', border: '2px solid yellow' }} />;
 }
 
-export default GoldenThinkerAnimation;
+export default CreativeAnimation;

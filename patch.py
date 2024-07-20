@@ -1,4 +1,7 @@
-import * as THREE from 'three';
+import os
+
+# Define the content for SubjectiveVideoPlane.js with the updated material
+subjective_video_plane_content = """import * as THREE from 'three';
 
 class SubjectiveVideoPlane {
   constructor(scene, videoUrl, developerMode) {
@@ -36,3 +39,16 @@ class SubjectiveVideoPlane {
 }
 
 export default SubjectiveVideoPlane;
+"""
+
+# Write the content to SubjectiveVideoPlane.js
+file_path = 'components/subjective_3d/SubjectiveVideoPlane.js'
+
+# Ensure the directory exists
+os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
+# Write the file
+with open(file_path, 'w') as file:
+    file.write(subjective_video_plane_content)
+
+print(f'Patch applied: {file_path} has been updated.')

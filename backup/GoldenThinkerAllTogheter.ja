@@ -8,7 +8,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass';
 
 import GUI from 'lil-gui';
-import SubjectiveGlowingText from './3d/SubjectiveGlowingText';
+import SubjectiveGlowingText from './marketing/marketing_3d/SubjectiveGlowingText';
 
 
 const DEVELOPER_MODE = true;

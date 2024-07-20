@@ -1,89 +1,142 @@
-// components/GoldenThinkerAnimation.js
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import GTScene from './GTScene.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
+import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
+import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass';
 
-import BloomShaderTransformer from './GTBloomShaderTransformer.js';
+import GoldenThinkerStatue from './subjective_3d/GoldenThinkerStatue';
+import SubjectiveSceneThree from './subjective_3d/SubjectiveSceneThree';
+import SubjectiveVideoPlane from './subjective_3d/SubjectiveVideoPlane';
+import styles from '../public/styles/GoldenThinkerAnimation.module.css';
+import LightsDefault from './subjective_3d/LightsDefault';
+import trackProperties from './developermode/trackProperties';
+import SubjectiveDynamicDebugUi from './developermode/SubjectiveDynamicDebugUi'; // Import the UI class
 
+const developerMode = true;
 
-const GoldenThinkerAnimation = () => {
+function GoldenThinkerAnimation() {
+  const containerRef = useRef(null);
+
   useEffect(() => {
+    const scene = new SubjectiveSceneThree(developerMode);
 
-      const gt_scene = new GTScene();
-        
+    const cameraConfig = trackProperties({
+      fov: 75,
+      aspect: window.innerWidth / window.innerHeight,
+      near: 0.1,
+      far: 1000
+    }, 'cameraConfig');
 
-      const image360Path = 'images/360/background_black_4096x2048_360.png'
-      const objPath = './3d/anim_goldenthinker.obj'; // Update with the actual path
+    const camera = trackProperties(
+      new THREE.PerspectiveCamera(
+        cameraConfig.fov,
+        cameraConfig.aspect,
+        cameraConfig.near,
+        cameraConfig.far
+      ),
+      'camera'
+    );
+    camera.position.set(0, 0, 10);
 
-    // ---------------------------------DEFINE MATERIALS------------------------------------
-    
-      // Create a gold material
-      const goldMaterial = new THREE.MeshPhysicalMaterial({
-        color: 0xD4AF37, // Gold color
-        metalness: 1.5, // Full metalness makes it look more like gold
-        roughness: 0.3, // Adjust to make it shinier or more matte
-        reflectivity: 1, // Full reflectivity for a metallic look
-      });
-      //materialCatalog.addMaterial('goldmaterial',goldMaterial);
+    const renderer = trackProperties(new THREE.WebGLRenderer(), 'renderer');
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.shadowMap.enabled = true;
+    renderer.domElement.style.position = 'absolute';
+    renderer.domElement.style.top = '0';
+    renderer.domElement.style.left = '0';
+    renderer.domElement.style.zIndex = '0'; // Ensure it is behind CSS3DRenderer
 
-      //const goldMaterial = new THREE.MeshPhongMaterial({ color: 0xFFD700 });
+    if (containerRef.current) {
+      containerRef.current.appendChild(renderer.domElement);
+    }
 
-     const statue = new THREE.Mesh(new THREE.SphereGeometry(1, 32, 32), goldMaterial);
-     gt_scene.add(statue);
+    const controls = trackProperties(new OrbitControls(camera, renderer.domElement), 'controls');
+    controls.enableDamping = true;
 
-     //this.goldenThinkerScene.getRenderer().setSize(window.innerWidth,window.innerHeight);
+    const renderScene = trackProperties(new RenderPass(scene.get_threejs_scene(), camera), 'renderScene');
+    const bloomPass = trackProperties(
+      new UnrealBloomPass(
+        new THREE.Vector2(window.innerWidth, window.innerHeight),
+        1.5, // Strength
+        0.4, // Radius
+        0.85 // Threshold
+      ),
+      'bloomPass'
+    );
+    const composer = trackProperties(new EffectComposer(renderer), 'composer');
+    composer.addPass(renderScene);
+    composer.addPass(bloomPass);
 
-    //-------------------------------- Materials ---------------------------------------
-   
-    
-    
+    const outlinePass = trackProperties(
+      new OutlinePass(new THREE.Vector2(window.innerWidth, window.innerHeight), scene.get_threejs_scene(), camera),
+      'outlinePass'
+    );
+    outlinePass.edgeStrength = 2.5;
+    outlinePass.edgeGlow = 0.0;
+    outlinePass.edgeThickness = 1.0;
+    outlinePass.pulsePeriod = 0;
+    outlinePass.visibleEdgeColor.set('#ffffff');
+    outlinePass.hiddenEdgeColor.set('#190a05');
+    composer.addPass(outlinePass);
 
+    const goldenThinkerStatue = new GoldenThinkerStatue(scene, developerMode);
+    const videoPlane = new SubjectiveVideoPlane(scene, '/images/animations/mp4/brainboost_marketing_videos_landing_page.mp4', developerMode);
 
+    // Wait for both objects to load
+    Promise.all([goldenThinkerStatue.onLoad(), videoPlane.onLoad()]).then(() => {
+      // Position and scale the objects
+      const statueObject = goldenThinkerStatue.getObject3D();
+      if (statueObject) {
+        statueObject.position.set(-3, 0, 0);
+        statueObject.scale.set(0.5, 0.5, 0.5);
+      }
 
+      const videoObject = videoPlane.getObject3D();
+      if (videoObject) {
+        videoObject.position.set(3, 0, 0);
+        videoObject.scale.set(0.5, 0.5, 0.5);
+      }
 
-    //------------------------------Loading Objects------------------------------------------
-    
-    
-      const thinkerStatuePath = '3d/anim_goldenthinker.obj';
+      scene.add_objects(goldenThinkerStatue);
+      scene.add_objects(videoPlane);
 
-      //material_calculation = (new BloomShaderTransformer(materialCatalog.getMaterial('goldmaterial'))).transform();
+      console.log('Video Plane added to the scene:', videoPlane);
+    });
 
-     // const originalMaterial = materialCatalog.getMaterial('goldmaterial');
+    const lightsDefault = new LightsDefault(scene, developerMode);
+    scene.add_objects(lightsDefault);
 
+    const synchronizeScroll = () => {
+      controls.update();
+      composer.render();
+    };
 
+    window.addEventListener('scroll', synchronizeScroll);
 
-     const bloomStrength  = 1.5;
-     const bloomRadius = 0.2;
-     const bloomThreshold = 0.8;
-      material_calculation = (new BloomShaderTransformer()).transform(
-        gt_scene.getRenderer(),
-        gt_scene,
-        gt_scene.getCamera(),
-        goldMaterial,
-        bloomStrength,
-        bloomRadius,
-        bloomThreshold
-      );
+    const animate = function () {
+      requestAnimationFrame(animate);
+      controls.update();
+      composer.render();
+    };
 
+    animate();
 
-      gt_scene.addElement(thinkerStatuePath, {
-       material: material_calculation,
-       position: { x: 0, y: -2, z: 0 },
-       rotation: { x: 0, y: 0, z: 0 },
-     });
-
-
-
-
-
-
+    // Initialize and load the UI if developerMode is true
+    if (developerMode) {
+      new SubjectiveDynamicDebugUi(scene);
+    }
 
     return () => {
-      // Clean up when the component unmounts
-      //myScene.dispose();
+      if (containerRef.current) {
+        containerRef.current.removeChild(renderer.domElement);
+      }
+      window.removeEventListener('scroll', synchronizeScroll);
     };
   }, []);
 
-  return <div id="animation_container"></div>;
-};
+  return <div ref={containerRef} className={styles.animation_container} style={{ position: 'relative', border: '2px solid yellow' }} />;
+}
+
 export default GoldenThinkerAnimation;

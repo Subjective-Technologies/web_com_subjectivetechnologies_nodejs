@@ -1,52 +1,56 @@
-const v8 = require('v8');
-import SubjectiveDynamicDebugUi from '../developermode/SubjectiveDynamicDebugUi';
-import global_dictionary from './SubjectiveGlobalDictionary';
-
+import trackProperties from '../developermode/trackProperties.js'
 
 class SubjectivePersistentObject {
+
   constructor(developerMode = false) {
-    this.snapshots = global_dictionary.get('SubjectivePersistentObject_8_snapshots');
-    this.isPlaying = global_dictionary.get('SubjectivePersistentObject_9_isPlaying');
-    this.isRecording = global_dictionary.get('SubjectivePersistentObject_10_isRecording');
-    this.currentFrame = global_dictionary.get('SubjectivePersistentObject_11_currentFrame');
-    this.recordInterval = global_dictionary.get('SubjectivePersistentObject_12_recordInterval');
-
-
-
-    if (developerMode) {
-      console.log('Developer mode enabled');
-      this.debugUi = new SubjectiveDynamicDebugUi(this);
-      this.proxy = this.initPropertyListeners();
-    } else {
-      this.proxy = this; // Use the original object if not in developer mode
-    }
-
-    return this.proxy; // Return the proxy (or original object)
+    this.persistent_object_properties = {
+      snapshots: [],
+      isPlaying: false,
+      isRecording: false,
+      currentFrame: 0,
+      recordInterval: null
+    };
+    this.trackedProperties = trackProperties(this.persistent_object_properties);
   }
 
-  // Initialize property listeners to detect changes
-  initPropertyListeners() {
-    const handler = {
-      set: (obj, prop, value) => {
-        console.log(`Property set: ${prop} = ${value}`);
-        obj[prop] = value;
-        if (this.debugUi) {
-          this.debugUi.updateUi();
-        }
-        return true;
-      },
-      deleteProperty: (obj, prop) => {
-        console.log(`Property deleted: ${prop}`);
-        delete obj[prop];
-        if (this.debugUi) {
-          this.debugUi.updateUi();
-        }
-        return true;
-      }
-    };
+  get snapshots() {
+    return this.trackedProperties.snapshots;
+  }
 
-    // Wrap the object with a Proxy to detect property changes
-    return new Proxy(this, handler);
+  set snapshots(value) {
+    this.trackedProperties.snapshots = value;
+  }
+
+  get isPlaying() {
+    return this.trackedProperties.isPlaying;
+  }
+
+  set isPlaying(value) {
+    this.trackedProperties.isPlaying = value;
+  }
+
+  get isRecording() {
+    return this.trackedProperties.isRecording;
+  }
+
+  set isRecording(value) {
+    this.trackedProperties.isRecording = value;
+  }
+
+  get currentFrame() {
+    return this.trackedProperties.currentFrame;
+  }
+
+  set currentFrame(value) {
+    this.trackedProperties.currentFrame = value;
+  }
+
+  get recordInterval() {
+    return this.trackedProperties.recordInterval;
+  }
+
+  set recordInterval(value) {
+    this.trackedProperties.recordInterval = value;
   }
 
   // Take a snapshot of the current state

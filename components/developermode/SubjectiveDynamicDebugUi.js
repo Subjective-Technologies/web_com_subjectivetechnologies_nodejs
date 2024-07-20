@@ -1,57 +1,26 @@
-import * as dat from 'dat.gui';
-import SubjectivePersistentObject from '../subjective_3d/SubjectivePersistentObject'; // Adjust the import path as needed
-
-// Patch dat.GUI to use passive event listeners for specific events
-const originalAddEventListener = EventTarget.prototype.addEventListener;
-EventTarget.prototype.addEventListener = function (type, listener, options) {
-  if (type === 'touchstart' || type === 'touchmove' || type === 'wheel') {
-    options = options || {};
-    if (typeof options === 'object') {
-      options.passive = true;
-    } else {
-      options = { capture: options, passive: true };
-    }
-  }
-  originalAddEventListener.call(this, type, listener, options);
-};
+if (typeof window !== 'undefined') { var dat = require('dat.gui'); }
+import SubjectiveGlobalDictionary from './SubjectiveGlobalDictionary';
+import { debounce } from './debounce';
+import SubjectivePersistentObject from '../subjective_3d/SubjectivePersistentObject';
 
 class SubjectiveDynamicDebugUi {
-  constructor(subjectiveObject) {
-    console.log("Initializing SubjectiveDynamicDebugUi with properties: " + JSON.stringify(Object.keys(subjectiveObject)));
+  constructor() {
+    if (SubjectiveDynamicDebugUi.instance) {
+      return SubjectiveDynamicDebugUi.instance;
+    }
 
-    this.subjectiveObject = subjectiveObject;
     this.gui = new dat.GUI({ load: JSON, preset: 'Default' });
+    this.addedProperties = new Set();
+    this.propertiesFolder = null;
 
-    // Apply the CSS styles for alignment and margin directly
     this.applyStyles();
+    this.buildGuiFromGlobalDictionary();
 
-    // Build the GUI with a limit of 2 depth levels
-    this.buildGui(this.subjectiveObject, this.gui, 0, 2);
-
-    // Add snapshot controls
-    const snapshotFolder = this.gui.addFolder('Snapshots');
-
-    this.snapshotTextarea = document.createElement('textarea');
-    this.snapshotTextarea.id = 'snapshotTextarea';
-    snapshotFolder.__ul.appendChild(this.snapshotTextarea);
-
-    snapshotFolder.add({ takeSnapshot: () => this.takeSnapshot() }, 'takeSnapshot').name('Take Snapshot');
-
-    const recordAnimationFolder = this.gui.addFolder('Record Animation');
-    this.recordAnimationTextarea = document.createElement('textarea');
-    this.recordAnimationTextarea.id = 'recordAnimationTextarea';
-    recordAnimationFolder.__ul.appendChild(this.recordAnimationTextarea);
-
-    recordAnimationFolder.add({ recordAnimation: () => this.recordAnimation() }, 'recordAnimation').name('Record Animation');
-    recordAnimationFolder.add({ playAnimation: () => this.playAnimation() }, 'playAnimation').name('Play Animation');
-
-    // Create a variable for snapshot index and an input for it
-    this.snapshotIndex = 0;
-
-    snapshotFolder.add({ setSnapshot: () => this.setSnapshot(this.snapshotIndex) }, 'setSnapshot').name('Set Snapshot');
-
-    // Change to light theme
     this.setLightTheme();
+
+    this.updateUi = debounce(this.updateUi.bind(this), 300);
+
+    SubjectiveDynamicDebugUi.instance = this;
   }
 
   applyStyles() {
@@ -63,6 +32,16 @@ class SubjectiveDynamicDebugUi {
         top: 100px;
         right: 0;
         z-index: 1000;
+      }
+      .dg.main {
+        position: relative;
+        height: 100%;
+      }
+      .dg.main .close-button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
       }
     `;
     document.getElementsByTagName('head')[0].appendChild(style);
@@ -76,6 +55,7 @@ class SubjectiveDynamicDebugUi {
         background: #fff !important;
         font-weight: bold !important;
         margin-top: 2%;
+        position: relative;
       }
       .dg .a {
         float: right;
@@ -83,15 +63,19 @@ class SubjectiveDynamicDebugUi {
         overflow-y: visible;
         width: fit-content;
       }
-        .dg .property-name {
-            color: white;
-        }
-        .dg .title {
-            color: yellow;
-        }
+      .dg .property-name {
+        color: white;
+      }
+      .dg .title {
+        color: yellow;
+      }
       .dg.main .close-button {
         background: #fff !important;
         border: 1px solid #ddd !important;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
       }
       .dg .c input[type="checkbox"]:checked::after {
         background: #000 !important;
@@ -132,47 +116,78 @@ class SubjectiveDynamicDebugUi {
     document.getElementsByTagName('head')[0].appendChild(style);
   }
 
-  buildGui(object, gui, level, maxDepth) {
-    if (level > maxDepth) return; // Limit to specified depth
+  buildGuiFromGlobalDictionary() {
+    const globalDict = SubjectiveGlobalDictionary.getAll();
+    const gui = this.gui;
 
-    const keys = Object.keys(object);
-    console.log(`Building GUI for level ${level}, keys: ${keys}`);
+    while (this.gui.__controllers.length > 0) {
+      this.gui.remove(this.gui.__controllers[0]);
+    }
 
-    keys.forEach(key => {
-      const value = object[key];
-      if (value instanceof SubjectivePersistentObject) {
-        console.log(`Adding folder for SubjectivePersistentObject: ${key}`);
-        const folder = gui.addFolder(key);
-        this.buildGui(value, folder, level + 1, maxDepth);
-      } else if (typeof value === 'number' || typeof value === 'string' || typeof value === 'boolean') {
-        console.log(`Adding property to GUI: ${key} = ${value}`);
-        const controller = gui.add(object, key).listen();
-        this.applyInlineStyles(controller.domElement);
+    if (!this.propertiesFolder) {
+      this.propertiesFolder = gui.addFolder('Properties');
+    } else {
+      Object.keys(this.propertiesFolder.__folders).forEach(folderName => {
+        this.propertiesFolder.removeFolder(this.propertiesFolder.__folders[folderName]);
+      });
+    }
+
+    const addedProperties = new Set();
+
+    Object.keys(globalDict).forEach(key => {
+      if (!this.addedProperties.has(key)) {
+        const value = globalDict[key];
+        const parts = key.split('_');
+        const propName = parts.pop();
+        const className = parts.join('_');
+
+        if (value instanceof SubjectivePersistentObject) {
+          let classFolder = this.propertiesFolder.__folders[className];
+          if (!classFolder) {
+            classFolder = this.propertiesFolder.addFolder(className);
+            classFolder.close();
+          }
+
+          if (typeof value === 'number') {
+            classFolder.add(globalDict, key, 0, 100).name(propName).listen().onChange(() => this.updateThreeJsObject(key, value));
+          } else if (typeof value === 'boolean') {
+            classFolder.add(globalDict, key).name(propName).listen().onChange(() => this.updateThreeJsObject(key, value));
+          } else if (typeof value === 'string') {
+            classFolder.add(globalDict, key).name(propName).listen().onChange(() => this.updateThreeJsObject(key, value));
+          }
+
+          this.addedProperties.add(key);
+        }
       }
     });
+
+    if (!this.closeButton) {
+      const closeButton = document.createElement('button');
+      closeButton.className = 'close-button';
+      closeButton.innerText = 'Close Controls';
+      closeButton.onclick = () => {
+        this.gui.close();
+      };
+      this.propertiesFolder.__ul.appendChild(closeButton);
+      this.closeButton = closeButton;
+    }
   }
 
-  applyInlineStyles(element) {
-    element.style.color = '#000';
-    element.style.background = '#fff';
-    element.style.fontWeight = 'bold';
-  }
+  updateThreeJsObject(key, value) {
+    const parts = key.split('_');
+    const propName = parts.pop();
+    const objectName = parts.join('_');
+    const threeJsObject = window[objectName];
 
-  takeSnapshot() {
-    this.subjectiveObject.takeSnapshot();
-    this.snapshotTextarea.value = JSON.stringify(this.subjectiveObject.snapshots);
-  }
-
-  setSnapshot(index) {
-    this.subjectiveObject.setSnapshot(index);
+    if (threeJsObject) {
+      threeJsObject[propName] = value;
+    }
   }
 
   updateUi() {
     console.log('Updating UI with current properties');
-    this.gui.destroy(); // Destroy the existing GUI
-    this.gui = new dat.GUI({ load: JSON, preset: 'Default' }); // Create a new GUI instance
-    this.buildGui(this.subjectiveObject, this.gui, 0, 2); // Rebuild the GUI with updated properties
-    this.setLightTheme(); // Reapply the light theme
+    this.buildGuiFromGlobalDictionary();
+    this.setLightTheme();
   }
 }
 

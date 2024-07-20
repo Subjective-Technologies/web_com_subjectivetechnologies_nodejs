@@ -33,9 +33,7 @@ html, body {
   grid-area: animation_container;
 }
 
-.footer_container {
-  grid-area: footer_container;
-}
+
 
 * {
   font-family: 'Roboto Mono', monospace;
@@ -50,9 +48,7 @@ html, body {
   height: 100vh;
 }
 
-.menu_container, .footer_container {
-  flex-shrink: 0;
-}
+
 
 .animation_container {
   position: relative;

@@ -4,10 +4,9 @@ import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
 import * as dat from 'dat.gui';
 import SubjectivePersistentObject from './SubjectivePersistentObject';
+import trackProperties from '../developermode/trackProperties';
 
 class SubjectiveGlowingText extends SubjectivePersistentObject {
-
-
   constructor(subjective_scene, text, developerMode = true) {
     super(developerMode);
     this.text = text;
@@ -16,7 +15,7 @@ class SubjectiveGlowingText extends SubjectivePersistentObject {
     this.camera = this.subjective_scene.get_threejs_camera();
     this.developerMode = developerMode;
 
-    this.params = {
+    this.params = trackProperties({
       bloomStrength: 1.5,
       bloomThreshold: 0.85,
       emissiveIntensity: 0.855,
@@ -27,10 +26,9 @@ class SubjectiveGlowingText extends SubjectivePersistentObject {
       bevelSegments: 5,
       textColor: 0xffffff,
       emissiveColor: 0xffffff
-    };
+    }, 'Params');
 
     this.init();
-
   }
 
   init() {
@@ -47,7 +45,7 @@ class SubjectiveGlowingText extends SubjectivePersistentObject {
     if (this.textMesh) this.subjective_scene.get_threejs_scene().remove(this.textMesh);
     if (this.glowMesh) this.subjective_scene.get_threejs_scene().remove(this.glowMesh);
 
-    const textGeometry = new TextGeometry(this.text, {
+    const textGeometry = trackProperties(new TextGeometry(this.text, {
       font,
       size: this.params.textSize,
       depth: this.params.textHeight,
@@ -57,15 +55,15 @@ class SubjectiveGlowingText extends SubjectivePersistentObject {
       bevelSize: this.params.bevelSize,
       bevelOffset: 0,
       bevelSegments: this.params.bevelSegments
-    });
+    }), 'TextGeometry');
 
-    const textMaterial = new THREE.MeshStandardMaterial({
+    const textMaterial = trackProperties(new THREE.MeshStandardMaterial({
       color: this.params.textColor,
       emissive: this.params.emissiveColor,
       emissiveIntensity: this.params.emissiveIntensity,
-    });
+    }), 'TextMaterial');
 
-    this.textMesh = new THREE.Mesh(textGeometry, textMaterial);
+    this.textMesh = trackProperties(new THREE.Mesh(textGeometry, textMaterial), 'TextMesh');
     this.textMesh.position.set(-5, 0, 0);
     this.subjective_scene.get_threejs_scene().add(this.textMesh);
 
@@ -73,7 +71,7 @@ class SubjectiveGlowingText extends SubjectivePersistentObject {
     glowGeometry.computeVertexNormals();
     glowGeometry.scale(1.05, 1.05, 1.05);
 
-    const glowMaterial = new THREE.ShaderMaterial({
+    const glowMaterial = trackProperties(new THREE.ShaderMaterial({
       uniforms: {
         "c": { type: "f", value: 1.0 },
         "p": { type: "f", value: 1.4 },
@@ -103,16 +101,16 @@ class SubjectiveGlowingText extends SubjectivePersistentObject {
       side: THREE.FrontSide,
       blending: THREE.AdditiveBlending,
       transparent: true
-    });
+    }), 'GlowMaterial');
 
-    this.glowMesh = new THREE.Mesh(glowGeometry, glowMaterial);
+    this.glowMesh = trackProperties(new THREE.Mesh(glowGeometry, glowMaterial), 'GlowMesh');
     this.glowMesh.position.set(-5, 0, 0);
     this.glowMesh.layers.enable(1); // Enable bloom layer
-    //this.subjective_scene.get_threejs_scene().add(this.glowMesh);
+    // this.subjective_scene.get_threejs_scene().add(this.glowMesh);
   }
 
-  get_threejs_object(){
-    return this.me
+  getObject3D() {
+    return this.textMesh;
   }
 
   setupGUI() {
@@ -124,17 +122,6 @@ class SubjectiveGlowingText extends SubjectivePersistentObject {
     gui.domElement.addEventListener('touchmove', (event) => {
       event.stopPropagation();
     }, { passive: false });
-
-
-    // Patch dat.GUI to add passive event listeners
-    const addEventListener = EventTarget.prototype.addEventListener;
-    EventTarget.prototype.addEventListener = function(type, listener, options) {
-      options = options || {};
-      if (typeof options === 'object') {
-        options.passive = true;
-      }
-      addEventListener.call(this, type, listener, options);
-    };
 
     gui.add(this.params, 'bloomStrength', 0.0, 3.0).onChange(value => {
       this.bloomPass.strength = value;

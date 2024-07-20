@@ -4,7 +4,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
-import SubjectiveGlowingText from './3d/SubjectiveGlowingText';
+import SubjectiveGlowingText from './marketing/marketing_3d/SubjectiveGlowingText';
 
 
 

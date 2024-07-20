@@ -1,5 +1,6 @@
 import React from 'react';
 import TechnologyImpact from './TechnologyImpact';
+import Footer from './Footer'; // Import the Footer component
 import styles from '../public/styles/ImpactComponent.module.css';
 
 const postScarcity = [
@@ -54,73 +55,76 @@ const postLabour = [
 const ImpactComponent = () => {
   return (
     <div className={styles.impactContainer}>
-      <section className={styles.videoSection}>
-        <video controls className={styles.video}>
-          <source src="video/brainboost_marketing_media_video_subjective.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </section>
+      <div className={styles.content}>
+        <section className={styles.videoSection}>
+          <video controls className={styles.video}>
+            <source src="video/brainboost_marketing_media_video_subjective.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </section>
 
-      <section className={styles.introSection}>
-        <h2 className={styles.introTitle}>Impact of Subjective Technologies in Society</h2>
-        <p className={styles.introText}>
-          The advent of Subjective Technologies marks a pivotal shift in the evolution of human interaction with technology. This transformation promises to usher in a new era characterized by post-scarcity, post-education, and post-labour dynamics, fundamentally altering the societal landscape. In this essay, we will explore the general implications of these changes and delve into specific technology products that exemplify these advancements.
-        </p>
-        <p className={styles.introText}>
-          <strong>Post-Scarcity:</strong> The concept of post-scarcity revolves around the idea that technological advancements can provide abundance, reducing or eliminating the scarcity of resources. Subjective Technologies facilitate this by optimizing the use of resources through real-time, personalized cognitive assistance. For example, VirtualGlands, a concept within this framework, enable users to perform energy transactions unconsciously and instantaneously, effectively replacing traditional currency systems and contributing to a more efficient and abundant economy​​.
-        </p>
-        <p className={styles.introText}>
-          <strong>Post-Education:</strong> Traditional education systems, with their one-size-fits-all approach, often fail to address individual learning needs and preferences. Subjective Technologies propose a paradigm shift towards a personalized learning experience. By providing real-time, context-sensitive cognitive services, these technologies empower individuals to learn and solve problems in ways that are tailored to their unique cognitive processes. This personalized approach democratizes access to knowledge and promotes continuous, lifelong learning, making formal education systems less critical​​​​.
-        </p>
-        <p className={styles.introText}>
-          <strong>Post-Labour:</strong> The integration of Subjective Technologies into daily life has the potential to significantly reduce the cognitive load associated with various tasks, from mundane daily activities to complex professional responsibilities. By enhancing individual capabilities and automating routine tasks, these technologies could lead to a reduction in the necessity for traditional forms of labor. This shift could free individuals to pursue more creative, fulfilling, and intellectually stimulating endeavors, contributing to a more balanced and humane societal structure​​.
-        </p>
-      </section>
+        <section className={styles.introSection}>
+          <h2 className={styles.introTitle}>Impact of Subjective Technologies in Society</h2>
+          <p className={styles.introText}>
+            The advent of Subjective Technologies marks a pivotal shift in the evolution of human interaction with technology. This transformation promises to usher in a new era characterized by post-scarcity, post-education, and post-labour dynamics, fundamentally altering the societal landscape. In this essay, we will explore the general implications of these changes and delve into specific technology products that exemplify these advancements.
+          </p>
+          <p className={styles.introText}>
+            <strong>Post-Scarcity:</strong> The concept of post-scarcity revolves around the idea that technological advancements can provide abundance, reducing or eliminating the scarcity of resources. Subjective Technologies facilitate this by optimizing the use of resources through real-time, personalized cognitive assistance. For example, VirtualGlands, a concept within this framework, enable users to perform energy transactions unconsciously and instantaneously, effectively replacing traditional currency systems and contributing to a more efficient and abundant economy​​.
+          </p>
+          <p className={styles.introText}>
+            <strong>Post-Education:</strong> Traditional education systems, with their one-size-fits-all approach, often fail to address individual learning needs and preferences. Subjective Technologies propose a paradigm shift towards a personalized learning experience. By providing real-time, context-sensitive cognitive services, these technologies empower individuals to learn and solve problems in ways that are tailored to their unique cognitive processes. This personalized approach democratizes access to knowledge and promotes continuous, lifelong learning, making formal education systems less critical​​​​.
+          </p>
+          <p className={styles.introText}>
+            <strong>Post-Labour:</strong> The integration of Subjective Technologies into daily life has the potential to significantly reduce the cognitive load associated with various tasks, from mundane daily activities to complex professional responsibilities. By enhancing individual capabilities and automating routine tasks, these technologies could lead to a reduction in the necessity for traditional forms of labor. This shift could free individuals to pursue more creative, fulfilling, and intellectually stimulating endeavors, contributing to a more balanced and humane societal structure​​.
+          </p>
+        </section>
 
-      <section className={styles.eraSection}>
-        <h3 className={styles.eraTitle}>Post-Scarcity Era</h3>
-        {postScarcity.map((tech, index) => (
-          <TechnologyImpact
-            key={index}
-            image={tech.image}
-            title={tech.title}
-            description={tech.description}
-            reverse={index % 2 === 1}
-          />
-        ))}
-      </section>
+        <section className={styles.eraSection}>
+          <h3 className={styles.eraTitle}>Post-Scarcity Era</h3>
+          {postScarcity.map((tech, index) => (
+            <TechnologyImpact
+              key={index}
+              image={tech.image}
+              title={tech.title}
+              description={tech.description}
+              reverse={index % 2 === 1}
+            />
+          ))}
+        </section>
 
-      <section className={styles.eraSection}>
-        <h3 className={styles.eraTitle}>Post-Education Era</h3>
-        {postEducation.map((tech, index) => (
-          <TechnologyImpact
-            key={index}
-            image={tech.image}
-            title={tech.title}
-            description={tech.description}
-            reverse={index % 2 === 1}
-          />
-        ))}
-      </section>
+        <section className={styles.eraSection}>
+          <h3 className={styles.eraTitle}>Post-Education Era</h3>
+          {postEducation.map((tech, index) => (
+            <TechnologyImpact
+              key={index}
+              image={tech.image}
+              title={tech.title}
+              description={tech.description}
+              reverse={index % 2 === 1}
+            />
+          ))}
+        </section>
 
-      <section className={styles.eraSection}>
-        <h3 className={styles.eraTitle}>Post-Labour Era</h3>
-        {postLabour.map((tech, index) => (
-          <TechnologyImpact
-            key={index}
-            image={tech.image}
-            title={tech.title}
-            description={tech.description}
-            reverse={index % 2 === 1}
-          />
-        ))}
-      </section>
+        <section className={styles.eraSection}>
+          <h3 className={styles.eraTitle}>Post-Labour Era</h3>
+          {postLabour.map((tech, index) => (
+            <TechnologyImpact
+              key={index}
+              image={tech.image}
+              title={tech.title}
+              description={tech.description}
+              reverse={index % 2 === 1}
+            />
+          ))}
+        </section>
 
-      <section className={styles.impactQuoteSection}>
-        <blockquote className={styles.impactQuote}>
-          "The Golden Thinker has changed the way we approach technology. Their solutions are not just innovative, but truly transformative." - Industry Expert
-        </blockquote>
-      </section>
+        <section className={styles.impactQuoteSection}>
+          <blockquote className={styles.impactQuote}>
+            "The Golden Thinker has changed the way we approach technology. Their solutions are not just innovative, but truly transformative." - Industry Expert
+          </blockquote>
+        </section>
+      </div>
+      <Footer /> {/* Add the Footer component */}
     </div>
   );
 };

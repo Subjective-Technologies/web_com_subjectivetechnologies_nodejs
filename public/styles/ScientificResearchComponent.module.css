@@ -1,4 +1,7 @@
 .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure it takes full height of the viewport */
     background-color: #ffffff;
     color: #000000;
     max-width: 80%;
@@ -6,7 +9,31 @@
     padding: 20px;
     font-family: 'Roboto Mono', monospace;
     margin-top: 100px;
-}
+  }
+
+  .content {
+    flex: 1; /* Take up remaining space */
+  }
+  
+  .title, .description {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .papersContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px; /* Adjust spacing as needed */
+  }
+  
+  .paperFrame, .note, .bookSection, .orcidSection {
+    text-align: center;
+  }
+  
+  .logoTable, .logoCell, .logo, .orcidRow, .orcidLogo, .orcidCode, .bookCover, .amazonButton {
+    margin: 0 auto;
+    text-align: center;
+  }
 
 .title {
     font-size: 2.5em;

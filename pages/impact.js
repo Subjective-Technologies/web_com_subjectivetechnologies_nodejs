@@ -2,7 +2,11 @@ import dynamic from 'next/dynamic';
 import React from 'react';
 import Menu from '../components/Menu';
 import Footer from '../components/Footer';
-import ImpactComponent from '../components/ImpactComponent';
+
+
+const ImpactComponent = dynamic(() => import('../components/ImpactComponent'), {
+  ssr: false,
+});
 
 const Home = () => {
   return (
