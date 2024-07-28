@@ -1,7 +1,10 @@
+console.log('Loading ContactComponent.js');
 import React from 'react';
 import styles from '../public/styles/ContactComponent.module.css';
 
 const ContactComponent = () => {
+console.log('Rendering ContactComponent');
+console.log('Returning from ContactComponent');
     return (
         <div className={styles.contactContainer}>
             <h1 className={styles.title}>Contact Us</h1>

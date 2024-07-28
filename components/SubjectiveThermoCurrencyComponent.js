@@ -1,7 +1,10 @@
+console.log('Loading SubjectiveThermoCurrencyComponent.js');
 import React from 'react';
 import styles from '../public/styles/SubjectiveThermoCurrencyComponent.module.css';
 
 const SubjectiveThermoCurrencyComponent = () => {
+console.log('Rendering SubjectiveThermoCurrencyComponent');
+console.log('Returning from SubjectiveThermoCurrencyComponent');
     return (
       <div className={styles.currencyContainer}>
         <div className={styles.imageContainer}>

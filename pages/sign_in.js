@@ -1,3 +1,4 @@
+console.log('Loading sign_in.js');
 // pages/sign_in.js
 import React from 'react';
 import dynamic from 'next/dynamic';
@@ -9,6 +10,8 @@ const SignInComponent = dynamic(() => import('../components/SignInComponent'), {
 });
 
 const SignIn = () => {
+console.log('Rendering SignIn');
+console.log('Returning from SignIn');
   return (
     <div className="container">
       <div className="menu_container">

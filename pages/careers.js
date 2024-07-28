@@ -1,3 +1,4 @@
+console.log('Loading careers.js');
 import dynamic from 'next/dynamic';
 import React from 'react';
 import Menu from '../components/Menu';
@@ -8,6 +9,8 @@ const CareersComponent = dynamic(() => import('../components/CareersComponent'),
 });
 
 const Careers = () => {
+console.log('Rendering Careers');
+console.log('Returning from Careers');
     return (
         <div className="container">
             <div className="menu_container">

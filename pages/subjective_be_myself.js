@@ -1,3 +1,4 @@
+console.log('Loading subjective_be_myself.js');
 // src/pages/products/subjective_be_myself.js
 import dynamic from 'next/dynamic';
 import React from 'react';
@@ -9,6 +10,8 @@ const SubjectiveBeMyselfComponent = dynamic(() => import('../components/Subjecti
 });
 
 const SubjectiveBeMyself = () => {
+console.log('Rendering SubjectiveBeMyself');
+console.log('Returning from SubjectiveBeMyself');
     return (
         <div className="container">
             <div className="menu_container">

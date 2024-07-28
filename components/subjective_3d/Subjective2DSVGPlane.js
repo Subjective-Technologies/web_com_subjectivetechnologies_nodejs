@@ -1,9 +1,11 @@
+console.log('Loading Subjective2DSVGPlane.js');
 import * as THREE from 'three';
 import { SVGLoader } from 'three/examples/jsm/loaders/SVGLoader';
 import SubjectivePersistentObject from './SubjectivePersistentObject';
 import trackProperties from '../developermode/trackProperties';
 
 class Subjective2DSVGPlane extends SubjectivePersistentObject {
+console.log('Rendering Subjective2DSVGPlane');
   constructor(subjective_scene, developerMode = false) {
     super(developerMode);
     this.subjective_scene = subjective_scene;

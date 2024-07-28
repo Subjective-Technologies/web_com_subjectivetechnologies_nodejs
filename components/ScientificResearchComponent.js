@@ -1,8 +1,15 @@
+console.log('Loading ScientificResearchComponent.js');
 import React from 'react';
 import Footer from './Footer'; // Import the Footer component
 import styles from '../public/styles/ScientificResearchComponent.module.css';
 
 const ScientificResearchComponent = () => {
+console.log('Rendering ScientificResearchComponent');
+console.log('Rendering ScientificResearchComponent');
+console.log('Rendering ScientificResearchComponent');
+console.log('Returning from ScientificResearchComponent');
+console.log('Returning from ScientificResearchComponent');
+console.log('Returning from ScientificResearchComponent');
   return (
     <div className={styles.container}>
       <div className={styles.content}>

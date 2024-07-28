@@ -1,3 +1,4 @@
+console.log('Loading impact.js');
 import dynamic from 'next/dynamic';
 import React from 'react';
 import Menu from '../components/Menu';
@@ -9,6 +10,8 @@ const ImpactComponent = dynamic(() => import('../components/ImpactComponent'), {
 });
 
 const Home = () => {
+console.log('Rendering Home');
+console.log('Returning from Home');
   return (
     <div className="container">
       <div className="menu_container">

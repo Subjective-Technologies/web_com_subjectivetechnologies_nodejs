@@ -1,3 +1,4 @@
+console.log('Loading subjective_cognitive_booster.js');
 // src/pages/products/subjective_cognitive_booster.js
 import dynamic from 'next/dynamic';
 import React from 'react';
@@ -9,6 +10,8 @@ const SubjectiveCognitiveBoosterComponent = dynamic(() => import('../components/
 });
 
 const SubjectiveCognitiveBooster = () => {
+console.log('Rendering SubjectiveCognitiveBooster');
+console.log('Returning from SubjectiveCognitiveBooster');
     return (
         <div className="container">
             <div className="menu_container">

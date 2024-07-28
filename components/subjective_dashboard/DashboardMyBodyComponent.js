@@ -1,7 +1,9 @@
+console.log('Loading DashboardMyBodyComponent.js');
 import React, { useState } from 'react';
 import styles from '../../public/styles/DashboardMyBodyComponent.module.css';
 
 const DashboardMyBodyComponent = () => {
+console.log('Rendering DashboardMyBodyComponent');
     const [selectedBodyPart, setSelectedBodyPart] = useState(null);
 
     const handleBodyPartClick = (index) => {
@@ -59,6 +61,7 @@ const DashboardMyBodyComponent = () => {
         }
     ];
 
+console.log('Returning from DashboardMyBodyComponent');
     return (
         <div className={styles.dashboardContainer}>
             <div className={styles.leftSide}>

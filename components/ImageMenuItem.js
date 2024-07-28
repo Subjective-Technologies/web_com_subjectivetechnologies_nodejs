@@ -1,3 +1,4 @@
+console.log('Loading ImageMenuItem.js');
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../public/styles/ImageMenuItem.module.css'; // Import CSS module for styling

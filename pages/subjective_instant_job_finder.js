@@ -1,3 +1,4 @@
+console.log('Loading subjective_instant_job_finder.js');
 // src/pages/products/subjective_instant_job_finder.js
 import dynamic from 'next/dynamic';
 import React from 'react';
@@ -9,6 +10,8 @@ const SubjectiveInstantJobFinderComponent = dynamic(() => import('../components/
 });
 
 const SubjectiveInstantJobFinder = () => {
+console.log('Rendering SubjectiveInstantJobFinder');
+console.log('Returning from SubjectiveInstantJobFinder');
     return (
         <div className="container">
             <div className="menu_container">

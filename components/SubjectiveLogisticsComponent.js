@@ -1,8 +1,11 @@
+console.log('Loading SubjectiveLogisticsComponent.js');
 // src/components/SubjectiveLogisticsComponent.js
 import React from 'react';
 import styles from '../public/styles/SubjectiveLogisticsComponent.module.css';
 
 const SubjectiveLogisticsComponent = () => {
+console.log('Rendering SubjectiveLogisticsComponent');
+console.log('Returning from SubjectiveLogisticsComponent');
     return (
         <div className={styles.container}>
             <div className={styles.imageContainer}>

@@ -1,3 +1,4 @@
+console.log('Loading test.js');
 db.getData((err,data)=>{
  if(err){
   console.log(err)

@@ -1,7 +1,10 @@
+console.log('Loading SubjectiveVideoPlane.js');
 import * as THREE from 'three';
 
 class SubjectiveVideoPlane {
+
   constructor(scene, videoUrl, developerMode) {
+    console.log('Constructor SubjectiveVideoPlane');
     this.scene = scene.get_threejs_scene();
     this.developerMode = developerMode;
     this.videoUrl = videoUrl;

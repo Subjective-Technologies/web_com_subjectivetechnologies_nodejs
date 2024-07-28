@@ -1,8 +1,15 @@
+console.log('Loading SubjectiveForMateComponent.js');
 // src/components/SubjectiveForMateComponent.js
 import React from 'react';
 import styles from '../public/styles/SubjectiveForMateComponent.module.css';
 
 const SubjectiveForMateComponent = () => {
+console.log('Rendering SubjectiveForMateComponent');
+console.log('Rendering SubjectiveForMateComponent');
+console.log('Rendering SubjectiveForMateComponent');
+console.log('Returning from SubjectiveForMateComponent');
+console.log('Returning from SubjectiveForMateComponent');
+console.log('Returning from SubjectiveForMateComponent');
     return (
         <div className={styles.container}>
             <div className={styles.imageContainer}>

@@ -1,3 +1,4 @@
+console.log('Loading subjective_semantizer.js');
 // src/pages/products/subjective_semantizer.js
 import dynamic from 'next/dynamic';
 import React from 'react';
@@ -9,6 +10,8 @@ const SubjectiveSemantizerComponent = dynamic(() => import('../components/Subjec
 });
 
 const SubjectiveSemantizer = () => {
+console.log('Rendering SubjectiveSemantizer');
+console.log('Returning from SubjectiveSemantizer');
     return (
         <div className="container">
             <div className="menu_container">

@@ -1,3 +1,4 @@
+console.log('Loading debounce.js');
 export function debounce(func, wait) {
   let timeout;
   return function(...args) {

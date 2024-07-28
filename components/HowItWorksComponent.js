@@ -1,7 +1,10 @@
+console.log('Loading HowItWorksComponent.js');
 import React from 'react';
 import styles from '../public/styles/HowItWorksComponent.module.css';
 
 const HowItWorksComponent = () => {
+console.log('Rendering HowItWorksComponent');
+console.log('Returning from HowItWorksComponent');
     return (
         <div className={styles.howItWorksContainer}>
             <h1 className={styles.title}>How It Works</h1>

@@ -1,8 +1,15 @@
+console.log('Loading SubjectiveCognitiveBoosterComponent.js');
 // src/components/SubjectiveCognitiveBoosterComponent.js
 import React from 'react';
 import styles from '../public/styles/SubjectiveCognitiveBoosterComponent.module.css'; // Make sure the CSS path is correct
 
 const SubjectiveCognitiveBoosterComponent = () => {
+console.log('Rendering SubjectiveCognitiveBoosterComponent');
+console.log('Rendering SubjectiveCognitiveBoosterComponent');
+console.log('Rendering SubjectiveCognitiveBoosterComponent');
+console.log('Returning from SubjectiveCognitiveBoosterComponent');
+console.log('Returning from SubjectiveCognitiveBoosterComponent');
+console.log('Returning from SubjectiveCognitiveBoosterComponent');
     return (
         <div className={styles.container}>
             <div className={styles.imageContainer}>

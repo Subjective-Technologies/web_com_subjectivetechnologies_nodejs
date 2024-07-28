@@ -1,3 +1,4 @@
+console.log('Loading scientific_research.js');
 import dynamic from 'next/dynamic';
 import React from 'react';
 import Menu from '../components/Menu';
@@ -5,6 +6,8 @@ import Footer from '../components/Footer';
 import ScientificResearchComponent from '../components/ScientificResearchComponent';
 
 const Home = () => {
+console.log('Rendering Home');
+console.log('Returning from Home');
   return (
     <div className="container">
       <div className="menu_container">

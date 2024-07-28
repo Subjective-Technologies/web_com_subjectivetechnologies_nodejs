@@ -1,8 +1,11 @@
+console.log('Loading SubjectiveAdapterComponent.js');
 // src/components/SubjectiveAdapterComponent.js
 import React from 'react';
 import styles from '../public/styles/SubjectiveAdapterComponent.module.css';
 
 const SubjectiveAdapterComponent = () => {
+console.log('Rendering SubjectiveAdapterComponent');
+console.log('Returning from SubjectiveAdapterComponent');
     return (
         <div className={styles.container}>
             <div className={styles.imageContainer}>

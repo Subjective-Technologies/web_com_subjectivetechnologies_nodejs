@@ -1,8 +1,9 @@
+console.log('Loading SubjectiveGlobalDictionary.js');
 // components/developermode/SubjectiveGlobalDictionary.js
 
 const globalDictionary = new Map();
 
-export default {
+const SubjectiveGlobalDictionary = {
   set: (className, prop, value) => {
     const key = `${className}_${prop}`;
     globalDictionary.set(key, value);
@@ -13,3 +14,6 @@ export default {
     return obj;
   }, {})
 };
+
+export default SubjectiveGlobalDictionary;
+export { globalDictionary };

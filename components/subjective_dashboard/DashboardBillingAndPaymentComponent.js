@@ -1,7 +1,9 @@
+console.log('Loading DashboardBillingAndPaymentComponent.js');
 import React, { useState } from 'react';
 import styles from '../../public/styles/DashboardBillingAndPaymentComponent.module.css';
 
 const DashboardBillingAndPaymentComponent = () => {
+console.log('Rendering DashboardBillingAndPaymentComponent');
     const [paymentMethod, setPaymentMethod] = useState('stripe');
 
     const handlePaymentMethodChange = (event) => {
@@ -17,6 +19,7 @@ const DashboardBillingAndPaymentComponent = () => {
 
     const total = charges.reduce((acc, charge) => acc + parseFloat(charge.amount.replace('$', '')), 0);
 
+console.log('Returning from DashboardBillingAndPaymentComponent');
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>Billing and Cost Analysis</h1>

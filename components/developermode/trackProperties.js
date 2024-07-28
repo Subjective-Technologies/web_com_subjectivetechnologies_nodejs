@@ -1,3 +1,4 @@
+console.log('Loading trackProperties.js');
 import globalDictionary from './SubjectiveGlobalDictionary';
 
 function trackProperties(obj, className, onChangeCallback) {

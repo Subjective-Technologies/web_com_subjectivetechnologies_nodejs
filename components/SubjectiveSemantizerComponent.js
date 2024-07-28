@@ -1,7 +1,14 @@
+console.log('Loading SubjectiveSemantizerComponent.js');
 import React from 'react';
 import styles from '../public/styles/SubjectiveSemantizerComponent.module.css';
 
 const SubjectiveSemantizerComponent = () => {
+console.log('Rendering SubjectiveSemantizerComponent');
+console.log('Rendering SubjectiveSemantizerComponent');
+console.log('Rendering SubjectiveSemantizerComponent');
+console.log('Returning from SubjectiveSemantizerComponent');
+console.log('Returning from SubjectiveSemantizerComponent');
+console.log('Returning from SubjectiveSemantizerComponent');
     return (
         <div className={styles.container}>
             <div className={styles.imageContainer}>

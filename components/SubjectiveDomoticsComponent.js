@@ -1,8 +1,11 @@
+console.log('Loading SubjectiveDomoticsComponent.js');
 // src/components/SubjectiveDomoticsComponent.js
 import React from 'react';
 import styles from '../public/styles/SubjectiveDomoticsComponent.module.css';
 
 const SubjectiveDomoticsComponent = () => {
+console.log('Rendering SubjectiveDomoticsComponent');
+console.log('Returning from SubjectiveDomoticsComponent');
     return (
         <div className={styles.container}>
             <div className={styles.imageContainer}>

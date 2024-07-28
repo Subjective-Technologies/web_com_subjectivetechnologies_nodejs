@@ -1,3 +1,4 @@
+console.log('Loading dashboard_billing_and_payment.js');
 import React from 'react';
 import DashboardMenuComponent from '../components/subjective_dashboard/DashboardMenuComponent';
 import DashboardBillingAndPaymentComponent from '../components/subjective_dashboard/DashboardBillingAndPaymentComponent';
@@ -8,6 +9,8 @@ import contentStyles from '../public/styles/DashboardBillingAndPaymentComponent.
 import Footer from '../components/Footer';
 
 const DashboardBillingAndPaymentPage = () => {
+console.log('Rendering DashboardBillingAndPaymentPage');
+console.log('Returning from DashboardBillingAndPaymentPage');
     return (
         <div className={menuStyles.container}>
             <DashboardMenuComponent />

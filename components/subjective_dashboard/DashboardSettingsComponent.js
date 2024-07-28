@@ -1,7 +1,9 @@
+console.log('Loading DashboardSettingsComponent.js');
 import React, { useState } from 'react';
 import styles from '../../public/styles/SettingsComponent.module.css';
 
 const SettingsComponent = () => {
+console.log('Rendering SettingsComponent');
     const [settings, setSettings] = useState({
         username: 'User123',
         email: 'user@example.com',
@@ -43,6 +45,7 @@ const SettingsComponent = () => {
         }
     };
 
+console.log('Returning from SettingsComponent');
     return (
         <div className={styles.settingsContainer}>
             <div className={styles.securitySection}>

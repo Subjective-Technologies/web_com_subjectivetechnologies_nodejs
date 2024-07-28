@@ -1,8 +1,11 @@
+console.log('Loading SubjectiveInstantJobFinderComponent.js');
 // src/components/SubjectiveInstantJobFinderComponent.js
 import React from 'react';
 import styles from '../public/styles/SubjectiveInstantJobFinderComponent.module.css';
 
 const SubjectiveInstantJobFinderComponent = () => {
+console.log('Rendering SubjectiveInstantJobFinderComponent');
+console.log('Returning from SubjectiveInstantJobFinderComponent');
     return (
         <div className={styles.container}>
             <div className={styles.imageContainer}>

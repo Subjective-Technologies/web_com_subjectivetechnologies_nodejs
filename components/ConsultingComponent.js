@@ -1,7 +1,10 @@
+console.log('Loading ConsultingComponent.js');
 import React from 'react';
 import styles from '../public/styles/ConsultingComponent.module.css';
 
 const ConsultingComponent = () => {
+console.log('Rendering ConsultingComponent');
+console.log('Returning from ConsultingComponent');
     return (
         <div className={styles.consultingContainer}>
             <h1 className={styles.title}>Consulting Services</h1>

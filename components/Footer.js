@@ -1,8 +1,15 @@
+console.log('Loading Footer.js');
 // components/Footer.js
 import React from 'react';
 import styles from '../public/styles/Footer.module.css';
 
 const Footer = () => {
+console.log('Rendering Footer');
+console.log('Rendering Footer');
+console.log('Rendering Footer');
+console.log('Returning from Footer');
+console.log('Returning from Footer');
+console.log('Returning from Footer');
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>

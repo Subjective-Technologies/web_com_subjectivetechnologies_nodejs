@@ -1,3 +1,4 @@
+console.log('Loading subjective_thermo_currency.js');
 import dynamic from 'next/dynamic';
 import React from 'react';
 import Menu from '../components/Menu';

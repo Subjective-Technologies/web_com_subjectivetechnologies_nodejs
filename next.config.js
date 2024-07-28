@@ -1,3 +1,4 @@
+console.log('Loading next.config.js');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack(config, { dev }) {

@@ -1,3 +1,4 @@
+console.log('Loading subjective_formate.js');
 // src/pages/products/subjective_formate.js
 import dynamic from 'next/dynamic';
 import React from 'react';
@@ -9,6 +10,8 @@ const SubjectiveForMateComponent = dynamic(() => import('../components/Subjectiv
 });
 
 const SubjectiveForMate = () => {
+console.log('Rendering SubjectiveForMate');
+console.log('Returning from SubjectiveForMate');
     return (
         <div className="container">
             <div className="menu_container">

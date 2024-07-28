@@ -1,3 +1,4 @@
+console.log('Loading _app.js');
 // pages/_app.js
 import '../public/styles/global.css'; // Adjust the path according to your file structure
 import '../public/styles/gui.css'; 

@@ -1,7 +1,14 @@
+console.log('Loading CareersComponent.js');
 import React from 'react';
 import styles from '../public/styles/CareersComponent.module.css';
 
 const CareersComponent = () => {
+console.log('Rendering CareersComponent');
+console.log('Rendering CareersComponent');
+console.log('Rendering CareersComponent');
+console.log('Returning from CareersComponent');
+console.log('Returning from CareersComponent');
+console.log('Returning from CareersComponent');
     return (
         <div className={styles.careersContainer}>
             <h1 className={styles.title}>Careers</h1>

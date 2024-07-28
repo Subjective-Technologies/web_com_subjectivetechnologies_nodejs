@@ -1,159 +1,79 @@
 import React, { useEffect, useRef } from 'react';
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
-import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
-import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass';
-
-import GoldenThinkerStatue from './subjective_3d/GoldenThinkerStatue';
 import SubjectiveSceneThree from './subjective_3d/SubjectiveSceneThree';
-import SubjectiveVideoPlane from './subjective_3d/SubjectiveVideoPlane';
-import styles from '../public/styles/GoldenThinkerAnimation.module.css';
-import LightsDefault from './subjective_3d/LightsDefault';
-import trackProperties from './developermode/trackProperties';
-import SubjectiveDynamicDebugUi from './developermode/SubjectiveDynamicDebugUi'; // Import the UI class
+import SubjectiveGlowingText from './subjective_3d/SubjectiveGlowingText';
+import GoldenThinkerStatue from './subjective_3d/GoldenThinkerStatue';
 
-const developerMode = true;
+const DEVELOPER_MODE = true;
 
-function GoldenThinkerAnimation() {
+const GoldenThinkerAnimation = () => {
   const containerRef = useRef(null);
+  let subjectiveScene;
 
   useEffect(() => {
-    console.log('Setting up scene, camera, and renderer...');
-    const scene = new SubjectiveSceneThree(developerMode);
+    const init = async () => {
+      const container = containerRef.current;
+      if (!container) return;
 
-    const cameraConfig = trackProperties({
-      fov: 75,
-      aspect: window.innerWidth / window.innerHeight,
-      near: 0.1,
-      far: 1000
-    }, 'cameraConfig');
+      subjectiveScene = new SubjectiveSceneThree(DEVELOPER_MODE, containerRef);
 
-    const camera = trackProperties(
-      new THREE.PerspectiveCamera(
-        cameraConfig.fov,
-        cameraConfig.aspect,
-        cameraConfig.near,
-        cameraConfig.far
-      ),
-      'camera'
-    );
-    camera.position.set(0, 0, 10);
+      // Set scene size and camera position
+      subjectiveScene.setSize(window.innerWidth, window.innerHeight);
+      subjectiveScene.setCameraPosition({ x: 8, y: 4, z: 8 });
 
-    const renderer = trackProperties(new THREE.WebGLRenderer(), 'renderer');
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.shadowMap.enabled = true;
-    renderer.domElement.style.position = 'absolute';
-    renderer.domElement.style.top = '0';
-    renderer.domElement.style.left = '0';
-    renderer.domElement.style.zIndex = '0'; // Ensure it is behind CSS3DRenderer
+      // Create glowing text
+      new SubjectiveGlowingText(subjectiveScene.get_threejs_scene(), 'Subjective Technologies', DEVELOPER_MODE);
 
-    if (containerRef.current) {
-      containerRef.current.appendChild(renderer.domElement);
-    }
+      // Add default lights
+      subjectiveScene.addLights();
 
-    const controls = trackProperties(new OrbitControls(camera, renderer.domElement), 'controls');
-    controls.enableDamping = true;
+      // Add the model using GoldenThinkerStatue
+      const thinkerStatue = new GoldenThinkerStatue(subjectiveScene.get_threejs_scene(), { color: 0xFFD700, metalness: 1, roughness: 0.3, clearcoat: 1, clearcoatRoughness: 0.1 });
+      thinkerStatue.loader.load('3d/all.glb', (gltf) => {
+        subjectiveScene.model = gltf.scene;
+        subjectiveScene.material = thinkerStatue.getMaterial();
 
-    console.log('Scene initialized:', scene);
-    console.log('Camera initialized:', camera);
-    console.log('Renderer initialized:', renderer);
-    console.log('OrbitControls initialized:', controls);
+        // Add grid helper
+        subjectiveScene.addGridHelper();
 
-    const renderScene = trackProperties(new RenderPass(scene.get_threejs_scene(), camera), 'renderScene');
-    const bloomPass = trackProperties(
-      new UnrealBloomPass(
-        new THREE.Vector2(window.innerWidth, window.innerHeight),
-        1.5, // Strength
-        0.4, // Radius
-        0.85 // Threshold
-      ),
-      'bloomPass'
-    );
-    const composer = trackProperties(new EffectComposer(renderer), 'composer');
-    composer.addPass(renderScene);
-    composer.addPass(bloomPass);
+        // Add axes helper
+        subjectiveScene.addAxesHelper();
 
-    const outlinePass = trackProperties(
-      new OutlinePass(new THREE.Vector2(window.innerWidth, window.innerHeight), scene.get_threejs_scene(), camera),
-      'outlinePass'
-    );
-    outlinePass.edgeStrength = 2.5;
-    outlinePass.edgeGlow = 0.0;
-    outlinePass.edgeThickness = 1.0;
-    outlinePass.pulsePeriod = 0;
-    outlinePass.visibleEdgeColor.set('#ffffff');
-    outlinePass.hiddenEdgeColor.set('#190a05');
-    composer.addPass(outlinePass);
+        // Set snapshot if available
+        if (subjectiveScene.setSnapshot) {
+          const initialSnapshot = {}; // Replace with actual snapshot or remove if not used
+          subjectiveScene.setSnapshot(initialSnapshot);
+        }
 
-    console.log('RenderPass initialized:', renderScene);
-    console.log('UnrealBloomPass initialized:', bloomPass);
-    console.log('OutlinePass initialized:', outlinePass);
+        // Setup GUI
+        if (DEVELOPER_MODE) {
+          subjectiveScene.setupGUI();
+        }
 
-    const goldenThinkerStatue = new GoldenThinkerStatue(scene, developerMode);
-    const videoPlane = new SubjectiveVideoPlane(scene, '/images/animations/mp4/brainboost_marketing_videos_landing_page.mp4', developerMode);
-
-    console.log('Loading GoldenThinkerStatue...');
-    console.log('Loading SubjectiveVideoPlane...');
-
-    // Wait for both objects to load
-    Promise.all([goldenThinkerStatue.onLoad(), videoPlane.onLoad()]).then(() => {
-      // Position and scale the objects
-      const statueObject = goldenThinkerStatue.getObject3D();
-      if (statueObject) {
-        statueObject.position.set(-3, 0, 0);
-        statueObject.scale.set(0.5, 0.5, 0.5);
-        console.log('Statue object added to the scene:', statueObject);
-      }
-
-      const videoObject = videoPlane.getObject3D();
-      if (videoObject) {
-        videoObject.position.set(3, 0, 0);
-        videoObject.scale.set(0.5, 0.5, 0.5);
-        console.log('Video object added to the scene:', videoObject);
-      }
-
-      scene.add_objects(goldenThinkerStatue);
-      scene.add_objects(videoPlane);
-
-      console.log('Video Plane added to the scene:', videoPlane);
-    });
-
-    const lightsDefault = new LightsDefault(scene, developerMode);
-    scene.add_objects(lightsDefault);
-
-    console.log('Lights added to the scene:', lightsDefault.getObject3D());
-
-    const synchronizeScroll = () => {
-      controls.update();
-      composer.render();
+        // Start animation loop
+        subjectiveScene.animate();
+      });
     };
 
-    window.addEventListener('scroll', synchronizeScroll);
+    init();
 
-    const animate = function () {
-      requestAnimationFrame(animate);
-      controls.update();
-      composer.render();
+    const handleResize = () => {
+      if (subjectiveScene) {
+        subjectiveScene.setSize(window.innerWidth, window.innerHeight);
+        subjectiveScene.updateCameraAspect(window.innerWidth / window.innerHeight);
+      }
     };
 
-    animate();
-
-    // Initialize and load the UI if developerMode is true
-    if (developerMode) {
-      new SubjectiveDynamicDebugUi(scene);
-    }
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      if (containerRef.current) {
-        containerRef.current.removeChild(renderer.domElement);
+      window.removeEventListener('resize', handleResize);
+      if (subjectiveScene) {
+        subjectiveScene.dispose();
       }
-      window.removeEventListener('scroll', synchronizeScroll);
     };
   }, []);
 
-  return <div ref={containerRef} className={styles.animation_container} style={{ position: 'relative', border: '2px solid yellow' }} />;
-}
+  return <div ref={containerRef} style={{ width: '100%', height: '100%' }} />;
+};
 
 export default GoldenThinkerAnimation;

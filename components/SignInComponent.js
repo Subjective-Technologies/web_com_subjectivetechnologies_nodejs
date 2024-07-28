@@ -1,3 +1,4 @@
+console.log('Loading SignInComponent.js');
 // components/SignInComponent.js
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
@@ -6,6 +7,7 @@ import { signInWithPopup, signInWithEmailAndPassword } from 'firebase/auth';
 import styles from '../public/styles/SignInComponent.module.css';
 
 const SignInComponent = () => {
+console.log('Rendering SignInComponent');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -56,6 +58,7 @@ const SignInComponent = () => {
         router.push('/sign_up');
     };
 
+console.log('Returning from SignInComponent');
     return (
         <div className={styles.signInContainer}>
             <div className={styles.loginBox}>

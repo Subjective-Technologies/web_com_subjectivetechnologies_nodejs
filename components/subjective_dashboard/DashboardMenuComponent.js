@@ -1,7 +1,9 @@
+console.log('Loading DashboardMenuComponent.js');
 import React, { useState } from 'react';
 import styles from '../../public/styles/DashboardMenuComponent.module.css';
 
 const DashboardMenuComponent = () => {
+console.log('Rendering DashboardMenuComponent');
     const [showSubMenu, setShowSubMenu] = useState(false);
     const [delayHandler, setDelayHandler] = useState(null);
     const [showUserSubMenu, setShowUserSubMenu] = useState(false);
@@ -55,6 +57,7 @@ const DashboardMenuComponent = () => {
         ));
     };
 
+console.log('Returning from DashboardMenuComponent');
     return (
         <div className={styles.menu}>
             <div 

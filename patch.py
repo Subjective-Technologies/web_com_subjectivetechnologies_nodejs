@@ -1,54 +1,103 @@
+
 import os
 
-# Define the content for SubjectiveVideoPlane.js with the updated material
-subjective_video_plane_content = """import * as THREE from 'three';
+# Path to the GoldenThinkerAnimation.js file
+file_path = './components/GoldenThinkerAnimation.js'
 
-class SubjectiveVideoPlane {
-  constructor(scene, videoUrl, developerMode) {
-    this.scene = scene.get_threejs_scene();
-    this.developerMode = developerMode;
-    this.videoUrl = videoUrl;
-    this.videoElement = document.createElement('video');
-    this.videoElement.src = this.videoUrl;
-    this.videoElement.loop = true;
-    this.videoElement.muted = true;
-    this.videoElement.play();
+# New content for the GoldenThinkerAnimation.js file
+new_content = '''
+import React, { useEffect } from 'react';
+import SubjectiveSceneThree from '../subjective_3d/SubjectiveSceneThree';
+import GoldenThinkerStatue from '../subjective_3d/GoldenThinkerStatue';
+import LightsDefault from '../subjective_3d/LightsDefault';
+import SubjectiveVideoPlane from '../subjective_3d/SubjectiveVideoPlane';
+import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
+import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass';
 
-    const texture = new THREE.VideoTexture(this.videoElement);
-    const material = new THREE.MeshBasicMaterial({
-      map: texture,
-      side: THREE.DoubleSide, // Ensure the material is rendered on both sides
+const GoldenThinkerAnimation = () => {
+  useEffect(() => {
+    let composer, scene, camera, renderer, controls;
+
+    const container = document.getElementById('animation_container');
+    
+    // Initialize the scene using SubjectiveSceneThree wrapper
+    scene = new SubjectiveSceneThree();
+    camera = scene.camera;
+    renderer = scene.renderer;
+
+    // Append renderer to the container
+    container.appendChild(renderer.domElement);
+
+    // Add default lights
+    const lights = new LightsDefault();
+    lights.addToScene(scene);
+
+    // Load and add 3D statue
+    const statue = new GoldenThinkerStatue();
+    statue.loadModel('path_to_model.glb').then(model => {
+      scene.add(model);
     });
 
-    const geometry = new THREE.PlaneGeometry(4, 2);
-    this.mesh = new THREE.Mesh(geometry, material);
+    // Add bloom and outline pass
+    const renderScene = new RenderPass(scene, camera);
+    const bloomPass = new UnrealBloomPass(
+      new THREE.Vector2(window.innerWidth, window.innerHeight),
+      1.5,  // Strength
+      0.4,  // Radius
+      0.85  // Threshold
+    );
+    const outlinePass = new OutlinePass(
+      new THREE.Vector2(window.innerWidth, window.innerHeight),
+      scene, camera
+    );
 
-    this.mesh.position.set(0, 0, 0);
-    this.mesh.rotation.y = Math.PI; // Rotate the plane to face the correct direction
-  }
+    composer = new EffectComposer(renderer);
+    composer.addPass(renderScene);
+    composer.addPass(bloomPass);
+    composer.addPass(outlinePass);
 
-  getObject3D() {
-    return this.mesh;
-  }
+    // Load and add video plane
+    const videoPlane = new SubjectiveVideoPlane('path_to_video.mp4');
+    videoPlane.addToScene(scene);
 
-  onLoad() {
-    return new Promise((resolve) => {
-      this.videoElement.oncanplaythrough = () => resolve();
-    });
-  }
-}
+    // Handle window resize
+    const onWindowResize = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+      renderer.setSize(width, height);
+      composer.setSize(width, height);
+    };
+    window.addEventListener('resize', onWindowResize);
 
-export default SubjectiveVideoPlane;
-"""
+    // Animation loop
+    const animate = () => {
+      requestAnimationFrame(animate);
+      composer.render();
+    };
+    animate();
 
-# Write the content to SubjectiveVideoPlane.js
-file_path = 'components/subjective_3d/SubjectiveVideoPlane.js'
+    // Clean up on unmount
+    return () => {
+      window.removeEventListener('resize', onWindowResize);
+      renderer.dispose();
+      composer.dispose();
+    };
+  }, []);
 
-# Ensure the directory exists
-os.makedirs(os.path.dirname(file_path), exist_ok=True)
+  return (
+    <div id="animation_container"></div>
+  );
+};
 
-# Write the file
+export default GoldenThinkerAnimation;
+'''.strip()
+
+# Write the new content to the GoldenThinkerAnimation.js file
 with open(file_path, 'w') as file:
-    file.write(subjective_video_plane_content)
+    file.write(new_content)
 
-print(f'Patch applied: {file_path} has been updated.')
+print(f"Updated {file_path} with new content.")

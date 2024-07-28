@@ -1,3 +1,4 @@
-node_modules
-.next
+node_modules/
+.next/
 web_com_subjectivetechnologies_nodejs.code-workspace
+context_snapshots/

@@ -1,3 +1,4 @@
+console.log('Loading subjective_advertising.js');
 // src/pages/products/subjective_advertising.js
 import dynamic from 'next/dynamic';
 import React from 'react';
@@ -9,6 +10,8 @@ const SubjectiveAdvertisingComponent = dynamic(() => import('../components/Subje
 });
 
 const SubjectiveAdvertising = () => {
+console.log('Rendering SubjectiveAdvertising');
+console.log('Returning from SubjectiveAdvertising');
     return (
         <div className="container">
             <div className="menu_container">

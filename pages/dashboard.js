@@ -1,3 +1,4 @@
+console.log('Loading dashboard.js');
 // pages/dashboard.js
 import React from 'react';
 import DashboardMenuComponent from '../components/subjective_dashboard/DashboardMenuComponent';
@@ -7,6 +8,8 @@ import contentStyles from '../public/styles/DashboardContentComponent.module.css
 import Footer from '../components/Footer';
 
 const DashboardPage = () => {
+console.log('Rendering DashboardPage');
+console.log('Returning from DashboardPage');
     return (
         <div className={menuStyles.container}>
             <DashboardMenuComponent />

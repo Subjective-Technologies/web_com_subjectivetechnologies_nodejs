@@ -1,8 +1,15 @@
+console.log('Loading SubjectiveBeMyselfComponent.js');
 // src/components/SubjectiveBeMyselfComponent.js
 import React from 'react';
 import styles from '../public/styles/SubjectiveBeMyselfComponent.module.css';
 
 const SubjectiveBeMyselfComponent = () => {
+console.log('Rendering SubjectiveBeMyselfComponent');
+console.log('Rendering SubjectiveBeMyselfComponent');
+console.log('Rendering SubjectiveBeMyselfComponent');
+console.log('Returning from SubjectiveBeMyselfComponent');
+console.log('Returning from SubjectiveBeMyselfComponent');
+console.log('Returning from SubjectiveBeMyselfComponent');
     return (
         <div className={styles.container}>
             <div className={styles.imageContainer}>

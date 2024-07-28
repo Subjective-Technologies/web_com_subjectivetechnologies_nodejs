@@ -1,3 +1,4 @@
+console.log('Loading ImpactComponent.js');
 import React from 'react';
 import TechnologyImpact from './TechnologyImpact';
 import Footer from './Footer'; // Import the Footer component
@@ -53,6 +54,12 @@ const postLabour = [
 ];
 
 const ImpactComponent = () => {
+console.log('Rendering ImpactComponent');
+console.log('Rendering ImpactComponent');
+console.log('Rendering ImpactComponent');
+console.log('Returning from ImpactComponent');
+console.log('Returning from ImpactComponent');
+console.log('Returning from ImpactComponent');
   return (
     <div className={styles.impactContainer}>
       <div className={styles.content}>

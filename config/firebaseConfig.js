@@ -1,3 +1,4 @@
+console.log('Loading firebaseConfig.js');
 // src/config/firebaseConfig.js
 
 import { initializeApp } from "firebase/app";

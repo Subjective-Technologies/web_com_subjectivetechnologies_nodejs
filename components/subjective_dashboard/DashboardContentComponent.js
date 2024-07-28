@@ -1,3 +1,4 @@
+console.log('Loading DashboardContentComponent.js');
 // components/subjective_dashboard/DashboardContentComponent.js
 import React, { useState } from 'react';
 import {
@@ -50,6 +51,7 @@ const lineData = {
 };
 
 const DashboardContentComponent = () => {
+console.log('Rendering DashboardContentComponent');
     const [isModalOpen, setModalOpen] = useState(false);
     const [toggleState, setToggleState] = useState(false);
 
@@ -61,6 +63,7 @@ const DashboardContentComponent = () => {
         setToggleState(!toggleState);
     };
 
+console.log('Returning from DashboardContentComponent');
     return (
         <div className={styles.dashboardContainer}>
             <h1 className={styles.title}>Dashboard Overview</h1>

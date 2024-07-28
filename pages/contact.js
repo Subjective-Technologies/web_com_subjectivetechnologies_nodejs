@@ -1,3 +1,4 @@
+console.log('Loading contact.js');
 import dynamic from 'next/dynamic';
 import React from 'react';
 import Menu from '../components/Menu';
@@ -8,6 +9,8 @@ const ContactComponent = dynamic(() => import('../components/ContactComponent'),
 });
 
 const Contact = () => {
+console.log('Rendering Contact');
+console.log('Returning from Contact');
     return (
         <div className="container">
             <div className="menu_container">

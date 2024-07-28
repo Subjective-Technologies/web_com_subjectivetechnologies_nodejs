@@ -11,37 +11,39 @@ class LightsDefault extends SubjectivePersistentObject {
   }
 
   init() {
-    const ambientLight = new THREE.AmbientLight(0x404040);
-    this.lights.push(ambientLight);
+    // Add point lights with increased intensity
+    this.addPointLight(new THREE.Vector3(10, 10, 10), 2);
+    this.addPointLight(new THREE.Vector3(-10, 10, 10), 2);
+    this.addPointLight(new THREE.Vector3(10, -10, 10), 2);
+    this.addPointLight(new THREE.Vector3(-10, -10, 10), 2);
 
-    // Add point lights
-    this.addPointLight(new THREE.Vector3(10, 10, 10));
-    this.addPointLight(new THREE.Vector3(-10, 10, 10));
-    this.addPointLight(new THREE.Vector3(10, -10, 10));
-    this.addPointLight(new THREE.Vector3(-10, -10, 10));
-
-    // Additional light for the statue
-    this.addSpotLight(new THREE.Vector3(0, 10, 10), new THREE.Vector3(-3, 0, 0));
+    // Additional light for the statue with increased intensity
+    this.addSpotLight(new THREE.Vector3(0, 10, 10), new THREE.Vector3(-3, 0, 0), 2);
   }
 
-  addPointLight(position) {
-    console.log('Creating PointLight at position:', position);
-    const pointLight = new THREE.PointLight(0xffffff, 1, 50);
+  addPointLight(position, intensity) {
+    const pointLight = new THREE.PointLight(0xffffff, intensity, 50);
     pointLight.position.copy(position);
+    pointLight.castShadow = true;
+    pointLight.shadow.mapSize.width = 2048;  // Increase shadow map size for better quality
+    pointLight.shadow.mapSize.height = 2048;
+    console.log("PointLight:", pointLight);  // Log properties
     this.lights.push(pointLight);
   }
 
-  addSpotLight(position, targetPosition) {
-    console.log('Creating SpotLight at position:', position, 'with target:', targetPosition);
-    const spotLight = new THREE.SpotLight(0xffffff, 1.5);
+  addSpotLight(position, targetPosition, intensity) {
+    const spotLight = new THREE.SpotLight(0xffffff, intensity);
     spotLight.position.copy(position);
     spotLight.target.position.copy(targetPosition);
+    spotLight.castShadow = true;
+    spotLight.shadow.mapSize.width = 2048;  // Increase shadow map size for better quality
+    spotLight.shadow.mapSize.height = 2048;
+    console.log("SpotLight:", spotLight);  // Log properties
     this.lights.push(spotLight);
     this.lights.push(spotLight.target);
   }
 
   getObject3D() {
-    console.log('Returning lights:', this.lights);
     return this.lights;
   }
 }

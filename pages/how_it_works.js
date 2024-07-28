@@ -1,3 +1,4 @@
+console.log('Loading how_it_works.js');
 import dynamic from 'next/dynamic';
 import React from 'react';
 import Menu from '../components/Menu';
@@ -8,6 +9,8 @@ const HowItWorksComponent = dynamic(() => import('../components/HowItWorksCompon
 });
 
 const HowItWorks = () => {
+console.log('Rendering HowItWorks');
+console.log('Returning from HowItWorks');
     return (
         <div className="container">
             <div className="menu_container">

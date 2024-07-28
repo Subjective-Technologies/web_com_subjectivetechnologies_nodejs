@@ -1,3 +1,4 @@
+console.log('Loading consulting.js');
 import dynamic from 'next/dynamic';
 import React from 'react';
 import Menu from '../components/Menu';
@@ -8,6 +9,8 @@ const ConsultingComponent = dynamic(() => import('../components/ConsultingCompon
 });
 
 const Consulting = () => {
+console.log('Rendering Consulting');
+console.log('Returning from Consulting');
     return (
         <div className="container">
             <div className="menu_container">

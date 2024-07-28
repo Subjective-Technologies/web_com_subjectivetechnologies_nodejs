@@ -1,3 +1,4 @@
+console.log('Loading TechnologyImpact.js');
 import React from 'react';
 import styles from '../public/styles/ImpactComponent.module.css';
 

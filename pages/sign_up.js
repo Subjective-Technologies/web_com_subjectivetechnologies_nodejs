@@ -1,3 +1,4 @@
+console.log('Loading sign_up.js');
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Menu from '../components/Menu';
@@ -8,6 +9,8 @@ const SignUpComponent = dynamic(() => import('../components/SignUpComponent'), {
 });
 
 const SignUp = () => {
+console.log('Rendering SignUp');
+console.log('Returning from SignUp');
   return (
     <div className="container">
       <div className="menu_container">
