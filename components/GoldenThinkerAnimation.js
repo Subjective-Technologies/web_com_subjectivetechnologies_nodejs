@@ -14,14 +14,15 @@ const GoldenThinkerAnimation = () => {
       const container = containerRef.current;
       if (!container) return;
 
-      subjectiveScene = new SubjectiveSceneThree(DEVELOPER_MODE, containerRef);
+      // Pass the path of the texture image as an option
+      subjectiveScene = new SubjectiveSceneThree(DEVELOPER_MODE, containerRef, { sphereTexturePath: 'images/heaven.webp' });
 
       // Set scene size and camera position
       subjectiveScene.setSize(window.innerWidth, window.innerHeight);
       subjectiveScene.setCameraPosition({ x: 8, y: 4, z: 8 });
 
       // Create glowing text
-      new SubjectiveGlowingText(subjectiveScene.get_threejs_scene(), 'Subjective Technologies', DEVELOPER_MODE);
+      //new SubjectiveGlowingText(subjectiveScene.get_threejs_scene(), 'Subjective Technologies', DEVELOPER_MODE);
 
       // Add default lights
       subjectiveScene.addLights();

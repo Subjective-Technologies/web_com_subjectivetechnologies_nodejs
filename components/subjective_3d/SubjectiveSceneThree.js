@@ -9,10 +9,11 @@ import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPa
 import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass';
 
 class SubjectiveSceneThree extends SubjectivePersistentObject {
-  constructor(developerMode = false, containerRef) {
+  constructor(developerMode = false, containerRef, options = {}) {
     super(developerMode); // Set the name property
     this.developerMode = developerMode;
     this.containerRef = containerRef;
+    this.options = options;
 
     // Initialize and load the UI if developerMode is true
     if (this.developerMode) {
@@ -114,6 +115,11 @@ class SubjectiveSceneThree extends SubjectivePersistentObject {
     this.model = null;
     this.material = null;
     this.lights = [];
+
+    // Add sphere with texture if provided in options
+    if (options.sphereTexturePath) {
+      this.addSphereWithTexture(options.sphereTexturePath);
+    }
   }
 
   add_objects(subjective_persistent_object) {
@@ -165,6 +171,19 @@ class SubjectiveSceneThree extends SubjectivePersistentObject {
     this.lights.push(ambientLight, directionalLight, spotLight);
   }
 
+  addSphereWithTexture(texturePath) {
+    const textureLoader = new THREE.TextureLoader();
+    textureLoader.load(texturePath, (texture) => {
+      const geometry = new THREE.SphereGeometry(12.5, 32, 32); // 50% smaller sphere
+      const material = new THREE.MeshBasicMaterial({
+        map: texture,
+        side: THREE.BackSide, // Render the inside of the sphere
+      });
+      this.sphere = new THREE.Mesh(geometry, material);
+      this.threejs_scene.add(this.sphere);
+    });
+  }
+
   animate() {
     if (this.developerMode && this.cube) {
       this.cube.rotation.x += 0.01;
@@ -175,6 +194,10 @@ class SubjectiveSceneThree extends SubjectivePersistentObject {
     this.my_objects.forEach(obj => {
       if (obj.update) obj.update();
     });
+
+    if (this.sphere) {
+      this.sphere.rotation.y += 0.001; // Rotate the sphere
+    }
 
     this.controls.update(); // Ensure controls are updated
     this.renderer.render(this.get_threejs_scene(), this.get_threejs_camera());
