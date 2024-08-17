@@ -2,3 +2,6 @@ node_modules/
 .next/
 web_com_subjectivetechnologies_nodejs.code-workspace
 context_snapshots/
+public/3d/HDRI/*.exr
+public/video/*.mkv
+public/video/*.mp4
