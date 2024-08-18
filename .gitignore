@@ -5,3 +5,11 @@ context_snapshots/
 public/3d/HDRI/*.exr
 public/video/*.mkv
 public/video/*.mp4
+./node_modules/@next/swc-linux-x64-gnu/next-swc.linux-x64-gnu.node
+./.git/objects/pack/pack-f38abc1b5feb668b62dafff4bb534cc1c9aa5cb4.pack
+./.git/objects/pack/pack-70329a9a346999b696045798c95e777bb03ae1dc.pack
+./.git/lfs/objects/4c/08/4c08a683c29575a8ac1b15a32c046b460cca3ac3f25eafac7f72635ac6917436
+./public/video/brainboost_marketing_video_subjective_temple_bar_4k_360.mkv
+./public/video/brainboost_marketing_media_video_subjective.mp4
+./public/3d/HDRI/little_paris_eiffel_tower_4k.exr
+./public/images/360/back4.png
