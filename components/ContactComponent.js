@@ -12,7 +12,7 @@ console.log('Returning from ContactComponent');
             <div className={styles.gridContainer}>
                 <div>
                     <h2 className={styles.subheading}>General Contact Information</h2>
-                    <p className={styles.text}>Email: info@subjectivetechnologies.com</p>
+                    <p className={styles.text}>Email: info@worktwins.com</p>
                     <p className={styles.text}>Phone: +17867965039</p>
                     <div className={styles.pressContact}>
                     <img src="images/profile_yo_compressed.jpg" alt="Tommy Fox" className={styles.pressImage} />

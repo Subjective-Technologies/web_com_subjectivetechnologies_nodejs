@@ -19,41 +19,8 @@ const Menu = () => {
         setDelayHandler(handler);
     };
 
-    const menuItems = [
-        { href: "subjective_semantizer", imageUrl: "../images/subjective_semantizer.png", label: "GT® Subjective Semantizer", text: "Knowledge Is Alive" },
-        { href: "subjective_cognitive_booster", imageUrl: "../images/subjective_cognitive_booster.png", label: "GT® Subjective Cognitive Booster", text: "Your World is Unforgettable" },
-        { href: "subjective_adapter", imageUrl: "../images/subjective_adapter.png", label: "GT® Subjective Adapter", text: "Migrating from legacy 3rd Person Technology" },
-        { href: "subjective_domotics", imageUrl: "../images/subjective_domotics.png", label: "GT® Subjective Domotics", text: "Extend Your Body PhysicalBodyParts" },
-        { href: "subjective_advertising", imageUrl: "../images/subjective_advertising.png", label: "GT® Subjective Advertising", text: "MarketingLess Advertising" },
-        { href: "subjective_thermo_currency", imageUrl: "../images/subjective_thermo_currency.png", label: "GT® Subjective Thermo-Currency", text: "Post-Scarcity Era" },
-        { href: "subjective_instant_job_finder", imageUrl: "../images/subjective_instant_job_finder.png", label: "GT® Subjective Instant Job Finder", text: "Just Sit&Work" },
-        { href: "subjective_formate", imageUrl: "../images/subjective_formate.png", label: "GT® Subjective ForMate", text: "No More Forms" },
-        { href: "subjective_be_myself", imageUrl: "../images/subjective_be_myself.png", label: "GT® Subjective BeMyself", text: "AI Learns to BeYourSelf" },
-        { href: "subjective_logistics", imageUrl: "../images/subjective_logistics.png", label: "GT® Subjective Logistics", text: "No More Postal Services" },
-    ];
-
-    const renderColumns = () => {
-        const columns = [];
-        for (let i = 0; i < menuItems.length; i += 2) {
-            columns.push(
-                <div className={styles.column} key={i}>
-                    <div className={styles.menuItem}>
-                        <a href={menuItems[i].href}><ImageMenuItem imageUrl={menuItems[i].imageUrl} label={menuItems[i].label} text={menuItems[i].text} /></a>
-                    </div>
-                    {menuItems[i + 1] && (
-                        <div className={styles.menuItem}>
-                            <a href={menuItems[i + 1].href}><ImageMenuItem imageUrl={menuItems[i + 1].imageUrl} label={menuItems[i + 1].label} text={menuItems[i + 1].text} /></a>
-                        </div>
-                    )}
-                </div>
-            );
-        }
-        return columns;
-    };
-
     return (
         <div className={styles.menu}>
-
             <div 
                 className={`${styles.menuItem} ${styles.link}`} 
                 onMouseEnter={handleMouseEnter}
@@ -61,15 +28,9 @@ const Menu = () => {
                 <div id="logo">
                     <a href="/"><img src="../images/logo_horizontal.png" alt="Logo" /></a>
                 </div>
-                {showSubMenu && (
-                    <div className={styles.subMenu}>
-                        {renderColumns()}
-                    </div>
-                )}
             </div>
+            <a href="../download"><div className={styles.menuItem}>Download</div></a>
             <a href="../how_it_works"><div className={styles.menuItem}>How It Works</div></a>
-            <a href="../impact"><div className={styles.menuItem}>Impact</div></a>
-            <a href="../scientific_research"><div className={styles.menuItem}>Scientific Research</div></a>
             <a href="../careers"><div className={styles.menuItem}>Careers</div></a>
             <a href="../investor"><div className={styles.menuItem}>Investors</div></a>
             <a href="../consulting"><div className={styles.menuItem}>Consulting</div></a>
