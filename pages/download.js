@@ -1,23 +1,20 @@
-console.log('Loading how_it_works.js');
 import dynamic from 'next/dynamic';
 import React from 'react';
 import Menu from '../components/Menu';
 import Footer from '../components/Footer';
 
-const HowItWorksComponent = dynamic(() => import('../components/HowItWorksComponent'), {
+const DownloadComponent = dynamic(() => import('../components/DownloadComponent'), {
   ssr: false,
 });
 
-const HowItWorks = () => {
-console.log('Rendering HowItWorks');
-console.log('Returning from HowItWorks');
+const Download = () => {
     return (
         <div className="container">
             <div className="menu_container">
                 <Menu />
             </div>
             <div className="content_container">
-                <HowItWorksComponent />
+                <DownloadComponent />
             </div>
             <div className="footer_container">
                 <Footer />
@@ -26,4 +23,4 @@ console.log('Returning from HowItWorks');
     );
 };
 
-export default HowItWorks;
+export default Download;

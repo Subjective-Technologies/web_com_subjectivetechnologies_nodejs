@@ -1,103 +1,65 @@
-
 import os
+import argparse
+import shutil
 
-# Path to the GoldenThinkerAnimation.js file
-file_path = './components/GoldenThinkerAnimation.js'
+# Menu path
+menu_js_path = os.path.join(os.getcwd(), 'components', 'Menu.js')
+backup_menu_js_path = os.path.join(os.getcwd(), 'components', 'Menu_backup.js')
 
-# New content for the GoldenThinkerAnimation.js file
-new_content = '''
-import React, { useEffect } from 'react';
-import SubjectiveSceneThree from '../subjective_3d/SubjectiveSceneThree';
-import GoldenThinkerStatue from '../subjective_3d/GoldenThinkerStatue';
-import LightsDefault from '../subjective_3d/LightsDefault';
-import SubjectiveVideoPlane from '../subjective_3d/SubjectiveVideoPlane';
-import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
-import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass';
+# Corrected Menu.js content
+updated_menu_js_content = """
+import React from 'react';
+import Link from 'next/link';
 
-const GoldenThinkerAnimation = () => {
-  useEffect(() => {
-    let composer, scene, camera, renderer, controls;
-
-    const container = document.getElementById('animation_container');
-    
-    // Initialize the scene using SubjectiveSceneThree wrapper
-    scene = new SubjectiveSceneThree();
-    camera = scene.camera;
-    renderer = scene.renderer;
-
-    // Append renderer to the container
-    container.appendChild(renderer.domElement);
-
-    // Add default lights
-    const lights = new LightsDefault();
-    lights.addToScene(scene);
-
-    // Load and add 3D statue
-    const statue = new GoldenThinkerStatue();
-    statue.loadModel('path_to_model.glb').then(model => {
-      scene.add(model);
-    });
-
-    // Add bloom and outline pass
-    const renderScene = new RenderPass(scene, camera);
-    const bloomPass = new UnrealBloomPass(
-      new THREE.Vector2(window.innerWidth, window.innerHeight),
-      1.5,  // Strength
-      0.4,  // Radius
-      0.85  // Threshold
+const Menu = () => {
+    return (
+        <nav>
+            <ul>
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="/about">About</Link></li>
+                <li><Link href="/services">Services</Link></li>
+                <li><Link href="/staticlanding">Static Landing</Link></li>
+                <li><Link href="/howitworks">How it works</Link></li>
+            </ul>
+        </nav>
     );
-    const outlinePass = new OutlinePass(
-      new THREE.Vector2(window.innerWidth, window.innerHeight),
-      scene, camera
-    );
-
-    composer = new EffectComposer(renderer);
-    composer.addPass(renderScene);
-    composer.addPass(bloomPass);
-    composer.addPass(outlinePass);
-
-    // Load and add video plane
-    const videoPlane = new SubjectiveVideoPlane('path_to_video.mp4');
-    videoPlane.addToScene(scene);
-
-    // Handle window resize
-    const onWindowResize = () => {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
-      renderer.setSize(width, height);
-      composer.setSize(width, height);
-    };
-    window.addEventListener('resize', onWindowResize);
-
-    // Animation loop
-    const animate = () => {
-      requestAnimationFrame(animate);
-      composer.render();
-    };
-    animate();
-
-    // Clean up on unmount
-    return () => {
-      window.removeEventListener('resize', onWindowResize);
-      renderer.dispose();
-      composer.dispose();
-    };
-  }, []);
-
-  return (
-    <div id="animation_container"></div>
-  );
 };
 
-export default GoldenThinkerAnimation;
-'''.strip()
+export default Menu;
+"""
 
-# Write the new content to the GoldenThinkerAnimation.js file
-with open(file_path, 'w') as file:
-    file.write(new_content)
+# Function to backup the Menu.js file
+def backup_file(path):
+    if os.path.exists(path):
+        shutil.copy(path, backup_menu_js_path)
+        print(f"Backup created: {backup_menu_js_path}")
 
-print(f"Updated {file_path} with new content.")
+# Function to restore the Menu.js file from backup
+def restore_file():
+    if os.path.exists(backup_menu_js_path):
+        shutil.copy(backup_menu_js_path, menu_js_path)
+        print(f"Menu restored from backup: {menu_js_path}")
+        os.remove(backup_menu_js_path)
+    else:
+        print("No backup found to restore.")
+
+# Function to update the Menu.js file
+def update_menu():
+    backup_file(menu_js_path)
+    with open(menu_js_path, 'w') as file:
+        file.write(updated_menu_js_content)
+    print(f"Updated Menu: {menu_js_path}")
+
+# Main function
+def main(undo=False):
+    if undo:
+        restore_file()
+    else:
+        update_menu()
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Fix <Link> component in Menu.js and implement undo.")
+    parser.add_argument('--undo', action='store_true', help="Undo the changes.")
+    args = parser.parse_args()
+    
+    main(undo=args.undo)

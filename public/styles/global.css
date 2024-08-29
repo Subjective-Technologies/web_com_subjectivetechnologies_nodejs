@@ -40,6 +40,7 @@ html, body {
   font-size: 18px; /* Adjust the font size as needed */
   color: black; /* Ensure text color is white for better contrast */
   box-sizing: border-box;
+  width:100%;
 }
 
 .container {

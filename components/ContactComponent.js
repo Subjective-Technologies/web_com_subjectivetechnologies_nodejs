@@ -26,7 +26,7 @@ console.log('Returning from ContactComponent');
                 </div>
 
                 <div className={styles.videoPlaceholder}>
-                    <video className={styles.video} src="video/brainboost_marketing_videos_goldenthinker_throw_ball.mp4" autoPlay muted loop />
+                    <video className={styles.video} src="video/golden_twins.mp4" autoPlay muted loop />
                 </div>
 
 

@@ -30,7 +30,6 @@ const Menu = () => {
                 </div>
             </div>
             <a href="../download"><div className={styles.menuItem}>Download</div></a>
-            <a href="../how_it_works"><div className={styles.menuItem}>How It Works</div></a>
             <a href="../careers"><div className={styles.menuItem}>Careers</div></a>
             <a href="../investor"><div className={styles.menuItem}>Investors</div></a>
             <a href="../consulting"><div className={styles.menuItem}>Consulting</div></a>
