@@ -15,3 +15,4 @@ public/video/*.mp4
 ./public/images/360/back4.png
 context_snapshots
 context
+deploy_prod.py
