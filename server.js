@@ -10,8 +10,8 @@ const handle = app.getRequestHandler();
 
 // Paths to your SSL certificates
 const httpsOptions = {
-  key: fs.readFileSync('/path/to/your/ssl/key.pem'),
-  cert: fs.readFileSync('/path/to/your/ssl/cert.pem')
+  key: fs.readFileSync('./certs/key.pem'),
+  cert: fs.readFileSync('./certs/cert.pem')
 };
 
 app.prepare().then(() => {

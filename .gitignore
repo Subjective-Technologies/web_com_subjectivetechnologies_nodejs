@@ -16,3 +16,4 @@ public/video/*.mp4
 context_snapshots
 context
 deploy_prod.py
+certs
