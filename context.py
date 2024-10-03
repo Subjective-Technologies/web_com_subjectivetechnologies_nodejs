@@ -4,12 +4,14 @@ from datetime import datetime
 import json
 from collections import defaultdict
 import argparse
+import shutil
 
 
 class SnapshotGenerator:
     def __init__(self, config):
         self.root_dir = config['root_dir']
         self.avoid_folders = config['avoid_folders']
+        self.avoid_files = set(config.get('avoid_files', []))
         self.include_extensions = set(config['include_extensions'])
         self.key_files = config['key_files']
         self.output_file = config['output_file']
@@ -84,9 +86,11 @@ class SnapshotGenerator:
         tree = {"directory_name": os.path.basename(root_dir), "children": []}
         for root, dirs, files in os.walk(root_dir):
             dirs[:] = self.exclude_directories(dirs)
-            path = root.split(os.sep)
+            path = os.path.relpath(root, root_dir).split(os.sep)
             subdir = tree
             for part in path:
+                if part == '.':
+                    continue
                 for child in subdir["children"]:
                     if child.get("directory_name") == part:
                         subdir = child
@@ -143,8 +147,13 @@ class SnapshotGenerator:
             dirs[:] = self.exclude_directories(dirs)
             if files:
                 for file in files:
-                    if file.endswith(tuple(self.include_extensions)) or file in self.key_files:
-                        file_path = os.path.join(root, file)
+                    file_path = os.path.join(root, file)
+                    relative_file_path = os.path.relpath(file_path, self.root_dir)
+                    if (
+                        (file.endswith(tuple(self.include_extensions)) or file in self.key_files) and
+                        file not in self.avoid_files and
+                        relative_file_path not in self.avoid_files
+                    ):
                         try:
                             with open(file_path, 'r', encoding='utf-8') as f_in:
                                 content = f_in.read()
@@ -153,7 +162,7 @@ class SnapshotGenerator:
                                     'file': {
                                         'File': file,
                                         'Full Path': file_path,
-                                        'Relative Path': os.path.relpath(file_path, self.root_dir),
+                                        'Relative Path': relative_file_path,
                                         'Size': file_info.st_size,
                                         'Last Modified': datetime.fromtimestamp(file_info.st_mtime).strftime('%Y-%m-%d %H:%M:%S'),
                                         'Lines': len(content.splitlines()),
@@ -223,17 +232,52 @@ class SnapshotGenerator:
 # Common folders to avoid
 COMMON_AVOID_FOLDERS = [
     "node_modules", "venv", "env", "__pycache__", "site-packages", "myenv",
-    "target", "bin", "build", "obj", "vendor",".next"
+    "target", "bin", "build", "obj", "vendor", ".next", "font", "animations", "package-lock"
 ]
 
-def main(root_dir='.', additional_avoid_folders=[], output_file='snapshot.context', output_folder='./context', compress=0, amount_of_chunks=10, size_of_chunk=None):
+# Common files to avoid
+COMMON_AVOID_FILES = [
+    "package-lock.json",
+    "yarn.lock",
+    "pnpm-lock.yaml",
+    "Cargo.lock",
+    "Pipfile.lock",
+    "composer.lock",
+    ".DS_Store",
+    "thumbs.db",
+    "Thumbs.db",
+    "npm-debug.log",
+    "yarn-error.log",
+    "Dockerfile",
+    "docker-compose.yml",
+    ".env",
+    ".gitignore",
+    ".gitattributes",
+    "Makefile"
+]
+
+def main(
+    root_dir='.',
+    additional_avoid_folders=[],
+    additional_avoid_files=[],
+    output_file='snapshot.context',
+    output_folder='./context',
+    compress=0,
+    amount_of_chunks=10,
+    size_of_chunk=None
+):
     # Combine common avoid folders with additional avoid folders
     avoid_folders = COMMON_AVOID_FOLDERS + additional_avoid_folders
+
+    # Combine common avoid files with additional avoid files
+    avoid_files = COMMON_AVOID_FILES + additional_avoid_files
+    avoid_files_set = set(avoid_files)
 
     # Create a temporary instance of SnapshotGenerator to access the language_extensions
     temp_config = {
         "root_dir": root_dir,
         "avoid_folders": avoid_folders,
+        "avoid_files": avoid_files_set,
         "include_extensions": [],
         "key_files": [],
         "output_file": "",
@@ -262,6 +306,7 @@ def main(root_dir='.', additional_avoid_folders=[], output_file='snapshot.contex
     config = {
         "root_dir": root_dir,
         "avoid_folders": avoid_folders,
+        "avoid_files": avoid_files_set,
         "include_extensions": list(language_extensions),
         "key_files": temp_generator.key_files,  # Using existing key files from the class
         "output_file": output_file_with_timestamp,
@@ -279,10 +324,19 @@ def main(root_dir='.', additional_avoid_folders=[], output_file='snapshot.contex
         elif size_of_chunk:
             parts_dir = generator.split_file(output_file_with_timestamp, chunk_size=size_of_chunk)
 
-        # Move the parts directory to the output folder
+        # Move the parts directory to the output folder if necessary
         new_parts_dir = os.path.join(output_folder, os.path.basename(parts_dir))
-        os.rename(parts_dir, new_parts_dir)
-        print(f"Parts directory moved to: {new_parts_dir}")
+        parts_dir_abs = os.path.abspath(parts_dir)
+        new_parts_dir_abs = os.path.abspath(new_parts_dir)
+
+        if parts_dir_abs != new_parts_dir_abs:
+            if os.path.exists(new_parts_dir):
+                # Remove the existing directory before moving
+                shutil.rmtree(new_parts_dir)
+            os.rename(parts_dir, new_parts_dir)
+            print(f"Parts directory moved to: {new_parts_dir}")
+        else:
+            print(f"Parts directory is already in the output folder: {new_parts_dir}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate a single context for a project.")
@@ -290,6 +344,7 @@ if __name__ == "__main__":
     parser.add_argument("--output_file", required=False, default="snapshot.context", help="Output file for the snapshot (default: snapshot.context in the current working directory)")
     parser.add_argument("--output_folder", required=False, default="./context", help="Output folder for the parts directory (default: ./context)")
     parser.add_argument("--additional-avoid-folders", required=False, default="", help="Comma-separated list of additional folders to avoid")
+    parser.add_argument("--additional-avoid-files", required=False, default="", help="Comma-separated list of additional files to avoid")
     parser.add_argument("--compress", type=int, choices=[0, 1], default=1, help="Whether to compress the output (0 or 1, default: 1)")
     parser.add_argument("--amount-of-chunks", type=int, default=10, help="Number of chunks to split the file into (default: 10)")
     parser.add_argument("--size-of-chunk", type=int, help="Size of each chunk in bytes")
@@ -299,6 +354,7 @@ if __name__ == "__main__":
     main(
         root_dir=args.root_dir,
         additional_avoid_folders=args.additional_avoid_folders.split(',') if args.additional_avoid_folders else [],
+        additional_avoid_files=args.additional_avoid_files.split(',') if args.additional_avoid_files else [],
         output_file=args.output_file,
         output_folder=args.output_folder,
         compress=args.compress,

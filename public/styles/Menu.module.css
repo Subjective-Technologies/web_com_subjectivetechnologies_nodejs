@@ -1,3 +1,5 @@
+/* components/Menu.module.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
 .menu {
@@ -43,32 +45,6 @@
     font-weight: 700;
 }
 
-.subMenu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #000;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    z-index: 10;
-    padding: 10px;
-    border-radius: 8px;
-    width: auto; /* Adjust width to fit content */
-    font-size: smaller;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-    margin: 0 5px;
-}
-
-.leftMenu, .rightMenu {
-    display: flex;
-    flex-direction: column;
-}
-
 .link {
     text-decoration: none;
     color: #fff;
@@ -80,19 +56,27 @@
     font-weight: 700;
 }
 
+/* Apply the specific styles to the .signUpButton */
 .signUpButton {
-    background-color: #007bff;
-    color: white;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1em;
+    background-color: #FFD700;
+    color: #000000;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
-    border-radius: 4px;
-    font-size: 1.5em;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 15px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px #FFD700;
     font-family: 'Roboto Mono', monospace;
+    white-space: nowrap;
 }
 
 .signUpButton:hover {
-    background-color: #0056b3;
+    background-color: #FFD700;
+    box-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700;
 }
 
 .content_container {

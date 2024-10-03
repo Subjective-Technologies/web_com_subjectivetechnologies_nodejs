@@ -1,20 +1,435 @@
+/* components/StaticLanding.module.css */
 
-.container {
+/* Import Roboto Mono font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+/* Landing Page Styles */
+.landingPage {
+    font-family: 'Roboto Mono', monospace;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    /* Theme variables */
+    --background-color: #1a1a1a; /* Default to dark theme */
+    --text-color: #f0f0f0;
+    --button-bg-color: #FFD700;
+    --button-text-color: #000000;
+}
+
+/* Theme styles */
+.darkMode {
+    --background-color: #1a1a1a;
+    --text-color: #f0f0f0;
+}
+
+.lightMode {
+    --background-color: #ffffff;
+    --text-color: #333333;
+}
+
+/* Apply theme variables */
+.landingPage {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.landingPage a {
+    color: var(--text-color);
+}
+
+.landingPage h1,
+.landingPage h2,
+.landingPage h3,
+.landingPage h4,
+.landingPage p,
+.landingPage li {
+    color: var(--text-color);
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Neon Text Effects */
+.neonTextWhite {
+    color: #ffffff;
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.5);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.neonTextBlack {
+    color: #000000;
+    text-shadow:
+        0 0 5px rgba(0, 0, 0, 0.5),
+        0 0 10px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Hero Section */
+.heroSection {
+    background-image: url('/images/worktwins_1920x1080.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroContent {
     text-align: center;
-    padding: 20px;
+    color: var(--text-color);
+    animation: fadeIn 2s ease-in-out;
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin: 0 20px;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
 }
 
-.fullWidthImage {
-    width: 100%;
-    margin: 0;
+.heroContent.hidden {
+    opacity: 0;
 }
 
-.title {
-    font-size: 2em;
+/* Adjusted font sizes in hero section */
+.heroContent h1 {
+    font-size: 4em;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
-.description {
+.heroContent p {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* Centered Button with Neon Effect */
+.ctaButton {
+    display: inline-block;
+    padding: 15px 30px;
     font-size: 1.2em;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px auto;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px var(--button-bg-color);
+    white-space: normal;
+    width: auto;
+    max-width: 100%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.ctaButton:hover {
+    background-color: var(--button-bg-color);
+    box-shadow: 0 0 20px var(--button-bg-color), 0 0 30px #FFA500;
+}
+
+/* Neon Button Effect */
+.neonButton {
+    box-shadow:
+        0 0 5px rgba(255, 215, 0, 0.5),
+        0 0 10px rgba(255, 215, 0, 0.5),
+        0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.neonButton:hover {
+    box-shadow:
+        0 0 10px rgba(255, 215, 0, 0.7),
+        0 0 20px rgba(255, 215, 0, 0.7),
+        0 0 30px rgba(255, 165, 0, 0.7);
+}
+
+/* Sections */
+.featuresSection,
+.howItWorksSection,
+.testimonialsSection,
+.ctaSection {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Scroll Animation */
+.inView {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.featuresSection h2,
+.howItWorksSection h2,
+.testimonialsSection h2,
+.ctaSection h2 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.featureItem,
+.stepItem,
+.testimonialItem {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.featureItem.inView,
+.stepItem.inView,
+.testimonialItem.inView,
+.featuresSection h2.inView,
+.howItWorksSection h2.inView,
+.testimonialsSection h2.inView,
+.ctaSection h2.inView {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Features Section */
+.featuresSection {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.featuresSection h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.featuresGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.featureItem {
+    width: 300px;
+    margin: 20px;
+    padding: 20px; /* Added uniform padding */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    border-radius: 10px;
+}
+
+.featureItem:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 20px rgba(255, 215, 0, 0.6),
+        0 0 30px rgba(255, 165, 0, 0.4);
+}
+
+.featureItem img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.featureItem:hover img {
+    transform: scale(1.05);
+}
+
+.featureItem h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.featureItem p {
+    font-size: 1em;
+    color: var(--text-color);
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* How It Works Section */
+.howItWorksSection {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.howItWorksSection h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stepItem {
+    width: 300px;
+    margin: 20px;
+    padding: 20px; /* Added uniform padding */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    border-radius: 10px;
+}
+
+.stepItem:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 20px rgba(255, 215, 0, 0.6),
+        0 0 30px rgba(255, 165, 0, 0.4);
+}
+
+.stepItem img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.stepItem:hover img {
+    transform: scale(1.05);
+}
+
+.stepItem h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.stepItem p {
+    font-size: 1em;
+    color: var(--text-color);
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Testimonials Section */
+.testimonialsSection {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.testimonialsSection h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonialItem {
+    width: 300px;
+    margin: 20px;
+    padding: 20px; /* Added uniform padding */
+    font-style: italic;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.testimonialItem:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 20px rgba(255, 215, 0, 0.6),
+        0 0 30px rgba(255, 165, 0, 0.4);
+}
+
+.testimonialItem::before {
+    content: open-quote;
+    font-size: 3em;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    color: #FFD700;
+}
+
+.testimonialItem p {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.testimonialItem h4 {
     margin-top: 20px;
+    font-size: 1em;
+    font-style: normal;
+    color: var(--text-color);
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Call to Action Section */
+.ctaSection {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.ctaSection h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.5);
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Theme Switcher Button */
+.themeSwitcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .featuresGrid,
+    .steps,
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featureItem,
+    .stepItem,
+    .testimonialItem {
+        width: 80%;
+    }
+
+    .heroContent h1 {
+        font-size: 3em;
+    }
+
+    .heroContent p {
+        font-size: 1.5em;
+    }
+
+    .ctaSection h2 {
+        font-size: 2em;
+    }
 }

@@ -34,3 +34,10 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+COMMERCIAL SCRIPT
+
+  How many years of experience do you have in Java?.. And in Python?.. Do you like frontend or backend?.. do these questions sound familiar?.. and pointless to you ? WorkTwins.com is the first AI recruiting platform where ONLY ENGINEERS, HIRE ENGINEERS. You monitor your work experience at the same time you work. Generate your work footprints in Real-Time. Our technlogy based on Subjective Knowledge-Hooks which compare your work experience to other's. We sort engineers by Computational Affinity. No more interviews. Collaborate in Real-Time with peers, who are working on the same error in the most similar context to yours. Because everybody has to be in the correct place.. "Computational Affinity" IS ALL. Join us at WorkTwins.com 
