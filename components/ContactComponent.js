@@ -15,7 +15,7 @@ console.log('Returning from ContactComponent');
                     <p className={styles.text}>Email: info@worktwins.com</p>
                     <p className={styles.text}>Phone: +17867965039</p>
                     <div className={styles.pressContact}>
-                    <img src="images/profile_yo_compressed.jpg" alt="Tommy Fox" className={styles.pressImage} />
+                    <img src="/images/icons/profile_yo.-min.jpg" alt="Tommy Fox" className={styles.pressImage} />
                     <div className={styles.pressDetails}>
                     <h2 className={styles.subheading}>Press Contact</h2>
                         <p className={styles.text}>Name: Tommy Fox</p>
@@ -57,7 +57,7 @@ console.log('Returning from ContactComponent');
             </div>
             <div className={styles.bookImageContainer}>
                     <a href="https://www.amazon.com/dp/B0CKL4MVMC/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1696620400&sr=8-1">
-                        <img src="images/360/brainboost_marketing_images_thefirstzeroinputtechnology_book_website.png" alt="Book Image" className={styles.bookImage} />
+                        <img src="/images/brainboost_marketing_images_thefirstzeroinputtechnology_book_website.png" alt="Book Image" className={styles.bookImage} />
                     </a>
               </div> 
 

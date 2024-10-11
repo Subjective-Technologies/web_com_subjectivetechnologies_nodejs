@@ -1,7 +1,5 @@
-// components/StaticLandingComponent.js
-
 import React, { useState, useEffect, useRef } from 'react';
-import styles from './StaticLanding.module.css';
+import styles from '../public/styles/StaticLanding.module.css';
 
 const StaticLandingComponent = () => {
     const [theme, setTheme] = useState('dark'); // Default theme is dark
@@ -24,14 +22,29 @@ const StaticLandingComponent = () => {
     // Ref to keep track of the last scroll position
     const lastScrollTopRef = useRef(0);
 
+    // Canvas ref for neural network background
+    const canvasRef = useRef(null);
+
     useEffect(() => {
+        const canvas = canvasRef.current;
+        const context = canvas.getContext('2d');
+        const animate = () => {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            // Drawing logic here
+            requestAnimationFrame(animate);
+        };
+        animate();
+
         // Smooth scroll for anchor links
         const handleAnchorClick = (e) => {
             if (e.target.hash) {
                 e.preventDefault();
-                document.querySelector(e.target.hash).scrollIntoView({
-                    behavior: 'smooth',
-                });
+                const targetElement = document.querySelector(e.target.hash);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                    });
+                }
             }
         };
         document.addEventListener('click', handleAnchorClick);
@@ -78,6 +91,141 @@ const StaticLandingComponent = () => {
         };
     }, []);
 
+    // Neural Network Background Animation
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        if (!canvas) return; // Ensure canvas is available
+
+        const context = canvas.getContext('2d');
+        let animationFrameId;
+        let particles = [];
+        const mouse = { x: 0, y: 0 };
+
+        // Set canvas size
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Handle window resize
+        const handleResize = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            initParticles();
+        };
+        window.addEventListener('resize', handleResize);
+
+        // Handle mouse move
+        const handleMouseMove = (event) => {
+            mouse.x = event.clientX;
+            mouse.y = event.clientY;
+        };
+        window.addEventListener('mousemove', handleMouseMove);
+
+        // Particle class
+        class Particle {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.size = Math.random() * 3 + 1;
+                this.speedX = Math.random() * 0.6 - 0.3;
+                this.speedY = Math.random() * 0.6 - 0.3;
+            }
+
+            update() {
+                this.x += this.speedX + (mouse.x - this.x) * 0.0005;
+                this.y += this.speedY + (mouse.y - this.y) * 0.0005;
+
+                // Wrap particles around edges
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+
+            draw() {
+                context.fillStyle = 'rgba(255, 215, 0, 0.7)'; // Golden color
+                context.beginPath();
+                context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                context.closePath();
+                context.fill();
+
+                // Glow effect
+                context.shadowColor = 'rgba(255, 215, 0, 0.7)';
+                context.shadowBlur = 15;
+            }
+        }
+
+        // Initialize particles
+        const initParticles = () => {
+            particles = [];
+            const maxParticles = 100; // Adjust this number based on performance
+            const numberOfParticles = Math.min(
+                Math.floor((canvas.width * canvas.height) / 16000),
+                maxParticles
+            );
+            for (let i = 0; i < numberOfParticles; i++) {
+                const x = Math.random() * canvas.width;
+                const y = Math.random() * canvas.height;
+                particles.push(new Particle(x, y));
+            }
+        };
+
+        // Animate particles
+        const animate = () => {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach((particle) => {
+                particle.update();
+                particle.draw();
+            });
+            connectParticles();
+            animationFrameId = requestAnimationFrame(animate);
+        };
+
+        // Connect particles with lines to simulate neural network
+        const connectParticles = () => {
+            let opacityValue = 1;
+            for (let a = 0; a < particles.length; a++) {
+                for (let b = a + 1; b < particles.length; b++) {
+                    const dx = particles[a].x - particles[b].x;
+                    const dy = particles[a].y - particles[b].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < 70) {
+                        opacityValue = 1 - distance / 70;
+
+                        // Create gradient for electricity effect
+                        const gradient = context.createLinearGradient(
+                            particles[a].x,
+                            particles[a].y,
+                            particles[b].x,
+                            particles[b].y
+                        );
+                        gradient.addColorStop(0, `rgba(255, 223, 0, ${opacityValue})`);
+                        gradient.addColorStop(1, `rgba(255, 140, 0, ${opacityValue})`);
+
+                        context.strokeStyle = gradient;
+                        context.lineWidth = 1.5;
+                        context.beginPath();
+                        context.moveTo(particles[a].x, particles[a].y);
+                        context.lineTo(particles[b].x, particles[b].y);
+                        context.stroke();
+                    }
+                }
+            }
+        };
+
+        // Start animation
+        initParticles();
+        animate();
+
+        // Cleanup on unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('mousemove', handleMouseMove);
+            cancelAnimationFrame(animationFrameId);
+        };
+    }, []); // Empty dependency array to run once on mount
+
     // Handle "Get Started" button click
     const handleGetStartedClick = () => {
         const nextSection = document.getElementById('features');
@@ -92,6 +240,9 @@ const StaticLandingComponent = () => {
                 theme === 'dark' ? styles.darkMode : styles.lightMode
             }`}
         >
+            {/* Neural Network Canvas */}
+            <canvas ref={canvasRef} className={styles.neuralCanvas}></canvas>
+
             {/* Hero Section */}
             <section className={styles.heroSection} id="hero">
                 <div
@@ -100,9 +251,7 @@ const StaticLandingComponent = () => {
                     }`}
                 >
                     <h1 className={styles.neonTextWhite}>Find your WorkTwins</h1>
-                    <p className={styles.neonTextWhite}>
-                        AI Precision For Candidate Selection based on empirical data.
-                    </p>
+
                     <button
                         className={`${styles.ctaButton} ${styles.neonButton}`}
                         onClick={handleGetStartedClick}
@@ -112,16 +261,19 @@ const StaticLandingComponent = () => {
                 </div>
             </section>
 
+
+
+
             {/* Features Section */}
             <section className={styles.featuresSection} id="features">
-                <h2 ref={addToAnimatedElements} className={styles.neonTextWhite}>
+                <h2 ref={addToAnimatedElements} className={styles.sectionTitle}>
                     How it works
                 </h2>
                 <div className={styles.featuresGrid}>
                     {[
                         {
                             icon: '/images/feature_monitor.png',
-                            title: 'Monitor Your Work Activity',
+                            title: 'Monitor Your Work Activity Using Computational Affinity Antenna',
                             description:
                                 'Utilize our desktop client, available for Windows, Mac, and Linux, to analyze your project files locally. The client automatically detects programming languages, libraries, frameworks, and APIs used within your projects. It also monitors your screen activity in real time using our KnowledgeHooks technology, providing detailed insights of your work experience.',
                         },
@@ -141,7 +293,7 @@ const StaticLandingComponent = () => {
                             icon: '/images/feature_whiteboard.png',
                             title: 'Impact',
                             description:
-                                'Technical interviews become obsolete. The platform empirically guarantees that you will always find the perfect employee for any role, even for the most specific tasks. By leveraging real-time data and computational affinity, we ensure seamless matches between employers and candidates, eliminating the guesswork from hiring. Developers, hire Developers. ',
+                                'Technical interviews become obsolete. The platform empirically guarantees that you will always find the perfect employee for any role, even for the most specific tasks. By leveraging real-time data and computational affinity, we ensure seamless matches between employers and candidates, eliminating the guesswork from hiring. Developers, hire Developers.',
                         },
                     ].map((feature, index) => (
                         <div
@@ -163,42 +315,146 @@ const StaticLandingComponent = () => {
             </section>
 
 
-            {/* Testimonials Section */}
-            <section className={styles.testimonialsSection} id="testimonials">
-                <h2 ref={addToAnimatedElements} className={styles.neonTextWhite}>
-                    What Our Customers Say
-                </h2>
-                <div className={styles.testimonials}>
-                    {Array.from({ length: 3 }).map((_, index) => (
-                        <div
-                            key={index}
-                            className={styles.testimonialItem}
-                            ref={addToAnimatedElements}
-                        >
-                            <p>
-                                "This AI product has transformed our business in ways we couldn't
-                                imagine."
-                            </p>
-                            <h4 className={styles.neonTextWhite}>- Customer {index + 1}</h4>
-                        </div>
-                    ))}
-                </div>
-            </section>
 
-            {/* Call to Action Section */}
-            <section className={styles.ctaSection}>
-                <h2 ref={addToAnimatedElements} className={styles.neonTextWhite}>
-                    Ready to Embrace the Future?
-                </h2>
-                <button className={`${styles.ctaButton} ${styles.neonButton}`}>
-                    Sign Up Now
-                </button>
-            </section>
+
+    {/* Download Section */}
+    <section className={styles.downloadSection} id="features">
+        <h2 ref={addToAnimatedElements} className={styles.sectionTitle}>
+                    Download Client
+        </h2>
+        <div className={styles.downloadSection}>
+        <div id="three_twins" align="center"><img src="images/three_twins_laptops.png"/></div>
+        <h2>Download WorkTwins Client Application</h2>
+        <p>Select your operating system below to download the WorkTwins client:</p>
+        <div className={styles.downloadOptions}>
+            <a href="/downloads/worktwins_windows.exe" className={`${styles.downloadLink} ${styles.windows}`}>
+            <img src="/images/windows_icon.svg" alt="Windows Icon" />
+            Download for Windows
+            </a>
+            <a href="/downloads/worktwins_macos.dmg" className={`${styles.downloadLink} ${styles.macos}`}>
+            <img src="/images/macos_icon.svg" alt="MacOS Icon" />
+            Download for MacOS
+            </a>
+            <a href="/downloads/worktwins_linux.deb" className={`${styles.downloadLink} ${styles.linux}`}>
+            <img src="/images/linux_icon.svg" alt="Linux Icon" />
+            Download for Linux
+            </a>
+        </div>
+        </div>
+    </section>
+
+
+
+
+
+    {/* Subjective 0-Input Technology Section */}
+    <section className={styles.subjectiveZeroInputSection} id="subjective-0-input-technology">
+        <h2 className={styles.sectionTitle}>What is Subjective 0-Input Technology?</h2>
+        <div className={styles.subjectiveZeroInputContent}>
+            <div className={styles.videoContainer}>
+                <div className={styles.videoWrapper}>
+                    <video
+                        className={styles.subjectiveVideo}
+                        src="/video/brainboost_marketing_media_video_subjective.mp4"
+                        controls
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    ></video>
+                </div>
+            </div>
+            <div className={styles.textContainer}>
+                <p className={styles.description}>
+                    Subjective 0-Input Technology is a groundbreaking framework that requires no explicit user input. It utilizes real-world data from your past and present contexts to deliver personalized insights and experiences. Devices such as AR/MR glasses constantly provide video input, allowing the system to work seamlessly without needing an internet connection. This technology optimizes relationships, interactions, and productivity by autonomously learning from your environment, delivering real-time feedback and results.
+                </p>
+                <p className={styles.description}>
+                    Key features of Subjective Technology include:
+                    <ul>
+                        <li>**User-Centric Design**: Prioritizes user experience by minimizing the need for input. The technology adapts seamlessly to the user's needs, reducing the learning curve traditionally associated with conventional technology.</li>
+                        <li>**Cognitive Augmentation**: Enhances human cognitive abilities by providing real-time, context-sensitive assistance without invasive interfaces.</li>
+                        <li>**Transhumanist Approach**: Aligns with transhumanist philosophy, aiming to transcend human limitations through virtual modifications and advanced interactions, such as *VirtualGlands* that replace traditional currency systems.</li>
+                        <li>**0-Input Technology**: Operates without requiring constant input from the user, making the interaction more natural and less reliant on traditional interfaces.</li>
+                        <li>**Wide-Ranging Applications**: From education to personalized economics (*Subjective Thermo-Currency*), it offers innovative solutions across multiple sectors, including aiding individuals with cognitive impairments.</li>
+                        <li>**Inclusive Vision**: Promotes democratization of intelligence, offering cognitive support tailored to individual needs, fostering an inclusive society where everyone benefits from technological advancements.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    {/* Contact Section */}
+    <section className={styles.subjectiveZeroInputSection} id="subjective-0-input-technology">
+    <div className={styles.contactContainer}>
+    <h2 className={styles.sectionTitle}>Contact Us</h2><br></br>
+
+            <div className={styles.gridContainer}>
+                <div>
+                    <h2 className={styles.subheading}>General Contact Information</h2>
+                    <p className={styles.text}>Email: info@worktwins.com</p>
+                    <p className={styles.text}>Phone: +17867965039</p>
+                    <div className={styles.pressContact}>
+                    <img src="/images/icons/profile_yo.-min.jpg" alt="Tommy Fox" className={styles.pressImage} />
+                    <div className={styles.pressDetails}>
+                    <h2 className={styles.subheading}>Press Contact</h2>
+                        <p className={styles.text}>Name: Tommy Fox</p>
+                        <p className={styles.text}>Email: tommyfox@subjectivetechnologies.com</p>
+                        <p className={styles.text}>WhatsApp: <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className={styles.whatsappLink}>+17867965039</a></p>
+                    </div>
+                </div>
+                </div>
+
+                <div className={styles.videoPlaceholder}>
+                    <video className={styles.video} src="video/golden_twins.mp4" autoPlay muted loop />
+                </div>
+
+
+
+                <div className={styles.formSection}>
+                <h2 className={styles.subheading}>Get in Touch</h2>
+                <form className={styles.contactForm}>
+                    <div className={styles.formGroup}>
+                        <label htmlFor="name" className={styles.label}>Name</label>
+                        <input type="text" id="name" name="name" className={styles.input} required />
+                    </div>
+                    <div className={styles.formGroup}>
+                        <label htmlFor="email" className={styles.label}>Email</label>
+                        <input type="email" id="email" name="email" className={styles.input} required />
+                    </div>
+                    <div className={styles.formGroup}>
+                        <label htmlFor="phone" className={styles.label}>Phone</label>
+                        <input type="tel" id="phone" name="phone" className={styles.input} />
+                    </div>
+                    <div className={styles.formGroup}>
+                        <label htmlFor="message" className={styles.label}>Message</label>
+                        <textarea id="message" name="message" className={styles.textarea} required></textarea>
+                    </div>
+                    <button type="submit" className={styles.submitButton}>Submit</button><br/>
+                </form>
+
+                {/**/}
+            </div>
+            <div className={styles.bookImageContainer}>
+                    <a href="https://www.amazon.com/dp/B0CKL4MVMC/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1696620400&sr=8-1">
+                        <img src="/images/brainboost_marketing_images_thefirstzeroinputtechnology_book_website.png" alt="Book Image" className={styles.bookImage} />
+                    </a>
+              </div> 
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
 
             {/* Theme Switcher Button */}
-            <button className={styles.themeSwitcher} onClick={toggleTheme}>
+{/*             <button className={styles.themeSwitcher} onClick={toggleTheme}>
                 {theme === 'dark' ? '🌞' : '🌜'}
-            </button>
+            </button> */}
         </div>
     );
 };

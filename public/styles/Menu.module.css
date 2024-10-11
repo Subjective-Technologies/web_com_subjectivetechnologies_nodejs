@@ -3,19 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
 .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Ensure the menu stays at the top */
-    width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensure it stays above other content */
-    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+    z-index: 999; /* Ensure it's on top of everything */
+    height: 80px; /* Define the height of your menu */
+    background-color: #000; /* Or any background color you prefer */
+    display: flex;
+    align-items: center;
+    padding: 0 20px; /* Add padding if necessary */
 }
 
 .menuItem {
