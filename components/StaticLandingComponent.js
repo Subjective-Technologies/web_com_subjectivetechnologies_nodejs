@@ -343,10 +343,6 @@ const StaticLandingComponent = () => {
         </div>
     </section>
 
-
-
-
-
     {/* Subjective 0-Input Technology Section */}
     <section className={styles.subjectiveZeroInputSection} id="subjective-0-input-technology">
         <h2 className={styles.sectionTitle}>What is Subjective 0-Input Technology?</h2>
@@ -363,22 +359,6 @@ const StaticLandingComponent = () => {
                         playsInline
                     ></video>
                 </div>
-            </div>
-            <div className={styles.textContainer}>
-                <p className={styles.description}>
-                    Subjective 0-Input Technology is a groundbreaking framework that requires no explicit user input. It utilizes real-world data from your past and present contexts to deliver personalized insights and experiences. Devices such as AR/MR glasses constantly provide video input, allowing the system to work seamlessly without needing an internet connection. This technology optimizes relationships, interactions, and productivity by autonomously learning from your environment, delivering real-time feedback and results.
-                </p>
-                <p className={styles.description}>
-                    Key features of Subjective Technology include:
-                    <ul>
-                        <li>**User-Centric Design**: Prioritizes user experience by minimizing the need for input. The technology adapts seamlessly to the user's needs, reducing the learning curve traditionally associated with conventional technology.</li>
-                        <li>**Cognitive Augmentation**: Enhances human cognitive abilities by providing real-time, context-sensitive assistance without invasive interfaces.</li>
-                        <li>**Transhumanist Approach**: Aligns with transhumanist philosophy, aiming to transcend human limitations through virtual modifications and advanced interactions, such as *VirtualGlands* that replace traditional currency systems.</li>
-                        <li>**0-Input Technology**: Operates without requiring constant input from the user, making the interaction more natural and less reliant on traditional interfaces.</li>
-                        <li>**Wide-Ranging Applications**: From education to personalized economics (*Subjective Thermo-Currency*), it offers innovative solutions across multiple sectors, including aiding individuals with cognitive impairments.</li>
-                        <li>**Inclusive Vision**: Promotes democratization of intelligence, offering cognitive support tailored to individual needs, fostering an inclusive society where everyone benefits from technological advancements.</li>
-                    </ul>
-                </p>
             </div>
         </div>
     </section>
