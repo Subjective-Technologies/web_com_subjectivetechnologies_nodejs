@@ -1,215 +1,185 @@
-/* DashboardContentComponent.module.css */
-
 /* Import Roboto Mono font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
-/* Base styles for dashboard */
+/* DashboardContentComponent.module.css */
+
+/* Main Dashboard Container */
 .dashboardContainer {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    grid-template-rows: auto;
-    min-height: 100vh;
-    background-color: #f0f0f0;
-    gap: 20px;
-    padding: 20px;
-    font-family: 'Roboto Mono', monospace;
+display:flex ;
+flex-direction :column ;
+height :100vh ;
 }
 
-/* Headings */
+/* Top Navbar Styles */
+.navbar {
+background-color:white ;
+box-shadow :0 .125rem .25rem rgba(0 ,0 ,0 ,.1);
+padding:.625rem ;
+display:flex ;
+justify-content :space-between ;
+align-items:center ;
+}
+
+/* Dashboard Component Styles */
+.dashboard-component {
+border-radius:.5rem ;
+border:.125rem solid #e0e0e0; /* Light gray border */
+transition : all .3s ease;
+}
+
+.dashboard-component:hover {
+border-color:#007bff; /* Change border color on hover */
+box-shadow :0px .3125rem .9375rem rgba(0 ,0 ,0 ,.2); /* Add shadow on hover */
+}
+
+/* Work Footprint Styles */
+.work-footprint {
+display:flex ;
+align-items:center ;
+padding:.625rem ;
+border-radius:.5rem ;
+background-color:white ;
+margin-bottom:.625rem ;
+}
+
+.work-footprint:hover {
+background-color:#f9f9f9; /* Light gray background on hover */
+}
+
+/* Chart Container Styles */
+.chart-container {
+width :100%;
+}
+
+/* Slot Styles for Docking Components */
+.slot {
+width :calc(50% - .625rem);
+height:auto ;
+border-style:dashed; /* Dashed border style */
+border-width:.125rem; /* Border width */
+border-color:#d1d5db; /* Light gray color */
+border-radius:.5rem; /* Rounded corners */
+padding:.625rem;
+z-index :1;
+}
+
+.slot:hover {
+background-color:#f0f8ff; /* Light blue background on hover */
+}
+
+/* General Text Styles */
 .title {
-    font-size: 22px; /* Product Titles */
-    font-weight: 700; /* Bold for emphasis */
+font-size :22px; /* Product Titles */
+font-weight :700; /* Bold for emphasis */
 }
 
 .widgetTitle {
-    font-size: 20px; /* Page Headings */
-    margin-bottom: 20px;
-    text-align: center;
+font-size :20px; /* Page Headings */
+margin-bottom :20px;
 }
 
-/* Body text */
 .body-text {
-    font-size: 16px; /* Product Prices */
-    font-weight: 400; /* Normal weight */
+font-size :16px; /* Body text size */
 }
 
-/* Small text */
 .small-text {
-    font-size: 14px; /* Product Descriptions and Details */
-    font-weight: 400; /* Normal weight */
+font-size :14px; /* Small text size for descriptions and details */
 }
 
-/* Navigation menus */
-.nav-menu {
-    font-size: 14px; /* Navigation Menus */
-    font-weight: 700; /* Bold for emphasis */
-}
-
-/* Buttons and Labels */
-.button-label {
-    font-size: 16px; /* Product Prices */
-    font-weight: 700; /* Bold for emphasis */
-}
-
-/* Footer text */
-.footer-text {
-    font-size: 12px; /* Navigation Menus */
-    font-weight: 400; /* Normal weight */
-}
-
-/* Data Table */
-.dataTable {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.dataTable th, .dataTable td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-.dataTable th {
-    background-color: #f2f2f2;
-}
-
-/* Button */
+/* Button Styles */
 .button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px; /* Product Prices */
-    margin-right: 10px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+background-color:#007bff;
+color:white ;
+padding:.625rem ; 
+text-decoration:none ;
+border-radius:.3125rem ;
 }
 
 .button:hover {
-    background-color: #0056b3;
+background-color:#0056b3; /* Darker blue on hover */
 }
 
-/* Form */
+/* Form Styles */
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+display:flex ;
+flex-direction :column ;
 }
 
 .formLabel {
-    display: flex;
-    flex-direction: column;
-    font-size: 16px; /* Product Prices */
-    margin-bottom: 10px;
+display:flex ;
+flex-direction :column ;
 }
 
 .formInput {
-    padding: 8px;
-    font-size: 16px; /* Product Prices */
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+padding:.5rem ; 
+font-size :16px; 
 }
 
 .formButton {
-    padding: 10px 20px;
-    font-size: 16px; /* Product Prices */
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+padding:.625rem ; 
+font-size :16px; 
 }
 
-.formButton:hover {
-    background-color: #218838;
-}
-
-/* Modal */
+/* Modal Styles (if needed) */
 .modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+display:flex ;
+justify-content:center ;
+align-items:center ;
+position:absolute ; 
+z-index :1 ; 
+left :0 ; 
+top :0 ; 
+width :100% ; 
+height :100% ; 
+background-color :rgba(0 ,0 ,0 ,.5) ; 
 }
 
 .modalContent {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    position: relative;
-    text-align: center;
+background-color:white ;
+padding :.625rem ; 
+border-radius :.625rem ; 
+box-shadow :.125rem .125rem .3125rem rgba(0 ,0 ,0 ,.3); 
 }
 
-.modalClose {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-/* Toggle Switch */
+/* Toggle Switch Styles (if needed) */
 .toggleSwitch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+position:absolute ; 
+display:inline-block ; 
+width :.375rem ; 
+height :.2125rem ; 
 }
 
 .toggleSwitch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+opacity :0 ; 
+width :0 ; 
+height :0 ; 
 }
 
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
+position:absolute ; 
+cursor:pointer ; 
+top :0 ; 
+left :0 ; 
+right :0 ; 
+bottom :0 ; 
+background-color:#ccc; 
+transition :.4s; 
+border-radius :.2125rem; 
 }
 
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
+.slider::before {
+position:absolute ; 
+content:""; 
+height :.1625rem; 
+width :.1625rem; 
+left :.025rem; 
+bottom :.025rem; 
+background-color:white; 
+transition :.4s; 
+border-radius :.5rem; 
 }
 
-input:checked + .slider {
-    background-color: #2196F3;
+input[type=checkbox]:checked + .slider {  
+background-color:#2196F3;  
 }
 
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
-
-/* Range Slider */
-.rangeSlider {
-    width: 100%;
-}
-
-@media (max-width: 768px) {
-    /* Responsive styles can be added here if needed */
-}

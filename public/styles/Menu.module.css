@@ -12,7 +12,7 @@
     background-color: #000; /* Or any background color you prefer */
     display: flex;
     align-items: center;
-    padding: 0 20px; /* Add padding if necessary */
+    padding: 0 25%; /* Add padding if necessary */
 }
 
 .menuItem {

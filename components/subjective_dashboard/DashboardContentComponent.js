@@ -1,163 +1,294 @@
-console.log('Loading DashboardContentComponent.js');
-// components/subjective_dashboard/DashboardContentComponent.js
-import React, { useState } from 'react';
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend,
-    PointElement,
-    LineElement,
-} from 'chart.js';
-import { Bar, Line } from 'react-chartjs-2';
-import styles from '../../public/styles/DashboardContentComponent.module.css';
+import React, { useState, useRef } from 'react';
+import { Responsive, WidthProvider } from 'react-grid-layout';
+import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, ResponsiveContainer, LineChart, Line } from 'recharts';
+import 'react-grid-layout/css/styles.css';
+import 'react-resizable/css/styles.css';
 
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend,
-    PointElement,
-    LineElement
+const ResponsiveGridLayout = WidthProvider(Responsive);
+
+// Mock data for charts
+const data = [
+  { name: 'Jan', value: 400, uv: 400, pv: 2400, amt: 2400 },
+  { name: 'Feb', value: 300, uv: 300, pv: 1398, amt: 2210 },
+  { name: 'Mar', value: 200, uv: 200, pv: 9800, amt: 2290 },
+  { name: 'Apr', value: 278, uv: 278, pv: 3908, amt: 2000 },
+  { name: 'May', value: 189, uv: 189, pv: 4800, amt: 2181 },
+];
+
+const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+
+const PieChartWidget = () => (
+  <ResponsiveContainer width="100%" height={200}>
+    <PieChart>
+      <Pie
+        data={data}
+        cx="50%"
+        cy="50%"
+        outerRadius={80}
+        fill="#8884d8"
+        dataKey="value"
+        label
+      >
+        {data.map((entry, index) => (
+          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+        ))}
+      </Pie>
+    </PieChart>
+  </ResponsiveContainer>
 );
 
-const barData = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-    datasets: [
-        {
-            label: 'Monthly Sales',
-            data: [65, 59, 80, 81, 56, 55],
-            backgroundColor: 'rgba(75,192,192,0.6)',
-        },
-    ],
-};
+const BarChartWidget = () => (
+  <ResponsiveContainer width="100%" height={200}>
+    <BarChart data={data}>
+      <XAxis dataKey="name" />
+      <YAxis />
+      <Bar dataKey="value" fill="#8884d8" />
+    </BarChart>
+  </ResponsiveContainer>
+);
 
-const lineData = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-    datasets: [
-        {
-            label: 'User Growth',
-            data: [33, 53, 85, 41, 44, 65],
-            fill: false,
-            backgroundColor: 'rgb(75, 192, 192)',
-            borderColor: 'rgba(75, 192, 192, 0.2)',
-        },
-    ],
-};
+const LineChartWidget = () => (
+  <ResponsiveContainer width="100%" height={200}>
+    <LineChart data={data}>
+      <XAxis dataKey="name" />
+      <YAxis />
+      <Line type="monotone" dataKey="pv" stroke="#8884d8" />
+      <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+    </LineChart>
+  </ResponsiveContainer>
+);
 
-const DashboardContentComponent = () => {
-console.log('Rendering DashboardContentComponent');
-    const [isModalOpen, setModalOpen] = useState(false);
-    const [toggleState, setToggleState] = useState(false);
+const Widget = ({ title, children }) => (
+  <div className="bg-white p-4 rounded-lg shadow-md border-2 border-blue-300 h-full overflow-hidden">
+    <h3 className="text-lg font-semibold mb-2">{title}</h3>
+    {children}
+  </div>
+);
 
-    const handleModalToggle = () => {
-        setModalOpen(!isModalOpen);
-    };
+const WorkFootPrints = () => {
+  const [footprints, setFootprints] = useState([
+    { id: 1, image: '/api/placeholder/40/40', name: 'Task A', timestamp: '2024-10-15 10:00 AM' },
+    { id: 2, image: '/api/placeholder/40/40', name: 'Task B', timestamp: '2024-10-15 11:00 AM' },
+    { id: 3, image: '/api/placeholder/40/40', name: 'Task C', timestamp: '2024-10-15 12:00 PM' },
+  ]);
+  
+  const fileInputRef = useRef(null);
+  
+  const [dragActive, setDragActive] = useState(false);
 
-    const handleToggleChange = () => {
-        setToggleState(!toggleState);
-    };
+  const handleNameChange = (id, newName) => {
+    setFootprints(footprints.map(fp => 
+      fp.id === id ? { ...fp, name: newName } : fp
+    ));
+  };
 
-console.log('Returning from DashboardContentComponent');
-    return (
-        <div className={styles.dashboardContainer}>
-            <h1 className={styles.title}>Dashboard Overview</h1>
+  const handleFileUpload = (file) => {
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const newFootprint = JSON.parse(e.target.result);
+          const timestamp = new Date().toLocaleString();
+          const newEntry = {
+            id: footprints.length + 1,
+            image: '/api/placeholder/40/40',
+            name: file.name.replace(/\.[^/.]+$/, ""),
+            timestamp,
+          };
+          setFootprints([...footprints, newEntry]);
+        } catch (error) {
+          console.error('Error parsing JSON:', error);
+          alert('Error loading file. Please ensure it\'s a valid JSON');
+        }
+      };
+      reader.readAsText(file);
+    }
+  };
 
-            <div className={styles.widgetContainer}>
-                <div className={styles.widget}>
-                    <h2 className={styles.widgetTitle}>Monthly Sales</h2>
-                    <Bar data={barData} />
-                </div>
+  const handleDrag = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.type === 'dragenter' || e.type === 'dragover') {
+      setDragActive(true);
+    } else if (e.type === 'dragleave') {
+      setDragActive(false);
+    }
+  };
 
-                <div className={styles.widget}>
-                    <h2 className={styles.widgetTitle}>User Growth</h2>
-                    <Line data={lineData} />
-                </div>
-            </div>
+  const handleDrop = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragActive(false);
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      handleFileUpload(e.dataTransfer.files[0]);
+    }
+  };
 
-            <div className={styles.widget}>
-                <h2 className={styles.widgetTitle}>Data Table</h2>
-                <table className={styles.dataTable}>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Age</th>
-                            <th>Location</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>28</td>
-                            <td>New York</td>
-                        </tr>
-                        <tr>
-                            <td>Jane Smith</td>
-                            <td>34</td>
-                            <td>San Francisco</td>
-                        </tr>
-                        <tr>
-                            <td>Sam Johnson</td>
-                            <td>45</td>
-                            <td>Chicago</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div className={styles.widget}>
-                <h2 className={styles.widgetTitle}>Interactive Buttons</h2>
-                <button className={styles.button} onClick={() => alert('Button 1 clicked!')}>Button 1</button>
-                <button className={styles.button} onClick={() => alert('Button 2 clicked!')}>Button 2</button>
-            </div>
-
-            <div className={styles.widget}>
-                <h2 className={styles.widgetTitle}>Form Example</h2>
-                <form className={styles.form}>
-                    <label className={styles.formLabel}>
-                        Name:
-                        <input type="text" className={styles.formInput} /></label>
-                    <label className={styles.formLabel}>
-                        Email:
-                        <input type="email" className={styles.formInput} />
-                    </label>
-                    <button type="submit" className={styles.formButton}>Submit</button>
-                </form>
-            </div>
-
-            <div className={styles.widget}>
-                <h2 className={styles.widgetTitle}>Modal Example</h2>
-                <button className={styles.button} onClick={handleModalToggle}>Open Modal</button>
-                {isModalOpen && (
-                    <div className={styles.modal}>
-                        <div className={styles.modalContent}>
-                            <span className={styles.modalClose} onClick={handleModalToggle}>&times;</span>
-                            <p>This is a modal!</p>
-                        </div>
-                    </div>
-                )}
-            </div>
-
-            <div className={styles.widget}>
-                <h2 className={styles.widgetTitle}>Toggle Example</h2>
-                <label className={styles.toggleSwitch}>
-                    <input type="checkbox" checked={toggleState} onChange={handleToggleChange} />
-                    <span className={styles.slider}></span>
-                </label>
-                <p>{toggleState ? "Toggle is ON" : "Toggle is OFF"}</p>
-            </div>
-
-            <div className={styles.widget}>
-                <h2 className={styles.widgetTitle}>Slider Example</h2>
-                <input type="range" min="1" max="100" className={styles.rangeSlider} />
-            </div>
+  return (
+    <div className="bg-white p-4 rounded-lg shadow-md border-2 border-blue-300 mb-4">
+      <h3 className="text-lg font-semibold mb-4">Work FootPrints</h3>
+      <table className="w-full mb-4">
+        <thead>
+          <tr className="bg-gray-200">
+            <th className="p-2">Image</th>
+            <th className="p-2">Name</th>
+            <th className="p-2">Timestamp</th>
+          </tr>
+        </thead>
+        <tbody>
+          {footprints.map((footprint, index) => (
+            <tr key={footprint.id} className={index % 2 === 0 ? 'bg-gray-100' : 'bg-white'}>
+              <td className="p-2">
+                <img src={footprint.image} alt="Task" className="w-8 h-8 rounded-full" />
+              </td>
+              <td className="p-2">
+                <input
+                  type="text"
+                  value={footprint.name}
+                  onChange={(e) => handleNameChange(footprint.id, e.target.value)}
+                  className="w-full p-1 border rounded"
+                />
+              </td>
+              <td className="p-2">{footprint.timestamp}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <div className="flex items-center space-x-4">
+        <input
+          type="file"
+          ref={fileInputRef}
+          onChange={(e) => handleFileUpload(e.target.files[0])}
+          accept=".json"
+          className="hidden"
+        />
+        <button
+          onClick={() => fileInputRef.current.click()}
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
+        >
+          Upload Footprint
+        </button>
+        <div
+          className={`border-2 border-dashed p-4 rounded ${
+            dragActive ? 'border-blue-500 bg-blue-50' : 'border-gray-300'
+          }`}
+          onDragEnter={handleDrag}
+          onDragLeave={handleDrag}
+          onDragOver={handleDrag}
+          onDrop={handleDrop}
+        >
+          Drag & Drop JSON file here
         </div>
-    );
+      </div>
+    </div>
+  );
 };
+
+const DashboardContent = () => {
+  const [layouts, setLayouts] = useState({
+    lg: [
+      { i: 'workFootprints', x: 0, y: 0, w: 1, h: 1 },
+      { i: 'pie', x: 1, y: 0, w: 1, h: 1 },
+      { i: 'bar', x: 2, y: 0, w: 1, h: 1 },
+      { i: 'line', x:3 , y :0 , w :1 , h :1 }
+    ],
+});
+
+const onLayoutChange = (layout) => {
+   setLayouts(layouts);
+};
+
+return (
+<div>
+   {/* Work Footprints now inside the grid layout */}
+   <ResponsiveGridLayout
+     className="layout"
+     layouts={layouts}
+     onLayoutChange={onLayoutChange}
+     breakpoints={{ lg:1200 , md :996 , sm :768 , xs :480 , xxs :0 }}
+     cols={{ lg :3 , md :3 , sm :2 , xs :1 , xxs :1 }}
+     rowHeight={300}
+   >
+     {/* Work Footprints Widget */}
+     <div key='workFootprints'>
+       <Widget title='Work Footprints'>
+         <WorkFootPrints />
+       </Widget>
+     </div>
+
+     {/* Chart Widgets */}
+     <div key='pie'>
+       <Widget title='Pie Chart'>
+         <PieChartWidget />
+       </Widget>
+     </div>
+
+     <div key='bar'>
+       <Widget title='Bar Chart'>
+         <BarChartWidget />
+       </Widget>
+     </div>
+
+     {/* Line Chart Widget */}
+     <div key='line'>
+       <Widget title='Line Chart'>
+         <LineChartWidget />
+       </Widget>
+     </div>
+
+   </ResponsiveGridLayout>
+
+</div>
+
+);
+};
+
+// Custom styles to enhance grid visibility
+const CustomStyles = () => (
+<style jsx global>{`
+.react-grid-layout {
+   background:#e2e8f0;
+}
+.react-grid-item {
+   transition : all .2s ease;
+   transition-property:left , top;
+}
+.react-grid-item.cssTransforms {
+   transition-property : transform;
+}
+.react-grid-item.resizing {
+   z-index :1;
+   will-change : width , height;
+}
+.react-grid-item.react-draggable-dragging {
+   transition:none;
+   z-index :3;
+   will-change : transform;
+}
+.react-grid-item.react-grid-placeholder {
+   background:#1a202c;
+   opacity:.2;
+   transition-duration:.1s;
+   z-index :2;
+   border-radius:.5rem;
+   user-select:none;
+}
+.react-grid-item:not(.react-grid-placeholder) {
+   background:#cbd5e0;
+   border-radius:.5rem;
+}
+.react-grid-item:hover {
+   box-shadow :0 .5rem .5rem rgba(0 ,0 ,0 ,.15);
+}
+.widget-container {
+   padding:.625rem;
+   box-sizing:border-box;
+}`}</style>);
+
+const DashboardContentComponent = () => (
+<>
+<DashboardContent />
+<CustomStyles />
+</>);
 
 export default DashboardContentComponent;
