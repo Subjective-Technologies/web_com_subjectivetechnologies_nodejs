@@ -12,7 +12,7 @@
     background-color: #000; /* Or any background color you prefer */
     display: flex;
     align-items: center;
-    padding: 0 25%; /* Add padding if necessary */
+     /* padding: 0 25%;Add padding if necessary */
 }
 
 .menuItem {
@@ -69,6 +69,7 @@
     box-shadow: 0 0 10px #FFD700;
     font-family: 'Roboto Mono', monospace;
     white-space: nowrap;
+    margin-left: 2%;
 }
 
 .signUpButton:hover {
@@ -79,3 +80,14 @@
 .content_container {
     padding-top: 70px; /* Ensure there is space below the fixed menu */
 }
+
+.itemContainer {
+    display: flex;
+    margin-left: 40%;
+  
+  }
+
+  .signUpYellowButton{
+margin-right: 2%;
+
+  }

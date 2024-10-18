@@ -1,9 +1,7 @@
-console.log('Loading DashboardMenuComponent.js');
 import React, { useState } from 'react';
 import styles from '../../public/styles/DashboardMenuComponent.module.css';
 
 const DashboardMenuComponent = () => {
-console.log('Rendering DashboardMenuComponent');
     const [showSubMenu, setShowSubMenu] = useState(false);
     const [delayHandler, setDelayHandler] = useState(null);
     const [showUserSubMenu, setShowUserSubMenu] = useState(false);
@@ -17,7 +15,7 @@ console.log('Rendering DashboardMenuComponent');
     const handleMouseLeave = () => {
         const handler = setTimeout(() => {
             setShowSubMenu(false);
-        }, 200); // Adjust the delay as needed (200ms in this case)
+        }, 200); // Delay before hiding
         setDelayHandler(handler);
     };
 
@@ -29,7 +27,7 @@ console.log('Rendering DashboardMenuComponent');
     const handleUserMouseLeave = () => {
         const handler = setTimeout(() => {
             setShowUserSubMenu(false);
-        }, 200); // Adjust the delay as needed (200ms in this case)
+        }, 200); // Delay before hiding
         setUserDelayHandler(handler);
     };
 
@@ -42,7 +40,6 @@ console.log('Rendering DashboardMenuComponent');
         { href: "/dashboard/settings", label: "Settings" },
         { href: "/dashboard/testing1", label: "Testing Item 1" },
         { href: "/dashboard/testing2", label: "Testing Item 2" },
-        // Adding 25 mock items for demonstration
         ...Array.from({ length: 25 }, (_, i) => ({
             href: `/dashboard/mock${i + 1}`,
             label: `Mock Item ${i + 1}`
@@ -57,7 +54,6 @@ console.log('Rendering DashboardMenuComponent');
         ));
     };
 
-console.log('Returning from DashboardMenuComponent');
     return (
         <div className={styles.menu}>
             <div 
@@ -82,39 +78,35 @@ console.log('Returning from DashboardMenuComponent');
                     </div>
                 )}
             </div>
-            <a href="dashboard_my_body"><div className={styles.menuItem}>My Body</div></a>
-            <a href="dashboard_my_injections"><div className={styles.menuItem}>My Injections</div></a>
-            <a href="dashboard_my_knowledge_hooks"><div className={styles.menuItem}>Knowledge Hooks</div></a>
-            <a href="dashboard_my_inventory"><div className={styles.menuItem}>Analytics</div></a>
-            <a href="dashboard_my_stamina"><div className={styles.menuItem}>My Stamina</div></a>
-            <div className={styles.rightAlignedItems}>
-                <div 
-                    className={styles.userProfile}
-                    onMouseEnter={handleUserMouseEnter}
-                    onMouseLeave={handleUserMouseLeave}
-                >
-                    <img 
-                        src="/images/icons/profile_yo.-min.jpg" 
-                        alt="User Profile" 
-                        className={styles.userProfileImage} 
-                    />
-                    {showUserSubMenu && (
-                        <div className={styles.userSubMenu}>
-                            <a href="/dashboard_my_profile" className={styles.subMenuItem}>Profile</a>
-                            <a href="/dashboard_my_settings" className={styles.subMenuItem}>
-                                Settings
-                                <img 
-                                    src="/images/icons/dashboard_settings_icon.svg" 
-                                    alt="Settings Icon" 
-                                    className={styles.settingsIcon} 
-                                />
-                            </a>
-                            <a href="/dashboard_security" className={styles.subMenuItem}>Security</a>
-                            <a href="/dashboard_billing_and_payment" className={styles.subMenuItem}>Billing Cost and Management</a>
-                        </div>
-                    )}
-                </div>
+            <div 
+                className={styles.userProfile}
+                onMouseEnter={handleUserMouseEnter}
+                onMouseLeave={handleUserMouseLeave}
+            >
+                <img 
+                    src="/images/icons/profile_yo.-min.jpg" 
+                    alt="User Profile" 
+                    className={styles.userProfileImage} 
+                />
+                {showUserSubMenu && (
+                    <div className={styles.userSubMenu}>
+                        <a href="/dashboard" className={styles.subMenuItem}>Dashboard</a>
+                        <a href="/dashboard_my_profile" className={styles.subMenuItem}>Profile</a>
+                        <a href="/dashboard_my_settings" className={styles.subMenuItem}>
+                            Settings
+                            <img 
+                                src="/images/icons/dashboard_settings_icon.svg" 
+                                alt="Settings Icon" 
+                                className={styles.settingsIcon} 
+                            />
+                        </a>
+                        <a href="/dashboard_security" className={styles.subMenuItem}>Security</a>
+                        <a href="/dashboard_billing_and_payment" className={styles.subMenuItem}>Billing Cost and Management</a>
+                        <a href="/logout" className={styles.subMenuItem}>Log Out</a>
+                    </div>
+                )}
             </div>
+            
         </div>
     );
 };

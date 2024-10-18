@@ -5,7 +5,6 @@
     display: flex;
     min-height: 100vh;
     background-color: #f0f0f0;
-    padding: 20px;
     font-family: 'Roboto Mono', monospace;
     justify-content: space-around;
     width: 100%;
@@ -102,4 +101,40 @@
     font-weight: 400;
     margin: 0;
     color: #000000;
+}
+.sidebar {
+    width: 7%;
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-decoration-color: #FFF;
+}
+
+.sidebar h2 {
+    color: #FFFFFF;
+}
+
+.sidebarMenu {
+    list-style-type: none;
+    padding: 0;
+    color: #FFF!important;
+}
+
+.sidebarMenu a {
+    color: #FFFFFF;
+
+}
+
+.sidebarMenu li {
+    margin: 15px 0;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.sidebarFooter {
+    margin-top: auto;
+    font-size: 0.85em;
+    color: #FFF;
 }

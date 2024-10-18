@@ -506,7 +506,7 @@
 
 .videoWrapper {
     width: 100%;
-    max-width: 800px;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -659,6 +659,7 @@
 .video {
     height: auto;
     border-radius: 8px;
+    width: 100%;
 }
 
 .contactForm {
@@ -721,3 +722,25 @@
 .pressDetails {
     flex: 1;
 }
+
+.calendlyButtonContainer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .calendlyButton {
+    background-color: #f1c40f;
+    color: #1c1c1c;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .calendlyButton:hover {
+    background-color: #d4ac0d;
+  }
+  

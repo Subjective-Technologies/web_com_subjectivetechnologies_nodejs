@@ -1,0 +1,105 @@
+.pricingContainer {
+    background-color: black;
+    color: #f0c040; /* Golden color */
+    padding: 40px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .heading {
+    font-size: 3.5rem;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 50px;
+    color: #f0c040;
+    text-shadow: 3px 3px 12px rgba(240, 192, 64, 0.7);
+  }
+  
+  .pricingTable {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .plan {
+    background-color: #222222; /* Darker background for better contrast */
+    border: 2px solid #f0c040;
+    border-radius: 12px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(240, 192, 64, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    text-align: left;
+  }
+  
+  .plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(240, 192, 64, 0.8);
+  }
+  
+  .planTitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f0c040;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .planPrice {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  .features li {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: #d4af37; /* Lighter gold for text */
+  }
+  
+  .checkmark {
+    color: #32CD32; /* Green for checkmark */
+  }
+  
+  .crossmark {
+    color: red; /* Red for unavailable features */
+  }
+  
+  .button {
+    background-color: #f0c040;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #ffdd57;
+  }
+  
+  @media (max-width: 768px) {
+    .pricingTable {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  

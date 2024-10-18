@@ -1,10 +1,10 @@
-console.log('Loading ConsultingComponent.js');
 import React from 'react';
 import styles from '../public/styles/ConsultingComponent.module.css';
 
 const ConsultingComponent = () => {
-console.log('Rendering ConsultingComponent');
-console.log('Returning from ConsultingComponent');
+    console.log('Rendering ConsultingComponent');
+    console.log('Returning from ConsultingComponent');
+
     return (
         <div className={styles.consultingContainer}>
             <h1 className={styles.title}>Consulting Services</h1>
@@ -13,14 +13,16 @@ console.log('Returning from ConsultingComponent');
             </p>
             <div className={styles.servicesList}>
                 <h2 className={styles.subheading}>Why Choose BrainBoost Consulting?</h2>
+                <div align="center">
+                    <img src="/images/cyber_tango_1.webp" alt="Cyber Tango Illustration" style={{ width: '80%' }} />
+                </div>
                 <ul>
                     <li>Strategic Location in LATAM: Our presence in Argentina offers a convenient time zone for collaborating with US companies, ensuring seamless communication and real-time project management. Argentina is rapidly emerging as the fourth pole of Artificial Intelligence globally, making it a hub of innovation and technological advancement.</li>
                     <li>Top-Notch Talent Pool: We boast a team of highly qualified professionals with extensive backgrounds in computer science, mathematics, and software engineering. Our experts are well-versed in cutting-edge technologies and possess the skills needed to deliver superior solutions tailored to your needs.</li>
-                    <li>Proven Track Record: With over 18 years of experience in diverse sectors, we have a proven track record of delivering successful projects for leading global companies, including PayPal, HP, IBM, and more.</li>
-                    <li>Comprehensive Services: From server-side product development with Java J2EE to scalable web applications and NoSQL databases, we cover all aspects of software development and IT support. Whether you need custom software solutions, system integrations, business analytics, or AI and machine learning, we have you covered.</li>
-                    <li>Innovation and Patents: At BrainBoost, we are not just about delivering services; we innovate. Our founder, Pablo Tomas Borda, has secured patents in advanced AI technologies, including a "Computer-Implemented Cognitive Functioning System". This demonstrates our commitment to staying at the forefront of technological advancements.</li>
                     <li>Flexible Engagement Models: We offer both contract and permanent engagement options, allowing you to choose the model that best fits your business requirements. Our Irish limited company structure enables smooth and efficient contracting processes.</li>
                 </ul>
+                <br />
+
             </div>
             <div className={styles.servicesList}>
                 <h2 className={styles.subheading}>Our Services</h2>

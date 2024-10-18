@@ -207,6 +207,18 @@ const DashboardMyBodyComponent = () => {
 
   return (
     <div className={styles.dashboardContainer}>
+      {/* Sidebar */}
+      <aside className={styles.sidebar}>
+        <a href="/"><h2>Home</h2></a>
+        <ul className={styles.sidebarMenu}>
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li>Profile</li>
+          <li><a href="/dashboard_my_body">My Body</a></li>
+          <li>Injections</li>          
+          <li>Stamina</li>
+        </ul>
+        <footer className={styles.sidebarFooter}>Sidebar Footer</footer>
+      </aside>
       <div className={styles.leftSide}>
         <h1 className={styles.title}>My Body</h1>
         <div className={styles.threeJsContainer} ref={containerRef}>

@@ -1,6 +1,6 @@
 .investorContainer {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #000000; /* Dark background */
+    color: #f1c40f; /* Gold color for text */
     max-width: 95%;
     margin: 0 auto;
     padding: 5%;
@@ -8,55 +8,88 @@
     margin-top: 0px;
 }
 
-
 .title {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 20px;
     text-align: center;
+    color: #f1c40f; /* Gold color */
+    font-family: 'Playfair Display', serif;
+}
+
+.subtitle {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f1c40f;
+    font-family: 'Playfair Display', serif;
 }
 
 .subheading {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 2.5em;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    color: #f1c40f;
+    border-bottom: 2px solid #f1c40f;
+    padding-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.subsubheading {
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #f1c40f;
+    font-family: 'Playfair Display', serif;
 }
 
 .text {
     font-size: 1.2em;
-    line-height: 1.6;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Light gray text */
+    font-family: 'Open Sans', sans-serif;
+}
+
+.featureTitle {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #f1c40f;
+    font-family: 'Playfair Display', serif;
+}
+
+.list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.list li {
     margin-bottom: 20px;
 }
 
-.imagePlaceholder {
-    width: 100%;
-    height: 200px;
-    background-color: #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-    font-size: 1.2em;
-    color: #666;
-    border-radius: 8px;
+.productList li p {
+    color: #e0e0e0; /* Light gray text */
 }
 
-.patentTable {
+.financialTable {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-.patentTable th, .patentTable td {
-    border: 1px solid #ddd;
-    padding: 8px;
+.financialTable th, .financialTable td {
+    border: 1px solid #f1c40f;
+    padding: 12px;
     text-align: left;
+    color: #e0e0e0;
+    font-size: 1.1em;
 }
 
-.patentTable th {
-    background-color: #f2f2f2;
+.financialTable th {
+    background-color: #2c2c2c;
 }
 
 .link {
-    color: #007bff;
+    color: #f1c40f;
     text-decoration: none;
 }
 
@@ -64,142 +97,93 @@
     text-decoration: underline;
 }
 
-.imageContainer {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.teamSection {
+    margin-top: 20px;
 }
 
-.pitchImage {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
+.teamMember {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.teamPhoto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #f1c40f;
+    transition: transform 0.3s ease;
+}
+
+.teamPhoto:hover {
+    transform: scale(1.05);
+}
+
+.memberInfo h3 {
+    margin-top: 0;
+    color: #f1c40f;
+    font-family: 'Playfair Display', serif;
+}
+
+.memberInfo p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.calendlyContainer {
+    margin-top: 40px;
+    border: 2px solid #f1c40f;
     border-radius: 8px;
-}
-
-.collapsibleGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.collapsibleTitle {
-    cursor: pointer;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.collapsibleTitle:hover {
-    background-color: #444;
-}
-
-.collapsibleContent {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
     overflow: hidden;
-    transition: max-height 0.3s ease;
-    width: calc(100% - 22px); /* Account for border and padding */
-    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(241, 196, 15, 0.3);
 }
 
-.downloadContainer {
+.pdfGrid {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-top: 40px;
 }
 
-.downloadButton {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
-}
-
-.downloadButton:hover {
-    background-color: #0056b3;
-}
-
-@media (max-width: 768px) {
-    .title {
-        font-size: 2em;
-    }
-
-    .subheading {
-        font-size: 1.5em;
-    }
-
-    .text {
-        font-size: 1em;
-    }
-
-    .imagePlaceholder {
-        height: 150px;
-    }
-
-    .patentTable th, .patentTable td {
-        font-size: 0.9em;
-    }
-
-    .collapsibleGrid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* Round image */
-.roundImageContainer {
-    background-color: #ffffff;
-    color: #000000;
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: 'Roboto Mono', monospace;
-    margin-top: 100px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.imageContainer {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.roundImage {
-    width: 400px;  /* Adjust size to 400% bigger */
-    height: 400px; /* Adjust size to 400% bigger */
-    border-radius: 50%;
-    float: left;
-    margin-right: 20px; /* Maintain original margin */
-}
-
-.imageText {
-    margin-top: 0;
-    margin-bottom: 20px; /* Maintain original margin */
-    font-size: 1em; /* Original font size */
-    width: calc(100% - 420px); /* Adjust width based on new image width */
-}
-
-.title {
-    font-size: 2.5em; /* Original font size */
+.pdfItem {
+    width: 48%;
     margin-bottom: 20px;
     text-align: center;
 }
 
-.description {
-    font-size: 1.2em; /* Original font size */
-    line-height: 1.6; /* Original line height */
+.pdfViewer {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border: 1px solid #f1c40f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(241, 196, 15, 0.3);
+}
+
+.downloadLink {
+    display: block;
+    margin-top: 15px;
+    color: #f1c40f;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.downloadLink:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .pdfItem {
+        width: 100%;
+    }
+    .teamMember {
+        flex-direction: column;
+        align-items: center;
+    }
+    .teamPhoto {
+        margin-bottom: 20px;
+    }
+    .memberInfo h3 {
+        text-align: center;
+    }
 }
