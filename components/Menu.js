@@ -33,20 +33,19 @@ const Menu = () => {
                 </div>
             </div>
             <div className={styles.itemContainer}>
-                <a href="../consulting">
-                    <div className={styles.menuItem}>Business</div>
-                </a>
-                <a href="../download">
+                <a href="/#download">
                     <div className={styles.menuItem}>Download</div>
                 </a>
-
+                <a href="../consulting">
+                    <div className={styles.menuItem}>Consulting</div>
+                </a>
                 <a href="../investor">
                     <div className={styles.menuItem}>Investors</div>
                 </a>
                 <a href="../pricing">
                     <div className={styles.menuItem}>Pricing</div>
                 </a>
-                <a href="../contact">
+                <a href="/#contact">
                     <div className={styles.menuItem}>Contact</div>
                 </a>
             </div>

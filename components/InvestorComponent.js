@@ -29,7 +29,10 @@ const InvestorComponent = () => {
           <h3 className={styles.featureTitle}>WorkFootPrint Technology</h3>
           <p className={styles.text}>
             WorkFootPrints are empirical records of a developer’s activities, performance, and real-world expertise. They eliminate the reliance on subjective resumes, interviews, or technical tests, offering a precise match between job requirements and the developer's demonstrated abilities.
-          </p>
+          </p><br/>
+          <div className={styles.footprintVignetteDiffuse}>
+            <img src="/images/worktwins_vignette_diffuse.png"/>
+          </div>
         </li>
         <li>
           <h3 className={styles.featureTitle}>Real-Time Collaboration & Collective Intelligence</h3>
@@ -44,6 +47,96 @@ const InvestorComponent = () => {
           </p>
         </li>
       </ol>
+
+    {/* Subjective 0-Input Technology Section */}
+    <section
+            className={styles.subjectiveZeroInputSection}
+            id="subjective-0-input-technology"
+          >
+            <h2 className={styles.sectionTitle}>
+              What is Subjective 0-Input Technology?
+            </h2>
+            <div className={styles.subjectiveZeroInputContent}>
+              <div className={styles.videoContainer}>
+                <div className={styles.videoWrapper}>
+                  <video
+                    className={styles.subjectiveVideo}
+                    src="/video/brainboost_marketing_media_video_subjective.mp4"
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  ></video>
+                </div><br/>
+              </div>
+            </div>
+          </section>
+
+            {/* PDF Viewer Section */}
+            <h2 className={styles.subheading}>Download Our Documents</h2>
+      <div className={styles.pdfGrid}>
+        <div className={styles.pdfItem}>
+          <iframe
+            src="/downloads/Business Plan for WorkTwins.com.pdf"
+            className={styles.pdfViewer}
+            title="Business Plan"
+          ></iframe>
+          <a href="/downloads/Business Plan for WorkTwins.com.pdf" className={styles.downloadLink} target="_blank" rel="noopener noreferrer">
+            Download Business Plan
+          </a>
+        </div>
+        <div className={styles.pdfItem}>
+          <iframe
+            src="/downloads/Subjective Technologies_APA_7_en-202401142351.pdf"
+            className={styles.pdfViewer}
+            title="Subjective Technologies APA 7"
+          ></iframe>
+          <a href="/downloads/Subjective Technologies_APA_7_en-202401142351.pdf" className={styles.downloadLink} target="_blank" rel="noopener noreferrer">
+            Download Subjective Technologies APA
+          </a>
+        </div>
+        <div className={styles.pdfItem}>
+          <iframe
+            src="/downloads/subjective_technologies_an_exoskeleton_for_the_mind_print.pdf"
+            className={styles.pdfViewer}
+            title="Subjective Technologies Exoskeleton"
+          ></iframe>
+          <a href="/downloads/subjective_technologies_an_exoskeleton_for_the_mind_print.pdf" className={styles.downloadLink} target="_blank" rel="noopener noreferrer">
+            Download Exoskeleton for the Mind
+          </a>
+        </div>
+        <div className={styles.pdfItem}>
+          <iframe
+            src="/downloads/US20220358283A1.pdf"
+            className={styles.pdfViewer}
+            title="Patent US20220358283A1"
+          ></iframe>
+          <a href="/downloads/US20220358283A1.pdf" className={styles.downloadLink} target="_blank" rel="noopener noreferrer">
+            Download Patent US20220358283A1
+          </a>
+        </div>
+      </div>
+
+
+              {/* Subjective 0-Input Technology Section */}
+    <section
+            className={styles.subjectiveZeroInputSection}
+            id="subjective-0-input-technology"
+          >
+            <h2 className={styles.sectionTitle}>
+            Get our book on Amazon 
+            </h2>
+            <div className={styles.subjectiveZeroInputContent}>
+              <div className={styles.videoContainer}>
+                <div className={styles.videoWrapper}>
+                <a href="http://localhost:3000/images/brainboost_marketing_images_thefirstzeroinputtechnology_book_website.png"><img src="/images/brainboost_marketing_images_thefirstzeroinputtechnology_book_website.png"/></a>
+
+                </div><br/>
+              </div>
+            </div>
+          </section>
+
 
       <h2 className={styles.subheading}>Market Opportunity</h2>
       <p className={styles.text}>
@@ -171,7 +264,7 @@ const InvestorComponent = () => {
         <div className={styles.teamMember}>
           <img src="/images/icons/profile_yo.-min.jpg" alt="Tommy Fox" className={styles.teamPhoto} />
           <div className={styles.memberInfo}>
-            <h3>Tommy Fox – CTO</h3>
+            <h3>Tommy Fox – Company Founder</h3>
             <p className={styles.text}>
               Tommy leads the development of WorkTwins, bringing years of experience in software architecture and developer tools. He ensures the seamless integration of advanced AI and machine learning algorithms into the platform.
             </p>
@@ -198,50 +291,7 @@ const InvestorComponent = () => {
         For more information or to discuss investment opportunities, please reach out to our Investor Relations Team at <a href="mailto:investors@worktwins.com" className={styles.link}>investors@worktwins.com</a>.
       </p>
 
-      {/* PDF Viewer Section */}
-      <h2 className={styles.subheading}>Download Our Documents</h2>
-      <div className={styles.pdfGrid}>
-        <div className={styles.pdfItem}>
-          <iframe
-            src="/downloads/Business Plan for WorkTwins.com.pdf"
-            className={styles.pdfViewer}
-            title="Business Plan"
-          ></iframe>
-          <a href="/downloads/Business Plan for WorkTwins.com.pdf" className={styles.downloadLink} target="_blank" rel="noopener noreferrer">
-            Download Business Plan
-          </a>
-        </div>
-        <div className={styles.pdfItem}>
-          <iframe
-            src="/downloads/Subjective Technologies_APA_7_en-202401142351.pdf"
-            className={styles.pdfViewer}
-            title="Subjective Technologies APA"
-          ></iframe>
-          <a href="/downloads/Subjective Technologies_APA_7_en-202401142351.pdf" className={styles.downloadLink} target="_blank" rel="noopener noreferrer">
-            Download Subjective Technologies APA
-          </a>
-        </div>
-        <div className={styles.pdfItem}>
-          <iframe
-            src="/downloads/subjective_technologies_an_exoskeleton_for_the_mind_print.pdf"
-            className={styles.pdfViewer}
-            title="Subjective Technologies Exoskeleton"
-          ></iframe>
-          <a href="/downloads/subjective_technologies_an_exoskeleton_for_the_mind_print.pdf" className={styles.downloadLink} target="_blank" rel="noopener noreferrer">
-            Download Exoskeleton for the Mind
-          </a>
-        </div>
-        <div className={styles.pdfItem}>
-          <iframe
-            src="/downloads/US20220358283A1.pdf"
-            className={styles.pdfViewer}
-            title="Patent US20220358283A1"
-          ></iframe>
-          <a href="/downloads/US20220358283A1.pdf" className={styles.downloadLink} target="_blank" rel="noopener noreferrer">
-            Download Patent US20220358283A1
-          </a>
-        </div>
-      </div>
+
 
     </div>
   );

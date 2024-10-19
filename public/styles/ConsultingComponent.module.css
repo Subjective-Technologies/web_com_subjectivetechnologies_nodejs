@@ -1,59 +1,134 @@
-.consultingContainer {
-    background-color: #ffffff;
-    color: #000000;
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+/* Import your landing page fonts and global styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+.landingPage {
     font-family: 'Roboto Mono', monospace;
-    margin-top: 100px;
+    background: #000000; /* Ensuring black background at all times */
+    color: #ffffff;
 }
 
-.title {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+/* Hero Section with Background Image */
+.heroSection {
+    background-image: url('/images/work_with_us_twins.webp'); /* Background image */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 80px); /* Full-screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.heroOverlay {
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay to improve text readability */
+    padding: 40px;
+    border-radius: 10px;
     text-align: center;
+    margin-top: auto;
+    width: 50%;
 }
 
-.description {
-    font-size: 1.2em;
-    line-height: 1.6;
+.heroContent h1 {
+    font-size: 4em;
     margin-bottom: 20px;
+    color: #f0c040; /* Golden color for headings */
 }
 
-.servicesList {
-    margin-bottom: 40px;
+.heroSubtitle {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-bottom: 30px;
 }
 
-.subheading {
-    font-size: 2em;
-    margin-bottom: 20px;
+/* Section Title */
+.sectionTitle {
+    text-align: center;
+    font-size: 3.5em;
+    color: #f0c040; /* Gold for section titles */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
-.servicesList ul {
-    list-style-type: disc;
-    padding-left: 20px;
+/* Features Section */
+.featuresSection {
+    padding: 80px 20px;
+    text-align: center;
+    background: #000000; /* Black background */
 }
 
-.servicesList li {
-    font-size: 1.2em;
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 40px; /* Spacing between items */
+}
+
+.featureItem {
+    background-color: rgba(255, 255, 255, 0.1); /* Light semi-transparent */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Deeper shadow for readability */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.featureItem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Hover effect with golden glow */
+}
+
+.featureItem h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #f0c040; /* Golden color for headers */
+}
+
+.featureItem p {
+    font-size: 1.1em;
     line-height: 1.6;
-    margin-bottom: 10px;
+    color: #ffffff; /* White for better readability */
 }
 
-.contactInfo {
-    margin-top: 40px;
+/* Call to Action Section */
+.ctaSection {
+    padding: 80px 20px;
+    text-align: center;
+    background: #000000; /* Keep black background */
 }
 
-.text {
+.ctaButton {
+    display: inline-block;
+    padding: 15px 30px;
     font-size: 1.2em;
-    line-height: 1.6;
+    background-color: #FFD700; /* Golden button */
+    color: #000000;
+    border-radius: 5px;
+    margin: 20px auto;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.contactInfo a {
-    color: #007bff;
-    text-decoration: none;
+.ctaButton:hover {
+    background-color: #ffcc00;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 165, 0, 0.7);
 }
 
-.contactInfo a:hover {
-    text-decoration: underline;
+.sectionText p {
+    align-content: center;
+    width: 50%;
+    color: #ffffff;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .featuresGrid {
+        grid-template-columns: 1fr; /* Make each item full-width on small screens */
+    }
+
+    .heroContent h1 {
+        font-size: 3em;
+    }
+
+    .heroSubtitle {
+        font-size: 1.2em;
+    }
 }

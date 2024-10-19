@@ -13,7 +13,7 @@
     margin-bottom: 20px;
     text-align: center;
     color: #f1c40f; /* Gold color */
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .subtitle {
@@ -21,7 +21,7 @@
     margin-bottom: 20px;
     text-align: center;
     color: #f1c40f;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .subheading {
@@ -31,7 +31,7 @@
     color: #f1c40f;
     border-bottom: 2px solid #f1c40f;
     padding-bottom: 10px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .subsubheading {
@@ -39,7 +39,7 @@
     margin-top: 30px;
     margin-bottom: 15px;
     color: #f1c40f;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .text {
@@ -47,14 +47,14 @@
     line-height: 1.8;
     margin-bottom: 20px;
     color: #e0e0e0; /* Light gray text */
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .featureTitle {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #f1c40f;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .list {
@@ -123,11 +123,11 @@
 .memberInfo h3 {
     margin-top: 0;
     color: #f1c40f;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .memberInfo p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .calendlyContainer {
@@ -186,4 +186,48 @@
     .memberInfo h3 {
         text-align: center;
     }
+}
+
+/* Subjective 0-Input Technology Section */
+.subjectiveZeroInputSection {
+    padding: 100px 20px;
+    background-image: url('/images/background_gradient.png');
+    color: #ffffff;
+    text-align: center;
+}
+
+.sectionTitle {
+    font-size: 3.5em;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-shadow: 0 0 8px #ffffff;
+}
+
+/* Content Container */
+.subjectiveZeroInputContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Video Container */
+.videoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.videoWrapper {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.subjectiveVideo {
+    width: 100%;
+    height: auto;
+}
+.footprintVignetteDiffuse {
+    width: 50%!important;
+
 }

@@ -12,6 +12,7 @@
     background-color: #000; /* Or any background color you prefer */
     display: flex;
     align-items: center;
+    opacity: 0.85;
      /* padding: 0 25%;Add padding if necessary */
 }
 

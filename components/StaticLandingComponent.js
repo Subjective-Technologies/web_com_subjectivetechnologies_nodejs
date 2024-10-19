@@ -356,31 +356,7 @@ const StaticLandingComponent = () => {
         </div>
       </section>
 
-      {/* Subjective 0-Input Technology Section */}
-      <section
-        className={styles.subjectiveZeroInputSection}
-        id="subjective-0-input-technology"
-      >
-        <h2 className={styles.sectionTitle}>
-          What is Subjective 0-Input Technology?
-        </h2>
-        <div className={styles.subjectiveZeroInputContent}>
-          <div className={styles.videoContainer}>
-            <div className={styles.videoWrapper}>
-              <video
-                className={styles.subjectiveVideo}
-                src="/video/brainboost_marketing_media_video_subjective.mp4"
-                controls
-                autoPlay
-                loop
-                muted
-                playsInline
-              ></video>
-            </div>
-          </div>
-        </div>
-      </section>
-
+     
       {/* Contact Section */}
       <section className={styles.contactSection} id="contact">
         <div className={styles.contactContainer}>
