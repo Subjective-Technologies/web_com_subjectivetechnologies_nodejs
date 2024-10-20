@@ -238,6 +238,34 @@ const StaticLandingComponent = () => {
     }
   };
 
+  var how_it_works = [
+    {
+      icon: '/images/feature_monitor.png',
+      title:
+        'Monitor Your Work Activity Using Computational Affinity Antenna',
+      description:
+        'Utilize our desktop client, available for Windows, Mac, and Linux, to analyze your project files locally. The client automatically detects programming languages, libraries, frameworks, and APIs used within your projects. It also monitors your screen activity in real time using our KnowledgeHooks technology, providing detailed insights of your work experience.',
+    },
+    {
+      icon: '/images/feature_footprint.png',
+      title: 'Generate Your Work Experience Footprint',
+      description:
+        'Your work experience Footprint is a string generated solely for comparison and context matching. Based on this, users will be sorted according to their computational affinity or distance, helping to identify similarities and differences in technical skills and workflows.',
+    },
+    {
+      icon: '/images/feature_collaboration.png',
+      title: 'Real-Time Collaboration',
+      description:
+        'Imagine encountering a Windows error on your screen and instantly collaborating with other users facing the same error in real time. With WorkTwins.com, you never work alone—this is collective intelligence with a shared purpose. By connecting users experiencing similar challenges, the platform fosters a collaborative environment where solutions are found together, leveraging the power of a united workforce.',
+    },
+    {
+      icon: '/images/feature_whiteboard.png',
+      title: 'Impact',
+      description:
+        'Technical interviews become obsolete. The platform empirically guarantees that you will always find the perfect employee for any role, even for the most specific tasks. By leveraging real-time data and computational affinity, we ensure seamless matches between employers and candidates, eliminating the guesswork from hiring. Developers, hire Developers.',
+    },
+  ]
+
   return (
     <div
       className={`${styles.landingPage} ${
@@ -274,33 +302,7 @@ const StaticLandingComponent = () => {
           Subjective Artificial Intelligence for Candidate Selection
         </h3>
         <div className={styles.featuresGrid}>
-          {[
-            {
-              icon: '/images/feature_monitor.png',
-              title:
-                'Monitor Your Work Activity Using Computational Affinity Antenna',
-              description:
-                'Utilize our desktop client, available for Windows, Mac, and Linux, to analyze your project files locally. The client automatically detects programming languages, libraries, frameworks, and APIs used within your projects. It also monitors your screen activity in real time using our KnowledgeHooks technology, providing detailed insights of your work experience.',
-            },
-            {
-              icon: '/images/feature_footprint.png',
-              title: 'Generate Your Work Experience Footprint',
-              description:
-                'Your work experience Footprint is a string generated solely for comparison and context matching. Based on this, users will be sorted according to their computational affinity or distance, helping to identify similarities and differences in technical skills and workflows.',
-            },
-            {
-              icon: '/images/feature_collaboration.png',
-              title: 'Real-Time Collaboration',
-              description:
-                'Imagine encountering a Windows error on your screen and instantly collaborating with other users facing the same error in real time. With WorkTwins.com, you never work alone—this is collective intelligence with a shared purpose. By connecting users experiencing similar challenges, the platform fosters a collaborative environment where solutions are found together, leveraging the power of a united workforce.',
-            },
-            {
-              icon: '/images/feature_whiteboard.png',
-              title: 'Impact',
-              description:
-                'Technical interviews become obsolete. The platform empirically guarantees that you will always find the perfect employee for any role, even for the most specific tasks. By leveraging real-time data and computational affinity, we ensure seamless matches between employers and candidates, eliminating the guesswork from hiring. Developers, hire Developers.',
-            },
-          ].map((feature, index) => (
+          {how_it_works.map((feature, index) => (
             <div
               key={index}
               className={styles.featureItem}
