@@ -1,25 +1,29 @@
+import { getText } from '../utils/getText.js';
 import React, { useEffect, useRef } from 'react';
 import SubjectiveSceneThree from './subjective_3d/SubjectiveSceneThree';
 import SubjectiveGlowingText from './subjective_3d/SubjectiveGlowingText';
 import GoldenThinkerStatue from './subjective_3d/GoldenThinkerStatue';
-
 const DEVELOPER_MODE = true;
-
 const GoldenThinkerAnimation = () => {
   const containerRef = useRef(null);
   let subjectiveScene;
-
   useEffect(() => {
     const init = async () => {
       const container = containerRef.current;
       if (!container) return;
 
       // Pass the path of the texture image as an option
-      subjectiveScene = new SubjectiveSceneThree(DEVELOPER_MODE, containerRef, { sphereTexturePath: 'images/heaven.webp' });
+      subjectiveScene = new SubjectiveSceneThree(DEVELOPER_MODE, containerRef, {
+        sphereTexturePath: getText("GoldenThinkerAnimation.js_18_aW1hZ2")
+      });
 
       // Set scene size and camera position
       subjectiveScene.setSize(window.innerWidth, window.innerHeight);
-      subjectiveScene.setCameraPosition({ x: 8, y: 4, z: 8 });
+      subjectiveScene.setCameraPosition({
+        x: 8,
+        y: 4,
+        z: 8
+      });
 
       // Create glowing text
       //new SubjectiveGlowingText(subjectiveScene.get_threejs_scene(), 'Subjective Technologies', DEVELOPER_MODE);
@@ -28,8 +32,14 @@ const GoldenThinkerAnimation = () => {
       subjectiveScene.addLights();
 
       // Add the model using GoldenThinkerStatue
-      const thinkerStatue = new GoldenThinkerStatue(subjectiveScene.get_threejs_scene(), { color: 0xFFD700, metalness: 1, roughness: 0.3, clearcoat: 1, clearcoatRoughness: 0.1 });
-      thinkerStatue.loader.load('3d/all.glb', (gltf) => {
+      const thinkerStatue = new GoldenThinkerStatue(subjectiveScene.get_threejs_scene(), {
+        color: 0xFFD700,
+        metalness: 1,
+        roughness: 0.3,
+        clearcoat: 1,
+        clearcoatRoughness: 0.1
+      });
+      thinkerStatue.loader.load('3d/all.glb', gltf => {
         subjectiveScene.model = gltf.scene;
         subjectiveScene.material = thinkerStatue.getMaterial();
 
@@ -54,18 +64,14 @@ const GoldenThinkerAnimation = () => {
         subjectiveScene.animate();
       });
     };
-
     init();
-
     const handleResize = () => {
       if (subjectiveScene) {
         subjectiveScene.setSize(window.innerWidth, window.innerHeight);
         subjectiveScene.updateCameraAspect(window.innerWidth / window.innerHeight);
       }
     };
-
     window.addEventListener('resize', handleResize);
-
     return () => {
       window.removeEventListener('resize', handleResize);
       if (subjectiveScene) {
@@ -73,8 +79,9 @@ const GoldenThinkerAnimation = () => {
       }
     };
   }, []);
-
-  return <div ref={containerRef} style={{ width: '100%', height: '100%' }} />;
+  return <div ref={containerRef} style={{
+    width: getText("GoldenThinkerAnimation.js_4_MTAwJQ"),
+    height: getText("GoldenThinkerAnimation.js_4_MTAwJQ")
+  }} />;
 };
-
 export default GoldenThinkerAnimation;

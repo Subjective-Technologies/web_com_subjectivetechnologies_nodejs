@@ -5,7 +5,7 @@ import SubjectivePersistentObject from './SubjectivePersistentObject';
 import trackProperties from '../developermode/trackProperties';
 
 class Subjective2DSVGPlaneCSS3D extends SubjectivePersistentObject {
-console.log('Rendering Subjective2DSVGPlaneCSS3D');
+
   constructor(subjective_scene, developerMode = false) {
     super(developerMode);
     this.subjective_scene = subjective_scene;

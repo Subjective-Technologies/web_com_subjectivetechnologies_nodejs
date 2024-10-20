@@ -1,24 +1,19 @@
+import { getText } from '../utils/getText.js';
 console.log('Loading SubjectiveInstantJobFinderComponent.js');
 // src/components/SubjectiveInstantJobFinderComponent.js
 import React from 'react';
 import styles from '../public/styles/SubjectiveInstantJobFinderComponent.module.css';
-
 const SubjectiveInstantJobFinderComponent = () => {
-console.log('Rendering SubjectiveInstantJobFinderComponent');
-console.log('Returning from SubjectiveInstantJobFinderComponent');
-    return (
-        <div className={styles.container}>
+  console.log('Rendering SubjectiveInstantJobFinderComponent');
+  console.log('Returning from SubjectiveInstantJobFinderComponent');
+  return <div className={styles.container}>
             <div className={styles.imageContainer}>
-                <img src="images/subjective_instant_job_finder.png" alt="Instant Job Finder" className={styles.roundImage} />
-                <p className={styles.imageText}>Connect instantly to your dream job with GT® Instant Job Finder.</p>
+                <img src={getText("SubjectiveInstantJobFinderComponent.js_40_aW1hZ2")} alt={getText("SubjectiveInstantJobFinderComponent.js_18_SW5zdG")} className={styles.roundImage} />
+                <p className={styles.imageText}>{getText('SubjectiveInstantJobFinderComponent.js_64_Q29ubm')}</p>
             </div>
-            <h1 className={styles.title}>GT® Subjective Instant Job Finder</h1>
-            <p className={styles.description}>Just Sit&Work</p>
-            <p className={styles.content}>
-                The GT® Subjective Instant Job Finder connects you with job opportunities instantly. Utilizing advanced AI matching algorithms, it ensures you find the perfect job without the hassle of searching.
-            </p>
-        </div>
-    );
+            <h1 className={styles.title}>{getText('SubjectiveInstantJobFinderComponent.js_33_R1TCri')}</h1>
+            <p className={styles.description}>{getText('SubjectiveInstantJobFinderComponent.js_13_SnVzdC')}</p>
+            <p className={styles.content}>{getText('SubjectiveInstantJobFinderComponent.js_196_VGhlIE')}</p>
+        </div>;
 };
-
 export default SubjectiveInstantJobFinderComponent;

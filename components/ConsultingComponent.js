@@ -1,86 +1,59 @@
+import { getText } from '../utils/getText.js';
 import React from 'react';
 import styles from '../public/styles/ConsultingComponent.module.css';
-
 const ConsultingComponent = () => {
-  return (
-    <div className={styles.landingPage}>
+  return <div className={styles.landingPage}>
       <div className={styles.heroSection}>
         <div className={styles.heroOverlay}>
-          <h1 className={styles.sectionTitle}>Why Choose <br/>WorkTwins Consulting?</h1>
-          <p className={styles.heroSubtitle}>
-        The First Subjective 0-Input Technology<br/> Solution For Work Candidate Selection          </p>
+          <h1 className={styles.sectionTitle}>{getText('ConsultingComponent.js_10_V2h5IE')}<br />{getText('ConsultingComponent.js_21_V29ya1')}</h1>
+          <p className={styles.heroSubtitle}>{getText('ConsultingComponent.js_39_VGhlIE')}<br />{getText('ConsultingComponent.js_37_U29sdX')}</p>
         </div>
       </div>
 
       <div className={styles.featuresSection}>
-        <h2 className={styles.sectionTitle}>Data-Driven Staff Augmentation</h2>
+        <h2 className={styles.sectionTitle}>{getText('ConsultingComponent.js_30_RGF0YS')}</h2>
         <div className={styles.sectionText}>
-            <p>
-                At BrainBoost Consulting, we revolutionize the hiring and consultancy process by offering a data-driven, unbiased, and inclusive approach that ensures you get the best possible match for your technical needs. Our WorkFootPrint technology eliminates subjectivity and focuses entirely on real developer experience, making it impossible for candidates to exaggerate their abilities. With us, you get top-tier talent, innovative solutions, and the efficiency your business needs to stay ahead in today’s fast-paced digital landscape.
-            </p><br/>
+            <p>{getText('ConsultingComponent.js_529_QXQgQn')}</p><br />
         </div>
 
         <div className={styles.featuresGrid}>
           <div className={styles.featureItem}>
-            <h3 className={styles.subheading}>1. Data-Driven, Bias-Free Selection</h3>
-            <p className={styles.text}>
-              Our <strong>WorkFootPrint technology</strong> captures real developer performance data, removing biases from 
-              the hiring process. No more guesswork—just a perfect match based on real skills.
-            </p>
+            <h3 className={styles.subheading}>{getText('ConsultingComponent.js_35_MS4gRG')}</h3>
+            <p className={styles.text}>{getText('ConsultingComponent.js_3_T3Vy')}<strong>{getText('ConsultingComponent.js_24_V29ya0')}</strong>{getText('ConsultingComponent.js_158_Y2FwdH')}</p>
           </div>
 
           <div className={styles.featureItem}>
-            <h3 className={styles.subheading}>2. Flexible Contractor Engagement</h3>
-            <p className={styles.text}>
-              Whether you need short-term contractors or long-term hires, we offer flexible models. We ensure the best 
-              talent, backed by data-driven decisions.
-            </p>
+            <h3 className={styles.subheading}>{getText('ConsultingComponent.js_33_Mi4gRm')}</h3>
+            <p className={styles.text}>{getText('ConsultingComponent.js_160_V2hldG')}</p>
           </div>
 
           <div className={styles.featureItem}>
-            <h3 className={styles.subheading}>3. Strategic Location & Cultural Alignment</h3>
-            <p className={styles.text}>
-              Our presence in Argentina ensures real-time collaboration with US clients, along with a shared culture that 
-              makes working with us seamless and productive.
-            </p>
+            <h3 className={styles.subheading}>{getText('ConsultingComponent.js_42_My4gU3')}</h3>
+            <p className={styles.text}>{getText('ConsultingComponent.js_169_T3VyIH')}</p>
           </div>
 
           <div className={styles.featureItem}>
-            <h3 className={styles.subheading}>4. Real Performance, Not Just Resumes</h3>
-            <p className={styles.text}>
-              Every developer's <strong>WorkFootPrint</strong> provides real-world evidence of their expertise, removing 
-              the need for interviews and subjective assessments.
-            </p>
+            <h3 className={styles.subheading}>{getText('ConsultingComponent.js_37_NC4gUm')}</h3>
+            <p className={styles.text}>{getText('ConsultingComponent.js_17_RXZlcn')}<strong>{getText('ConsultingComponent.js_13_V29ya0')}</strong>{getText('ConsultingComponent.js_124_cHJvdm')}</p>
           </div>
 
           <div className={styles.featureItem}>
-            <h3 className={styles.subheading}>5. Comprehensive Service Portfolio</h3>
-            <p className={styles.text}>
-              From <strong>Custom Software Development</strong> to <strong>AI solutions</strong> and <strong>business consulting</strong>, 
-              we offer end-to-end solutions that address every aspect of your business.
-            </p>
+            <h3 className={styles.subheading}>{getText('ConsultingComponent.js_34_NS4gQ2')}</h3>
+            <p className={styles.text}>{getText('ConsultingComponent.js_4_RnJvbQ')}<strong>{getText('ConsultingComponent.js_27_Q3VzdG')}</strong>{getText('ConsultingComponent.js_2_dG8=')}<strong>{getText('ConsultingComponent.js_12_QUkgc2')}</strong>{getText('ConsultingComponent.js_3_YW5k')}<strong>{getText('ConsultingComponent.js_19_YnVzaW')}</strong>{getText('ConsultingComponent.js_90_LCAKIC')}</p>
           </div>
 
           <div className={styles.featureItem}>
-            <h3 className={styles.subheading}>6. Continuous Innovation</h3>
-            <p className={styles.text}>
-              We are committed to <strong>research and development</strong>, providing cutting-edge solutions that ensure your 
-              business stays ahead of the competition.
-            </p>
+            <h3 className={styles.subheading}>{getText('ConsultingComponent.js_24_Ni4gQ2')}</h3>
+            <p className={styles.text}>{getText('ConsultingComponent.js_19_V2UgYX')}<strong>{getText('ConsultingComponent.js_24_cmVzZW')}</strong>{getText('ConsultingComponent.js_107_LCBwcm')}</p>
           </div>
         </div>
 
         <div className={styles.ctaSection}>
-          <h2 className={styles.sectionTitle}>Partner with Us</h2>
-          <p className={styles.text}>
-            Contact BrainBoost Consulting today to explore how we can help your business thrive with our unique blend of data-driven,
-            bias-free talent selection and cutting-edge consulting services.
-          </p>
-          <a href="#contact" className={styles.ctaButton}>Contact Us</a>
+          <h2 className={styles.sectionTitle}>{getText('ConsultingComponent.js_15_UGFydG')}</h2>
+          <p className={styles.text}>{getText('ConsultingComponent.js_198_Q29udG')}</p>
+          <a href={getText("ConsultingComponent.js_8_I2Nvbn")} className={styles.ctaButton}>{getText('ConsultingComponent.js_10_Q29udG')}</a>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ConsultingComponent;

@@ -1,3 +1,4 @@
+import { getText } from '../utils/getText.js';
 console.log('Loading firebaseConfig.js');
 // src/config/firebaseConfig.js
 
@@ -10,23 +11,20 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCwsZtlsKYbLBqQSsrnWss6r0kncfhJy7s",
-  authDomain: "worktwins-87df2.firebaseapp.com",
-  projectId: "worktwins-87df2",
-  storageBucket: "worktwins-87df2.appspot.com",
-  messagingSenderId: "429257469666",
-  appId: "1:429257469666:web:42cfd7ab4d388057e4b8bb",
-  measurementId: "G-6PE2RZFVGJ"
+  apiKey: getText("firebaseConfig.js_39_QUl6YV"),
+  authDomain: getText("firebaseConfig.js_31_d29ya3"),
+  projectId: getText("firebaseConfig.js_15_d29ya3"),
+  storageBucket: getText("firebaseConfig.js_27_d29ya3"),
+  messagingSenderId: getText("firebaseConfig.js_12_NDI5Mj"),
+  appId: getText("firebaseConfig.js_41_MTo0Mj"),
+  measurementId: getText("firebaseConfig.js_12_Ry02UE")
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
-
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
 const linkedinProvider = new OAuthProvider('linkedin.com');
-
 export { auth, googleProvider, githubProvider, linkedinProvider };

@@ -1,25 +1,23 @@
+import { getText } from '../utils/getText.js';
 console.log('Loading firebaseConfig.js');
 // src/config/firebaseConfig.js
 
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, GithubAuthProvider, OAuthProvider } from "firebase/auth";
-
 const firebaseConfig = {
-    apiKey: "AIzaSyDLUW37pI2Hp2yTZXbJOXLFtV_5XrsPKwU",
-    authDomain: "subjectivetechnologies-login.firebaseapp.com",
-    projectId: "subjectivetechnologies-login",
-    storageBucket: "subjectivetechnologies-login.appspot.com",
-    messagingSenderId: "363070822103",
-    appId: "1:363070822103:web:82d4304d8779f8a0670292",
-    measurementId: "G-M3C1T7XDRJ"
+  apiKey: getText("firebaseConfig.js_39_QUl6YV"),
+  authDomain: getText("firebaseConfig.js_44_c3Viam"),
+  projectId: getText("firebaseConfig.js_28_c3Viam"),
+  storageBucket: getText("firebaseConfig.js_40_c3Viam"),
+  messagingSenderId: getText("firebaseConfig.js_12_MzYzMD"),
+  appId: getText("firebaseConfig.js_41_MTozNj"),
+  measurementId: getText("firebaseConfig.js_12_Ry1NM0")
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
 const linkedinProvider = new OAuthProvider('linkedin.com');
-
 export { auth, googleProvider, githubProvider, linkedinProvider };

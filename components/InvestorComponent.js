@@ -1,300 +1,222 @@
+import { getText } from '../utils/getText.js';
 import React from 'react';
 import { InlineWidget } from 'react-calendly';
 import styles from '../public/styles/InvestorComponent.module.css';
-
 const InvestorComponent = () => {
-  return (
-    <div className={styles.investorContainer}>
-      <h1 className={styles.title}>Investors Page for WorkTwins.com</h1>
-      <h2 className={styles.subtitle}>Welcome to the Future of Hiring and Workforce Collaboration</h2>
+  return <div className={styles.investorContainer}>
+      <h1 className={styles.title}>{getText('InvestorComponent.js_32_SW52ZX')}</h1>
+      <h2 className={styles.subtitle}>{getText('InvestorComponent.js_59_V2VsY2')}</h2>
 
-      <p className={styles.text}>
-        At WorkTwins.com, we are revolutionizing how companies hire and collaborate by using empirical, real-world data to match developers—and eventually professionals from all fields—based on actual work performance. Powered by our patented 0-Input Subjective Technology, we provide a platform where developers hire other developers, using WorkFootPrints to identify the best technical fit. With our technology, we eliminate inefficiencies in hiring, empower real-time collaboration, and create a data-driven approach that is poised to disrupt multiple industries.
-      </p>
+      <p className={styles.text}>{getText('InvestorComponent.js_558_QXQgV2')}</p>
 
-      <h2 className={styles.subheading}>Our Vision</h2>
-      <p className={styles.text}>
-        We believe the hiring process should be data-driven, efficient, and precise. Our goal is to eliminate the guesswork that exists in traditional recruitment by offering an empirical, real-time solution for workforce optimization. Starting with developers and expanding to all professions, WorkTwins is designed to empower professionals with data-driven collaboration and hiring, fostering collective work intelligence from a Subjective Perspective, with 0-Input.
-      </p>
+      <h2 className={styles.subheading}>{getText('InvestorComponent.js_10_T3VyIF')}</h2>
+      <p className={styles.text}>{getText('InvestorComponent.js_460_V2UgYm')}</p>
 
-      <h2 className={styles.subheading}>Key Features of WorkTwins.com</h2>
+      <h2 className={styles.subheading}>{getText('InvestorComponent.js_29_S2V5IE')}</h2>
       <ol className={styles.list}>
         <li>
-          <h3 className={styles.featureTitle}>Developer-to-Developer Hiring</h3>
-          <p className={styles.text}>
-            Unlike traditional platforms, WorkTwins enables developers to hire developers based on their actual performance and coding activity, as captured through our WorkFootPrint system. This ensures that companies hire the right technical talent the first time, reducing the need for extensive interviews and coding tests.
-          </p>
+          <h3 className={styles.featureTitle}>{getText('InvestorComponent.js_29_RGV2ZW')}</h3>
+          <p className={styles.text}>{getText('InvestorComponent.js_315_VW5saW')}</p>
         </li>
         <li>
-          <h3 className={styles.featureTitle}>WorkFootPrint Technology</h3>
-          <p className={styles.text}>
-            WorkFootPrints are empirical records of a developer’s activities, performance, and real-world expertise. They eliminate the reliance on subjective resumes, interviews, or technical tests, offering a precise match between job requirements and the developer's demonstrated abilities.
-          </p><br/>
+          <h3 className={styles.featureTitle}>{getText('InvestorComponent.js_24_V29ya0')}</h3>
+          <p className={styles.text}>{getText('InvestorComponent.js_281_V29ya0')}</p><br />
           <div className={styles.footprintVignetteDiffuse}>
-            <img src="/images/worktwins_vignette_diffuse.png"/>
+            <img src={getText("InvestorComponent.js_38_L2ltYW")} />
           </div>
         </li>
         <li>
-          <h3 className={styles.featureTitle}>Real-Time Collaboration & Collective Intelligence</h3>
-          <p className={styles.text}>
-            Developers can collaborate with other professionals facing the same technical challenges in real time, creating a network of collective intelligence. This fosters fast problem-solving and allows developers to never work alone.
-          </p>
+          <h3 className={styles.featureTitle}>{getText('InvestorComponent.js_49_UmVhbC')}</h3>
+          <p className={styles.text}>{getText('InvestorComponent.js_226_RGV2ZW')}</p>
         </li>
         <li>
-          <h3 className={styles.featureTitle}>Built on Patented 0-Input Technology</h3>
-          <p className={styles.text}>
-            Our platform is powered by 0-Input Subjective Technology, a broader framework that enables seamless, intuitive interaction between professionals and technology, requiring minimal user input.
-          </p>
+          <h3 className={styles.featureTitle}>{getText('InvestorComponent.js_36_QnVpbH')}</h3>
+          <p className={styles.text}>{getText('InvestorComponent.js_190_T3VyIH')}</p>
         </li>
       </ol>
 
     {/* Subjective 0-Input Technology Section */}
-    <section
-            className={styles.subjectiveZeroInputSection}
-            id="subjective-0-input-technology"
-          >
-            <h2 className={styles.sectionTitle}>
-              What is Subjective 0-Input Technology?
-            </h2>
+    <section className={styles.subjectiveZeroInputSection} id={getText("InvestorComponent.js_29_c3Viam")}>
+            <h2 className={styles.sectionTitle}>{getText('InvestorComponent.js_38_V2hhdC')}</h2>
             <div className={styles.subjectiveZeroInputContent}>
               <div className={styles.videoContainer}>
                 <div className={styles.videoWrapper}>
-                  <video
-                    className={styles.subjectiveVideo}
-                    src="/video/brainboost_marketing_media_video_subjective.mp4"
-                    controls
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  ></video>
-                </div><br/>
+                  <video className={styles.subjectiveVideo} src={getText("InvestorComponent.js_54_L3ZpZG")} controls autoPlay loop muted playsInline></video>
+                </div><br />
               </div>
             </div>
           </section>
 
             {/* PDF Viewer Section */}
-            <h2 className={styles.subheading}>Download Our Documents</h2>
+            <h2 className={styles.subheading}>{getText('InvestorComponent.js_22_RG93bm')}</h2>
       <div className={styles.pdfGrid}>
         <div className={styles.pdfItem}>
-          <iframe
-            src="/downloads/Business Plan for WorkTwins.com.pdf"
-            className={styles.pdfViewer}
-            title="Business Plan"
-          ></iframe>
-          <a href="/downloads/Business Plan for WorkTwins.com.pdf" className={styles.downloadLink} target="_blank" rel="noopener noreferrer">
-            Download Business Plan
-          </a>
+          <iframe src={getText("InvestorComponent.js_46_L2Rvd2")} className={styles.pdfViewer} title={getText("InvestorComponent.js_13_QnVzaW")}></iframe>
+          <a href={getText("InvestorComponent.js_46_L2Rvd2")} className={styles.downloadLink} target={getText("InvestorComponent.js_6_X2JsYW")} rel={getText("InvestorComponent.js_19_bm9vcG")}>{getText('InvestorComponent.js_22_RG93bm')}</a>
         </div>
         <div className={styles.pdfItem}>
-          <iframe
-            src="/downloads/Subjective Technologies_APA_7_en-202401142351.pdf"
-            className={styles.pdfViewer}
-            title="Subjective Technologies APA 7"
-          ></iframe>
-          <a href="/downloads/Subjective Technologies_APA_7_en-202401142351.pdf" className={styles.downloadLink} target="_blank" rel="noopener noreferrer">
-            Download Subjective Technologies APA
-          </a>
+          <iframe src={getText("InvestorComponent.js_60_L2Rvd2")} className={styles.pdfViewer} title={getText("InvestorComponent.js_29_U3Viam")}></iframe>
+          <a href={getText("InvestorComponent.js_60_L2Rvd2")} className={styles.downloadLink} target={getText("InvestorComponent.js_6_X2JsYW")} rel={getText("InvestorComponent.js_19_bm9vcG")}>{getText('InvestorComponent.js_36_RG93bm')}</a>
         </div>
         <div className={styles.pdfItem}>
-          <iframe
-            src="/downloads/subjective_technologies_an_exoskeleton_for_the_mind_print.pdf"
-            className={styles.pdfViewer}
-            title="Subjective Technologies Exoskeleton"
-          ></iframe>
-          <a href="/downloads/subjective_technologies_an_exoskeleton_for_the_mind_print.pdf" className={styles.downloadLink} target="_blank" rel="noopener noreferrer">
-            Download Exoskeleton for the Mind
-          </a>
+          <iframe src={getText("InvestorComponent.js_72_L2Rvd2")} className={styles.pdfViewer} title={getText("InvestorComponent.js_35_U3Viam")}></iframe>
+          <a href={getText("InvestorComponent.js_72_L2Rvd2")} className={styles.downloadLink} target={getText("InvestorComponent.js_6_X2JsYW")} rel={getText("InvestorComponent.js_19_bm9vcG")}>{getText('InvestorComponent.js_33_RG93bm')}</a>
         </div>
         <div className={styles.pdfItem}>
-          <iframe
-            src="/downloads/US20220358283A1.pdf"
-            className={styles.pdfViewer}
-            title="Patent US20220358283A1"
-          ></iframe>
-          <a href="/downloads/US20220358283A1.pdf" className={styles.downloadLink} target="_blank" rel="noopener noreferrer">
-            Download Patent US20220358283A1
-          </a>
+          <iframe src={getText("InvestorComponent.js_30_L2Rvd2")} className={styles.pdfViewer} title={getText("InvestorComponent.js_22_UGF0ZW")}></iframe>
+          <a href={getText("InvestorComponent.js_30_L2Rvd2")} className={styles.downloadLink} target={getText("InvestorComponent.js_6_X2JsYW")} rel={getText("InvestorComponent.js_19_bm9vcG")}>{getText('InvestorComponent.js_31_RG93bm')}</a>
         </div>
       </div>
 
 
               {/* Subjective 0-Input Technology Section */}
-    <section
-            className={styles.subjectiveZeroInputSection}
-            id="subjective-0-input-technology"
-          >
-            <h2 className={styles.sectionTitle}>
-            Get our book on Amazon 
-            </h2>
+    <section className={styles.subjectiveZeroInputSection} id={getText("InvestorComponent.js_29_c3Viam")}>
+            <h2 className={styles.sectionTitle}>{getText('InvestorComponent.js_22_R2V0IG')}</h2>
             <div className={styles.subjectiveZeroInputContent}>
               <div className={styles.videoContainer}>
                 <div className={styles.videoWrapper}>
-                <a href="http://localhost:3000/images/brainboost_marketing_images_thefirstzeroinputtechnology_book_website.png"><img src="/images/brainboost_marketing_images_thefirstzeroinputtechnology_book_website.png"/></a>
+                <a href={getText("InvestorComponent.js_101_aHR0cD")}><img src={getText("InvestorComponent.js_80_L2ltYW")} /></a>
 
-                </div><br/>
+                </div><br />
               </div>
             </div>
           </section>
 
 
-      <h2 className={styles.subheading}>Market Opportunity</h2>
-      <p className={styles.text}>
-        The global market for software developers is expected to grow from 26.4 million developers in 2023 to 45 million by 2030. The staff augmentation industry is on a similar growth trajectory, with a market size forecasted to grow from $132 billion in 2023 to $205 billion by 2030. Yet, hiring inefficiencies persist—long recruitment cycles, skills mismatches, and high costs are still major barriers for companies. WorkTwins.com addresses these challenges with data-driven, automated matching that eliminates the friction in hiring and onboarding.
-      </p>
+      <h2 className={styles.subheading}>{getText('InvestorComponent.js_18_TWFya2')}</h2>
+      <p className={styles.text}>{getText('InvestorComponent.js_544_VGhlIG')}</p>
 
-      <h2 className={styles.subheading}>Product Ecosystem: Beyond Developers</h2>
-      <p className={styles.text}>
-        WorkTwins.com is the first of many products in our broader Subjective Technology ecosystem. As AI and computer vision techniques evolve, the same WorkFootPrint model will be applied to other professions, from design and project management to data analysis and customer support. This positions WorkTwins as a scalable platform that can transform workforce optimization across industries.
-      </p>
+      <h2 className={styles.subheading}>{getText('InvestorComponent.js_36_UHJvZH')}</h2>
+      <p className={styles.text}>{getText('InvestorComponent.js_386_V29ya1')}</p>
 
-      <h3 className={styles.subsubheading}>Future Products:</h3>
+      <h3 className={styles.subsubheading}>{getText('InvestorComponent.js_16_RnV0dX')}</h3>
       <ul className={styles.productList}>
         <li>
-          <p className={styles.text}>Subjective ForMate – Automated form-filling system using zero input.</p>
+          <p className={styles.text}>{getText('InvestorComponent.js_68_U3Viam')}</p>
         </li>
         <li>
-          <p className={styles.text}>Subjective Domotics – Smart home automation that learns user behavior.</p>
+          <p className={styles.text}>{getText('InvestorComponent.js_70_U3Viam')}</p>
         </li>
         <li>
-          <p className={styles.text}>Subjective Semantizer – A post-education tool creating dynamic semantic models for knowledge enhancement.</p>
+          <p className={styles.text}>{getText('InvestorComponent.js_105_U3Viam')}</p>
         </li>
         <li>
-          <p className={styles.text}>Subjective JobFinder – Extending WorkTwins to match all professionals based on empirical data.</p>
+          <p className={styles.text}>{getText('InvestorComponent.js_94_U3Viam')}</p>
         </li>
         <li>
-          <p className={styles.text}>Subjective Thermo-Currency – A novel economic model using real-time energy accounting.</p>
+          <p className={styles.text}>{getText('InvestorComponent.js_86_U3Viam')}</p>
         </li>
         <li>
-          <p className={styles.text}>Subjective Advertising – A solution-centric advertising platform tailored to real-time user needs.</p>
+          <p className={styles.text}>{getText('InvestorComponent.js_98_U3Viam')}</p>
         </li>
         <li>
-          <p className={styles.text}>Subjective Adapter – A bridge for legacy systems, enhancing user experiences without complete system overhauls.</p>
+          <p className={styles.text}>{getText('InvestorComponent.js_111_U3Viam')}</p>
         </li>
       </ul>
 
-      <h2 className={styles.subheading}>Why Invest in WorkTwins.com?</h2>
+      <h2 className={styles.subheading}>{getText('InvestorComponent.js_28_V2h5IE')}</h2>
       <ol className={styles.list}>
         <li>
-          <h3 className={styles.featureTitle}>Huge Market Potential</h3>
-          <p className={styles.text}>
-            With a growing global workforce that is increasingly specialized, WorkTwins.com is positioned to address the inefficiencies in talent acquisition and real-time collaboration. Starting with the developer market, the platform is set to scale across industries, from IT to design, customer service, and beyond.
-          </p>
+          <h3 className={styles.featureTitle}>{getText('InvestorComponent.js_21_SHVnZS')}</h3>
+          <p className={styles.text}>{getText('InvestorComponent.js_307_V2l0aC')}</p>
         </li>
         <li>
-          <h3 className={styles.featureTitle}>Game-Changing Technology</h3>
-          <p className={styles.text}>
-            Our patented 0-Input Technology and Computational Affinity Antenna enable us to capture real-world performance data in a way that no other platform can. This ensures that companies hire based on empirical evidence, removing biases and inefficiencies from the hiring process.
-          </p>
+          <h3 className={styles.featureTitle}>{getText('InvestorComponent.js_24_R2FtZS')}</h3>
+          <p className={styles.text}>{getText('InvestorComponent.js_274_T3VyIH')}</p>
         </li>
         <li>
-          <h3 className={styles.featureTitle}>Scalable and Expandable</h3>
-          <p className={styles.text}>
-            WorkTwins.com is just the beginning. Our Subjective Technology framework provides a scalable foundation that can evolve into new industries and products, creating a wide-ranging impact across the global workforce.
-          </p>
+          <h3 className={styles.featureTitle}>{getText('InvestorComponent.js_23_U2NhbG')}</h3>
+          <p className={styles.text}>{getText('InvestorComponent.js_213_V29ya1')}</p>
         </li>
         <li>
-          <h3 className={styles.featureTitle}>Reduced Hiring Costs and Time</h3>
-          <p className={styles.text}>
-            By automating the technical vetting process and reducing the need for interviews, WorkTwins drastically shortens the time-to-hire and lowers recruitment costs. Companies can onboard the right talent quickly and efficiently.
-          </p>
+          <h3 className={styles.featureTitle}>{getText('InvestorComponent.js_29_UmVkdW')}</h3>
+          <p className={styles.text}>{getText('InvestorComponent.js_223_QnkgYX')}</p>
         </li>
       </ol>
 
-      <h2 className={styles.subheading}>Financial Projections</h2>
+      <h2 className={styles.subheading}>{getText('InvestorComponent.js_21_RmluYW')}</h2>
       <table className={styles.financialTable}>
         <thead>
           <tr>
-            <th>Year</th>
-            <th>Revenue</th>
-            <th>Expenses</th>
-            <th>Profit/Loss</th>
+            <th>{getText('InvestorComponent.js_4_WWVhcg')}</th>
+            <th>{getText('InvestorComponent.js_7_UmV2ZW')}</th>
+            <th>{getText('InvestorComponent.js_8_RXhwZW')}</th>
+            <th>{getText('InvestorComponent.js_11_UHJvZm')}</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>2024</td>
-            <td>$2.5M</td>
-            <td>$1.8M</td>
-            <td>$700K</td>
+            <td>{getText('InvestorComponent.js_4_MjAyNA')}</td>
+            <td>{getText('InvestorComponent.js_5_JDIuNU')}</td>
+            <td>{getText('InvestorComponent.js_5_JDEuOE')}</td>
+            <td>{getText('InvestorComponent.js_5_JDcwME')}</td>
           </tr>
           <tr>
-            <td>2025</td>
-            <td>$8M</td>
-            <td>$4.5M</td>
-            <td>$3.5M</td>
+            <td>{getText('InvestorComponent.js_4_MjAyNQ')}</td>
+            <td>{getText('InvestorComponent.js_3_JDhN')}</td>
+            <td>{getText('InvestorComponent.js_5_JDQuNU')}</td>
+            <td>{getText('InvestorComponent.js_5_JDMuNU')}</td>
           </tr>
           <tr>
-            <td>2026</td>
-            <td>$15M</td>
-            <td>$8M</td>
-            <td>$7M</td>
+            <td>{getText('InvestorComponent.js_4_MjAyNg')}</td>
+            <td>{getText('InvestorComponent.js_4_JDE1TQ')}</td>
+            <td>{getText('InvestorComponent.js_3_JDhN')}</td>
+            <td>{getText('InvestorComponent.js_3_JDdN')}</td>
           </tr>
           <tr>
-            <td>2027</td>
-            <td>$30M</td>
-            <td>$14M</td>
-            <td>$16M</td>
+            <td>{getText('InvestorComponent.js_4_MjAyNw')}</td>
+            <td>{getText('InvestorComponent.js_4_JDMwTQ')}</td>
+            <td>{getText('InvestorComponent.js_4_JDE0TQ')}</td>
+            <td>{getText('InvestorComponent.js_4_JDE2TQ')}</td>
           </tr>
         </tbody>
       </table>
 
-      <h2 className={styles.subheading}>Funding Requirements</h2>
-      <p className={styles.text}>
-        We are seeking $5 million in seed funding to accelerate platform development, enhance AI-driven matching algorithms, and expand marketing and sales operations. The funding will be used as follows:
-      </p>
+      <h2 className={styles.subheading}>{getText('InvestorComponent.js_20_RnVuZG')}</h2>
+      <p className={styles.text}>{getText('InvestorComponent.js_196_V2UgYX')}</p>
       <ul className={styles.list}>
         <li>
-          <p className={styles.text}>30% for product development (enhancing WorkFootPrint analytics and real-time collaboration tools).</p>
+          <p className={styles.text}>{getText('InvestorComponent.js_98_MzAlIG')}</p>
         </li>
         <li>
-          <p className={styles.text}>40% for sales and marketing (expanding the sales team, partnerships, and outreach efforts).</p>
+          <p className={styles.text}>{getText('InvestorComponent.js_91_NDAlIG')}</p>
         </li>
         <li>
-          <p className={styles.text}>20% for customer support and operations.</p>
+          <p className={styles.text}>{getText('InvestorComponent.js_40_MjAlIG')}</p>
         </li>
         <li>
-          <p className={styles.text}>10% for general corporate purposes.</p>
+          <p className={styles.text}>{getText('InvestorComponent.js_35_MTAlIG')}</p>
         </li>
       </ul>
 
-      <h2 className={styles.subheading}>Meet Our Team</h2>
+      <h2 className={styles.subheading}>{getText('InvestorComponent.js_13_TWVldC')}</h2>
       <div className={styles.teamSection}>
 
         <div className={styles.teamMember}>
-          <img src="/images/icons/profile_yo.-min.jpg" alt="Tommy Fox" className={styles.teamPhoto} />
+          <img src={getText("InvestorComponent.js_33_L2ltYW")} alt={getText("InvestorComponent.js_9_VG9tbX")} className={styles.teamPhoto} />
           <div className={styles.memberInfo}>
-            <h3>Tommy Fox – Company Founder</h3>
-            <p className={styles.text}>
-              Tommy leads the development of WorkTwins, bringing years of experience in software architecture and developer tools. He ensures the seamless integration of advanced AI and machine learning algorithms into the platform.
-            </p>
+            <h3>{getText('InvestorComponent.js_27_VG9tbX')}</h3>
+            <p className={styles.text}>{getText('InvestorComponent.js_218_VG9tbX')}</p>
           </div>
         </div>
       </div>
 
       {/* Calendly Widget Integration */}
-      <h2 className={styles.subheading}>Schedule a Meeting with Tommy Fox</h2>
+      <h2 className={styles.subheading}>{getText('InvestorComponent.js_33_U2NoZW')}</h2>
       <div className={styles.calendlyContainer}>
-        <InlineWidget
-          url="https://calendly.com/tommy-fox/30min"
-          styles={{ height: '700px' }}
-        />
+        <InlineWidget url={getText("InvestorComponent.js_36_aHR0cH")} styles={{
+        height: getText("InvestorComponent.js_5_NzAwcH")
+      }} />
       </div>
 
-      <h2 className={styles.subheading}>Join Us in Shaping the Future of Work</h2>
-      <p className={styles.text}>
-        At WorkTwins.com, we are redefining how companies find, hire, and collaborate with talent. By investing in WorkTwins, you are backing a platform that will revolutionize the hiring process, improve workforce efficiency, and expand into new industries using cutting-edge technology.
-      </p>
+      <h2 className={styles.subheading}>{getText('InvestorComponent.js_37_Sm9pbi')}</h2>
+      <p className={styles.text}>{getText('InvestorComponent.js_280_QXQgV2')}</p>
 
-      <h2 className={styles.subheading}>Contact Us</h2>
-      <p className={styles.text}>
-        For more information or to discuss investment opportunities, please reach out to our Investor Relations Team at <a href="mailto:investors@worktwins.com" className={styles.link}>investors@worktwins.com</a>.
-      </p>
+      <h2 className={styles.subheading}>{getText('InvestorComponent.js_10_Q29udG')}</h2>
+      <p className={styles.text}>{getText('InvestorComponent.js_111_Rm9yIG')}<a href={getText("InvestorComponent.js_30_bWFpbH")} className={styles.link}>{getText('InvestorComponent.js_23_aW52ZX')}</a>{getText('InvestorComponent.js_1_Lg==')}</p>
 
 
 
-    </div>
-  );
+    </div>;
 };
-
 export default InvestorComponent;

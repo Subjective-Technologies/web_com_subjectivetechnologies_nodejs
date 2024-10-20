@@ -1,72 +1,60 @@
+import { getText } from '../utils/getText.js';
 console.log('Loading ScientificResearchComponent.js');
 import React from 'react';
 import Footer from './Footer'; // Import the Footer component
 import styles from '../public/styles/ScientificResearchComponent.module.css';
-
 const ScientificResearchComponent = () => {
-console.log('Rendering ScientificResearchComponent');
-console.log('Rendering ScientificResearchComponent');
-console.log('Rendering ScientificResearchComponent');
-console.log('Returning from ScientificResearchComponent');
-console.log('Returning from ScientificResearchComponent');
-console.log('Returning from ScientificResearchComponent');
-  return (
-    <div className={styles.container}>
+  console.log('Rendering ScientificResearchComponent');
+  console.log('Rendering ScientificResearchComponent');
+  console.log('Rendering ScientificResearchComponent');
+  console.log('Returning from ScientificResearchComponent');
+  console.log('Returning from ScientificResearchComponent');
+  console.log('Returning from ScientificResearchComponent');
+  return <div className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Scientific Research</h1>
-        <p className={styles.description}>
-          Explore our extensive collection of research papers and publications.
-        </p>
+        <h1 className={styles.title}>{getText('ScientificResearchComponent.js_19_U2NpZW')}</h1>
+        <p className={styles.description}>{getText('ScientificResearchComponent.js_69_RXhwbG')}</p>
 
         <div className={styles.papersContainer}>
           <div className={styles.paperFrame}>
-            <iframe className={styles.iframe} src="https://www.example.com/research1"></iframe>
-            <p className={styles.paperNote}>Paper 1: Title and brief description.</p>
+            <iframe className={styles.iframe} src={getText("ScientificResearchComponent.js_33_aHR0cH")}></iframe>
+            <p className={styles.paperNote}>{getText('ScientificResearchComponent.js_37_UGFwZX')}</p>
           </div>
           <div className={styles.paperFrame}>
-            <iframe className={styles.iframe} src="https://www.example.com/research2"></iframe>
-            <p className={styles.paperNote}>Paper 2: Title and brief description.</p>
+            <iframe className={styles.iframe} src={getText("ScientificResearchComponent.js_33_aHR0cH")}></iframe>
+            <p className={styles.paperNote}>{getText('ScientificResearchComponent.js_37_UGFwZX')}</p>
           </div>
         </div>
 
-        <p className={styles.note}>
-          For more information, visit our{' '}
-          <a href="https://www.example.com" className={styles.link}>
-            research page
-          </a>
-          .
-        </p>
+        <p className={styles.note}>{getText('ScientificResearchComponent.js_31_Rm9yIG')}{' '}
+          <a href={getText("ScientificResearchComponent.js_23_aHR0cH")} className={styles.link}>{getText('ScientificResearchComponent.js_13_cmVzZW')}</a>{getText('ScientificResearchComponent.js_1_Lg==')}</p>
 
         <div className={styles.logoTable}>
           <div className={styles.logoCell}>
-            <img src="https://via.placeholder.com/150" className={styles.logo} alt="Logo 1" />
+            <img src={getText("ScientificResearchComponent.js_31_aHR0cH")} className={styles.logo} alt={getText("ScientificResearchComponent.js_6_TG9nby")} />
           </div>
           <div className={styles.logoCell}>
-            <img src="https://via.placeholder.com/150" className={styles.logo} alt="Logo 2" />
+            <img src={getText("ScientificResearchComponent.js_31_aHR0cH")} className={styles.logo} alt={getText("ScientificResearchComponent.js_6_TG9nby")} />
           </div>
         </div>
 
         <div className={styles.orcidSection}>
           <div className={styles.orcidRow}>
-            <img src="https://via.placeholder.com/100" className={styles.orcidLogo} alt="ORCID Logo" />
-            <p className={styles.orcidCode}>0000-0001-2345-6789</p>
+            <img src={getText("ScientificResearchComponent.js_31_aHR0cH")} className={styles.orcidLogo} alt={getText("ScientificResearchComponent.js_10_T1JDSU")} />
+            <p className={styles.orcidCode}>{getText('ScientificResearchComponent.js_19_MDAwMC')}</p>
           </div>
         </div>
 
         <div className={styles.bookSection}>
-          <h2 className={styles.bookTitle}>Book Title</h2>
-          <p className={styles.bookSubtitle}>Subtitle of the book</p>
-          <img src="https://via.placeholder.com/400x600" className={styles.bookCover} alt="Book Cover" />
-          <p className={styles.bookNote}>Note about the book</p>
-          <p className={styles.bookPitch}>Pitch about the book</p>
-          <a href="https://www.amazon.com" className={styles.amazonButton}>
-            Buy on Amazon
-          </a>
+          <h2 className={styles.bookTitle}>{getText('ScientificResearchComponent.js_10_Qm9vay')}</h2>
+          <p className={styles.bookSubtitle}>{getText('ScientificResearchComponent.js_20_U3VidG')}</p>
+          <img src={getText("ScientificResearchComponent.js_35_aHR0cH")} className={styles.bookCover} alt={getText("ScientificResearchComponent.js_10_Qm9vay")} />
+          <p className={styles.bookNote}>{getText('ScientificResearchComponent.js_19_Tm90ZS')}</p>
+          <p className={styles.bookPitch}>{getText('ScientificResearchComponent.js_20_UGl0Y2')}</p>
+          <a href={getText("ScientificResearchComponent.js_22_aHR0cH")} className={styles.amazonButton}>{getText('ScientificResearchComponent.js_13_QnV5IG')}</a>
         </div>
       </div>
       <Footer /> {/* Add the Footer component */}
-    </div>
-  );
+    </div>;
 };
-
 export default ScientificResearchComponent;

@@ -1,0 +1,5030 @@
+[
+  {
+    "key": "FullScreenVideoScene.js_8_cmVsYX",
+    "file_path": "FullScreenVideoScene.js",
+    "reference": "ObjectProperty (position)",
+    "text": "relative"
+  },
+  {
+    "key": "FullScreenVideoScene.js_16_MnB4IH",
+    "file_path": "FullScreenVideoScene.js",
+    "reference": "ObjectProperty (border)",
+    "text": "2px solid yellow"
+  },
+  {
+    "key": "CareersComponent.js_7_Q2FyZW",
+    "file_path": "components/CareersComponent.js",
+    "reference": "JSXText",
+    "text": "Careers"
+  },
+  {
+    "key": "CareersComponent.js_13_Sm9pbi",
+    "file_path": "components/CareersComponent.js",
+    "reference": "JSXText",
+    "text": "Join Our Team"
+  },
+  {
+    "key": "CareersComponent.js_220_QXQgU3",
+    "file_path": "components/CareersComponent.js",
+    "reference": "JSXText",
+    "text": "At Subjective Technologies, we are always looking for talented and passionate individuals to join our team.\n                    Explore our open positions and find out how you can become a part of our innovative company."
+  },
+  {
+    "key": "CareersComponent.js_19_Sm9pbi",
+    "file_path": "components/CareersComponent.js",
+    "reference": "JSXText",
+    "text": "Join Our Team Image"
+  },
+  {
+    "key": "CareersComponent.js_14_T3Blbi",
+    "file_path": "components/CareersComponent.js",
+    "reference": "JSXText",
+    "text": "Open Positions"
+  },
+  {
+    "key": "CareersComponent.js_208_V2Ugb2",
+    "file_path": "components/CareersComponent.js",
+    "reference": "JSXText",
+    "text": "We offer a variety of positions across different departments. Whether you are a developer, designer, or marketing expert,\n                    we have a place for you. Check out our current job openings below."
+  },
+  {
+    "key": "CareersComponent.js_18_U29mdH",
+    "file_path": "components/CareersComponent.js",
+    "reference": "JSXText",
+    "text": "Software Developer"
+  },
+  {
+    "key": "CareersComponent.js_72_V29yay",
+    "file_path": "components/CareersComponent.js",
+    "reference": "JSXText",
+    "text": "Work on cutting-edge technology projects in a collaborative environment."
+  },
+  {
+    "key": "CareersComponent.js_14_VUkvVV",
+    "file_path": "components/CareersComponent.js",
+    "reference": "JSXText",
+    "text": "UI/UX Designer"
+  },
+  {
+    "key": "CareersComponent.js_64_Q3JlYX",
+    "file_path": "components/CareersComponent.js",
+    "reference": "JSXText",
+    "text": "Create intuitive and beautiful user interfaces for our products."
+  },
+  {
+    "key": "CareersComponent.js_20_TWFya2",
+    "file_path": "components/CareersComponent.js",
+    "reference": "JSXText",
+    "text": "Marketing Specialist"
+  },
+  {
+    "key": "CareersComponent.js_65_RGV2ZW",
+    "file_path": "components/CareersComponent.js",
+    "reference": "JSXText",
+    "text": "Develop and execute marketing strategies to promote our products."
+  },
+  {
+    "key": "CareersComponent.js_17_V2h5IF",
+    "file_path": "components/CareersComponent.js",
+    "reference": "JSXText",
+    "text": "Why Work With Us?"
+  },
+  {
+    "key": "CareersComponent.js_211_V2UgYm",
+    "file_path": "components/CareersComponent.js",
+    "reference": "JSXText",
+    "text": "We believe in fostering a positive and inclusive work environment. Our employees enjoy competitive salaries, comprehensive\n                    benefits, and opportunities for professional growth and development."
+  },
+  {
+    "key": "CareersComponent.js_22_V2h5IF",
+    "file_path": "components/CareersComponent.js",
+    "reference": "JSXText",
+    "text": "Why Work With Us Image"
+  },
+  {
+    "key": "ConsultingComponent.js_10_V2h5IE",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "Why Choose"
+  },
+  {
+    "key": "ConsultingComponent.js_21_V29ya1",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "WorkTwins Consulting?"
+  },
+  {
+    "key": "ConsultingComponent.js_39_VGhlIE",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "The First Subjective 0-Input Technology"
+  },
+  {
+    "key": "ConsultingComponent.js_37_U29sdX",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "Solution For Work Candidate Selection"
+  },
+  {
+    "key": "ConsultingComponent.js_30_RGF0YS",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "Data-Driven Staff Augmentation"
+  },
+  {
+    "key": "ConsultingComponent.js_529_QXQgQn",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "At BrainBoost Consulting, we revolutionize the hiring and consultancy process by offering a data-driven, unbiased, and inclusive approach that ensures you get the best possible match for your technical needs. Our WorkFootPrint technology eliminates subjectivity and focuses entirely on real developer experience, making it impossible for candidates to exaggerate their abilities. With us, you get top-tier talent, innovative solutions, and the efficiency your business needs to stay ahead in today’s fast-paced digital landscape."
+  },
+  {
+    "key": "ConsultingComponent.js_35_MS4gRG",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "1. Data-Driven, Bias-Free Selection"
+  },
+  {
+    "key": "ConsultingComponent.js_3_T3Vy",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "Our"
+  },
+  {
+    "key": "ConsultingComponent.js_24_V29ya0",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "WorkFootPrint technology"
+  },
+  {
+    "key": "ConsultingComponent.js_158_Y2FwdH",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "captures real developer performance data, removing biases from \n              the hiring process. No more guesswork—just a perfect match based on real skills."
+  },
+  {
+    "key": "ConsultingComponent.js_33_Mi4gRm",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "2. Flexible Contractor Engagement"
+  },
+  {
+    "key": "ConsultingComponent.js_160_V2hldG",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "Whether you need short-term contractors or long-term hires, we offer flexible models. We ensure the best \n              talent, backed by data-driven decisions."
+  },
+  {
+    "key": "ConsultingComponent.js_42_My4gU3",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "3. Strategic Location & Cultural Alignment"
+  },
+  {
+    "key": "ConsultingComponent.js_169_T3VyIH",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "Our presence in Argentina ensures real-time collaboration with US clients, along with a shared culture that \n              makes working with us seamless and productive."
+  },
+  {
+    "key": "ConsultingComponent.js_37_NC4gUm",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "4. Real Performance, Not Just Resumes"
+  },
+  {
+    "key": "ConsultingComponent.js_17_RXZlcn",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "Every developer's"
+  },
+  {
+    "key": "ConsultingComponent.js_13_V29ya0",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "WorkFootPrint"
+  },
+  {
+    "key": "ConsultingComponent.js_124_cHJvdm",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "provides real-world evidence of their expertise, removing \n              the need for interviews and subjective assessments."
+  },
+  {
+    "key": "ConsultingComponent.js_34_NS4gQ2",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "5. Comprehensive Service Portfolio"
+  },
+  {
+    "key": "ConsultingComponent.js_4_RnJvbQ",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "From"
+  },
+  {
+    "key": "ConsultingComponent.js_27_Q3VzdG",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "Custom Software Development"
+  },
+  {
+    "key": "ConsultingComponent.js_2_dG8=",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "to"
+  },
+  {
+    "key": "ConsultingComponent.js_12_QUkgc2",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "AI solutions"
+  },
+  {
+    "key": "ConsultingComponent.js_3_YW5k",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "and"
+  },
+  {
+    "key": "ConsultingComponent.js_19_YnVzaW",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "business consulting"
+  },
+  {
+    "key": "ConsultingComponent.js_90_LCAKIC",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": ", \n              we offer end-to-end solutions that address every aspect of your business."
+  },
+  {
+    "key": "ConsultingComponent.js_24_Ni4gQ2",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "6. Continuous Innovation"
+  },
+  {
+    "key": "ConsultingComponent.js_19_V2UgYX",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "We are committed to"
+  },
+  {
+    "key": "ConsultingComponent.js_24_cmVzZW",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "research and development"
+  },
+  {
+    "key": "ConsultingComponent.js_107_LCBwcm",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": ", providing cutting-edge solutions that ensure your \n              business stays ahead of the competition."
+  },
+  {
+    "key": "ConsultingComponent.js_15_UGFydG",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "Partner with Us"
+  },
+  {
+    "key": "ConsultingComponent.js_198_Q29udG",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "Contact BrainBoost Consulting today to explore how we can help your business thrive with our unique blend of data-driven,\n            bias-free talent selection and cutting-edge consulting services."
+  },
+  {
+    "key": "ConsultingComponent.js_8_I2Nvbn",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "#contact"
+  },
+  {
+    "key": "ConsultingComponent.js_10_Q29udG",
+    "file_path": "components/ConsultingComponent.js",
+    "reference": "JSXText",
+    "text": "Contact Us"
+  },
+  {
+    "key": "ContactComponent.js_10_Q29udG",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXText",
+    "text": "Contact Us"
+  },
+  {
+    "key": "ContactComponent.js_27_R2VuZX",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXText",
+    "text": "General Contact Information"
+  },
+  {
+    "key": "ContactComponent.js_25_RW1haW",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXText",
+    "text": "Email: info@worktwins.com"
+  },
+  {
+    "key": "ContactComponent.js_19_UGhvbm",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXText",
+    "text": "Phone: +17867965039"
+  },
+  {
+    "key": "ContactComponent.js_33_L2ltYW",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/icons/profile_yo.-min.jpg"
+  },
+  {
+    "key": "ContactComponent.js_9_VG9tbX",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Tommy Fox"
+  },
+  {
+    "key": "ContactComponent.js_13_UHJlc3",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXText",
+    "text": "Press Contact"
+  },
+  {
+    "key": "ContactComponent.js_15_TmFtZT",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXText",
+    "text": "Name: Tommy Fox"
+  },
+  {
+    "key": "ContactComponent.js_42_RW1haW",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXText",
+    "text": "Email: tommyfox@subjectivetechnologies.com"
+  },
+  {
+    "key": "ContactComponent.js_9_V2hhdH",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXText",
+    "text": "WhatsApp:"
+  },
+  {
+    "key": "ContactComponent.js_24_aHR0cH",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "https://wa.me/1234567890"
+  },
+  {
+    "key": "ContactComponent.js_6_X2JsYW",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (target)",
+    "text": "_blank"
+  },
+  {
+    "key": "ContactComponent.js_19_bm9vcG",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (rel)",
+    "text": "noopener noreferrer"
+  },
+  {
+    "key": "ContactComponent.js_12_KzE3OD",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXText",
+    "text": "+17867965039"
+  },
+  {
+    "key": "ContactComponent.js_22_dmlkZW",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "video/golden_twins.mp4"
+  },
+  {
+    "key": "ContactComponent.js_12_R2V0IG",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXText",
+    "text": "Get in Touch"
+  },
+  {
+    "key": "ContactComponent.js_4_bmFtZQ",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "name"
+  },
+  {
+    "key": "ContactComponent.js_4_TmFtZQ",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXText",
+    "text": "Name"
+  },
+  {
+    "key": "ContactComponent.js_4_dGV4dA",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (type)",
+    "text": "text"
+  },
+  {
+    "key": "ContactComponent.js_5_ZW1haW",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "email"
+  },
+  {
+    "key": "ContactComponent.js_5_RW1haW",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXText",
+    "text": "Email"
+  },
+  {
+    "key": "ContactComponent.js_5_cGhvbm",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "phone"
+  },
+  {
+    "key": "ContactComponent.js_5_UGhvbm",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXText",
+    "text": "Phone"
+  },
+  {
+    "key": "ContactComponent.js_3_dGVs",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (type)",
+    "text": "tel"
+  },
+  {
+    "key": "ContactComponent.js_7_bWVzc2",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "message"
+  },
+  {
+    "key": "ContactComponent.js_7_TWVzc2",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXText",
+    "text": "Message"
+  },
+  {
+    "key": "ContactComponent.js_6_c3VibW",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (type)",
+    "text": "submit"
+  },
+  {
+    "key": "ContactComponent.js_6_U3VibW",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXText",
+    "text": "Submit"
+  },
+  {
+    "key": "ContactComponent.js_94_aHR0cH",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "https://www.amazon.com/dp/B0CKL4MVMC/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1696620400&sr=8-1"
+  },
+  {
+    "key": "ContactComponent.js_80_L2ltYW",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/brainboost_marketing_images_thefirstzeroinputtechnology_book_website.png"
+  },
+  {
+    "key": "ContactComponent.js_10_Qm9vay",
+    "file_path": "components/ContactComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Book Image"
+  },
+  {
+    "key": "CreativeAnimation.js_8_cmVsYX",
+    "file_path": "components/CreativeAnimation.js",
+    "reference": "ObjectProperty (position)",
+    "text": "relative"
+  },
+  {
+    "key": "CreativeAnimation.js_16_MnB4IH",
+    "file_path": "components/CreativeAnimation.js",
+    "reference": "ObjectProperty (border)",
+    "text": "2px solid yellow"
+  },
+  {
+    "key": "DownloadComponent.js_11_dGhyZW",
+    "file_path": "components/DownloadComponent.js",
+    "reference": "JSXAttribute (id)",
+    "text": "three_twins"
+  },
+  {
+    "key": "DownloadComponent.js_6_Y2VudG",
+    "file_path": "components/DownloadComponent.js",
+    "reference": "JSXAttribute (align)",
+    "text": "center"
+  },
+  {
+    "key": "DownloadComponent.js_30_aW1hZ2",
+    "file_path": "components/DownloadComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "images/three_twins_laptops.png"
+  },
+  {
+    "key": "DownloadComponent.js_37_RG93bm",
+    "file_path": "components/DownloadComponent.js",
+    "reference": "JSXText",
+    "text": "Download WorkTwins Client Application"
+  },
+  {
+    "key": "DownloadComponent.js_68_U2VsZW",
+    "file_path": "components/DownloadComponent.js",
+    "reference": "JSXText",
+    "text": "Select your operating system below to download the WorkTwins client:"
+  },
+  {
+    "key": "DownloadComponent.js_32_L2Rvd2",
+    "file_path": "components/DownloadComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/downloads/worktwins_windows.exe"
+  },
+  {
+    "key": "DownloadComponent.js_24_L2ltYW",
+    "file_path": "components/DownloadComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/windows_icon.svg"
+  },
+  {
+    "key": "DownloadComponent.js_12_V2luZG",
+    "file_path": "components/DownloadComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Windows Icon"
+  },
+  {
+    "key": "DownloadComponent.js_20_RG93bm",
+    "file_path": "components/DownloadComponent.js",
+    "reference": "JSXText",
+    "text": "Download for Windows"
+  },
+  {
+    "key": "DownloadComponent.js_30_L2Rvd2",
+    "file_path": "components/DownloadComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/downloads/worktwins_macos.dmg"
+  },
+  {
+    "key": "DownloadComponent.js_22_L2ltYW",
+    "file_path": "components/DownloadComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/macos_icon.svg"
+  },
+  {
+    "key": "DownloadComponent.js_10_TWFjT1",
+    "file_path": "components/DownloadComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "MacOS Icon"
+  },
+  {
+    "key": "DownloadComponent.js_18_RG93bm",
+    "file_path": "components/DownloadComponent.js",
+    "reference": "JSXText",
+    "text": "Download for MacOS"
+  },
+  {
+    "key": "DownloadComponent.js_10_TGludX",
+    "file_path": "components/DownloadComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Linux Icon"
+  },
+  {
+    "key": "Footer.js_8_UHJvZH",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "Products"
+  },
+  {
+    "key": "Footer.js_21_c3Viam",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "subjective_semantizer"
+  },
+  {
+    "key": "Footer.js_25_R1TCri",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Semantizer"
+  },
+  {
+    "key": "Footer.js_28_c3Viam",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "subjective_cognitive_booster"
+  },
+  {
+    "key": "Footer.js_32_R1TCri",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Cognitive Booster"
+  },
+  {
+    "key": "Footer.js_19_c3Viam",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "subjective_domotics"
+  },
+  {
+    "key": "Footer.js_23_R1TCri",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Domotics"
+  },
+  {
+    "key": "Footer.js_22_c3Viam",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "subjective_advertising"
+  },
+  {
+    "key": "Footer.js_26_R1TCri",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Advertising"
+  },
+  {
+    "key": "Footer.js_29_c3Viam",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "subjective_instant_job_finder"
+  },
+  {
+    "key": "Footer.js_33_R1TCri",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Instant Job Finder"
+  },
+  {
+    "key": "Footer.js_18_c3Viam",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "subjective_formate"
+  },
+  {
+    "key": "Footer.js_22_R1TCri",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective ForMate"
+  },
+  {
+    "key": "Footer.js_26_c3Viam",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "subjective_thermo_currency"
+  },
+  {
+    "key": "Footer.js_30_R1TCri",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Thermo-Currency"
+  },
+  {
+    "key": "Footer.js_20_c3Viam",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "subjective_logistics"
+  },
+  {
+    "key": "Footer.js_24_R1TCri",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Logistics"
+  },
+  {
+    "key": "Footer.js_5_QWJvdX",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "About"
+  },
+  {
+    "key": "Footer.js_6_aW1wYW",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "impact"
+  },
+  {
+    "key": "Footer.js_6_SW1wYW",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "Impact"
+  },
+  {
+    "key": "Footer.js_12_aG93X2",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "how_it_works"
+  },
+  {
+    "key": "Footer.js_12_SG93IE",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "How It Works"
+  },
+  {
+    "key": "Footer.js_19_c2NpZW",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "scientific_research"
+  },
+  {
+    "key": "Footer.js_19_U2NpZW",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "Scientific Research"
+  },
+  {
+    "key": "Footer.js_7_Y2FyZW",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "careers"
+  },
+  {
+    "key": "Footer.js_7_Q2FyZW",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "Careers"
+  },
+  {
+    "key": "Footer.js_8_aW52ZX",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "investor"
+  },
+  {
+    "key": "Footer.js_9_SW52ZX",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "Investors"
+  },
+  {
+    "key": "Footer.js_7_Y29udG",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "contact"
+  },
+  {
+    "key": "Footer.js_7_Q29udG",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "Contact"
+  },
+  {
+    "key": "Footer.js_10_Y29uc3",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "consulting"
+  },
+  {
+    "key": "Footer.js_10_Q29uc3",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "Consulting"
+  },
+  {
+    "key": "Footer.js_9_Rm9sbG",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "Follow Us"
+  },
+  {
+    "key": "Footer.js_24_aHR0cH",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "https://www.facebook.com"
+  },
+  {
+    "key": "Footer.js_8_RmFjZW",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "Facebook"
+  },
+  {
+    "key": "Footer.js_23_aHR0cH",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "https://x.com/worktwins"
+  },
+  {
+    "key": "Footer.js_1_WA==",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "X"
+  },
+  {
+    "key": "Footer.js_8_TGlua2",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "LinkedIn"
+  },
+  {
+    "key": "Footer.js_25_aHR0cH",
+    "file_path": "components/Footer.js",
+    "reference": "JSXAttribute (href)",
+    "text": "https://www.instagram.com"
+  },
+  {
+    "key": "Footer.js_9_SW5zdG",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "Instagram"
+  },
+  {
+    "key": "Footer.js_30_wqkgMj",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "© 2023 Subjective Technologies"
+  },
+  {
+    "key": "Footer.js_276_Q29weX",
+    "file_path": "components/Footer.js",
+    "reference": "JSXText",
+    "text": "Copyright © BrainBoost Limited, 2019. All rights reserved. goldenthinker.com “THE THINKER ®” and “GOLDEN THINKER ®” are registered trademarks of BrainBoost Limited, in Ireland and the United States. Company Registered in Ireland cro no. 589489. Registered VAT no. IE3435462UH."
+  },
+  {
+    "key": "FullScreenVideo.js_8_YWJzb2",
+    "file_path": "components/FullScreenVideo.js",
+    "reference": "ObjectProperty (position)",
+    "text": "absolute"
+  },
+  {
+    "key": "FullScreenVideo.js_4_MTAwJQ",
+    "file_path": "components/FullScreenVideo.js",
+    "reference": "ObjectProperty (width)",
+    "text": "100%"
+  },
+  {
+    "key": "GoldenThinkerAnimation.js_18_aW1hZ2",
+    "file_path": "components/GoldenThinkerAnimation.js",
+    "reference": "ObjectProperty (sphereTexturePath)",
+    "text": "images/heaven.webp"
+  },
+  {
+    "key": "GoldenThinkerAnimation.js_4_MTAwJQ",
+    "file_path": "components/GoldenThinkerAnimation.js",
+    "reference": "ObjectProperty (width)",
+    "text": "100%"
+  },
+  {
+    "key": "ImpactComponent.js_35_aHR0cH",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "ObjectProperty (image)",
+    "text": "https://via.placeholder.com/800x400"
+  },
+  {
+    "key": "ImpactComponent.js_25_U3Viam",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "ObjectProperty (title)",
+    "text": "Subjective ThermoCurrency"
+  },
+  {
+    "key": "ImpactComponent.js_439_VGhpcy",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "This pioneering currency is backed by the laws of physics, specifically energy. By using energy as a universal currency, we can create a fairer and more sustainable economic system. The subjective thermocurrency ensures that everyone has access to the resources they need by utilizing the energy they expend in their daily activities. This system promotes efficiency and equity, potentially eliminating the traditional concept of scarcity."
+  },
+  {
+    "key": "ImpactComponent.js_22_U3Viam",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "ObjectProperty (title)",
+    "text": "Subjective Advertising"
+  },
+  {
+    "key": "ImpactComponent.js_329_VW5saW",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "Unlike traditional advertising, which often relies on intrusive and irrelevant messages, subjective advertising is problem-solving oriented. By detecting specific user needs and providing targeted solutions, it enhances user satisfaction and reduces wasteful consumption, contributing to a more efficient allocation of resources."
+  },
+  {
+    "key": "ImpactComponent.js_19_U3Viam",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "ObjectProperty (title)",
+    "text": "Subjective Domotics"
+  },
+  {
+    "key": "ImpactComponent.js_296_VGhpcy",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "This smart home technology learns and adapts to the user’s habits and preferences, optimizing energy use and improving comfort. By reducing unnecessary energy consumption and automating routine tasks, subjective domotics can significantly lower the cost of living and enhance the quality of life."
+  },
+  {
+    "key": "ImpactComponent.js_21_U3Viam",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "ObjectProperty (title)",
+    "text": "Subjective Semantizer"
+  },
+  {
+    "key": "ImpactComponent.js_321_VGhpcy",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "This technology transforms written knowledge into subjective computer vision experiences, making learning more intuitive and accessible. By integrating real-time, context-aware learning into everyday activities, it reduces the need for formal education systems and makes knowledge acquisition more seamless and efficient."
+  },
+  {
+    "key": "ImpactComponent.js_301_QnkgYW",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "By analyzing work environments and matching them with the most suitable candidates based on their past experiences and skills, this technology streamlines the job matching process. It reduces the time and effort required for job hunting and hiring, leading to a more efficient and satisfied workforce."
+  },
+  {
+    "key": "ImpactComponent.js_18_U3Viam",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "ObjectProperty (title)",
+    "text": "Subjective Adapter"
+  },
+  {
+    "key": "ImpactComponent.js_287_VGhpcy",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "This tool learns from user interactions with legacy systems, automating repetitive tasks and reducing the need for manual input. It enhances productivity by allowing users to focus on more creative and meaningful work, ultimately leading to a reduction in traditional labor requirements."
+  },
+  {
+    "key": "ImpactComponent.js_293_QnkgY3",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "By creating digital clones that mimic the behavior and decision-making processes of individuals, this technology enables users to extend their presence and influence without being physically present. It allows for greater flexibility and efficiency in managing personal and professional tasks."
+  },
+  {
+    "key": "ImpactComponent.js_17_Q29nbm",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "ObjectProperty (title)",
+    "text": "Cognitive Booster"
+  },
+  {
+    "key": "ImpactComponent.js_227_VGhpcy",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "This system enhances human cognitive capabilities by providing real-time reminders, suggestions, and contextual information. It helps users manage their daily lives more effectively, reducing stress and increasing productivity."
+  },
+  {
+    "key": "ImpactComponent.js_53_dmlkZW",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "video/brainboost_marketing_media_video_subjective.mp4"
+  },
+  {
+    "key": "ImpactComponent.js_9_dmlkZW",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "JSXAttribute (type)",
+    "text": "video/mp4"
+  },
+  {
+    "key": "ImpactComponent.js_44_WW91ci",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "JSXText",
+    "text": "Your browser does not support the video tag."
+  },
+  {
+    "key": "ImpactComponent.js_44_SW1wYW",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "JSXText",
+    "text": "Impact of Subjective Technologies in Society"
+  },
+  {
+    "key": "ImpactComponent.js_438_VGhlIG",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "JSXText",
+    "text": "The advent of Subjective Technologies marks a pivotal shift in the evolution of human interaction with technology. This transformation promises to usher in a new era characterized by post-scarcity, post-education, and post-labour dynamics, fundamentally altering the societal landscape. In this essay, we will explore the general implications of these changes and delve into specific technology products that exemplify these advancements."
+  },
+  {
+    "key": "ImpactComponent.js_14_UG9zdC",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "JSXText",
+    "text": "Post-Scarcity:"
+  },
+  {
+    "key": "ImpactComponent.js_540_VGhlIG",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "JSXText",
+    "text": "The concept of post-scarcity revolves around the idea that technological advancements can provide abundance, reducing or eliminating the scarcity of resources. Subjective Technologies facilitate this by optimizing the use of resources through real-time, personalized cognitive assistance. For example, VirtualGlands, a concept within this framework, enable users to perform energy transactions unconsciously and instantaneously, effectively replacing traditional currency systems and contributing to a more efficient and abundant economy​​."
+  },
+  {
+    "key": "ImpactComponent.js_15_UG9zdC",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "JSXText",
+    "text": "Post-Education:"
+  },
+  {
+    "key": "ImpactComponent.js_574_VHJhZG",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "JSXText",
+    "text": "Traditional education systems, with their one-size-fits-all approach, often fail to address individual learning needs and preferences. Subjective Technologies propose a paradigm shift towards a personalized learning experience. By providing real-time, context-sensitive cognitive services, these technologies empower individuals to learn and solve problems in ways that are tailored to their unique cognitive processes. This personalized approach democratizes access to knowledge and promotes continuous, lifelong learning, making formal education systems less critical​​​​."
+  },
+  {
+    "key": "ImpactComponent.js_12_UG9zdC",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "JSXText",
+    "text": "Post-Labour:"
+  },
+  {
+    "key": "ImpactComponent.js_561_VGhlIG",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "JSXText",
+    "text": "The integration of Subjective Technologies into daily life has the potential to significantly reduce the cognitive load associated with various tasks, from mundane daily activities to complex professional responsibilities. By enhancing individual capabilities and automating routine tasks, these technologies could lead to a reduction in the necessity for traditional forms of labor. This shift could free individuals to pursue more creative, fulfilling, and intellectually stimulating endeavors, contributing to a more balanced and humane societal structure​​."
+  },
+  {
+    "key": "ImpactComponent.js_17_UG9zdC",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "JSXText",
+    "text": "Post-Scarcity Era"
+  },
+  {
+    "key": "ImpactComponent.js_18_UG9zdC",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "JSXText",
+    "text": "Post-Education Era"
+  },
+  {
+    "key": "ImpactComponent.js_149_IlRoZS",
+    "file_path": "components/ImpactComponent.js",
+    "reference": "JSXText",
+    "text": "\"The Golden Thinker has changed the way we approach technology. Their solutions are not just innovative, but truly transformative.\" - Industry Expert"
+  },
+  {
+    "key": "InvestorComponent.js_32_SW52ZX",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Investors Page for WorkTwins.com"
+  },
+  {
+    "key": "InvestorComponent.js_59_V2VsY2",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Welcome to the Future of Hiring and Workforce Collaboration"
+  },
+  {
+    "key": "InvestorComponent.js_558_QXQgV2",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "At WorkTwins.com, we are revolutionizing how companies hire and collaborate by using empirical, real-world data to match developers—and eventually professionals from all fields—based on actual work performance. Powered by our patented 0-Input Subjective Technology, we provide a platform where developers hire other developers, using WorkFootPrints to identify the best technical fit. With our technology, we eliminate inefficiencies in hiring, empower real-time collaboration, and create a data-driven approach that is poised to disrupt multiple industries."
+  },
+  {
+    "key": "InvestorComponent.js_10_T3VyIF",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Our Vision"
+  },
+  {
+    "key": "InvestorComponent.js_460_V2UgYm",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "We believe the hiring process should be data-driven, efficient, and precise. Our goal is to eliminate the guesswork that exists in traditional recruitment by offering an empirical, real-time solution for workforce optimization. Starting with developers and expanding to all professions, WorkTwins is designed to empower professionals with data-driven collaboration and hiring, fostering collective work intelligence from a Subjective Perspective, with 0-Input."
+  },
+  {
+    "key": "InvestorComponent.js_29_S2V5IE",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Key Features of WorkTwins.com"
+  },
+  {
+    "key": "InvestorComponent.js_29_RGV2ZW",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Developer-to-Developer Hiring"
+  },
+  {
+    "key": "InvestorComponent.js_315_VW5saW",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Unlike traditional platforms, WorkTwins enables developers to hire developers based on their actual performance and coding activity, as captured through our WorkFootPrint system. This ensures that companies hire the right technical talent the first time, reducing the need for extensive interviews and coding tests."
+  },
+  {
+    "key": "InvestorComponent.js_24_V29ya0",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "WorkFootPrint Technology"
+  },
+  {
+    "key": "InvestorComponent.js_281_V29ya0",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "WorkFootPrints are empirical records of a developer’s activities, performance, and real-world expertise. They eliminate the reliance on subjective resumes, interviews, or technical tests, offering a precise match between job requirements and the developer's demonstrated abilities."
+  },
+  {
+    "key": "InvestorComponent.js_38_L2ltYW",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/worktwins_vignette_diffuse.png"
+  },
+  {
+    "key": "InvestorComponent.js_49_UmVhbC",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Real-Time Collaboration & Collective Intelligence"
+  },
+  {
+    "key": "InvestorComponent.js_226_RGV2ZW",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Developers can collaborate with other professionals facing the same technical challenges in real time, creating a network of collective intelligence. This fosters fast problem-solving and allows developers to never work alone."
+  },
+  {
+    "key": "InvestorComponent.js_36_QnVpbH",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Built on Patented 0-Input Technology"
+  },
+  {
+    "key": "InvestorComponent.js_190_T3VyIH",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Our platform is powered by 0-Input Subjective Technology, a broader framework that enables seamless, intuitive interaction between professionals and technology, requiring minimal user input."
+  },
+  {
+    "key": "InvestorComponent.js_29_c3Viam",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (id)",
+    "text": "subjective-0-input-technology"
+  },
+  {
+    "key": "InvestorComponent.js_38_V2hhdC",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "What is Subjective 0-Input Technology?"
+  },
+  {
+    "key": "InvestorComponent.js_54_L3ZpZG",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/video/brainboost_marketing_media_video_subjective.mp4"
+  },
+  {
+    "key": "InvestorComponent.js_22_RG93bm",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Download Our Documents"
+  },
+  {
+    "key": "InvestorComponent.js_46_L2Rvd2",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/downloads/Business Plan for WorkTwins.com.pdf"
+  },
+  {
+    "key": "InvestorComponent.js_13_QnVzaW",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (title)",
+    "text": "Business Plan"
+  },
+  {
+    "key": "InvestorComponent.js_6_X2JsYW",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (target)",
+    "text": "_blank"
+  },
+  {
+    "key": "InvestorComponent.js_19_bm9vcG",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (rel)",
+    "text": "noopener noreferrer"
+  },
+  {
+    "key": "InvestorComponent.js_60_L2Rvd2",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/downloads/Subjective Technologies_APA_7_en-202401142351.pdf"
+  },
+  {
+    "key": "InvestorComponent.js_29_U3Viam",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (title)",
+    "text": "Subjective Technologies APA 7"
+  },
+  {
+    "key": "InvestorComponent.js_36_RG93bm",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Download Subjective Technologies APA"
+  },
+  {
+    "key": "InvestorComponent.js_72_L2Rvd2",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/downloads/subjective_technologies_an_exoskeleton_for_the_mind_print.pdf"
+  },
+  {
+    "key": "InvestorComponent.js_35_U3Viam",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (title)",
+    "text": "Subjective Technologies Exoskeleton"
+  },
+  {
+    "key": "InvestorComponent.js_33_RG93bm",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Download Exoskeleton for the Mind"
+  },
+  {
+    "key": "InvestorComponent.js_30_L2Rvd2",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/downloads/US20220358283A1.pdf"
+  },
+  {
+    "key": "InvestorComponent.js_22_UGF0ZW",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (title)",
+    "text": "Patent US20220358283A1"
+  },
+  {
+    "key": "InvestorComponent.js_31_RG93bm",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Download Patent US20220358283A1"
+  },
+  {
+    "key": "InvestorComponent.js_22_R2V0IG",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Get our book on Amazon"
+  },
+  {
+    "key": "InvestorComponent.js_101_aHR0cD",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "http://localhost:3000/images/brainboost_marketing_images_thefirstzeroinputtechnology_book_website.png"
+  },
+  {
+    "key": "InvestorComponent.js_80_L2ltYW",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/brainboost_marketing_images_thefirstzeroinputtechnology_book_website.png"
+  },
+  {
+    "key": "InvestorComponent.js_18_TWFya2",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Market Opportunity"
+  },
+  {
+    "key": "InvestorComponent.js_544_VGhlIG",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "The global market for software developers is expected to grow from 26.4 million developers in 2023 to 45 million by 2030. The staff augmentation industry is on a similar growth trajectory, with a market size forecasted to grow from $132 billion in 2023 to $205 billion by 2030. Yet, hiring inefficiencies persist—long recruitment cycles, skills mismatches, and high costs are still major barriers for companies. WorkTwins.com addresses these challenges with data-driven, automated matching that eliminates the friction in hiring and onboarding."
+  },
+  {
+    "key": "InvestorComponent.js_36_UHJvZH",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Product Ecosystem: Beyond Developers"
+  },
+  {
+    "key": "InvestorComponent.js_386_V29ya1",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "WorkTwins.com is the first of many products in our broader Subjective Technology ecosystem. As AI and computer vision techniques evolve, the same WorkFootPrint model will be applied to other professions, from design and project management to data analysis and customer support. This positions WorkTwins as a scalable platform that can transform workforce optimization across industries."
+  },
+  {
+    "key": "InvestorComponent.js_16_RnV0dX",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Future Products:"
+  },
+  {
+    "key": "InvestorComponent.js_68_U3Viam",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Subjective ForMate – Automated form-filling system using zero input."
+  },
+  {
+    "key": "InvestorComponent.js_70_U3Viam",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Subjective Domotics – Smart home automation that learns user behavior."
+  },
+  {
+    "key": "InvestorComponent.js_105_U3Viam",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Subjective Semantizer – A post-education tool creating dynamic semantic models for knowledge enhancement."
+  },
+  {
+    "key": "InvestorComponent.js_94_U3Viam",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Subjective JobFinder – Extending WorkTwins to match all professionals based on empirical data."
+  },
+  {
+    "key": "InvestorComponent.js_86_U3Viam",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Subjective Thermo-Currency – A novel economic model using real-time energy accounting."
+  },
+  {
+    "key": "InvestorComponent.js_98_U3Viam",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Subjective Advertising – A solution-centric advertising platform tailored to real-time user needs."
+  },
+  {
+    "key": "InvestorComponent.js_111_U3Viam",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Subjective Adapter – A bridge for legacy systems, enhancing user experiences without complete system overhauls."
+  },
+  {
+    "key": "InvestorComponent.js_28_V2h5IE",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Why Invest in WorkTwins.com?"
+  },
+  {
+    "key": "InvestorComponent.js_21_SHVnZS",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Huge Market Potential"
+  },
+  {
+    "key": "InvestorComponent.js_307_V2l0aC",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "With a growing global workforce that is increasingly specialized, WorkTwins.com is positioned to address the inefficiencies in talent acquisition and real-time collaboration. Starting with the developer market, the platform is set to scale across industries, from IT to design, customer service, and beyond."
+  },
+  {
+    "key": "InvestorComponent.js_24_R2FtZS",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Game-Changing Technology"
+  },
+  {
+    "key": "InvestorComponent.js_274_T3VyIH",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Our patented 0-Input Technology and Computational Affinity Antenna enable us to capture real-world performance data in a way that no other platform can. This ensures that companies hire based on empirical evidence, removing biases and inefficiencies from the hiring process."
+  },
+  {
+    "key": "InvestorComponent.js_23_U2NhbG",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Scalable and Expandable"
+  },
+  {
+    "key": "InvestorComponent.js_213_V29ya1",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "WorkTwins.com is just the beginning. Our Subjective Technology framework provides a scalable foundation that can evolve into new industries and products, creating a wide-ranging impact across the global workforce."
+  },
+  {
+    "key": "InvestorComponent.js_29_UmVkdW",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Reduced Hiring Costs and Time"
+  },
+  {
+    "key": "InvestorComponent.js_223_QnkgYX",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "By automating the technical vetting process and reducing the need for interviews, WorkTwins drastically shortens the time-to-hire and lowers recruitment costs. Companies can onboard the right talent quickly and efficiently."
+  },
+  {
+    "key": "InvestorComponent.js_21_RmluYW",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Financial Projections"
+  },
+  {
+    "key": "InvestorComponent.js_4_WWVhcg",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Year"
+  },
+  {
+    "key": "InvestorComponent.js_7_UmV2ZW",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Revenue"
+  },
+  {
+    "key": "InvestorComponent.js_8_RXhwZW",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Expenses"
+  },
+  {
+    "key": "InvestorComponent.js_11_UHJvZm",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Profit/Loss"
+  },
+  {
+    "key": "InvestorComponent.js_4_MjAyNA",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "2024"
+  },
+  {
+    "key": "InvestorComponent.js_5_JDIuNU",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "$2.5M"
+  },
+  {
+    "key": "InvestorComponent.js_5_JDEuOE",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "$1.8M"
+  },
+  {
+    "key": "InvestorComponent.js_5_JDcwME",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "$700K"
+  },
+  {
+    "key": "InvestorComponent.js_4_MjAyNQ",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "2025"
+  },
+  {
+    "key": "InvestorComponent.js_3_JDhN",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "$8M"
+  },
+  {
+    "key": "InvestorComponent.js_5_JDQuNU",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "$4.5M"
+  },
+  {
+    "key": "InvestorComponent.js_5_JDMuNU",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "$3.5M"
+  },
+  {
+    "key": "InvestorComponent.js_4_MjAyNg",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "2026"
+  },
+  {
+    "key": "InvestorComponent.js_4_JDE1TQ",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "$15M"
+  },
+  {
+    "key": "InvestorComponent.js_3_JDdN",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "$7M"
+  },
+  {
+    "key": "InvestorComponent.js_4_MjAyNw",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "2027"
+  },
+  {
+    "key": "InvestorComponent.js_4_JDMwTQ",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "$30M"
+  },
+  {
+    "key": "InvestorComponent.js_4_JDE0TQ",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "$14M"
+  },
+  {
+    "key": "InvestorComponent.js_4_JDE2TQ",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "$16M"
+  },
+  {
+    "key": "InvestorComponent.js_20_RnVuZG",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Funding Requirements"
+  },
+  {
+    "key": "InvestorComponent.js_196_V2UgYX",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "We are seeking $5 million in seed funding to accelerate platform development, enhance AI-driven matching algorithms, and expand marketing and sales operations. The funding will be used as follows:"
+  },
+  {
+    "key": "InvestorComponent.js_98_MzAlIG",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "30% for product development (enhancing WorkFootPrint analytics and real-time collaboration tools)."
+  },
+  {
+    "key": "InvestorComponent.js_91_NDAlIG",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "40% for sales and marketing (expanding the sales team, partnerships, and outreach efforts)."
+  },
+  {
+    "key": "InvestorComponent.js_40_MjAlIG",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "20% for customer support and operations."
+  },
+  {
+    "key": "InvestorComponent.js_35_MTAlIG",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "10% for general corporate purposes."
+  },
+  {
+    "key": "InvestorComponent.js_13_TWVldC",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Meet Our Team"
+  },
+  {
+    "key": "InvestorComponent.js_33_L2ltYW",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/icons/profile_yo.-min.jpg"
+  },
+  {
+    "key": "InvestorComponent.js_9_VG9tbX",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Tommy Fox"
+  },
+  {
+    "key": "InvestorComponent.js_27_VG9tbX",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Tommy Fox – Company Founder"
+  },
+  {
+    "key": "InvestorComponent.js_218_VG9tbX",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Tommy leads the development of WorkTwins, bringing years of experience in software architecture and developer tools. He ensures the seamless integration of advanced AI and machine learning algorithms into the platform."
+  },
+  {
+    "key": "InvestorComponent.js_33_U2NoZW",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Schedule a Meeting with Tommy Fox"
+  },
+  {
+    "key": "InvestorComponent.js_36_aHR0cH",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (url)",
+    "text": "https://calendly.com/tommy-fox/30min"
+  },
+  {
+    "key": "InvestorComponent.js_5_NzAwcH",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "ObjectProperty (height)",
+    "text": "700px"
+  },
+  {
+    "key": "InvestorComponent.js_37_Sm9pbi",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Join Us in Shaping the Future of Work"
+  },
+  {
+    "key": "InvestorComponent.js_280_QXQgV2",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "At WorkTwins.com, we are redefining how companies find, hire, and collaborate with talent. By investing in WorkTwins, you are backing a platform that will revolutionize the hiring process, improve workforce efficiency, and expand into new industries using cutting-edge technology."
+  },
+  {
+    "key": "InvestorComponent.js_10_Q29udG",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "Contact Us"
+  },
+  {
+    "key": "InvestorComponent.js_111_Rm9yIG",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "For more information or to discuss investment opportunities, please reach out to our Investor Relations Team at"
+  },
+  {
+    "key": "InvestorComponent.js_30_bWFpbH",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "mailto:investors@worktwins.com"
+  },
+  {
+    "key": "InvestorComponent.js_23_aW52ZX",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "investors@worktwins.com"
+  },
+  {
+    "key": "InvestorComponent.js_1_Lg==",
+    "file_path": "components/InvestorComponent.js",
+    "reference": "JSXText",
+    "text": "."
+  },
+  {
+    "key": "KnowledgeHooksComponent.js_25_S25vd2",
+    "file_path": "components/KnowledgeHooksComponent.js",
+    "reference": "JSXText",
+    "text": "Knowledge Hooks Component"
+  },
+  {
+    "key": "LoadableComponent.js_18_TG9hZG",
+    "file_path": "components/LoadableComponent.js",
+    "reference": "JSXText",
+    "text": "Loadable Component"
+  },
+  {
+    "key": "Menu.js_4_bG9nbw",
+    "file_path": "components/Menu.js",
+    "reference": "JSXAttribute (id)",
+    "text": "logo"
+  },
+  {
+    "key": "Menu.js_1_Lw==",
+    "file_path": "components/Menu.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/"
+  },
+  {
+    "key": "Menu.js_29_Li4vaW",
+    "file_path": "components/Menu.js",
+    "reference": "JSXAttribute (src)",
+    "text": "../images/logo_horizontal.png"
+  },
+  {
+    "key": "Menu.js_4_TG9nbw",
+    "file_path": "components/Menu.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Logo"
+  },
+  {
+    "key": "Menu.js_10_LyNkb3",
+    "file_path": "components/Menu.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/#download"
+  },
+  {
+    "key": "Menu.js_8_RG93bm",
+    "file_path": "components/Menu.js",
+    "reference": "JSXText",
+    "text": "Download"
+  },
+  {
+    "key": "Menu.js_13_Li4vY2",
+    "file_path": "components/Menu.js",
+    "reference": "JSXAttribute (href)",
+    "text": "../consulting"
+  },
+  {
+    "key": "Menu.js_10_Q29uc3",
+    "file_path": "components/Menu.js",
+    "reference": "JSXText",
+    "text": "Consulting"
+  },
+  {
+    "key": "Menu.js_11_Li4vaW",
+    "file_path": "components/Menu.js",
+    "reference": "JSXAttribute (href)",
+    "text": "../investor"
+  },
+  {
+    "key": "Menu.js_9_SW52ZX",
+    "file_path": "components/Menu.js",
+    "reference": "JSXText",
+    "text": "Investors"
+  },
+  {
+    "key": "Menu.js_10_Li4vcH",
+    "file_path": "components/Menu.js",
+    "reference": "JSXAttribute (href)",
+    "text": "../pricing"
+  },
+  {
+    "key": "Menu.js_7_UHJpY2",
+    "file_path": "components/Menu.js",
+    "reference": "JSXText",
+    "text": "Pricing"
+  },
+  {
+    "key": "Menu.js_9_LyNjb2",
+    "file_path": "components/Menu.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/#contact"
+  },
+  {
+    "key": "Menu.js_7_Q29udG",
+    "file_path": "components/Menu.js",
+    "reference": "JSXText",
+    "text": "Contact"
+  },
+  {
+    "key": "Menu.js_10_Li4vc2",
+    "file_path": "components/Menu.js",
+    "reference": "JSXAttribute (href)",
+    "text": "../sign_up"
+  },
+  {
+    "key": "Menu.js_7_U2lnbi",
+    "file_path": "components/Menu.js",
+    "reference": "JSXText",
+    "text": "Sign Up"
+  },
+  {
+    "key": "PricingComponent.js_16_Q2hvb3",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Choose Your Plan"
+  },
+  {
+    "key": "PricingComponent.js_14_RGV2ZW",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Developer Plan"
+  },
+  {
+    "key": "PricingComponent.js_4_RnJlZQ",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Free"
+  },
+  {
+    "key": "PricingComponent.js_1_4pyU",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "✔"
+  },
+  {
+    "key": "PricingComponent.js_22_V29ya0",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "WorkFootPrint Creation"
+  },
+  {
+    "key": "PricingComponent.js_23_UmVhbC",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Real-Time Collaboration"
+  },
+  {
+    "key": "PricingComponent.js_17_Sm9iIE",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Job Opportunities"
+  },
+  {
+    "key": "PricingComponent.js_18_R2l0SH",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "GitHub Integration"
+  },
+  {
+    "key": "PricingComponent.js_7_U2lnbi",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Sign Up"
+  },
+  {
+    "key": "PricingComponent.js_23_QnVzaW",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Business Essential Plan"
+  },
+  {
+    "key": "PricingComponent.js_10_JDQ5OS",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "$499/month"
+  },
+  {
+    "key": "PricingComponent.js_24_QWNjZX",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Access to WorkFootPrints"
+  },
+  {
+    "key": "PricingComponent.js_19_VXAgdG",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Up to 5 Hires/Month"
+  },
+  {
+    "key": "PricingComponent.js_21_UGVyZm",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Performance Analytics"
+  },
+  {
+    "key": "PricingComponent.js_1_4pyW",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "✖"
+  },
+  {
+    "key": "PricingComponent.js_14_Q3VzdG",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Custom Filters"
+  },
+  {
+    "key": "PricingComponent.js_11_R2V0IF",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Get Started"
+  },
+  {
+    "key": "PricingComponent.js_17_QnVzaW",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Business Pro Plan"
+  },
+  {
+    "key": "PricingComponent.js_12_JDEsND",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "$1,499/month"
+  },
+  {
+    "key": "PricingComponent.js_28_QWR2YW",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Advanced Matching Algorithms"
+  },
+  {
+    "key": "PricingComponent.js_20_VXAgdG",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Up to 20 Hires/Month"
+  },
+  {
+    "key": "PricingComponent.js_19_Q29sbG",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Collaboration Tools"
+  },
+  {
+    "key": "PricingComponent.js_15_RW50ZX",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Enterprise Plan"
+  },
+  {
+    "key": "PricingComponent.js_13_JDMsOT",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "$3,999+/month"
+  },
+  {
+    "key": "PricingComponent.js_24_VW5saW",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Unlimited WorkFootPrints"
+  },
+  {
+    "key": "PricingComponent.js_19_RnVsbC",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Full Suite of Tools"
+  },
+  {
+    "key": "PricingComponent.js_22_V29ya2",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Workforce Organization"
+  },
+  {
+    "key": "PricingComponent.js_25_RGVkaW",
+    "file_path": "components/PricingComponent.js",
+    "reference": "JSXText",
+    "text": "Dedicated Account Manager"
+  },
+  {
+    "key": "ScientificResearchComponent.js_19_U2NpZW",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXText",
+    "text": "Scientific Research"
+  },
+  {
+    "key": "ScientificResearchComponent.js_69_RXhwbG",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXText",
+    "text": "Explore our extensive collection of research papers and publications."
+  },
+  {
+    "key": "ScientificResearchComponent.js_33_aHR0cH",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "https://www.example.com/research1"
+  },
+  {
+    "key": "ScientificResearchComponent.js_37_UGFwZX",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXText",
+    "text": "Paper 1: Title and brief description."
+  },
+  {
+    "key": "ScientificResearchComponent.js_31_Rm9yIG",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXText",
+    "text": "For more information, visit our"
+  },
+  {
+    "key": "ScientificResearchComponent.js_23_aHR0cH",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "https://www.example.com"
+  },
+  {
+    "key": "ScientificResearchComponent.js_13_cmVzZW",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXText",
+    "text": "research page"
+  },
+  {
+    "key": "ScientificResearchComponent.js_1_Lg==",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXText",
+    "text": "."
+  },
+  {
+    "key": "ScientificResearchComponent.js_31_aHR0cH",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "https://via.placeholder.com/150"
+  },
+  {
+    "key": "ScientificResearchComponent.js_6_TG9nby",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Logo 1"
+  },
+  {
+    "key": "ScientificResearchComponent.js_10_T1JDSU",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "ORCID Logo"
+  },
+  {
+    "key": "ScientificResearchComponent.js_19_MDAwMC",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXText",
+    "text": "0000-0001-2345-6789"
+  },
+  {
+    "key": "ScientificResearchComponent.js_10_Qm9vay",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXText",
+    "text": "Book Title"
+  },
+  {
+    "key": "ScientificResearchComponent.js_20_U3VidG",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXText",
+    "text": "Subtitle of the book"
+  },
+  {
+    "key": "ScientificResearchComponent.js_35_aHR0cH",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "https://via.placeholder.com/400x600"
+  },
+  {
+    "key": "ScientificResearchComponent.js_19_Tm90ZS",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXText",
+    "text": "Note about the book"
+  },
+  {
+    "key": "ScientificResearchComponent.js_20_UGl0Y2",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXText",
+    "text": "Pitch about the book"
+  },
+  {
+    "key": "ScientificResearchComponent.js_22_aHR0cH",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "https://www.amazon.com"
+  },
+  {
+    "key": "ScientificResearchComponent.js_13_QnV5IG",
+    "file_path": "components/ScientificResearchComponent.js",
+    "reference": "JSXText",
+    "text": "Buy on Amazon"
+  },
+  {
+    "key": "SignInComponent.js_7_U2lnbi",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXText",
+    "text": "Sign In"
+  },
+  {
+    "key": "SignInComponent.js_5_ZW1haW",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "email"
+  },
+  {
+    "key": "SignInComponent.js_5_RW1haW",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXText",
+    "text": "Email"
+  },
+  {
+    "key": "SignInComponent.js_8_cGFzc3",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "password"
+  },
+  {
+    "key": "SignInComponent.js_8_UGFzc3",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXText",
+    "text": "Password"
+  },
+  {
+    "key": "SignInComponent.js_6_c3VibW",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXAttribute (type)",
+    "text": "submit"
+  },
+  {
+    "key": "SignInComponent.js_2_T1I=",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXText",
+    "text": "OR"
+  },
+  {
+    "key": "SignInComponent.js_65_L2ltYW",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/icons/1298745_google_brand_branding_logo_network_icon.svg"
+  },
+  {
+    "key": "SignInComponent.js_11_R29vZ2",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Google icon"
+  },
+  {
+    "key": "SignInComponent.js_19_U2lnbi",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXText",
+    "text": "Sign in with Google"
+  },
+  {
+    "key": "SignInComponent.js_55_L2ltYW",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/icons/1221583_github_logo_media_social_icon.png"
+  },
+  {
+    "key": "SignInComponent.js_11_R2l0SH",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "GitHub icon"
+  },
+  {
+    "key": "SignInComponent.js_56_L2ltYW",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/icons/11053969_x_logo_twitter_new_brand_icon.svg"
+  },
+  {
+    "key": "SignInComponent.js_12_VHdpdH",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Twitter icon"
+  },
+  {
+    "key": "SignInComponent.js_20_U2lnbi",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXText",
+    "text": "Sign in with Twitter"
+  },
+  {
+    "key": "SignInComponent.js_21_Rm9yZ2",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXText",
+    "text": "Forgot your password?"
+  },
+  {
+    "key": "SignInComponent.js_14_UmVzZX",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXText",
+    "text": "Reset Password"
+  },
+  {
+    "key": "SignInComponent.js_9_TmV3IF",
+    "file_path": "components/SignInComponent.js",
+    "reference": "JSXText",
+    "text": "New User?"
+  },
+  {
+    "key": "SignUpComponent.js_7_U2lnbi",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXText",
+    "text": "Sign Up"
+  },
+  {
+    "key": "SignUpComponent.js_5_ZW1haW",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "email"
+  },
+  {
+    "key": "SignUpComponent.js_5_RW1haW",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXText",
+    "text": "Email"
+  },
+  {
+    "key": "SignUpComponent.js_8_cGFzc3",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "password"
+  },
+  {
+    "key": "SignUpComponent.js_8_UGFzc3",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXText",
+    "text": "Password"
+  },
+  {
+    "key": "SignUpComponent.js_6_c3VibW",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXAttribute (type)",
+    "text": "submit"
+  },
+  {
+    "key": "SignUpComponent.js_2_T1I=",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXText",
+    "text": "OR"
+  },
+  {
+    "key": "SignUpComponent.js_65_L2ltYW",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/icons/1298745_google_brand_branding_logo_network_icon.svg"
+  },
+  {
+    "key": "SignUpComponent.js_11_R29vZ2",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Google icon"
+  },
+  {
+    "key": "SignUpComponent.js_19_U2lnbi",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXText",
+    "text": "Sign up with Google"
+  },
+  {
+    "key": "SignUpComponent.js_55_L2ltYW",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/icons/1221583_github_logo_media_social_icon.png"
+  },
+  {
+    "key": "SignUpComponent.js_11_R2l0SH",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "GitHub icon"
+  },
+  {
+    "key": "SignUpComponent.js_56_L2ltYW",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/icons/11053969_x_logo_twitter_new_brand_icon.svg"
+  },
+  {
+    "key": "SignUpComponent.js_12_VHdpdH",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Twitter icon"
+  },
+  {
+    "key": "SignUpComponent.js_20_U2lnbi",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXText",
+    "text": "Sign Up with Twitter"
+  },
+  {
+    "key": "SignUpComponent.js_13_QWxyZW",
+    "file_path": "components/SignUpComponent.js",
+    "reference": "JSXText",
+    "text": "Already User?"
+  },
+  {
+    "key": "StaticLandingComponent.js_6_c21vb3",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "ObjectProperty (behavior)",
+    "text": "smooth"
+  },
+  {
+    "key": "StaticLandingComponent.js_27_L2ltYW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "ObjectProperty (icon)",
+    "text": "/images/feature_monitor.png"
+  },
+  {
+    "key": "StaticLandingComponent.js_63_TW9uaX",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "ObjectProperty (title)",
+    "text": "Monitor Your Work Activity Using Computational Affinity Antenna"
+  },
+  {
+    "key": "StaticLandingComponent.js_361_VXRpbG",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "Utilize our desktop client, available for Windows, Mac, and Linux, to analyze your project files locally. The client automatically detects programming languages, libraries, frameworks, and APIs used within your projects. It also monitors your screen activity in real time using our KnowledgeHooks technology, providing detailed insights of your work experience."
+  },
+  {
+    "key": "StaticLandingComponent.js_29_L2ltYW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "ObjectProperty (icon)",
+    "text": "/images/feature_footprint.png"
+  },
+  {
+    "key": "StaticLandingComponent.js_39_R2VuZX",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "ObjectProperty (title)",
+    "text": "Generate Your Work Experience Footprint"
+  },
+  {
+    "key": "StaticLandingComponent.js_271_WW91ci",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "Your work experience Footprint is a string generated solely for comparison and context matching. Based on this, users will be sorted according to their computational affinity or distance, helping to identify similarities and differences in technical skills and workflows."
+  },
+  {
+    "key": "StaticLandingComponent.js_33_L2ltYW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "ObjectProperty (icon)",
+    "text": "/images/feature_collaboration.png"
+  },
+  {
+    "key": "StaticLandingComponent.js_23_UmVhbC",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "ObjectProperty (title)",
+    "text": "Real-Time Collaboration"
+  },
+  {
+    "key": "StaticLandingComponent.js_410_SW1hZ2",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "Imagine encountering a Windows error on your screen and instantly collaborating with other users facing the same error in real time. With WorkTwins.com, you never work alone—this is collective intelligence with a shared purpose. By connecting users experiencing similar challenges, the platform fosters a collaborative environment where solutions are found together, leveraging the power of a united workforce."
+  },
+  {
+    "key": "StaticLandingComponent.js_30_L2ltYW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "ObjectProperty (icon)",
+    "text": "/images/feature_whiteboard.png"
+  },
+  {
+    "key": "StaticLandingComponent.js_6_SW1wYW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "ObjectProperty (title)",
+    "text": "Impact"
+  },
+  {
+    "key": "StaticLandingComponent.js_354_VGVjaG",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "Technical interviews become obsolete. The platform empirically guarantees that you will always find the perfect employee for any role, even for the most specific tasks. By leveraging real-time data and computational affinity, we ensure seamless matches between employers and candidates, eliminating the guesswork from hiring. Developers, hire Developers."
+  },
+  {
+    "key": "StaticLandingComponent.js_4_aGVybw",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (id)",
+    "text": "hero"
+  },
+  {
+    "key": "StaticLandingComponent.js_19_RmluZC",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Find your WorkTwins"
+  },
+  {
+    "key": "StaticLandingComponent.js_11_R2V0IF",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Get Started"
+  },
+  {
+    "key": "StaticLandingComponent.js_8_ZmVhdH",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (id)",
+    "text": "features"
+  },
+  {
+    "key": "StaticLandingComponent.js_12_SG93IG",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "How it works"
+  },
+  {
+    "key": "StaticLandingComponent.js_58_U3Viam",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Subjective Artificial Intelligence for Candidate Selection"
+  },
+  {
+    "key": "StaticLandingComponent.js_3_MjUw",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (width)",
+    "text": "250"
+  },
+  {
+    "key": "StaticLandingComponent.js_8_ZG93bm",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (id)",
+    "text": "download"
+  },
+  {
+    "key": "StaticLandingComponent.js_15_RG93bm",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Download Client"
+  },
+  {
+    "key": "StaticLandingComponent.js_11_dGhyZW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (id)",
+    "text": "three_twins"
+  },
+  {
+    "key": "StaticLandingComponent.js_6_Y2VudG",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (align)",
+    "text": "center"
+  },
+  {
+    "key": "StaticLandingComponent.js_31_L2ltYW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/three_twins_laptops.png"
+  },
+  {
+    "key": "StaticLandingComponent.js_16_V29ya1",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "WorkTwins Client"
+  },
+  {
+    "key": "StaticLandingComponent.js_37_RG93bm",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Download WorkTwins Client Application"
+  },
+  {
+    "key": "StaticLandingComponent.js_68_U2VsZW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Select your operating system below to download the WorkTwins client:"
+  },
+  {
+    "key": "StaticLandingComponent.js_32_L2Rvd2",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/downloads/worktwins_windows.exe"
+  },
+  {
+    "key": "StaticLandingComponent.js_24_L2ltYW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/windows_icon.svg"
+  },
+  {
+    "key": "StaticLandingComponent.js_12_V2luZG",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Windows Icon"
+  },
+  {
+    "key": "StaticLandingComponent.js_20_RG93bm",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Download for Windows"
+  },
+  {
+    "key": "StaticLandingComponent.js_30_L2Rvd2",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/downloads/worktwins_macos.dmg"
+  },
+  {
+    "key": "StaticLandingComponent.js_22_L2ltYW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/macos_icon.svg"
+  },
+  {
+    "key": "StaticLandingComponent.js_10_TWFjT1",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "MacOS Icon"
+  },
+  {
+    "key": "StaticLandingComponent.js_18_RG93bm",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Download for MacOS"
+  },
+  {
+    "key": "StaticLandingComponent.js_10_TGludX",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Linux Icon"
+  },
+  {
+    "key": "StaticLandingComponent.js_7_Y29udG",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (id)",
+    "text": "contact"
+  },
+  {
+    "key": "StaticLandingComponent.js_10_Q29udG",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Contact Us"
+  },
+  {
+    "key": "StaticLandingComponent.js_27_R2VuZX",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "General Contact Information"
+  },
+  {
+    "key": "StaticLandingComponent.js_25_RW1haW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Email: info@worktwins.com"
+  },
+  {
+    "key": "StaticLandingComponent.js_24_UGhvbm",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Phone: +1 (786) 796-5039"
+  },
+  {
+    "key": "StaticLandingComponent.js_9_VG9tbX",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Tommy Fox"
+  },
+  {
+    "key": "StaticLandingComponent.js_13_UHJlc3",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Press Contact"
+  },
+  {
+    "key": "StaticLandingComponent.js_15_TmFtZT",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Name: Tommy Fox"
+  },
+  {
+    "key": "StaticLandingComponent.js_42_RW1haW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Email: tommyfox@subjectivetechnologies.com"
+  },
+  {
+    "key": "StaticLandingComponent.js_9_V2hhdH",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "WhatsApp:"
+  },
+  {
+    "key": "StaticLandingComponent.js_25_aHR0cH",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "https://wa.me/17867965039"
+  },
+  {
+    "key": "StaticLandingComponent.js_6_X2JsYW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (target)",
+    "text": "_blank"
+  },
+  {
+    "key": "StaticLandingComponent.js_19_bm9vcG",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (rel)",
+    "text": "noopener noreferrer"
+  },
+  {
+    "key": "StaticLandingComponent.js_17_KzEgKD",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "+1 (786) 796-5039"
+  },
+  {
+    "key": "StaticLandingComponent.js_23_L3ZpZG",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/video/golden_twins.mp4"
+  },
+  {
+    "key": "StaticLandingComponent.js_12_R2V0IG",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Get in Touch"
+  },
+  {
+    "key": "StaticLandingComponent.js_33_U2NoZW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXText",
+    "text": "Schedule a Meeting with Tommy Fox"
+  },
+  {
+    "key": "StaticLandingComponent.js_36_aHR0cH",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (url)",
+    "text": "https://calendly.com/tommy-fox/30min"
+  },
+  {
+    "key": "StaticLandingComponent.js_28_U2NoZW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (text)",
+    "text": "Schedule a 30-Minute Meeting"
+  },
+  {
+    "key": "StaticLandingComponent.js_94_aHR0cH",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "https://www.amazon.com/dp/B0CKL4MVMC/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1696620400&sr=8-1"
+  },
+  {
+    "key": "StaticLandingComponent.js_80_L2ltYW",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/brainboost_marketing_images_thefirstzeroinputtechnology_book_website.png"
+  },
+  {
+    "key": "StaticLandingComponent.js_10_Qm9vay",
+    "file_path": "components/StaticLandingComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Book Image"
+  },
+  {
+    "key": "SubjectiveAdapterComponent.js_29_aW1hZ2",
+    "file_path": "components/SubjectiveAdapterComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "images/subjective_adapter.png"
+  },
+  {
+    "key": "SubjectiveAdapterComponent.js_18_U3Viam",
+    "file_path": "components/SubjectiveAdapterComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Subjective Adapter"
+  },
+  {
+    "key": "SubjectiveAdapterComponent.js_82_U2VhbW",
+    "file_path": "components/SubjectiveAdapterComponent.js",
+    "reference": "JSXText",
+    "text": "Seamlessly transition to the future of technology with the GT® Subjective Adapter."
+  },
+  {
+    "key": "SubjectiveAdapterComponent.js_22_R1TCri",
+    "file_path": "components/SubjectiveAdapterComponent.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Adapter"
+  },
+  {
+    "key": "SubjectiveAdapterComponent.js_43_TWlncm",
+    "file_path": "components/SubjectiveAdapterComponent.js",
+    "reference": "JSXText",
+    "text": "Migrating from legacy 3rd Person Technology"
+  },
+  {
+    "key": "SubjectiveAdapterComponent.js_202_R1TCri",
+    "file_path": "components/SubjectiveAdapterComponent.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Adapter makes it easy to transition from outdated third-person technology to modern, intuitive systems. Enhance your productivity and embrace the future with seamless migration solutions."
+  },
+  {
+    "key": "SubjectiveAdvertisingComponent.js_33_aW1hZ2",
+    "file_path": "components/SubjectiveAdvertisingComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "images/subjective_advertising.png"
+  },
+  {
+    "key": "SubjectiveAdvertisingComponent.js_22_U3Viam",
+    "file_path": "components/SubjectiveAdvertisingComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Subjective Advertising"
+  },
+  {
+    "key": "SubjectiveAdvertisingComponent.js_80_RXhwbG",
+    "file_path": "components/SubjectiveAdvertisingComponent.js",
+    "reference": "JSXText",
+    "text": "Explore the new era of personalized advertising with GT® Subjective Advertising."
+  },
+  {
+    "key": "SubjectiveAdvertisingComponent.js_26_R1TCri",
+    "file_path": "components/SubjectiveAdvertisingComponent.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Advertising"
+  },
+  {
+    "key": "SubjectiveAdvertisingComponent.js_25_TWFya2",
+    "file_path": "components/SubjectiveAdvertisingComponent.js",
+    "reference": "JSXText",
+    "text": "MarketingLess Advertising"
+  },
+  {
+    "key": "SubjectiveAdvertisingComponent.js_204_R1TCri",
+    "file_path": "components/SubjectiveAdvertisingComponent.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Advertising transforms the marketing landscape with personalized, unobtrusive advertising that resonates with individual preferences and needs, reducing the noise and increasing engagement."
+  },
+  {
+    "key": "SubjectiveBeMyselfComponent.js_31_aW1hZ2",
+    "file_path": "components/SubjectiveBeMyselfComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "images/subjective_be_myself.png"
+  },
+  {
+    "key": "SubjectiveBeMyselfComponent.js_19_U3Viam",
+    "file_path": "components/SubjectiveBeMyselfComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Subjective BeMyself"
+  },
+  {
+    "key": "SubjectiveBeMyselfComponent.js_95_RGlzY2",
+    "file_path": "components/SubjectiveBeMyselfComponent.js",
+    "reference": "JSXText",
+    "text": "Discover a digital assistant that adapts to your unique lifestyle with GT® Subjective BeMyself."
+  },
+  {
+    "key": "SubjectiveBeMyselfComponent.js_23_R1TCri",
+    "file_path": "components/SubjectiveBeMyselfComponent.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective BeMyself"
+  },
+  {
+    "key": "SubjectiveBeMyselfComponent.js_23_QUkgTG",
+    "file_path": "components/SubjectiveBeMyselfComponent.js",
+    "reference": "JSXText",
+    "text": "AI Learns to BeYourSelf"
+  },
+  {
+    "key": "SubjectiveBeMyselfComponent.js_172_R1TCri",
+    "file_path": "components/SubjectiveBeMyselfComponent.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective BeMyself uses advanced AI to understand and mimic your unique preferences and behaviors, creating a personalized digital assistant that truly represents you."
+  },
+  {
+    "key": "SubjectiveCognitiveBoosterComponent.js_39_aW1hZ2",
+    "file_path": "components/SubjectiveCognitiveBoosterComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "images/subjective_cognitive_booster.png"
+  },
+  {
+    "key": "SubjectiveCognitiveBoosterComponent.js_17_Q29nbm",
+    "file_path": "components/SubjectiveCognitiveBoosterComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Cognitive Booster"
+  },
+  {
+    "key": "SubjectiveCognitiveBoosterComponent.js_75_RW5oYW",
+    "file_path": "components/SubjectiveCognitiveBoosterComponent.js",
+    "reference": "JSXText",
+    "text": "Enhance your cognitive abilities with the GT® Subjective Cognitive Booster."
+  },
+  {
+    "key": "SubjectiveCognitiveBoosterComponent.js_32_R1TCri",
+    "file_path": "components/SubjectiveCognitiveBoosterComponent.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Cognitive Booster"
+  },
+  {
+    "key": "SubjectiveCognitiveBoosterComponent.js_27_WW91ci",
+    "file_path": "components/SubjectiveCognitiveBoosterComponent.js",
+    "reference": "JSXText",
+    "text": "Your World is Unforgettable"
+  },
+  {
+    "key": "SubjectiveCognitiveBoosterComponent.js_211_VGhlIE",
+    "file_path": "components/SubjectiveCognitiveBoosterComponent.js",
+    "reference": "JSXText",
+    "text": "The GT® Subjective Cognitive Booster enhances your memory and cognitive functions. Using cutting-edge neuroscience, it helps you retain and recall information effortlessly, making your world truly unforgettable."
+  },
+  {
+    "key": "SubjectiveDomoticsComponent.js_30_aW1hZ2",
+    "file_path": "components/SubjectiveDomoticsComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "images/subjective_domotics.png"
+  },
+  {
+    "key": "SubjectiveDomoticsComponent.js_19_U3Viam",
+    "file_path": "components/SubjectiveDomoticsComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Subjective Domotics"
+  },
+  {
+    "key": "SubjectiveDomoticsComponent.js_70_RXhwZX",
+    "file_path": "components/SubjectiveDomoticsComponent.js",
+    "reference": "JSXText",
+    "text": "Experience the future of home automation with GT® Subjective Domotics."
+  },
+  {
+    "key": "SubjectiveDomoticsComponent.js_23_R1TCri",
+    "file_path": "components/SubjectiveDomoticsComponent.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Domotics"
+  },
+  {
+    "key": "SubjectiveDomoticsComponent.js_34_RXh0ZW",
+    "file_path": "components/SubjectiveDomoticsComponent.js",
+    "reference": "JSXText",
+    "text": "Extend Your Body PhysicalBodyParts"
+  },
+  {
+    "key": "SubjectiveDomoticsComponent.js_206_R1TCri",
+    "file_path": "components/SubjectiveDomoticsComponent.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Domotics integrates your home and personal devices into a seamless, intelligent network. Control your environment and extend your physical capabilities with intuitive, easy-to-use technology."
+  },
+  {
+    "key": "SubjectiveForMateComponent.js_29_aW1hZ2",
+    "file_path": "components/SubjectiveForMateComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "images/subjective_formate.png"
+  },
+  {
+    "key": "SubjectiveForMateComponent.js_18_U3Viam",
+    "file_path": "components/SubjectiveForMateComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Subjective ForMate"
+  },
+  {
+    "key": "SubjectiveForMateComponent.js_87_U3RyZW",
+    "file_path": "components/SubjectiveForMateComponent.js",
+    "reference": "JSXText",
+    "text": "Streamline your workflows with GT® Subjective ForMate, eliminating the hassle of forms."
+  },
+  {
+    "key": "SubjectiveForMateComponent.js_22_R1TCri",
+    "file_path": "components/SubjectiveForMateComponent.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective ForMate"
+  },
+  {
+    "key": "SubjectiveForMateComponent.js_13_Tm8gTW",
+    "file_path": "components/SubjectiveForMateComponent.js",
+    "reference": "JSXText",
+    "text": "No More Forms"
+  },
+  {
+    "key": "SubjectiveForMateComponent.js_185_R1TCri",
+    "file_path": "components/SubjectiveForMateComponent.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective ForMate eliminates the need for tedious forms. With intuitive data collection and smart processing, it simplifies interactions and improves efficiency in data management."
+  },
+  {
+    "key": "SubjectiveInstantJobFinderComponent.js_40_aW1hZ2",
+    "file_path": "components/SubjectiveInstantJobFinderComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "images/subjective_instant_job_finder.png"
+  },
+  {
+    "key": "SubjectiveInstantJobFinderComponent.js_18_SW5zdG",
+    "file_path": "components/SubjectiveInstantJobFinderComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Instant Job Finder"
+  },
+  {
+    "key": "SubjectiveInstantJobFinderComponent.js_64_Q29ubm",
+    "file_path": "components/SubjectiveInstantJobFinderComponent.js",
+    "reference": "JSXText",
+    "text": "Connect instantly to your dream job with GT® Instant Job Finder."
+  },
+  {
+    "key": "SubjectiveInstantJobFinderComponent.js_33_R1TCri",
+    "file_path": "components/SubjectiveInstantJobFinderComponent.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Instant Job Finder"
+  },
+  {
+    "key": "SubjectiveInstantJobFinderComponent.js_13_SnVzdC",
+    "file_path": "components/SubjectiveInstantJobFinderComponent.js",
+    "reference": "JSXText",
+    "text": "Just Sit&Work"
+  },
+  {
+    "key": "SubjectiveInstantJobFinderComponent.js_196_VGhlIE",
+    "file_path": "components/SubjectiveInstantJobFinderComponent.js",
+    "reference": "JSXText",
+    "text": "The GT® Subjective Instant Job Finder connects you with job opportunities instantly. Utilizing advanced AI matching algorithms, it ensures you find the perfect job without the hassle of searching."
+  },
+  {
+    "key": "SubjectiveLogisticsComponent.js_31_aW1hZ2",
+    "file_path": "components/SubjectiveLogisticsComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "images/subjective_logistics.png"
+  },
+  {
+    "key": "SubjectiveLogisticsComponent.js_9_TG9naX",
+    "file_path": "components/SubjectiveLogisticsComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Logistics"
+  },
+  {
+    "key": "SubjectiveLogisticsComponent.js_66_Q29ubm",
+    "file_path": "components/SubjectiveLogisticsComponent.js",
+    "reference": "JSXText",
+    "text": "Connect instantly to your dream job with GT® Subjective Logistics."
+  },
+  {
+    "key": "SubjectiveLogisticsComponent.js_24_R1TCri",
+    "file_path": "components/SubjectiveLogisticsComponent.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Logistics"
+  },
+  {
+    "key": "SubjectiveLogisticsComponent.js_13_SnVzdC",
+    "file_path": "components/SubjectiveLogisticsComponent.js",
+    "reference": "JSXText",
+    "text": "Just Sit&Work"
+  },
+  {
+    "key": "SubjectiveLogisticsComponent.js_187_VGhlIE",
+    "file_path": "components/SubjectiveLogisticsComponent.js",
+    "reference": "JSXText",
+    "text": "The GT® Subjective Logistics connects you with job opportunities instantly. Utilizing advanced AI matching algorithms, it ensures you find the perfect job without the hassle of searching."
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_32_aW1hZ2",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "images/subjective_semantizer.png"
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_21_U3Viam",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Subjective Semantizer"
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_25_R1TCri",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "GT® Subjective Semantizer"
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_50_V2l0aC",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "With our Subjective Semantizer we can say that our"
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_20_Iktub3",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "\"Knowledge Is Alive\""
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_249_VGhlIE",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "The GT® Subjective Semantizer revolutionizes the way we interact with knowledge. Leveraging advanced AI and semantic technologies, it transforms static data into dynamic, living knowledge, making information more accessible, interactive, and useful."
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_33_RXZvbH",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "Evolution of Knowledge Expression"
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_445_S25vd2",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "Knowledge Hooks, as part of Subjective Technologies, facilitate the implementation of the Subjective Semantizer by mirroring and augmenting the user's cognitive processes. This system learns and replicates user interactions with the world and devices, creating an experience similar to mind-reading. It effectively reduces cognitive load and enhances the user's cognitive abilities by providing real-time, context-sensitive cognitive services​​."
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_107_VGhlIG",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "The evolution of how humans express and manage knowledge has significantly impacted cognitive technologies:"
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_85_TWVtb3",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "Memorization: Initially, humans relied on memorization to pass down knowledge orally."
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_236_V3JpdG",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "Writing: The invention of writing allowed knowledge to be externalized and shared more broadly. However, this third-person technology demanded significant dedication and cognitive skills to read, understand, and internalize information."
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_191_RGlnaX",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "Digital Storage and Access: The digital age brought about vast databases and search engines, making knowledge more accessible but still requiring active retrieval and interpretation by users."
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_296_U3Viam",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "Subjective Technologies: These represent a shift from third-person tools to a user-centric paradigm. Unlike traditional tools, which require extensive training, Subjective Technologies aim to augment human capabilities seamlessly and intuitively, minimizing the need for conscious user input​​​​."
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_4_MTAwJQ",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXAttribute (width)",
+    "text": "100%"
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_75_L2ltYW",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/semantizer_image_apa7_halfpage_landscape_template_1875x2550 (1).png"
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_63_VHJhbn",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "Transforming Third-Person Technology into Subjective Experience"
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_280_VGhpcm",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "Third-person technologies, such as writing, are external and objective, requiring conscious effort to use and understand. Subjective Technologies turn this process into a subjective experience by becoming an integral part of the user's cognitive process. This is achieved through:"
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_340_MC1Jbn",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "0-Input Technology: This design paradigm integrates technology with the human mind in a non-invasive manner. It enables seamless interaction without the need for constant conscious input from the user. The technology learns from the user's context and adapts accordingly, functioning as an extension of the user's own cognitive abilities​​."
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_332_VmlydH",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "Virtual Modifications: Tools and interfaces are replaced by virtual body parts, such as VirtualGlands, which perform functions unconsciously in real-time. This integration transforms traditional concepts like currency transactions into unconscious processes, making technology an inherent part of the user's subjective experience​​."
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_344_VXNlci",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "User-Centric Design: By prioritizing the user's experience and minimizing learning curves, Subjective Technologies create a more intuitive and efficient interaction with technology. This approach aims to democratize intelligence, promoting inclusion and enhancing the quality of life, especially for individuals with cognitive disabilities​​​​."
+  },
+  {
+    "key": "SubjectiveSemantizerComponent.js_362_SW4gc3",
+    "file_path": "components/SubjectiveSemantizerComponent.js",
+    "reference": "JSXText",
+    "text": "In summary, Knowledge Hooks in Subjective Technologies implement the Subjective Semantizer by transforming external third-person knowledge tools into integrated, intuitive, and personalized cognitive aids. This shift marks a significant evolution from memorization and writing to a future where technology enhances human intelligence seamlessly and subjectively."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_37_aW1hZ2",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "images/subjective_thermo_currency.png"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_15_VGhlcm",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Thermo-Currency"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_93_RXhwbG",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Explore the cutting-edge concept of energy-based economy with GT® Subjective Thermo-Currency."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_48_U3Viam",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Subjective Thermo-Currency: Energy-based Economy"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_651_U3Viam",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Subjective Thermo-Currency (STC) is a novel concept in currency and economic exchange that fundamentally departs from traditional monetary systems like fiat money and cryptocurrencies. Developed by BrainBoost Ltd., STC is rooted in the principles of physics and utilizes the energy inherent in physical processes as its basis for value. This groundbreaking approach involves integrating virtual artificial glands, or \"BodyParts,\" into the human body as software constructs. These glands measure and store the energy exerted and absorbed by users in real-time, effectively turning human energy expenditure into a quantifiable and transferable currency."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_483_VGhlIG",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "The key innovation in STC is its reliance on the laws of thermodynamics, ensuring that the currency's value is both stable and sustainable. By aligning economic activity with physical energy exchange, STC aims to address issues of scarcity and security inherent in traditional financial systems. This model not only ensures fairness in transactions but also promotes a more equitable and efficient global economy by leveraging ubiquitous and measurable resources like thermal energy."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_388_TW9yZW",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Moreover, STC represents a philosophical shift towards harmonizing human economic activities with natural laws, potentially leading to a more balanced and just society. The technology underpinning STC includes the use of specialized devices to visualize and manage these virtual glands, making the concept both practical and revolutionary in its implications for future economic systems​."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_73_aW1hZ2",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "images/brainboost_marketing_images_subjective_thermocurrency_1200x600.png"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_25_UmVsYX",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Related Scientific Papers"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_102_SGVyZS",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Here are several scientific papers that could be related to the concept of Subjective Thermo-Currency:"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_108_TW9uZX",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Monetary Aspects of a Thermodynamic Theory of Economics Part II: An Application to the USA Economy 1966-2006"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_19_QXV0aG",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Author: John Bryant"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_244_QWJzdH",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Abstract: This paper replicates a thermodynamic model of a monetary system applied to the American economy. It explores relationships between economic factors and develops an equation to measure the rate of entropy loss from an economic system."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_81_TmV0d2",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Network Capital: Value of Currency Protocols Bitcoin & SolarCoin Cases in Context"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_35_QXV0aG",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Authors: Nick Gogerty, Paul Johnson"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_207_QWJzdH",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Abstract: The paper assesses various currencies through the lens of a currency protocol, offering insights into the value of currency and its role in the economy, using Bitcoin and SolarCoin as case studies."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_86_RW5lcm",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Energy-Denominated Currencies as a Viable Pathway for Sustainable Societal Transitions"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_25_QXV0aG",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Author: Sgouris Sgouridis"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_175_QWJzdH",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Abstract: This paper proposes an energy-based system of exchange that aligns economic systems with thermodynamic limits, offering a sustainable alternative to fiat currencies."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_25_U3ludG",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Synthetic Commodity Money"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_21_QXV0aG",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Author: George Selgin"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_218_QWJzdH",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Abstract: Discusses a third type of money, \"synthetic commodity money,\" which combines features of both commodity and fiat money and could provide macroeconomic stability without requiring monetary authority oversight."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_70_TWlnaH",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Might Supplementary Tethered Currencies Reduce Financial System Risks?"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_22_QXV0aG",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Author: Shann Turnbull"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_195_QWJzdH",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Abstract: Investigates if supplementary tethered currencies could reduce financial system risks and act as a fallback during crises, focusing on currencies tethered to renewable energy resources."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_59_T3B0aW",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Options for Rebuilding the Economy and the Financial System"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_203_QWJzdH",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Abstract: Outlines options for reforming the financial system, including the reintroduction of cost carrying money in electronic form, and proposes linking currency to local sustainable energy resources."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_43_Tm92ZW",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Novel Aspects of Subjective Thermo-Currency"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_197_VGhlIG",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "The concept of Subjective Thermo-Currency (STC) introduces several novel elements that distinguish it from the articles mentioned earlier. Here are the key differences and the novel aspects of STC:"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_13_RW5lcm",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Energy Basis:"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_194_U1RDIG",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "STC directly ties currency value to thermal energy produced or conserved by individuals or entities, using real-time measurement through virtual artificial glands integrated into the human body."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_34_SW50ZW",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Integration with Human Physiology:"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_183_SW52b2",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Involves the use of virtual artificial glands, or \"BodyParts,\" that measure and store energy exerted and absorbed by users, turning this into a quantifiable and transferable currency."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_29_VGVjaG",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Technological Implementation:"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_126_VXRpbG",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Utilizes specialized devices to visualize and manage the virtual glands, creating a practical and interactive user experience."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_25_VGhlcm",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Thermodynamic Foundation:"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_165_U3BlY2",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Specifically designed to align with the laws of thermodynamics, ensuring currency stability and sustainability by linking economic value directly to physical energy."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_21_UGF0ZW",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Patented Technologies"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_266_U3Viam",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Subjective Thermo-Currency (STC) introduces several patented technologies that enable its unique functionality and distinguish it from other currency models discussed in the scientific literature. Here are the key patented technologies and their novel contributions:"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_33_S25vd2",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Knowledge Hooks (KnowledgeHooks):"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_91_VGhpcy",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "This is the patented technology that enable us to implement our Subjective Thermo-Currency."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_38_VmlydH",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Virtual Artificial Glands (BodyParts):"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_240_VGhlc2",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "These are software constructs integrated into the human body, designed to measure and store the energy exerted by users in real-time. The virtual glands are placed strategically on the hands and shoulders and function as energy transducers."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_22_U3Viam",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Subjective Semantizer:"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_270_QWx0aG",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Although primarily associated with educational transformation, the Subjective Semantizer also plays a role in the STC framework. It interprets and \"semantizes\" information, turning written knowledge into intuitive subjective experiences that enhance cognitive processes."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_42_UmVhbC",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "Real-Time Energy Transduction and Storage:"
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_226_VGhlIG",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "The energy measured by the virtual glands is stored in a virtual heart, which acts as a sophisticated battery. This battery mathematically quantifies the accumulated energy, ensuring a fair and secure system of value exchange."
+  },
+  {
+    "key": "SubjectiveThermoCurrencyComponent.js_471_SW4gc3",
+    "file_path": "components/SubjectiveThermoCurrencyComponent.js",
+    "reference": "JSXText",
+    "text": "In summary, Subjective Thermo-Currency leverages advanced technologies that integrate human physiological energy measurement with real-time data processing to create a stable, secure, and sustainable currency model. This innovative approach not only challenges traditional economic systems but also offers a more equitable and efficient alternative. For more detailed information, you can explore resources on the Subjective Technologies blog and their GitHub repository."
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_14_U2Vydm",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "Service Charge"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_7_JDEwMC",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "ObjectProperty (amount)",
+    "text": "$100.00"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_15_TWFpbn",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "Maintenance Fee"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_6_JDUwLj",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "ObjectProperty (amount)",
+    "text": "$50.00"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_12_VXNhZ2",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "Usage Charge"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_6_JDc1Lj",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "ObjectProperty (amount)",
+    "text": "$75.00"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_3_VGF4",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "ObjectProperty (description)",
+    "text": "Tax"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_6_JDE1Lj",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "ObjectProperty (amount)",
+    "text": "$15.00"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_25_QmlsbG",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXText",
+    "text": "Billing and Cost Analysis"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_11_RGVzY3",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXText",
+    "text": "Description"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_6_QW1vdW",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXText",
+    "text": "Amount"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_5_VG90YW",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXText",
+    "text": "Total"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_1_JA==",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXText",
+    "text": "$"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_18_U2V0IF",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXText",
+    "text": "Set Payment Method"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_5_cmFkaW",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXAttribute (type)",
+    "text": "radio"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_6_c3RyaX",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXAttribute (value)",
+    "text": "stripe"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_6_U3RyaX",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXText",
+    "text": "Stripe"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_6_cGF5cG",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXAttribute (value)",
+    "text": "paypal"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_6_UGF5UG",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXText",
+    "text": "PayPal"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_19_U3RyaX",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXText",
+    "text": "Stripe Payment Form"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_4_dGV4dA",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXAttribute (type)",
+    "text": "text"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_11_Q2FyZC",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXAttribute (placeholder)",
+    "text": "Card Number"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_5_TU0vWV",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXAttribute (placeholder)",
+    "text": "MM/YY"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_3_Q1ZD",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXAttribute (placeholder)",
+    "text": "CVC"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_15_UGF5IH",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXText",
+    "text": "Pay with Stripe"
+  },
+  {
+    "key": "DashboardBillingAndPaymentComponent.js_19_UGF5UG",
+    "file_path": "components/subjective_dashboard/DashboardBillingAndPaymentComponent.js",
+    "reference": "JSXText",
+    "text": "PayPal Payment Form"
+  },
+  {
+    "key": "DashboardContentComponent.js_16_VGVjaG",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "ObjectProperty (label)",
+    "text": "Technology Usage"
+  },
+  {
+    "key": "DashboardContentComponent.js_3_dG9w",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "ObjectProperty (position)",
+    "text": "top"
+  },
+  {
+    "key": "DashboardContentComponent.js_26_VGVjaG",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "ObjectProperty (text)",
+    "text": "Technology Usage Bar Chart"
+  },
+  {
+    "key": "DashboardContentComponent.js_4_IzAwMA",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "ObjectProperty (color)",
+    "text": "#000"
+  },
+  {
+    "key": "DashboardContentComponent.js_4_Ym9sZA",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "ObjectProperty (weight)",
+    "text": "bold"
+  },
+  {
+    "key": "DashboardContentComponent.js_1_Lw==",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/"
+  },
+  {
+    "key": "DashboardContentComponent.js_4_SG9tZQ",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "Home"
+  },
+  {
+    "key": "DashboardContentComponent.js_9_RGFzaG",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "Dashboard"
+  },
+  {
+    "key": "DashboardContentComponent.js_7_UHJvZm",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "Profile"
+  },
+  {
+    "key": "DashboardContentComponent.js_18_L2Rhc2",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/dashboard_my_body"
+  },
+  {
+    "key": "DashboardContentComponent.js_7_TXkgQm",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "My Body"
+  },
+  {
+    "key": "DashboardContentComponent.js_10_SW5qZW",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "Injections"
+  },
+  {
+    "key": "DashboardContentComponent.js_7_U3RhbW",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "Stamina"
+  },
+  {
+    "key": "DashboardContentComponent.js_14_U2lkZW",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "Sidebar Footer"
+  },
+  {
+    "key": "DashboardContentComponent.js_4_dGV4dA",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXAttribute (type)",
+    "text": "text"
+  },
+  {
+    "key": "DashboardContentComponent.js_6_U2Vhcm",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXAttribute (placeholder)",
+    "text": "Search"
+  },
+  {
+    "key": "DashboardContentComponent.js_23_T3Zlcm",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "Overall Work Experience"
+  },
+  {
+    "key": "DashboardContentComponent.js_21_VGVjaG",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "Technology Frameworks"
+  },
+  {
+    "key": "DashboardContentComponent.js_38_UGVlcn",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "Peers Sorted by Computational Affinity"
+  },
+  {
+    "key": "DashboardContentComponent.js_33_L2ltYW",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/icons/profile_yo.-min.jpg"
+  },
+  {
+    "key": "DashboardContentComponent.js_12_U2VuZC",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "Send Message"
+  },
+  {
+    "key": "DashboardContentComponent.js_11_UGFnZS",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "Page Visits"
+  },
+  {
+    "key": "DashboardContentComponent.js_9_UGFnZS",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "Page Name"
+  },
+  {
+    "key": "DashboardContentComponent.js_5_Vmlld3",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "Views"
+  },
+  {
+    "key": "DashboardContentComponent.js_5_VmFsdW",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "Value"
+  },
+  {
+    "key": "DashboardContentComponent.js_11_Qm91bm",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "Bounce Rate"
+  },
+  {
+    "key": "DashboardContentComponent.js_5_Myw2OD",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "3,689"
+  },
+  {
+    "key": "DashboardContentComponent.js_3_JDEw",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "$10"
+  },
+  {
+    "key": "DashboardContentComponent.js_4_KzIwJQ",
+    "file_path": "components/subjective_dashboard/DashboardContentComponent.js",
+    "reference": "JSXText",
+    "text": "+20%"
+  },
+  {
+    "key": "DashboardMenuComponent.js_19_L2Rhc2",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "ObjectProperty (href)",
+    "text": "/dashboard/overview"
+  },
+  {
+    "key": "DashboardMenuComponent.js_8_T3Zlcn",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "ObjectProperty (label)",
+    "text": "Overview"
+  },
+  {
+    "key": "DashboardMenuComponent.js_16_L2Rhc2",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "ObjectProperty (href)",
+    "text": "/dashboard/sales"
+  },
+  {
+    "key": "DashboardMenuComponent.js_5_U2FsZX",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "ObjectProperty (label)",
+    "text": "Sales"
+  },
+  {
+    "key": "DashboardMenuComponent.js_20_L2Rhc2",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "ObjectProperty (href)",
+    "text": "/dashboard/customers"
+  },
+  {
+    "key": "DashboardMenuComponent.js_9_Q3VzdG",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "ObjectProperty (label)",
+    "text": "Customers"
+  },
+  {
+    "key": "DashboardMenuComponent.js_9_SW52ZW",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "ObjectProperty (label)",
+    "text": "Inventory"
+  },
+  {
+    "key": "DashboardMenuComponent.js_18_L2Rhc2",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "ObjectProperty (href)",
+    "text": "/dashboard/reports"
+  },
+  {
+    "key": "DashboardMenuComponent.js_7_UmVwb3",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "ObjectProperty (label)",
+    "text": "Reports"
+  },
+  {
+    "key": "DashboardMenuComponent.js_8_U2V0dG",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "ObjectProperty (label)",
+    "text": "Settings"
+  },
+  {
+    "key": "DashboardMenuComponent.js_14_VGVzdG",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "ObjectProperty (label)",
+    "text": "Testing Item 1"
+  },
+  {
+    "key": "DashboardMenuComponent.js_1_Lw==",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/"
+  },
+  {
+    "key": "DashboardMenuComponent.js_53_L2ltYW",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/icons/subjective_technologies_icon_square.png"
+  },
+  {
+    "key": "DashboardMenuComponent.js_28_U3Viam",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Subjective Technologies Icon"
+  },
+  {
+    "key": "DashboardMenuComponent.js_42_L2ltYW",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/icons/dashboard_menu_grid_icon.svg"
+  },
+  {
+    "key": "DashboardMenuComponent.js_14_RGFzaG",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Dashboard Icon"
+  },
+  {
+    "key": "DashboardMenuComponent.js_33_L2ltYW",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/icons/profile_yo.-min.jpg"
+  },
+  {
+    "key": "DashboardMenuComponent.js_12_VXNlci",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "User Profile"
+  },
+  {
+    "key": "DashboardMenuComponent.js_10_L2Rhc2",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/dashboard"
+  },
+  {
+    "key": "DashboardMenuComponent.js_9_RGFzaG",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXText",
+    "text": "Dashboard"
+  },
+  {
+    "key": "DashboardMenuComponent.js_21_L2Rhc2",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/dashboard_my_profile"
+  },
+  {
+    "key": "DashboardMenuComponent.js_7_UHJvZm",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXText",
+    "text": "Profile"
+  },
+  {
+    "key": "DashboardMenuComponent.js_22_L2Rhc2",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/dashboard_my_settings"
+  },
+  {
+    "key": "DashboardMenuComponent.js_41_L2ltYW",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXAttribute (src)",
+    "text": "/images/icons/dashboard_settings_icon.svg"
+  },
+  {
+    "key": "DashboardMenuComponent.js_13_U2V0dG",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Settings Icon"
+  },
+  {
+    "key": "DashboardMenuComponent.js_8_U2VjdX",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXText",
+    "text": "Security"
+  },
+  {
+    "key": "DashboardMenuComponent.js_30_L2Rhc2",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/dashboard_billing_and_payment"
+  },
+  {
+    "key": "DashboardMenuComponent.js_27_QmlsbG",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXText",
+    "text": "Billing Cost and Management"
+  },
+  {
+    "key": "DashboardMenuComponent.js_7_L2xvZ2",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/logout"
+  },
+  {
+    "key": "DashboardMenuComponent.js_7_TG9nIE",
+    "file_path": "components/subjective_dashboard/DashboardMenuComponent.js",
+    "reference": "JSXText",
+    "text": "Log Out"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_30_Q29tcH",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_name)",
+    "text": "Computational Distance Antenna"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_7_VmlydH",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_type)",
+    "text": "Virtual"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_620_SW4gdG",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_description)",
+    "text": "In the same way a GPS can give you the shortest path to go from point A to point B and you can measure it in miles/kilometers, we calculate this computational affinity between contexts. This can be between your own contexts from the past and present and also in between the contexts of other users. This body part has many different use cases, for example, you can detect when you have a better affinity to certain people in very specific aspects of their life, affinity to certain tasks, or even certain places. In this way you could find from your work twins to the perfect partners with a very low chance of divorces."
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_76_L2ltYW",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (icon)",
+    "text": "/images/bodyparts/subjective_marketing_images_virtual_body_part_antenna.webp"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_18_SGFuZC",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_name)",
+    "text": "Hand Energy Glands"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_70_VGhpcy",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_description)",
+    "text": "This virtual gland works for exerting energy when the user is working."
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_79_L2ltYW",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (icon)",
+    "text": "/images/bodyparts/subjective_marketing_images_virtual_body_part_hand_gland.webp"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_22_U2hvdW",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_name)",
+    "text": "Shoulder Energy Glands"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_104_VGhpcy",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_description)",
+    "text": "This virtual gland works for absorbing energy. Typically the energy that the user saves to other people."
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_82_L2ltYW",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (icon)",
+    "text": "/images/bodyparts/subjective_marketing_image_virtual_body_part_shoulder_gland.webp"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_6_Q2FtZX",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_name)",
+    "text": "Camera"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_8_UGh5c2",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_type)",
+    "text": "Physical"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_124_VGhpcy",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_description)",
+    "text": "This enables the user to augment their sight, being able to see not only their context but other contexts from other places."
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_68_L2ltYW",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (icon)",
+    "text": "/images/bodyparts/subjective_physical_body_part_security_camera.webp"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_12_QmF0dG",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_name)",
+    "text": "Battery Hart"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_81_L2ltYW",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (icon)",
+    "text": "/images/bodyparts/subjective_marketing_images_virtual_body_part_hart_battery.webp"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_12_V2VhdG",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_name)",
+    "text": "Weather Nose"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_79_VGhpcy",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_description)",
+    "text": "This nose gives users the capacity to detect their current weather/temperature."
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_73_L2ltYW",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (icon)",
+    "text": "/images/bodyparts/subjective_virtual_body_part_weather_detector_nose.webp"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_24_Q29nbm",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_name)",
+    "text": "Cognitive Expansion Halo"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_83_VGhpcy",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_description)",
+    "text": "This halo increases the user's cognitive power up to the available computing power."
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_29_VGhpcm",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_name)",
+    "text": "Third-Eye Future Foresighting"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_137_VGhlIF",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (subjective_body_part_description)",
+    "text": "The Third-Eye is a stream of data that with events that could possibly happen in the future according your past contexts and experiences."
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_77_L2ltYW",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "ObjectProperty (icon)",
+    "text": "/images/bodyparts/subjective_marketing_image_virtual_body_part_third_eye.webp"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_1_Lw==",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_4_SG9tZQ",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "JSXText",
+    "text": "Home"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_10_L2Rhc2",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/dashboard"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_9_RGFzaG",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "JSXText",
+    "text": "Dashboard"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_7_UHJvZm",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "JSXText",
+    "text": "Profile"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_18_L2Rhc2",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "JSXAttribute (href)",
+    "text": "/dashboard_my_body"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_7_TXkgQm",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "JSXText",
+    "text": "My Body"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_10_SW5qZW",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "JSXText",
+    "text": "Injections"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_7_U3RhbW",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "JSXText",
+    "text": "Stamina"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_14_U2lkZW",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "JSXText",
+    "text": "Sidebar Footer"
+  },
+  {
+    "key": "DashboardMyBodyComponent.js_10_Qm9keS",
+    "file_path": "components/subjective_dashboard/DashboardMyBodyComponent.js",
+    "reference": "JSXText",
+    "text": "Body Parts"
+  },
+  {
+    "key": "DashboardProfileComponent.js_8_Sm9obi",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "ObjectProperty (name)",
+    "text": "John Doe"
+  },
+  {
+    "key": "DashboardProfileComponent.js_20_am9obi",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "ObjectProperty (email)",
+    "text": "john.doe@example.com"
+  },
+  {
+    "key": "DashboardProfileComponent.js_11_KzEyMz",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "ObjectProperty (phone)",
+    "text": "+1234567890"
+  },
+  {
+    "key": "DashboardProfileComponent.js_28_L2ltYW",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "ObjectProperty (picture)",
+    "text": "/images/profile/john_doe.jpg"
+  },
+  {
+    "key": "DashboardProfileComponent.js_13_VW5pdG",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "ObjectProperty (country)",
+    "text": "United States"
+  },
+  {
+    "key": "DashboardProfileComponent.js_26_MTIzNC",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "ObjectProperty (address)",
+    "text": "1234 Main St, Anytown, USA"
+  },
+  {
+    "key": "DashboardProfileComponent.js_17_U29mdH",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "ObjectProperty (occupation)",
+    "text": "Software Engineer"
+  },
+  {
+    "key": "DashboardProfileComponent.js_67_UGFzc2",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "ObjectProperty (bio)",
+    "text": "Passionate developer with a love for creating innovative solutions."
+  },
+  {
+    "key": "DashboardProfileComponent.js_7_UHJvZm",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "JSXText",
+    "text": "Profile"
+  },
+  {
+    "key": "DashboardProfileComponent.js_4_TmFtZQ",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "JSXText",
+    "text": "Name"
+  },
+  {
+    "key": "DashboardProfileComponent.js_5_RW1haW",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "JSXText",
+    "text": "Email"
+  },
+  {
+    "key": "DashboardProfileComponent.js_5_UGhvbm",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "JSXText",
+    "text": "Phone"
+  },
+  {
+    "key": "DashboardProfileComponent.js_7_Q291bn",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "JSXText",
+    "text": "Country"
+  },
+  {
+    "key": "DashboardProfileComponent.js_7_QWRkcm",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "JSXText",
+    "text": "Address"
+  },
+  {
+    "key": "DashboardProfileComponent.js_10_T2NjdX",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "JSXText",
+    "text": "Occupation"
+  },
+  {
+    "key": "DashboardProfileComponent.js_3_Qmlv",
+    "file_path": "components/subjective_dashboard/DashboardProfileComponent.js",
+    "reference": "JSXText",
+    "text": "Bio"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_7_VXNlcj",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "ObjectProperty (username)",
+    "text": "User123"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_16_dXNlck",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "ObjectProperty (email)",
+    "text": "user@example.com"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_11_KzEyMz",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "ObjectProperty (phone)",
+    "text": "+1234567890"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_3_VVNB",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "ObjectProperty (country)",
+    "text": "USA"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_4_Sm9obg",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "ObjectProperty (firstName)",
+    "text": "John"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_3_RG9l",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "ObjectProperty (lastName)",
+    "text": "Doe"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_34_L3B1Ym",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "ObjectProperty (profilePicture)",
+    "text": "/public/images/profile-picture.jpg"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_8_U2VjdX",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Security"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_9_YXBpVG",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "apiTokens"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_10_QVBJIF",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "API Tokens"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_4_dGV4dA",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (type)",
+    "text": "text"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_14_WW91ci",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (value)",
+    "text": "Your API Token"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_4_Q29weQ",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Copy"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_10_UmVnZW",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Regenerate"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_13_dHdvRm",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "twoFactorAuth"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_31_VHdvLU",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Two-Factor Authentication (2FA)"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_8_Y2hlY2",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (type)",
+    "text": "checkbox"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_9_c2Vjcm",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "secretKey"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_10_U2Vjcm",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Secret Key"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_15_WW91ci",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (value)",
+    "text": "Your Secret Key"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_13_cmVzZX",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "resetPassword"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_14_UmVzZX",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Reset Password"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_5_UmVzZX",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Reset"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_13_Y29sbG",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "collaborators"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_22_QWRkIE",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Add Collaborator Users"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_24_RW50ZX",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (placeholder)",
+    "text": "Enter collaborator email"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_3_QWRk",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Add"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_16_VXNlci",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "User Information"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_7_UHJvZm",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (alt)",
+    "text": "Profile"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_4_ZmlsZQ",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (type)",
+    "text": "file"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_19_cHJvZm",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (id)",
+    "text": "profilePictureInput"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_7_aW1hZ2",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (accept)",
+    "text": "image/*"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_6_Q2hhbm",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Change"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_9_Zmlyc3",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "firstName"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_10_Rmlyc3",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "First Name"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_8_bGFzdE",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "lastName"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_9_TGFzdC",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Last Name"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_8_dXNlcm",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "username"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_8_VXNlcm",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Username"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_5_ZW1haW",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "email"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_5_RW1haW",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Email"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_5_cGhvbm",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "phone"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_5_UGhvbm",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Phone"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_3_dGVs",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (type)",
+    "text": "tel"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_7_Y291bn",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "country"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_7_Q291bn",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Country"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_13_bm90aW",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "notifications"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_13_Tm90aW",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Notifications"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_8_ZGFya0",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXAttribute (htmlFor)",
+    "text": "darkMode"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_9_RGFyay",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Dark Mode"
+  },
+  {
+    "key": "DashboardSettingsComponent.js_13_U2F2ZS",
+    "file_path": "components/subjective_dashboard/DashboardSettingsComponent.js",
+    "reference": "JSXText",
+    "text": "Save Settings"
+  },
+  {
+    "key": "firebaseConfig.js_39_QUl6YV",
+    "file_path": "config/firebaseConfig.js",
+    "reference": "ObjectProperty (apiKey)",
+    "text": "AIzaSyDLUW37pI2Hp2yTZXbJOXLFtV_5XrsPKwU"
+  },
+  {
+    "key": "firebaseConfig.js_44_c3Viam",
+    "file_path": "config/firebaseConfig.js",
+    "reference": "ObjectProperty (authDomain)",
+    "text": "subjectivetechnologies-login.firebaseapp.com"
+  },
+  {
+    "key": "firebaseConfig.js_28_c3Viam",
+    "file_path": "config/firebaseConfig.js",
+    "reference": "ObjectProperty (projectId)",
+    "text": "subjectivetechnologies-login"
+  },
+  {
+    "key": "firebaseConfig.js_40_c3Viam",
+    "file_path": "config/firebaseConfig.js",
+    "reference": "ObjectProperty (storageBucket)",
+    "text": "subjectivetechnologies-login.appspot.com"
+  },
+  {
+    "key": "firebaseConfig.js_12_MzYzMD",
+    "file_path": "config/firebaseConfig.js",
+    "reference": "ObjectProperty (messagingSenderId)",
+    "text": "363070822103"
+  },
+  {
+    "key": "firebaseConfig.js_41_MTozNj",
+    "file_path": "config/firebaseConfig.js",
+    "reference": "ObjectProperty (appId)",
+    "text": "1:363070822103:web:82d4304d8779f8a0670292"
+  },
+  {
+    "key": "firebaseConfig.js_12_Ry1NM0",
+    "file_path": "config/firebaseConfig.js",
+    "reference": "ObjectProperty (measurementId)",
+    "text": "G-M3C1T7XDRJ"
+  },
+  {
+    "key": "extract_and_replace_text.js_6_bW9kdW",
+    "file_path": "extract_and_replace_text.js",
+    "reference": "ObjectProperty (sourceType)",
+    "text": "module"
+  },
+  {
+    "key": "extract_and_replace_text.js_7_SlNYVG",
+    "file_path": "extract_and_replace_text.js",
+    "reference": "ObjectProperty (reference)",
+    "text": "JSXText"
+  },
+  {
+    "key": "extract_and_replace_text.js_22_SlNYRX",
+    "file_path": "extract_and_replace_text.js",
+    "reference": "ObjectProperty (type)",
+    "text": "JSXExpressionContainer"
+  },
+  {
+    "key": "extract_and_replace_text.js_14_Q2FsbE",
+    "file_path": "extract_and_replace_text.js",
+    "reference": "ObjectProperty (type)",
+    "text": "CallExpression"
+  },
+  {
+    "key": "extract_and_replace_text.js_10_SWRlbn",
+    "file_path": "extract_and_replace_text.js",
+    "reference": "ObjectProperty (type)",
+    "text": "Identifier"
+  },
+  {
+    "key": "extract_and_replace_text.js_7_Z2V0VG",
+    "file_path": "extract_and_replace_text.js",
+    "reference": "ObjectProperty (name)",
+    "text": "getText"
+  },
+  {
+    "key": "extract_and_replace_text.js_13_U3RyaW",
+    "file_path": "extract_and_replace_text.js",
+    "reference": "ObjectProperty (type)",
+    "text": "StringLiteral"
+  },
+  {
+    "key": "careers.js_9_Y29udG",
+    "file_path": "pages/careers.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "careers.js_14_bWVudV",
+    "file_path": "pages/careers.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "careers.js_17_Y29udG",
+    "file_path": "pages/careers.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "careers.js_16_Zm9vdG",
+    "file_path": "pages/careers.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "consulting.js_9_Y29udG",
+    "file_path": "pages/consulting.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "consulting.js_14_bWVudV",
+    "file_path": "pages/consulting.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "consulting.js_17_Y29udG",
+    "file_path": "pages/consulting.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "consulting.js_16_Zm9vdG",
+    "file_path": "pages/consulting.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "contact.js_9_Y29udG",
+    "file_path": "pages/contact.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "contact.js_14_bWVudV",
+    "file_path": "pages/contact.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "contact.js_17_Y29udG",
+    "file_path": "pages/contact.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "contact.js_16_Zm9vdG",
+    "file_path": "pages/contact.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "download.js_9_Y29udG",
+    "file_path": "pages/download.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "download.js_14_bWVudV",
+    "file_path": "pages/download.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "download.js_17_Y29udG",
+    "file_path": "pages/download.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "download.js_16_Zm9vdG",
+    "file_path": "pages/download.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "impact.js_9_Y29udG",
+    "file_path": "pages/impact.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "impact.js_14_bWVudV",
+    "file_path": "pages/impact.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "impact.js_19_YW5pbW",
+    "file_path": "pages/impact.js",
+    "reference": "JSXAttribute (className)",
+    "text": "animation_container"
+  },
+  {
+    "key": "impact.js_17_aW1wYW",
+    "file_path": "pages/impact.js",
+    "reference": "JSXAttribute (id)",
+    "text": "impact_react_page"
+  },
+  {
+    "key": "impact.js_16_Zm9vdG",
+    "file_path": "pages/impact.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "index.js_9_Y29udG",
+    "file_path": "pages/index.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "index.js_14_bWVudV",
+    "file_path": "pages/index.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "index.js_17_Y29udG",
+    "file_path": "pages/index.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "index.js_16_Zm9vdG",
+    "file_path": "pages/index.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "investor.js_9_Y29udG",
+    "file_path": "pages/investor.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "investor.js_14_bWVudV",
+    "file_path": "pages/investor.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "investor.js_17_Y29udG",
+    "file_path": "pages/investor.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "investor.js_16_Zm9vdG",
+    "file_path": "pages/investor.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "pricing.js_9_Y29udG",
+    "file_path": "pages/pricing.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "pricing.js_14_bWVudV",
+    "file_path": "pages/pricing.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "pricing.js_17_Y29udG",
+    "file_path": "pages/pricing.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "pricing.js_16_Zm9vdG",
+    "file_path": "pages/pricing.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "scientific_research.js_9_Y29udG",
+    "file_path": "pages/scientific_research.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "scientific_research.js_14_bWVudV",
+    "file_path": "pages/scientific_research.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "scientific_research.js_19_YW5pbW",
+    "file_path": "pages/scientific_research.js",
+    "reference": "JSXAttribute (className)",
+    "text": "animation_container"
+  },
+  {
+    "key": "scientific_research.js_17_aW1wYW",
+    "file_path": "pages/scientific_research.js",
+    "reference": "JSXAttribute (id)",
+    "text": "impact_react_page"
+  },
+  {
+    "key": "scientific_research.js_16_Zm9vdG",
+    "file_path": "pages/scientific_research.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "sign_in.js_9_Y29udG",
+    "file_path": "pages/sign_in.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "sign_in.js_14_bWVudV",
+    "file_path": "pages/sign_in.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "sign_in.js_17_Y29udG",
+    "file_path": "pages/sign_in.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "sign_in.js_16_Zm9vdG",
+    "file_path": "pages/sign_in.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "sign_up.js_9_Y29udG",
+    "file_path": "pages/sign_up.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "sign_up.js_14_bWVudV",
+    "file_path": "pages/sign_up.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "sign_up.js_17_Y29udG",
+    "file_path": "pages/sign_up.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "sign_up.js_16_Zm9vdG",
+    "file_path": "pages/sign_up.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "subjective_adapter.js_9_Y29udG",
+    "file_path": "pages/subjective_adapter.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "subjective_adapter.js_14_bWVudV",
+    "file_path": "pages/subjective_adapter.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "subjective_adapter.js_17_Y29udG",
+    "file_path": "pages/subjective_adapter.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "subjective_adapter.js_16_Zm9vdG",
+    "file_path": "pages/subjective_adapter.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "subjective_advertising.js_9_Y29udG",
+    "file_path": "pages/subjective_advertising.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "subjective_advertising.js_14_bWVudV",
+    "file_path": "pages/subjective_advertising.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "subjective_advertising.js_17_Y29udG",
+    "file_path": "pages/subjective_advertising.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "subjective_advertising.js_16_Zm9vdG",
+    "file_path": "pages/subjective_advertising.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "subjective_be_myself.js_9_Y29udG",
+    "file_path": "pages/subjective_be_myself.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "subjective_be_myself.js_14_bWVudV",
+    "file_path": "pages/subjective_be_myself.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "subjective_be_myself.js_17_Y29udG",
+    "file_path": "pages/subjective_be_myself.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "subjective_be_myself.js_16_Zm9vdG",
+    "file_path": "pages/subjective_be_myself.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "subjective_cognitive_booster.js_9_Y29udG",
+    "file_path": "pages/subjective_cognitive_booster.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "subjective_cognitive_booster.js_14_bWVudV",
+    "file_path": "pages/subjective_cognitive_booster.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "subjective_cognitive_booster.js_17_Y29udG",
+    "file_path": "pages/subjective_cognitive_booster.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "subjective_cognitive_booster.js_16_Zm9vdG",
+    "file_path": "pages/subjective_cognitive_booster.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "subjective_domotics.js_9_Y29udG",
+    "file_path": "pages/subjective_domotics.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "subjective_domotics.js_14_bWVudV",
+    "file_path": "pages/subjective_domotics.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "subjective_domotics.js_17_Y29udG",
+    "file_path": "pages/subjective_domotics.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "subjective_domotics.js_16_Zm9vdG",
+    "file_path": "pages/subjective_domotics.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "subjective_formate.js_9_Y29udG",
+    "file_path": "pages/subjective_formate.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "subjective_formate.js_14_bWVudV",
+    "file_path": "pages/subjective_formate.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "subjective_formate.js_17_Y29udG",
+    "file_path": "pages/subjective_formate.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "subjective_formate.js_16_Zm9vdG",
+    "file_path": "pages/subjective_formate.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "subjective_instant_job_finder.js_9_Y29udG",
+    "file_path": "pages/subjective_instant_job_finder.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "subjective_instant_job_finder.js_14_bWVudV",
+    "file_path": "pages/subjective_instant_job_finder.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "subjective_instant_job_finder.js_17_Y29udG",
+    "file_path": "pages/subjective_instant_job_finder.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "subjective_instant_job_finder.js_16_Zm9vdG",
+    "file_path": "pages/subjective_instant_job_finder.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "subjective_logistics.js_9_Y29udG",
+    "file_path": "pages/subjective_logistics.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "subjective_logistics.js_14_bWVudV",
+    "file_path": "pages/subjective_logistics.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "subjective_logistics.js_17_Y29udG",
+    "file_path": "pages/subjective_logistics.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "subjective_logistics.js_16_Zm9vdG",
+    "file_path": "pages/subjective_logistics.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "subjective_semantizer.js_9_Y29udG",
+    "file_path": "pages/subjective_semantizer.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "subjective_semantizer.js_14_bWVudV",
+    "file_path": "pages/subjective_semantizer.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "subjective_semantizer.js_17_Y29udG",
+    "file_path": "pages/subjective_semantizer.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "subjective_semantizer.js_16_Zm9vdG",
+    "file_path": "pages/subjective_semantizer.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "subjective_thermo_currency.js_9_Y29udG",
+    "file_path": "pages/subjective_thermo_currency.js",
+    "reference": "JSXAttribute (className)",
+    "text": "container"
+  },
+  {
+    "key": "subjective_thermo_currency.js_14_bWVudV",
+    "file_path": "pages/subjective_thermo_currency.js",
+    "reference": "JSXAttribute (className)",
+    "text": "menu_container"
+  },
+  {
+    "key": "subjective_thermo_currency.js_17_Y29udG",
+    "file_path": "pages/subjective_thermo_currency.js",
+    "reference": "JSXAttribute (className)",
+    "text": "content_container"
+  },
+  {
+    "key": "subjective_thermo_currency.js_16_Zm9vdG",
+    "file_path": "pages/subjective_thermo_currency.js",
+    "reference": "JSXAttribute (className)",
+    "text": "footer_container"
+  },
+  {
+    "key": "firebaseConfig.js_31_d29ya3",
+    "file_path": "src/config/firebaseConfig.js",
+    "reference": "ObjectProperty (authDomain)",
+    "text": "worktwins-87df2.firebaseapp.com"
+  },
+  {
+    "key": "firebaseConfig.js_15_d29ya3",
+    "file_path": "src/config/firebaseConfig.js",
+    "reference": "ObjectProperty (projectId)",
+    "text": "worktwins-87df2"
+  },
+  {
+    "key": "firebaseConfig.js_27_d29ya3",
+    "file_path": "src/config/firebaseConfig.js",
+    "reference": "ObjectProperty (storageBucket)",
+    "text": "worktwins-87df2.appspot.com"
+  },
+  {
+    "key": "firebaseConfig.js_12_NDI5Mj",
+    "file_path": "src/config/firebaseConfig.js",
+    "reference": "ObjectProperty (messagingSenderId)",
+    "text": "429257469666"
+  },
+  {
+    "key": "firebaseConfig.js_41_MTo0Mj",
+    "file_path": "src/config/firebaseConfig.js",
+    "reference": "ObjectProperty (appId)",
+    "text": "1:429257469666:web:42cfd7ab4d388057e4b8bb"
+  },
+  {
+    "key": "firebaseConfig.js_12_Ry02UE",
+    "file_path": "src/config/firebaseConfig.js",
+    "reference": "ObjectProperty (measurementId)",
+    "text": "G-6PE2RZFVGJ"
+  }
+]

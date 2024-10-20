@@ -1,24 +1,19 @@
+import { getText } from '../utils/getText.js';
 console.log('Loading SubjectiveDomoticsComponent.js');
 // src/components/SubjectiveDomoticsComponent.js
 import React from 'react';
 import styles from '../public/styles/SubjectiveDomoticsComponent.module.css';
-
 const SubjectiveDomoticsComponent = () => {
-console.log('Rendering SubjectiveDomoticsComponent');
-console.log('Returning from SubjectiveDomoticsComponent');
-    return (
-        <div className={styles.container}>
+  console.log('Rendering SubjectiveDomoticsComponent');
+  console.log('Returning from SubjectiveDomoticsComponent');
+  return <div className={styles.container}>
             <div className={styles.imageContainer}>
-                <img src="images/subjective_domotics.png" alt="Subjective Domotics" className={styles.roundImage} />
-                <p className={styles.imageText}>Experience the future of home automation with GT® Subjective Domotics.</p>
+                <img src={getText("SubjectiveDomoticsComponent.js_30_aW1hZ2")} alt={getText("SubjectiveDomoticsComponent.js_19_U3Viam")} className={styles.roundImage} />
+                <p className={styles.imageText}>{getText('SubjectiveDomoticsComponent.js_70_RXhwZX')}</p>
             </div>
-            <h1 className={styles.title}>GT® Subjective Domotics</h1>
-            <p className={styles.description}>Extend Your Body PhysicalBodyParts</p>
-            <p className={styles.content}>
-                GT® Subjective Domotics integrates your home and personal devices into a seamless, intelligent network. Control your environment and extend your physical capabilities with intuitive, easy-to-use technology.
-            </p>
-        </div>
-    );
+            <h1 className={styles.title}>{getText('SubjectiveDomoticsComponent.js_23_R1TCri')}</h1>
+            <p className={styles.description}>{getText('SubjectiveDomoticsComponent.js_34_RXh0ZW')}</p>
+            <p className={styles.content}>{getText('SubjectiveDomoticsComponent.js_206_R1TCri')}</p>
+        </div>;
 };
-
 export default SubjectiveDomoticsComponent;
