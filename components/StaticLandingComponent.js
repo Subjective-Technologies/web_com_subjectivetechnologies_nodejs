@@ -279,8 +279,8 @@ const StaticLandingComponent = () => {
               <img src={getText("StaticLandingComponent.js_24_L2ltYW")} alt={getText("StaticLandingComponent.js_12_V2luZG")} />{getText('StaticLandingComponent.js_20_RG93bm')}</a>
             <a href={getText("StaticLandingComponent.js_30_L2Rvd2")} className={`${styles.downloadLink} ${styles.macos}`}>
               <img src={getText("StaticLandingComponent.js_22_L2ltYW")} alt={getText("StaticLandingComponent.js_10_TWFjT1")} />{getText('StaticLandingComponent.js_18_RG93bm')}</a>
-            <a href={getText("StaticLandingComponent.js_30_L2Rvd2")} className={`${styles.downloadLink} ${styles.linux}`}>
-              <img src={getText("StaticLandingComponent.js_22_L2ltYW")} alt={getText("StaticLandingComponent.js_10_TGludX")} />{getText('StaticLandingComponent.js_18_RG93bm')}</a>
+            <a href="/downloads/client/worktwins_1.0_amd64.deb" className={`${styles.downloadLink} ${styles.linux}`}>
+              <img src={getText("Linux_download_icon")} alt={getText("StaticLandingComponent.js_10_TGludX")} />{getText('download_for_linux_message')}</a>
           </div>
         </div>
       </section>

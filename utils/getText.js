@@ -1,4 +1,4 @@
-import textData from './extracted_text.json' assert { type: 'json' };
+import textData from './gpt_reviewed_text.json' assert { type: 'json' };
 
 // Function to get text by key
 export function getText(key) {

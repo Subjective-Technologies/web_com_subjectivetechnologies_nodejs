@@ -5,8 +5,8 @@ const ConsultingComponent = () => {
   return <div className={styles.landingPage}>
       <div className={styles.heroSection}>
         <div className={styles.heroOverlay}>
-          <h1 className={styles.sectionTitle}>{getText('ConsultingComponent.js_10_V2h5IE')}<br />{getText('ConsultingComponent.js_21_V29ya1')}</h1>
-          <p className={styles.heroSubtitle}>{getText('ConsultingComponent.js_39_VGhlIE')}<br />{getText('ConsultingComponent.js_37_U29sdX')}</p>
+          <h1 className={styles.sectionTitle}>{getText('ConsultingComponent.js_21_V29ya1')}</h1>
+          <p className={styles.heroSubtitle}>{getText('ConsultingComponent.js_39_VGhlIE')}<br />{getText('ConsultingComponent.js_37_U29sdX')}<br/></p>
         </div>
       </div>
 
